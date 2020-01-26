@@ -1,0 +1,24 @@
+---
+layout: home
+adsense: false
+---
+{% assign documents = site.wiki | sort: 'updated' | reverse %}
+<div id="app">
+    <H3 class="indent">최근 변경된 문서</H3>
+    <ul class="post-list">
+{% for doc in documents %}{% if doc.public != false and doc.title != 'wiki' %}
+        <li>
+            <div>
+                <a class="post-link" href="{{ doc.url }}">
+                    <div class="post-meta">{{ doc.updated | date: "%Y.%m.%d" }} - {{ doc.title }}</div>
+                    <div class="post-excerpt">{{ doc.summary }}</div>
+        {% if doc.tags %}
+                    <ul class="tag-list"><li class="post-tag">{{ doc. tag }}</li></ul>
+        {% endif %}
+                </a>
+            </div>
+        </li>
+{% endif %}{% endfor %}
+    </ul>
+</div>
+{% include createLink.html %}

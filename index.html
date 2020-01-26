@@ -1,0 +1,62 @@
+---
+layout: home
+adsense: false
+regenerate: true
+---
+
+<div class="blog-face">
+    <div>
+        🧠기억 보조용 위키
+        <div>
+            <a href="https://johngrib.github.io/wiki/my-wiki/" target="_blank">이곳</a>의 도움을 받았습니다. 🙇‍♀️
+        </div>
+        <div>
+            <a href="/blog/">블로그</a>
+            /
+            <a href="/tag/">태그</a>
+        </div>
+    </div>
+    <div class="contact">
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+        {% endif %}
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}">Email</a>
+        {% endif %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+    </div>
+</div>
+<div>
+    <H3 class="indent">최근 변경된 문서</H3>
+    <ul class="post-list">
+        {% assign documents = site.wiki | sort: 'updated' | reverse %}
+        {% for doc in documents limit: 30 %}
+        {% if doc.public == true and doc.title != 'wiki'%}
+        <li>
+            <div>
+                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+                    <div class="post-meta">
+                        {{ doc.updated | date: "%Y.%m.%d" }}
+                        -
+                        {{ doc.title }}
+                    </div>
+                    <div class="post-excerpt">{{ doc.summary }}</div>
+                    <ul class="tag-list">
+                        <li class="post-tag">
+                            {{ doc. tag }}
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <h4>
+        <a href="/recent/">최근 변경된 문서 전체 리스트 보기</a>
+    </h4>
+</div>
+{% include createLink.html %}

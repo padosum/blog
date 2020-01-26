@@ -1,0 +1,63 @@
+# Site settings
+title: 최연정 Choi Yeonjeong
+url: "https://yjaalto.github.io"
+baseurl: ""
+description: >
+    최연정 블로그
+
+# My information
+email: makalu171@gmail.com
+author: yjaalto
+profile: 👩‍💻
+twitter_username: 
+github_username: yjaalto
+comment-support: utterances
+
+# Build settings
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginator_path: "/blog"
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+    wiki:
+        output: true
+        permalink: /:collection/:path/
+
+# Comment Service
+disqus:
+  id: 
+  shortname: 
+utterances:
+  repo: yjaalto/yjaalto.github.io
+  issue-term: pathname
+  label: Comment
+  branch: master
+
+google_analytics:
+  ua: UA-156992915-1
+
+google_adsense:
+  client: 
+
+blame: "https://github.com/yjaalto/yjaalto.github.io/blame/master/_wiki"
+edit: "https://github.com/yjaalto/yjaalto.github.io/edit/master/_wiki"
+issue: "https://github.com/yjaalto/yjaalto.github.io/issues/new"
+
+timezone: "Asia/Seoul"
+
+# https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
