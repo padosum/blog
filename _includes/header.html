@@ -8,8 +8,10 @@
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+        href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ page.title }}">
@@ -22,37 +24,44 @@
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.summary }}" />
-{% if site.google_analytics.ua %}
+    {% if site.google_analytics.ua %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', '{{ site.google_analytics.ua }}');
     </script>
-{% endif %}
-{% if site.google_adsense.client and page.adsense == true %}
+    {% endif %}
+    {% if site.google_adsense.client and page.adsense == true %}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "{{ site.google_adsense.client }}",
-        enable_page_level_ads: true
-      });
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "{{ site.google_adsense.client }}",
+            enable_page_level_ads: true
+        });
     </script>
-{% endif %}
+    {% endif %}
 
 </head>
 <header class="header">
     <div>
         <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     </div>
+    <div class="site-title-right">
+        <form role="search" method="get" action="/search/">
+            <input name="searchString" class="" placeholder=" 검색하세요" type="text">
+            <input type="submit" class="searchButton" value="Search">
+        </form>
+    </div>
     <div>
         <a class="site-title-right" href="/about/">me</a>
     </div>
     <div>
-        <a class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
+        <a class="site-title-right" href="/wiki/index/#random"
+            onClick="if(typeof random === 'function')random()">random</a>
     </div>
     <div>
         <a class="site-title-right" href="/wiki/index/">wiki</a>

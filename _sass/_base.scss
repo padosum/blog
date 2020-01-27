@@ -3,7 +3,7 @@ body {
     height: 100%;
 }
 body, th, td, div, p, li {
-    font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
+    font-family: "Spoqa Han Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
     line-height: 1.5;
     word-break: keep-all;
 }
@@ -13,9 +13,16 @@ p, li {
 }
 
 a:link {
+    color: #3282b8;
+    text-decoration: none;
 }
 a:visited {
-    color: #344B83;
+    color: #0f4c75;
+}
+
+a:hover, a:focus {
+    color: #0f4c75;
+    text-decoration: underline;
 }
 
 .post-content {
@@ -87,38 +94,38 @@ h2 {
     font-size: 1.8em;
     border-bottom: 1px solid #d0d0d0;
 }
-.post-content h2 {
-    &:before { content:"⠁"; }
-}
+// .post-content h2 {
+//     // &:before { content:"⠁"; }
+// }
 h3 {
     font-size: 1.6em;
     font-style: italic;
 }
-.post-content h3 {
-    &:before { content:"⠃"; }
-}
+// .post-content h3 {
+//     &:before { content:"⠃"; }
+// }
 h4 {
     font-size: 1.4em;
     padding-left: 5px;
     font-style: italic;
 }
-.post-content h4 {
-    &:before { content:"⠋"; }
-}
+// .post-content h4 {
+//     &:before { content:"⠋"; }
+// }
 h5 {
     font-size: 1.2em;
     padding-left: 10px;
     font-style: italic;
 }
-.post-content h5 {
-    &:before { content:"⠛"; }
-}
+// .post-content h5 {
+//     &:before { content:"⠛"; }
+// }
 h6 {
     font-size: 1.0em;
     padding-left: 15px;
     font-weight: bold;
     font-style: italic;
 }
-.post-content h6 {
-    &:before { content:"⠟"; }
-}
+// .post-content h6 {
+//     &:before { content:"⠟"; }
+// }

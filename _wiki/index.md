@@ -2,18 +2,14 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2019-10-30 08:36:56 +0900
+updated : 2020-01-27 20:09:58 +0900
 tags    : index
 toc     : true
 public  : true
 comment : false
 ---
 
-= My knowledge base =
-    * [[Tasks]] -- things to be done _yesterday_!!!
-    * Project Gutenberg -- good books are power.
-    * Scratchpad -- various temporary stuff.
-
+* [[Movies-with-a-computer]]
 
 ---
 
@@ -32,3 +28,8 @@ comment : false
     </ul>
 </div>
 
+
+# Generated Links
+
+- [Movies-with-a-computer](Movies-with-a-computer)
+- [index](index)
