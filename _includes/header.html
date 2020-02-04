@@ -6,6 +6,8 @@
 
     <meta name="description" content="{{ page.summary }}">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
@@ -46,24 +48,28 @@
     {% endif %}
 
 </head>
-<header class="header">
-    <div>
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarHeader">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/wiki/index/#random"
+                    onClick="if(typeof random === 'function')random()">random</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/wiki/index/">wiki</a>
+            </li>
+        </ul>
     </div>
-    <div class="site-title-right">
-        <form role="search" method="get" action="/search/">
-            <input name="searchString" class="" placeholder=" 검색하세요" type="text">
-            <input type="submit" class="searchButton" value="Search">
-        </form>
-    </div>
-    <div>
-        <a class="site-title-right" href="/about/">me</a>
-    </div>
-    <div>
-        <a class="site-title-right" href="/wiki/index/#random"
-            onClick="if(typeof random === 'function')random()">random</a>
-    </div>
-    <div>
-        <a class="site-title-right" href="/wiki/index/">wiki</a>
-    </div>
-</header>
+    <form class="form-inline" role="search" method="get" action="/search/">
+        <input name="searchString" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
