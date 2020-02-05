@@ -18,45 +18,35 @@ regenerate: true
     </div>
     <div class="contact">
         {% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+        <a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
         {% endif %}
         {% if site.twitter_username %}
         <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
         {% endif %}
         {% if site.email %}
-        <a href="mailto:{{ site.email }}">Email</a>
+        <a href="mailto:{{ site.email }}"><i class="far fa-envelope"></i></a>
         {% endif %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fas fa-rss"></i></a>
     </div>
 </div>
 <div>
     <H3 class="indent">최근 변경된 문서</H3>
-    <ul class="post-list">
+    <div class="list-group indent">
         {% assign documents = site.wiki | sort: 'updated' | reverse %}
         {% for doc in documents limit: 30 %}
         {% if doc.public == true and doc.title != 'wiki'%}
-        <li>
-            <div>
-                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
-                    <div class="post-meta">
-                        {{ doc.updated | date: "%Y.%m.%d" }}
-                        -
-                        {{ doc.title }}
-                    </div>
-                    <div class="post-excerpt">{{ doc.summary }}</div>
-                    <ul class="tag-list">
-                        <li class="post-tag">
-                            {{ doc. tag }}
-                        </li>
-                    </ul>
-                </a>
+        <a class="list-group-item list-group-item-action" href="{{ doc.url | prepend: site.baseurl }}">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ doc.title }}</h5>
+                <small>{{ doc.updated | date: "%Y.%m.%d" }}</small>
             </div>
-        </li>
+            <p class="mb-1">{{ doc.summary }}</p>
+            <small>{{ doc.tags }}</small>
+        </a>
         {% endif %}
         {% endfor %}
-    </ul>
-    <h4>
-        <a href="/recent/">최근 변경된 문서 전체 리스트 보기</a>
-    </h4>
+        <a class="list-group-item list-group-item-action active" href="/recent/">최근 변경된 문서 전체 리스트 보기</a>
+    </div>
+
 </div>
 {% include createLink.html %}

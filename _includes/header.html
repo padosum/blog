@@ -27,6 +27,17 @@
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.summary }}" />
     {% if site.google_analytics.ua %}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b21e3700d5.js" crossorigin="anonymous"></script>
+    {{ current }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>
     <script>
@@ -50,21 +61,18 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarHeader">
         <ul class="navbar-nav">
+            {% assign current = page.url | downcase | split: '/' %}
             <li class="nav-item">
-                <a class="nav-link" href="/about/">me</a>
+                <a class="nav-link{% if current[1] == 'about' %} active{% endif %}" href="/about/">about</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/wiki/index/#random"
                     onClick="if(typeof random === 'function')random()">random</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/wiki/index/">wiki</a>
+                <a class="nav-link{% if current[1] == 'wiki' %} active{% endif %}" href="/wiki/index/">wiki</a>
             </li>
         </ul>
     </div>
@@ -72,4 +80,8 @@
         <input name="searchString" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </nav>
