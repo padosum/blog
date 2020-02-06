@@ -4,49 +4,61 @@ adsense: false
 regenerate: true
 ---
 
-<div class="blog-face">
-    <div>
+<div class="columns">
+    <div class="column has-text-centered">
         🧠기억 보조용 위키
         <div>
             <a href="https://johngrib.github.io/wiki/my-wiki/" target="_blank">이곳</a>의 도움을 받았습니다. 🙇‍♀️
         </div>
-        <div>
-            <a href="/blog/">블로그</a>
-            /
-            <a href="/tag/">태그</a>
-        </div>
-    </div>
-    <div class="contact">
-        {% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
-        {% endif %}
-        {% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-        {% endif %}
-        {% if site.email %}
-        <a href="mailto:{{ site.email }}"><i class="far fa-envelope"></i></a>
-        {% endif %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fas fa-rss"></i></a>
     </div>
 </div>
-<div>
-    <H3 class="indent">최근 변경된 문서</H3>
-    <div class="list-group indent">
-        {% assign documents = site.wiki | sort: 'updated' | reverse %}
-        {% for doc in documents limit: 30 %}
-        {% if doc.public == true and doc.title != 'wiki'%}
-        <a class="list-group-item list-group-item-action" href="{{ doc.url | prepend: site.baseurl }}">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{ doc.title }}</h5>
-                <small>{{ doc.updated | date: "%Y.%m.%d" }}</small>
-            </div>
-            <p class="mb-1">{{ doc.summary }}</p>
-            <small>{{ doc.tags }}</small>
-        </a>
+<div class="columns">
+    <div class="column has-text-centered">
+            <a href="/blog/" class="button is-small">블로그</a>
+            <a href="/tag/" class="button is-small">태그</a>
+    </div>
+</div>
+<div class="columns">
+    <div class="column has-text-centered">
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" class="button is-small"><i
+                class="fab fa-github"></i></a>
         {% endif %}
-        {% endfor %}
-        <a class="list-group-item list-group-item-action active" href="/recent/">최근 변경된 문서 전체 리스트 보기</a>
+        {% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}" class="button is-small">Twitter</a>
+        {% endif %}
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}" class="button is-small"><i class="far fa-envelope"></i></a>
+        {% endif %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="button is-small"><i class="fas fa-rss"></i></a>
     </div>
 
 </div>
+<div class="columns">
+    <div class="column is-half">
+        <article class="panel is-primary">
+            <p class="panel-heading">
+                최근 변경된 문서
+            </p>
+            {% assign documents = site.wiki | sort: 'updated' | reverse %}
+            {% for doc in documents limit: 30 %}
+            {% if doc.public == true and doc.title != 'wiki'%}
+            <a class="panel-block" href="{{ doc.url | prepend: site.baseurl }}">
+                <span class="panel-icon">
+                    <i class="fas fa-book" aria-hidden="true"></i>
+                </span>
+                    <h5>{{ doc.title }}</h5>
+                    <small>{{ doc.updated | date: "%Y.%m.%d" }}</small>
+                <span class="tag is-primary is-light">{{ doc.tags }}</span>
+            </a>
+            {% endif %}
+            {% endfor %}
+            <a class="panel-block" href="/recent/">
+                최근 변경된 문서 전체 리스트 보기
+            </a>
+        </article>
+    </div>
+</div>
+
+
 {% include createLink.html %}

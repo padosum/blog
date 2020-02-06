@@ -8,7 +8,7 @@
 
 @media (min-width: 800px) {
   body {
-    // width: 800px;
+    width: 800px;
     margin: auto;
     border: 1px solid #d0d0d0;
   }
@@ -157,30 +157,31 @@ ul.tag-list {
     display: none;
 }
 
-.pagination {
-    text-align:center;
+// .pagination {
+//     text-align:center;
 
-    a {
-        font-size: 1em;
-        margin: 2px;
-        padding: 2px;
-        text-decoration: none;
-        border-radius: 10px;
-        border: 0px solid $theme-color;
-        background-color: $theme-color;
-        color: #FFFFFF;
-    }
+//     a {
+//         font-size: 1em;
+//         margin: 2px;
+//         padding: 2px;
+//         text-decoration: none;
+//         border-radius: 10px;
+//         border: 0px solid $theme-color;
+//         background-color: $theme-color;
+//         color: #FFFFFF;
+//     }
 
-    a.active {
-        border: 0px solid transparent;
-        background-color: transparent;
-        color: #000000;
-    }
-}
+//     a.active {
+//         border: 0px solid transparent;
+//         background-color: transparent;
+//         color: #000000;
+//     }
+// }
 
-.pagination li {
-    display: inline-block;
-}
+// .pagination li {
+//     display: inline-block;
+// }
+
 .tag-list li {
     display: inline-block;
 }
