@@ -14,8 +14,8 @@ regenerate: true
 </div>
 <div class="columns">
     <div class="column has-text-centered">
-            <a href="/blog/" class="button is-small">블로그</a>
-            <a href="/tag/" class="button is-small">태그</a>
+        <a href="/blog/" class="button is-small">블로그</a>
+        <a href="/tag/" class="button is-small">태그</a>
     </div>
 </div>
 <div class="columns">
@@ -47,9 +47,12 @@ regenerate: true
                 <span class="panel-icon">
                     <i class="fas fa-book" aria-hidden="true"></i>
                 </span>
-                    <h5>{{ doc.title }}</h5>
-                    <small>{{ doc.updated | date: "%Y.%m.%d" }}</small>
-                <span class="tag is-primary is-light">{{ doc.tags }}</span>
+                <span>{{ doc.title }}</span>
+                <div class="tags has-addons">
+                    <span class="tag is-primary is-light">{{ doc.tags }}</span>
+                    <span class="tag is-light">{{ doc.updated | date: "%Y.%m.%d" }} </span>
+                </div>
+               
             </a>
             {% endif %}
             {% endfor %}
