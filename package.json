@@ -4,6 +4,7 @@
   "description": "data generator",
   "main": "generateData.js",
   "dependencies": {
+    "bulma": "^0.8.0",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {},
