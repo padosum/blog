@@ -1,8 +1,7 @@
-wiki:
-    - {fileName: my-wiki}
-vimwiki:
-    - {fileName: my-wiki}
-jekyll:
-    - {fileName: my-wiki}
-blog:
-    - {fileName: my-wiki}
+javascript:
+    - {fileName: Javascript-regular-expression}
+    - {fileName: Javascript-Scope}
+TIL:
+    - {fileName: Javascript-regular-expression}
+movie:
+    - {fileName: Movies-with-a-computer}

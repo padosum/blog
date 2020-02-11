@@ -35,7 +35,7 @@ regenerate: true
 
 </div>
 <div class="columns">
-    <div class="column is-half">
+    <div class="column is-three-quarters">
         <article class="panel is-primary">
             <p class="panel-heading">
                 최근 변경된 문서
@@ -44,15 +44,16 @@ regenerate: true
             {% for doc in documents limit: 30 %}
             {% if doc.public == true and doc.title != 'wiki'%}
             <a class="panel-block" href="{{ doc.url | prepend: site.baseurl }}">
+
                 <span class="panel-icon">
                     <i class="fas fa-book" aria-hidden="true"></i>
                 </span>
-                <span>{{ doc.title }}</span>
+                {{ doc.title }}
+
                 <div class="tags has-addons">
                     <span class="tag is-primary is-light">{{ doc.tags }}</span>
                     <span class="tag is-light">{{ doc.updated | date: "%Y.%m.%d" }} </span>
                 </div>
-               
             </a>
             {% endif %}
             {% endfor %}

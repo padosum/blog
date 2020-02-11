@@ -3,8 +3,8 @@ layout  : wiki
 title   : 컴퓨터가 등장하는 영화
 summary : 
 date    : 2020-01-27 16:47:14 +0900
-updated : 2020-01-27 20:13:10 +0900
-tags    : movie
+updated : 2020-02-05 23:27:40 +0900
+tag    : movie
 toc     : true
 public  : true
 parent  : 
@@ -19,7 +19,7 @@ latex   : false
 ## 영화
 * [ ] 2001: 스페이스 오디세이(2001: A Sapce Odyseey, 1968)
 * [ ] 가타카(Gattaca, 1997)
-* [X] 그녀(Her, 2013)
+ [X] 그녀(Her, 2013)
 * [ ] 네트(The Net, 1995) 
 * [ ] 다이하드4.0(Live Free or Die Hard, 2007)
 * [ ] 디스커넥트(Disconnect, 2012)
