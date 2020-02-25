@@ -4,7 +4,15 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-02-02 00:02:14 +0900'
+    updated: '2020-02-25 21:10:32 +0900'
+    children: []
+Javascript-Destructuring-assignment:
+    type: wiki
+    title: '비구조화 할당'
+    summary: 'Destructuring assignment 구조 분해 할당'
+    parent: null
+    url: /wiki/Javascript-Destructuring-assignment
+    updated: '2020-02-25 21:10:32 +0900'
     children: []
 Javascript-regular-expression:
     type: wiki

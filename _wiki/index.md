@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-02-02 00:02:14 +0900
+updated : 2020-02-25 21:10:32 +0900
 tags    : index
 toc     : true
 public  : true
@@ -13,6 +13,9 @@ comment : false
 * JavaScript
 	* [[Javascript-regular-expression]]
 	* [[Javascript-Scope]]
+	* [[Javascript-Destructuring-assignment]]
+
+
 ---
 
 # blog
