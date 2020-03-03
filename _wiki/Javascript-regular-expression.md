@@ -11,7 +11,7 @@ parent  :
 latex   : false
 ---
 * TOC
-{:toc}
+{: .menu-list .is-marginless}
 
 ## 정규표현식 생성 
 

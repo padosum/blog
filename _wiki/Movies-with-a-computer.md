@@ -12,7 +12,7 @@ latex   : false
 ---
 * TOC
 {:toc}
-{: .menu-list}
+{: .menu-list .is-marginless}
 
 > 그냥 생각나서 정리해본다. 내가 본 것은 ✅  
 가나다순, 내기준 컴퓨터를 다루는 장면이 중요하거 컴퓨터 속 세상(가상현실?)이 등장하는 경우... 

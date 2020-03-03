@@ -10,10 +10,9 @@ public: true
 parent:
 latex: false
 ---
-
-- TOC
-  {:toc}
-  {: .menu-list}
+* TOC
+{:toc}
+{: .menu-list .is-marginless}
 
 # 비구조화 할당
 

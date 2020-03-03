@@ -4,7 +4,7 @@ Fetch:
     summary: ""
     parent: ""
     url: /wiki/Fetch
-    updated: '2020-03-02 22:04:24 +0900'
+    updated: '2020-03-03 22:14:55 +0900'
     children: []
 index:
     type: wiki
@@ -52,5 +52,5 @@ New-branch-not-showing-in-visual-studio:
     summary: ""
     parent: ""
     url: /wiki/New-branch-not-showing-in-visual-studio
-    updated: '2020-03-02 22:06:36 +0900'
+    updated: '2020-03-03 22:12:57 +0900'
     children: []
