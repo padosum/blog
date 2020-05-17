@@ -7,11 +7,11 @@
 }
 
 @media (min-width: 800px) {
-  body {
-    width: 800px;
-    margin: auto;
-    border: 1px solid #d0d0d0;
-  }
+    body {
+        width: 800px;
+        margin: auto;
+        border: 1px solid #d0d0d0;
+    }
 }
 
 div.gsc-control-cse {
@@ -31,14 +31,14 @@ table.gsc-search-box {
 
     &:after {
         clear: both;
-        content: ' ';
+        content: " ";
         display: block;
     }
 
     .site-title {
         float: left;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 1.3;
         padding-left: 10px;
         font-style: italic;
@@ -46,7 +46,7 @@ table.gsc-search-box {
     .site-title-right {
         float: right;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 1.3;
         padding-right: 10px;
         font-style: italic;
@@ -54,16 +54,15 @@ table.gsc-search-box {
 }
 
 .page-content {
-    background:#FAFAFA;
+    background: #fafafa;
     // padding: 30px 0;
 
     img {
-        max-width:100%;
+        max-width: 100%;
     }
 }
 
 .post {
-
     overflow-x: auto;
     padding: 5px;
 
@@ -72,22 +71,23 @@ table.gsc-search-box {
         border-spacing: 0;
         border-color: #000000;
 
-        td, th {
+        td,
+        th {
             border: 1px solid $third-font-color;
             padding: 5px 5px;
         }
         th {
-            font-weight:normal;
-            color: #FFFFFF;
-            background: $theme-color
+            font-weight: normal;
+            color: #ffffff;
+            background: $theme-color;
         }
         tr:hover {
-            background: #BEE7F6;
+            background: #bee7f6;
         }
     }
 }
 .toc {
-    background: #EEE;
+    background: #eee;
 }
 .post-tag a {
     color: #888888;
@@ -100,11 +100,10 @@ table.gsc-search-box {
 }
 
 .footer {
-    text-align:center;
+    text-align: center;
 }
 
 ul.tag-list {
-
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -131,11 +130,11 @@ ul.tag-list {
 }
 
 .section-nav {
-  background-color: #FFF;
-  margin: 5px 0;
-  padding: 10px 30px;
-  border: 1px solid #E8E8E8;
-  border-radius: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px 30px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
 }
 
 .history-button {
@@ -213,7 +212,7 @@ div.search {
 .searchButton {
     // border: 0px;
     // border-radius: 0px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     // position: absolute;
     // top: 0;
     // right: 0;
@@ -232,4 +231,9 @@ div.search {
 
 .post-excerpt {
     color: $forth-font-color;
+}
+
+.center-image {
+    margin: 0 auto;
+    display: block;
 }

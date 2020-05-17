@@ -26,7 +26,7 @@ latex   : false
 * [ ] 디스커넥트(Disconnect, 2012)
 * [X] 디지몬 어드벤처: 우리들의 워 게임! (Digimon Adventure: Our War Game!, デジモンアドベンチャー／ぼくらのウォーゲーム, 2000) 
 * [ ] 마이너리티 리포트(Minority Report, 2002)
-* [ ] 매트릭스(The Matrix, 1999)
+* [X] 매트릭스(The Matrix, 1999)
 * [ ] 미션 임파서블 시리즈 
 * [X] 미술관 옆 동물원(1998)
 * [X] 빅(Big, 1988)

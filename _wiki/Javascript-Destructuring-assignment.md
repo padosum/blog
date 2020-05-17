@@ -20,7 +20,7 @@ latex: false
 
 리액트를 배우려니까 정리해본다.
 
-```
+``` javascript
 var a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10

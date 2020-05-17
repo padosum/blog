@@ -1,23 +1,41 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>
+        {% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{
+        site.title }}{% endif %}
+    </title>
 
-    <meta name="description" content="{{ page.summary }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <meta name="description" content="{{ page.summary }}" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link
+        rel="canonical"
+        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-        href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link
+        href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <link
+        href="http://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css"
+        rel="stylesheet"
+        type="text/css"
+    />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.summary }}">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.summary }}" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@{{ site.twitter_username }}" />
@@ -25,33 +43,49 @@
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.summary }}" />
     {% if site.google_analytics.ua %}
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/b21e3700d5.js" crossorigin="anonymous"></script>
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://kit.fontawesome.com/b21e3700d5.js"
+        crossorigin="anonymous"
+    ></script>
     {{ current }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"
+    ></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-        gtag('config', '{{ site.google_analytics.ua }}');
+        gtag("config", "{{ site.google_analytics.ua }}");
     </script>
-    {% endif %}
-    {% if site.google_adsense.client and page.adsense == true %}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {% endif %} {% if site.google_adsense.client and page.adsense == true %}
+    <script
+        async
+        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "{{ site.google_adsense.client }}",
-            enable_page_level_ads: true
+            enable_page_level_ads: true,
         });
     </script>
     {% endif %}
@@ -61,7 +95,13 @@
         <a class="navbar-item" href="{{ site.baseurl }}/">
             {{ site.title }}
         </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbar"
+        >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -70,24 +110,50 @@
     <div id="navbar" class="navbar-menu">
         <div class="navbar-start">
             {% assign current = page.url | downcase | split: '/' %}
-            <a class="navbar-item{% if current[1] == 'about' %} is-active{% endif %}" href="/about/">
+            <a
+                class="navbar-item{% if current[1] == 'about' %} is-active{% endif %}"
+                href="/about/"
+            >
                 about
             </a>
-            <a class="navbar-item" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">
+            <a
+                class="navbar-item"
+                href="/wiki/index/#random"
+                onClick="if(typeof random === 'function')random()"
+            >
                 random
             </a>
-            <a class="navbar-item{% if current[1] == 'wiki' %} is-active{% endif %}" href="/wiki/index/">
+            <a
+                class="navbar-item{% if current[1] == 'wiki' %} is-active{% endif %}"
+                href="/wiki/index/"
+            >
                 wiki
             </a>
         </div>
         <div class="navbar-end">
             <div class="navbar-item">
-                <form class="field has-addons" role="search" method="get" action="/search/">
+                <form
+                    class="field has-addons"
+                    role="search"
+                    method="get"
+                    action="/search/"
+                >
                     <div class="control">
-                            <input name="searchString" class="input is-small" type="search" placeholder="Search" aria-label="Search">
+                        <input
+                            name="searchString"
+                            class="input is-small"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
                     </div>
                     <div class="control">
-                            <button class="button is-primary is-small" type="submit">Search</button>
+                        <button
+                            class="button is-primary is-small"
+                            type="submit"
+                        >
+                            Search
+                        </button>
                     </div>
                 </form>
             </div>
@@ -95,28 +161,27 @@
     </div>
 </nav>
 <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-
+    document.addEventListener("DOMContentLoaded", () => {
         // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        const $navbarBurgers = Array.prototype.slice.call(
+            document.querySelectorAll(".navbar-burger"),
+            0
+        );
 
         // Check if there are any navbar burgers
         if ($navbarBurgers.length > 0) {
-
             // Add a click event on each of them
-            $navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
                     // Get the target from the "data-target" attribute
                     const target = el.dataset.target;
                     const $target = document.getElementById(target);
 
                     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
                 });
             });
         }
-
-    });</script>
+    });
+</script>

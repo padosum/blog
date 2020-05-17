@@ -8,8 +8,8 @@
         background-color: white;
         z-index: 9999;
         font-size: 0.8em;
-        overflow-y:scroll;
-        overflow-x:hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
         border: 0px solid;
     }
 }
@@ -18,7 +18,12 @@
     border: 1px solid;
     padding: 10px;
     padding-left: 15px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-color: rgb(227, 227, 227);
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+#markdown-toc ul {
     list-style: none;
 }
