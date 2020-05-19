@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-05-17 20:33:11 +0900
+updated : 2020-05-19 20:58:39 +0900
 tags    : index
 toc     : true
 public  : true
@@ -22,6 +22,8 @@ comment : false
 	* [[Frontend-development-environment]]
 * React
 	* [[React-Native-tutorial]]
+* Java
+	* [[Servlet-Database]]
 ---
 
 # blog

@@ -20,7 +20,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-05-17 20:33:11 +0900'
+    updated: '2020-05-19 20:58:39 +0900'
     children: []
 Javascript-Destructuring-assignment:
     type: wiki
@@ -69,4 +69,12 @@ React-Native-tutorial:
     parent: ""
     url: /wiki/React-Native-tutorial
     updated: '2020-05-17 19:35:01 +0900'
+    children: []
+Servlet-Database:
+    type: wiki
+    title: 'Servlet 데이터베이스 연동'
+    summary: ""
+    parent: ""
+    url: /wiki/Servlet-Database
+    updated: '2020-05-19 20:58:39 +0900'
     children: []
