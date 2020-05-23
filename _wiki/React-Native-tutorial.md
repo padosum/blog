@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : ⚛️ React-Native 시작하기  
+title   : ⚛️  리액트 네이티브 시작하기 - 1  
 summary : 개발 환경 설정
 date    : 2020-05-17 19:33:15 +0900
-updated : 2020-05-17 19:35:01 +0900
+updated : 2020-05-23 23:35:26 +0900
 tags    : React-Native
 toc     : true
 public  : true
