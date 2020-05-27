@@ -4,7 +4,7 @@ title   : 🐝 리액트 네이티브 폴더와 파일 구조
 summary : 
 date    : 2020-05-23 13:56:01 +0900
 updated : 2020-05-23 13:57:42 +0900
-tags    : React-Native
+tag    : React-Native
 toc     : true
 public  : true
 parent  : 

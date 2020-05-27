@@ -4,7 +4,7 @@ title   : 📖 Servlet 데이터베이스 연동
 summary : 
 date    : 2020-05-19 20:57:27 +0900
 updated : 2020-05-19 20:58:39 +0900
-tags    : Java
+tag     : Java
 toc     : true
 public  : true
 parent  : 

@@ -4,7 +4,7 @@ title: 비구조화 할당
 summary: Destructuring assignment 구조 분해 할당
 date: 2020-02-25 21:09:48 +0900
 updated: 2020-02-25 21:10:32 +0900
-tags: javascript
+tag: javascript
 toc: true
 public: true
 parent:

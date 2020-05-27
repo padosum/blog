@@ -3,7 +3,7 @@ layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
 updated : 2020-05-23 23:33:46 +0900
-tags    : index
+tag     : index
 toc     : true
 public  : true
 comment : false

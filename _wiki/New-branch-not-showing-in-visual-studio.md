@@ -4,7 +4,7 @@ title   : Visual Studio에서 새 브랜치가 안보일 때
 summary : 
 date    : 2020-03-02 21:44:28 +0900
 updated : 2020-03-03 22:12:57 +0900
-tags    : visualstudio
+tag    : visualstudio
 toc     : true
 public  : true
 parent  : 

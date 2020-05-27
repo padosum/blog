@@ -4,7 +4,7 @@ title   : 프론트엔드 개발 환경 - Node.js
 summary : 
 date    : 2020-03-16 21:51:20 +0900
 updated : 2020-03-16 22:12:49 +0900
-tags    : [env, node.js]
+tag     : env nodejs
 toc     : true
 public  : true
 parent  : 
