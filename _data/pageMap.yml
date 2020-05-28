@@ -20,7 +20,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-05-23 23:33:46 +0900'
+    updated: '2020-05-28 20:29:02 +0900'
     children: []
 Javascript-Destructuring-assignment:
     type: wiki
@@ -85,6 +85,14 @@ React-Native-tutorial-2:
     parent: ""
     url: /wiki/React-Native-tutorial-2
     updated: '2020-05-23 23:31:08 +0900'
+    children: []
+React-Props-and-State:
+    type: wiki
+    title: 'Props와 State'
+    summary: ""
+    parent: ""
+    url: /wiki/React-Props-and-State
+    updated: '2020-05-28 20:29:02 +0900'
     children: []
 Servlet-Database:
     type: wiki
