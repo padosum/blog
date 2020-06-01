@@ -20,7 +20,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-05-28 20:29:02 +0900'
+    updated: '2020-05-30 09:23:37 +0900'
     children: []
 Javascript-Destructuring-assignment:
     type: wiki
@@ -41,7 +41,7 @@ Javascript-regular-expression:
 Javascript-Scope:
     type: wiki
     title: 'Javascript Scope'
-    summary: '자바스크립트의 유효범위'
+    summary: '🌴 자바스크립트의 유효범위'
     parent: ""
     url: /wiki/Javascript-Scope
     updated: '2020-02-02 00:01:31 +0900'
@@ -88,7 +88,7 @@ React-Native-tutorial-2:
     children: []
 React-Props-and-State:
     type: wiki
-    title: 'Props와 State'
+    title: '☄️ Props와 State'
     summary: ""
     parent: ""
     url: /wiki/React-Props-and-State
