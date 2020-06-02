@@ -20,7 +20,15 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-05-30 09:23:37 +0900'
+    updated: '2020-06-03 00:19:15 +0900'
+    children: []
+Javascript-closure:
+    type: wiki
+    title: '🐻 자바스크립트 클로저'
+    summary: ""
+    parent: ""
+    url: /wiki/Javascript-closure
+    updated: '2020-06-03 00:19:15 +0900'
     children: []
 Javascript-Destructuring-assignment:
     type: wiki
@@ -40,8 +48,8 @@ Javascript-regular-expression:
     children: []
 Javascript-Scope:
     type: wiki
-    title: 'Javascript Scope'
-    summary: '🌴 자바스크립트의 유효범위'
+    title: '🌴 Javascript Scope'
+    summary: '자바스크립트의 유효범위'
     parent: ""
     url: /wiki/Javascript-Scope
     updated: '2020-02-02 00:01:31 +0900'

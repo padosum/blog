@@ -7,6 +7,7 @@ nodejs:
 index:
     - {fileName: index}
 javascript:
+    - {fileName: Javascript-closure}
     - {fileName: Javascript-Destructuring-assignment}
     - {fileName: Javascript-regular-expression}
     - {fileName: Javascript-Scope}

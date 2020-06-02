@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-05-30 09:23:37 +0900
+updated : 2020-06-03 00:19:15 +0900
 tag     : index
 toc     : true
 public  : true
@@ -14,6 +14,7 @@ comment : false
 	* [[Javascript-regular-expression]]
 	* [[Javascript-Scope]]
 	* [[Javascript-Destructuring-assignment]]
+	* [[Javascript-closure]]
 
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
