@@ -6,6 +6,10 @@ nodejs:
     - {fileName: Frontend-development-environment}
 index:
     - {fileName: index}
+oracle:
+    - {fileName: Install-Oracle-Database-In-MacOS}
+mac:
+    - {fileName: Install-Oracle-Database-In-MacOS}
 javascript:
     - {fileName: Javascript-closure}
     - {fileName: Javascript-Destructuring-assignment}

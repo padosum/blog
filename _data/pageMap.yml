@@ -20,7 +20,15 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-06-03 00:19:15 +0900'
+    updated: '2020-06-10 21:58:35 +0900'
+    children: []
+Install-Oracle-Database-In-MacOS:
+    type: wiki
+    title: '🌍 Mac OS 오라클 db 설치하기'
+    summary: ""
+    parent: ""
+    url: /wiki/Install-Oracle-Database-In-MacOS
+    updated: '2020-06-10 21:58:35 +0900'
     children: []
 Javascript-closure:
     type: wiki
