@@ -1,3 +1,19 @@
+Apprenticeship-Patterns:
+    type: wiki
+    title: '👩‍⚕️ 프로그래머의 길, 멘토에게 묻다'
+    summary: ""
+    parent: null
+    url: /wiki/Apprenticeship-Patterns
+    updated: '2020-06-21 09:19:17 +0900'
+    children: []
+Book-list:
+    type: wiki
+    title: '📖 독서 목록'
+    summary: ""
+    parent: null
+    url: /wiki/Book-list
+    updated: '2020-06-21 09:19:17 +0900'
+    children: []
 Fetch:
     type: wiki
     title: 'Git - Fetch'
@@ -20,7 +36,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-06-10 21:58:35 +0900'
+    updated: '2020-06-22 09:21:47 +0900'
     children: []
 Install-Oracle-Database-In-MacOS:
     type: wiki

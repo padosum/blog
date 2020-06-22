@@ -1,3 +1,6 @@
+book:
+    - {fileName: Apprenticeship-Patterns}
+    - {fileName: Book-list}
 git:
     - {fileName: Fetch}
 env:

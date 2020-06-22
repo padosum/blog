@@ -2,14 +2,15 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-06-10 21:58:35 +0900
+updated : 2020-06-22 09:21:47 +0900
 tag     : index
 toc     : true
 public  : true
 comment : false
 ---
 
-* [[Movies-with-a-computer]]
+* [[Movies-with-a-computer]] 
+* [[Book-list]]
 * JavaScript
 	* [[Javascript-regular-expression]]
 	* [[Javascript-Scope]]
@@ -29,7 +30,7 @@ comment : false
 	* [[React-Native-tutorial-2]]
 	* [[React-Native-folder-and-file-structure]]
 * Java
-	* [[Servlet-Database]]
+	* [[Servlet-Database]] 
 ---
 
 # blog
