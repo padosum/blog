@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-06-22 09:21:47 +0900
+updated : 2020-08-08 12:46:31 +0900
 tag     : index
 toc     : true
 public  : true
@@ -31,6 +31,8 @@ comment : false
 	* [[React-Native-folder-and-file-structure]]
 * Java
 	* [[Servlet-Database]] 
+* Tools
+	* [[The Shell]]
 ---
 
 # blog

@@ -20,6 +20,7 @@ javascript:
     - {fileName: Javascript-Scope}
 TIL:
     - {fileName: Javascript-regular-expression}
+    - {fileName: 'The Shell'}
 movie:
     - {fileName: Movies-with-a-computer}
 visualstudio:
@@ -32,3 +33,5 @@ React:
     - {fileName: React-Props-and-State}
 Java:
     - {fileName: Servlet-Database}
+shell:
+    - {fileName: 'The Shell'}

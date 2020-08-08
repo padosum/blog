@@ -36,7 +36,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-06-22 09:21:47 +0900'
+    updated: '2020-08-08 12:46:31 +0900'
     children: []
 Install-Oracle-Database-In-MacOS:
     type: wiki
@@ -133,4 +133,12 @@ Servlet-Database:
     parent: ""
     url: /wiki/Servlet-Database
     updated: '2020-05-19 20:58:39 +0900'
+    children: []
+'The Shell':
+    type: wiki
+    title: '💻 셸(The Shell)'
+    summary: 'missing-semester 정리'
+    parent: ""
+    url: '/wiki/The Shell'
+    updated: '2020-08-08 12:46:55 +0900'
     children: []
