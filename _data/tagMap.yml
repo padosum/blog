@@ -1,6 +1,7 @@
 book:
     - {fileName: Apprenticeship-Patterns}
     - {fileName: Book-list}
+    - {fileName: Developer-culter-that-saved-korea-by-baekjun-lim}
 git:
     - {fileName: Fetch}
 env:

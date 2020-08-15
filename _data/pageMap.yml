@@ -12,7 +12,15 @@ Book-list:
     summary: ""
     parent: null
     url: /wiki/Book-list
-    updated: '2020-06-21 09:19:17 +0900'
+    updated: '2020-08-15 15:58:24 +0900'
+    children: []
+Developer-culter-that-saved-korea-by-baekjun-lim:
+    type: wiki
+    title: '👨‍💻 임백준의 대살개문'
+    summary: ""
+    parent: null
+    url: /wiki/Developer-culter-that-saved-korea-by-baekjun-lim
+    updated: '2020-08-15 15:59:28 +0900'
     children: []
 Fetch:
     type: wiki
