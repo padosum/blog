@@ -2,6 +2,7 @@ book:
     - {fileName: Apprenticeship-Patterns}
     - {fileName: Book-list}
     - {fileName: Developer-culter-that-saved-korea-by-baekjun-lim}
+    - {fileName: Mercedes-benz-programmer}
 git:
     - {fileName: Fetch}
 env:

@@ -12,7 +12,7 @@ Book-list:
     summary: ""
     parent: null
     url: /wiki/Book-list
-    updated: '2020-08-15 15:58:24 +0900'
+    updated: '2020-10-11 11:02:37 +0900'
     children: []
 Developer-culter-that-saved-korea-by-baekjun-lim:
     type: wiki
@@ -85,6 +85,14 @@ Javascript-Scope:
     parent: ""
     url: /wiki/Javascript-Scope
     updated: '2020-02-02 00:01:31 +0900'
+    children: []
+Mercedes-benz-programmer:
+    type: wiki
+    title: '🚗 벤츠 타는 프로그래머'
+    summary: ""
+    parent: null
+    url: /wiki/Mercedes-benz-programmer
+    updated: '2020-10-11 11:09:33 +0900'
     children: []
 Movies-with-a-computer:
     type: wiki
