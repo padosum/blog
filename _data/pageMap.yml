@@ -100,7 +100,7 @@ Movies-with-a-computer:
     summary: ""
     parent: ""
     url: /wiki/Movies-with-a-computer
-    updated: '2020-02-05 23:27:40 +0900'
+    updated: '2020-12-07 20:49:11 +0900'
     children: []
 New-branch-not-showing-in-visual-studio:
     type: wiki
@@ -152,7 +152,7 @@ Servlet-Database:
     children: []
 Tauch-t:
     type: wiki
-    title: 'TAUCH.T 토체티 텐키리스 키보드저소음 적축'
+    title: '⌨️ TAUCH.T 토체티 텐키리스 키보드저소음 적축'
     summary: ""
     parent: ""
     url: /wiki/Tauch-t

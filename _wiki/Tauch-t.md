@@ -1,6 +1,6 @@
 ---
 layout  : wiki
-title   : TAUCH.T 토체티 텐키리스 키보드저소음 적축
+title   : ⌨️ TAUCH.T 토체티 텐키리스 키보드저소음 적축
 summary : 
 date    : 2020-12-07 20:09:09 +0900
 updated : 2020-12-07 20:10:30 +0900
