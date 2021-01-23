@@ -5,9 +5,6 @@ date    : 2020-05-28 20:28:46 +0900
 updated : 2020-05-28 20:29:02 +0900
 tags    : [React]
 ---
-* TOC
-{:toc}
-{: .menu-list .is-marginless}
 
 리액트에서 데이터를 다루기 위해 Props, State, Context를 사용한다.  
 
