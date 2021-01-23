@@ -1,24 +1,81 @@
 {
-  "name": "yjaalto.github.io",
-  "version": "1.0.0",
-  "description": "data generator",
-  "main": "generateData.js",
+  "name": "gatsby-blog-mdx",
+  "author": "Ellis Min <ellismin.dev@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "description": "A simple starter for blog posts built with Gatsby js",
+  "version": "0.1.0",
   "dependencies": {
-    "bulma": "^0.8.0",
-    "yamljs": "^0.3.0"
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@mdx-js/mdx": "^1.6.1",
+    "@mdx-js/react": "^1.6.1",
+    "gatsby": "^2.21.24",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-catch-links": "^2.1.26",
+    "gatsby-plugin-feed": "^2.5.1",
+    "gatsby-plugin-google-analytics": "^2.1.36",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-mdx": "^1.2.6",
+    "gatsby-plugin-offline": "^3.0.35",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sass": "^2.1.29",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-plugin-sitemap": "^2.4.0",
+    "gatsby-plugin-styled-components": "^3.1.19",
+    "gatsby-remark-autolink-headers": "^2.1.24",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-copy-linked-files": "^2.1.40",
+    "gatsby-remark-emoji": "0.0.3",
+    "gatsby-remark-images": "^3.1.44",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-remark": "^2.6.53",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "local-storage-fallback": "^4.1.1",
+    "mdx-utils": "^0.2.0",
+    "medium-zoom": "^1.0.5",
+    "node-sass": "^4.14.1",
+    "parse-numeric-range": "^1.2.0",
+    "prism-react-renderer": "^1.1.0",
+    "prismjs": "^1.19.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-device-detect": "^1.11.14",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-live": "^2.2.2",
+    "react-share": "^4.0.1",
+    "react-switch": "^5.0.1",
+    "styled-components": "^5.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-blog-mdx"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "dev": "gatsby develop",
+    "dev-mobile": "gatsby develop -H 0.0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yjaalto/yjaalto.github.io.git"
+    "url": "https://github.com/EllisMin/gatsby-blog-mdx"
   },
-  "author": "yjaalto",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yjaalto/yjaalto.github.io/issues"
-  },
-  "homepage": "https://github.com/yjaalto/yjaalto.github.io#readme"
+    "url": "https://github.com/EllisMin/gatsby-blog-mdx/issues"
+  }
 }
