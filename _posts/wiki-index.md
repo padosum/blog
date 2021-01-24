@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-01-23 10:42:46 +0900
+updated : 2021-01-23 15:27:43 +0900
 ---
 
 * [[Movies-with-a-computer]] 
@@ -15,6 +15,7 @@ updated : 2021-01-23 10:42:46 +0900
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
 	* [[Fetch]]
+	* [[Gitignore-not-working]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
