@@ -21,6 +21,10 @@ exports.createPages = ({ actions, graphql }) => {
     "src/components/Posts/PostTemplate/index.js"
   )
 
+  const categoryTemplate = path.resolve(
+    "src/components/Posts/CategoryTemplate/index.js"
+  )
+
   return graphql(`
     {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -35,6 +39,8 @@ exports.createPages = ({ actions, graphql }) => {
               date
               excerpt
               draft
+              layout
+              parent
             }
           }
         }
@@ -48,22 +54,42 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Create pages & register paths
     const edges = res.data.allMdx.edges
+    
     edges.forEach((edge, i) => {
       const node = edge.node
 
       const prev = getPrevAvailableNode(edges, i + 1)
       const next = getNextAvailableNode(edges, i - 1)
-
+      const parent = getParentAvailableNode(edges, node.frontmatter.parent)
+      const child = getChildAvailableNode(edges, node.fields.slug.replace(/\//g, '')) 
       if (node.fields.slug !== "/__do-not-remove/") {
-        createPage({
-          path: node.fields.slug,
-          component: postTemplate,
-          context: {
-            slug: node.fields.slug,
-            next,
-            prev,
-          },
-        })
+
+        // if (node.frontmatter.layout === "category") {
+        //   createPage({
+        //     path: node.fields.slug,
+        //     component: categoryTemplate,
+        //     context: {
+        //       slug: node.fields.slug,
+        //       category: node.frontmatter.layout,
+        //       frontmatter: node.frontmatter,
+        //       title: node.frontmatter.title,
+        //       parent: node.frontmatter.parent,
+        //       child,
+        //     },
+        //   })
+        // } else {
+          createPage({
+            path: node.fields.slug,
+            component: postTemplate,
+            context: {
+              slug: node.fields.slug,
+              next,
+              prev,
+              parent,
+              child,
+            },
+          })
+        // }
       }
     })
   })
@@ -94,6 +120,30 @@ const getNextAvailableNode = (edges, index) => {
   return retVal
 }
 
+const getParentAvailableNode = (edges, parent) => {
+  let retVal
+
+  for(let i = 0; i < edges.length - 1; i++) {
+    if(isParent(edges[i].node, parent)) {
+      retVal = edges[i].node 
+      break
+    }
+  }
+  return retVal 
+}
+
+const getChildAvailableNode = (edges, slug) => {
+  let retVal = []
+
+  for(let i =0; i < edges.length - 1; i++) {
+    if(isChild(edges[i].node, slug)) {
+      retVal.push(edges[i].node)
+    }
+  }
+
+  return retVal
+}
+
 // Skip node if it's about, draft, or dummy post
 const skipNode = node => {
   return isAboutPage(node) || isDraft(node) || isDummy(node)
@@ -109,4 +159,12 @@ const isDraft = node => {
 
 const isDummy = node => {
   return node.frontmatter.tags && node.frontmatter.tags.includes("___dummy*")
+}
+
+const isParent = (node, parent) => {
+  return !isDraft(node) && node.fields.slug.replace(/\//g, '') == (parent && parent[0]) 
+}
+
+const isChild = (node, slug) => {
+  return !isDraft(node) && (node.frontmatter.parent && node.frontmatter.parent[0]) === slug
 }

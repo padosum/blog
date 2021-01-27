@@ -4,6 +4,8 @@ excerpt : 개발 환경 설정
 date    : 2020-05-17 19:33:15 +0900
 updated : 2020-05-23 23:35:26 +0900
 tags    : [React]
+parent  : 
+layout  :
 ---
 
 ## 맥 개발 환경 설정

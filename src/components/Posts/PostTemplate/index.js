@@ -184,7 +184,10 @@ class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const isAboutPage = post.fields.slug.includes("/about")
-
+    const parent = this.props.pageContext.parent
+    const child = this.props.pageContext.child 
+    const hasChild = child.length > 0
+    
     // Customize markdown component
     const mdxComponents = {
       "ul.li": ({ children }) => {
@@ -266,14 +269,32 @@ class PostTemplate extends React.Component {
                 >
                   {post.frontmatter.date}
                 </p>
+                
               </div>
               <Hr />
+              {parent && (
+                <p>상위 문서: <a href={parent.fields.slug}>{parent.frontmatter.title}</a></p>
+              )}
             </>
           )}
-          {/* Render mdx */}
-          <MDXProvider components={mdxComponents}>
-            <MDXRenderer>{post.body}</MDXRenderer>
-          </MDXProvider>
+          {!hasChild && (
+            <>
+            {/* Render mdx */}
+            <MDXProvider components={mdxComponents}>
+              <MDXRenderer>{post.body}</MDXRenderer>
+            </MDXProvider>    
+            </>        
+          )}
+          {hasChild && (
+            <ul>
+              {child && child.map((node, i) => {
+                return (
+                    <li key={i}><a href={node.fields.slug}>{ node.frontmatter.title }</a></li>
+                )
+              })
+              }
+            </ul>
+          )}
         </StyledHTML>
 
         {!isAboutPage && (
@@ -308,6 +329,7 @@ class PostTemplate extends React.Component {
 
 export const postQuery = graphql`
   query BlogPostByPath($slug: String!) {
+
     mdx(fields: { slug: { eq: $slug } }) {
       body
       excerpt
@@ -318,6 +340,7 @@ export const postQuery = graphql`
         title
         date(formatString: "YYYY.MM.DD")
         tags
+        layout
       }
     }
   }

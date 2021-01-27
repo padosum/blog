@@ -4,6 +4,8 @@ excerpt :
 date    : 2020-06-03 00:18:47 +0900
 updated : 2020-06-03 00:19:15 +0900
 tags    : [Javascript]
+parent  : 
+layout  :
 ---
 
 - 내부함수가 외부함수의 맥락(context)에 접근할 수 있는 것 

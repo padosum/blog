@@ -4,6 +4,8 @@ excerpt :
 date    : 2020-12-07 20:09:09 +0900
 updated : 2020-12-07 20:10:30 +0900
 tags    : [Tools]
+parent  : 
+layout  :
 ---
 
 ![tauche-t](/images/tauche-t01.png)  

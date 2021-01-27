@@ -4,6 +4,8 @@ date    : 2021-01-23 14:28:19 +0900
 updated : 2021-01-23 14:30:12 +0900
 tags    : [Git]
 excerpt : 
+parent  : 
+layout  :
 ---
 
 ```bash 

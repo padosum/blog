@@ -4,6 +4,8 @@ excerpt :
 date    : 2020-05-23 13:56:01 +0900
 updated : 2020-05-23 13:57:42 +0900
 tags    : [React]
+parent  : 
+layout  :
 ---
 
 ![react-native-folder](/images/react-native-folder.png)

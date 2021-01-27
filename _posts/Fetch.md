@@ -4,6 +4,8 @@ excerpt :
 date    : 2020-03-02 21:57:07 +0900
 updated : 2020-03-03 22:14:55 +0900
 tags    : [Git]
+parent  : 
+layout  : 
 ---
 
 ## 정의?  

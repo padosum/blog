@@ -4,6 +4,8 @@ excerpt :
 date    : 2020-06-21 09:19:17 +0900
 updated : 2021-01-23 15:45:16 +0900
 tags    : [Book]
+parent  : 
+layout  : category
 ---
 
 

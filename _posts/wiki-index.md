@@ -2,6 +2,8 @@
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
 updated : 2021-01-23 15:27:43 +0900
+parent  : [test]
+layout  :
 ---
 
 * [[Movies-with-a-computer]] 
