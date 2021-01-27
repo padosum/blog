@@ -180,7 +180,7 @@ cd 프로젝트명
 react-native run-ios 
 ```  
 
-![ios-simulator](/images/react-native-tutorial1.png){: .center-image width="50%"}
+![ios-simulator](/images/react-native-tutorial1.png)
 - 안드로이드로 실행하기 
 ``` zsh
 react-native run-android 
