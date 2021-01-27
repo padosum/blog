@@ -182,7 +182,7 @@ class PostTemplate extends React.Component {
   }
 
   render() {
-    const post = this.props.data.mdx
+    const post = this.props.data.post
     const isAboutPage = post.fields.slug.includes("/about")
     const parent = this.props.pageContext.parent
     const child = this.props.pageContext.child 
@@ -219,7 +219,7 @@ class PostTemplate extends React.Component {
     }
 
     return (
-      <Layout showTitle={true} isPostTemplate>
+      <Layout showTitle={true} isPostTemplate postList={this.props.data.allPost.edges}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div
           className="switch-container"
@@ -330,7 +330,7 @@ class PostTemplate extends React.Component {
 export const postQuery = graphql`
   query BlogPostByPath($slug: String!) {
 
-    mdx(fields: { slug: { eq: $slug } }) {
+    post: mdx(fields: { slug: { eq: $slug } }) {
       body
       excerpt
       fields {
@@ -341,6 +341,18 @@ export const postQuery = graphql`
         date(formatString: "YYYY.MM.DD")
         tags
         layout
+      }
+    }
+
+    allPost: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+        }
       }
     }
   }

@@ -18,7 +18,13 @@ import ProgressBar from "./ProgressBar"
 import config from "../../../customize"
 import configStyles from "../../../customize-styles"
 
-const Header = ({ siteTitle, showTitle, isPostTemplate }) => {
+const Header = ({ siteTitle, showTitle, isPostTemplate, postList }) => {
+
+  const handleClick = () => {
+    const random = Math.floor((Math.random() * postList.length));
+    const url = `..${postList[random].node.fields.slug}`;
+    window.location.replace(url)
+  }
   return (
     <StyledMainHeader className="main-header">
       {/* Google AdSense */}
@@ -36,7 +42,9 @@ const Header = ({ siteTitle, showTitle, isPostTemplate }) => {
         <h1 style={{ fontSize: "1.5rem" }}>
           {showTitle && <Link to="/">{`${siteTitle}`}</Link>}
         </h1>
+        
         <StyledMediaIcons>
+        <a href="#" style={{ textAlign: "right"}} onClick={handleClick} >Random</a>
           <HeaderIcon
             accountInfo={config.socialMediaLinks.email}
             mediaName={"email"}
@@ -101,6 +109,7 @@ Header.defaultProps = {
 
 export default withTheme(Header)
 
+
 const StyledMainHeader = styled.header`
   font-family: ${configStyles.fontMain + configStyles.fontsBackUp};
   height: 55px;
@@ -125,7 +134,7 @@ const StyledMediaIcons = styled.div`
   display: flex;
   justify-content: flex-end;
   * {
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 400px) {

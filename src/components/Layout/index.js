@@ -13,7 +13,7 @@ import ScrollTopButton from "../ScrollTopButton"
 
 config.autoAddCss = false
 
-const Layout = ({ children, showTitle, isPostTemplate }) => {
+const Layout = ({ children, showTitle, isPostTemplate, postList }) => {
   const setTheme = UseTheme()
 
   const data = useStaticQuery(graphql`
@@ -34,6 +34,7 @@ const Layout = ({ children, showTitle, isPostTemplate }) => {
         siteTitle={data.site.siteMetadata.title}
         showTitle={showTitle}
         isPostTemplate={isPostTemplate}
+        postList={postList}
       />
       <StyledMain>{children}</StyledMain>
       <Footer />

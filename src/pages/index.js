@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout postList={posts}>
       <SEO title="Home" />
       <MainCard posts={posts} loads={loaded} />
     </Layout>
