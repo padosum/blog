@@ -180,13 +180,13 @@ cd 프로젝트명
 react-native run-ios 
 ```  
 
-![ios-simulator](/images/react-native-tutorial1.png)
+![ios-simulator](https://user-images.githubusercontent.com/6129764/106074130-a9db5880-614e-11eb-9118-036b0d348c78.png)
 - 안드로이드로 실행하기 
 ``` zsh
 react-native run-android 
 ```  
 
-![android-simulator](/images/react-native-tutorial2.png)
+![android-simulator](https://user-images.githubusercontent.com/6129764/106074139-ab0c8580-614e-11eb-82be-2efa03803dbb.png)
 
 
 오랜만에 학교에서 방학때 특강들으면서 안드로이드 앱 만들었던 추억이 새록새록 떠올랐다. 지금 맥북에서 비행기 이륙소리가 들리긴 하지만...열심히 해서 원하는 것을 만들어 보겠다!! 😈
