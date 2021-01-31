@@ -1,8 +1,8 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-01-23 15:27:43 +0900
-parent  : [test]
+updated : 2021-01-31 19:45:00 +0900
+parent  : 
 layout  :
 ---
 

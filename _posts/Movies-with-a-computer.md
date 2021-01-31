@@ -2,7 +2,7 @@
 title   : 🎥 컴퓨터가 등장하는 영화
 excerpt : 
 date    : 2020-01-27 16:47:14 +0900
-updated : 2020-12-07 20:49:11 +0900
+updated : 2021-01-31 19:44:32 +0900
 tags    : 
 parent  : 
 layout  :
@@ -63,7 +63,9 @@ layout  :
 ## 애니메이션 
 * [ ] 접속! 트윕시(Twipsy)
 
-
+## 다큐멘터리  
+* [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)  
+      
 ## 참고자료
 - [https://en.wikipedia.org/wiki/List_of_films_about_computers](https://en.wikipedia.org/wiki/List_of_films_about_computers)
 
