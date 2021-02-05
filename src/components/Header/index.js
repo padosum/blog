@@ -21,8 +21,14 @@ import configStyles from "../../../customize-styles"
 const Header = ({ siteTitle, showTitle, isPostTemplate, postList }) => {
 
   const handleClick = () => {
-    const random = Math.floor((Math.random() * postList.length));
-    const url = `..${postList[random].node.fields.slug}`;
+
+    let filteredPosts = postList.filter(
+      post =>
+        post.node.fields.slug !== "/about/" &&
+        post.node.fields.slug !== "/__do-not-remove/"
+    )
+    const random = Math.floor((Math.random() * filteredPosts.length));
+    const url = `..${filteredPosts[random].node.fields.slug}`;
     window.location.replace(url)
   }
   return (
@@ -44,7 +50,15 @@ const Header = ({ siteTitle, showTitle, isPostTemplate, postList }) => {
         </h1>
         
         <StyledMediaIcons>
-        <a href="#" style={{ textAlign: "right"}} onClick={handleClick} >Random</a>
+          <div className="box">
+            <form role="search" method="get" action="/search/">
+              <StyledSearchContainer>
+                  <input type="text" name="searchString" id="search" placeholder="Search..."></input>
+                  <button type="submit">Search</button>
+              </StyledSearchContainer>
+            </form>
+          </div>
+          <a href="#" style={{ textAlign: "right"}} onClick={handleClick} >Random</a>
           <HeaderIcon
             accountInfo={config.socialMediaLinks.email}
             mediaName={"email"}
@@ -141,5 +155,38 @@ const StyledMediaIcons = styled.div`
     * {
       margin: 0 0.15rem;
     }
+  }
+`
+
+const StyledSearchContainer = styled.div`
+  margin-right: 10px;
+  
+  input#search {
+    border: 1px solid grey;
+    float: left;
+    width: 78%;
+    padding: 1px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  button {
+    float: left;
+    width: 22%;
+    padding: 1px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  ::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 `
