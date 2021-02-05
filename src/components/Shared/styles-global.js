@@ -409,4 +409,17 @@ export const GlobalStyles = createGlobalStyle`
   th {
     vertical-align: middle;
   }
+
+  .box {
+    input {
+      background: ${() =>
+        setThemeVars(theme.bgColorLight, theme.bgColorDark)};
+
+    }
+    button {
+      background: ${() =>
+        setThemeVars(theme.bgSubColorLight, theme.bgSubColorDark)};
+      color: ${() => setThemeVars("#888", "#c9c9c9")}
+    }
+  }
 `

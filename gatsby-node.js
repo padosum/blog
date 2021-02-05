@@ -21,8 +21,8 @@ exports.createPages = ({ actions, graphql }) => {
     "src/components/Posts/PostTemplate/index.js"
   )
 
-  const categoryTemplate = path.resolve(
-    "src/components/Posts/CategoryTemplate/index.js"
+  const searchTemplate = path.resolve(
+    "src/components/Posts/PostTemplate/index.js"
   )
 
   return graphql(`
@@ -64,20 +64,20 @@ exports.createPages = ({ actions, graphql }) => {
       const child = getChildAvailableNode(edges, node.fields.slug.replace(/\//g, '')) 
       if (node.fields.slug !== "/__do-not-remove/") {
 
-        // if (node.frontmatter.layout === "category") {
-        //   createPage({
-        //     path: node.fields.slug,
-        //     component: categoryTemplate,
-        //     context: {
-        //       slug: node.fields.slug,
-        //       category: node.frontmatter.layout,
-        //       frontmatter: node.frontmatter,
-        //       title: node.frontmatter.title,
-        //       parent: node.frontmatter.parent,
-        //       child,
-        //     },
-        //   })
-        // } else {
+        if (node.fields.slug === "/search/") {
+          // createPage({
+          //   path: node.fields.slug,
+          //   component: searchTemplate,
+          //   context: {
+          //     slug: node.fields.slug,
+          //     category: node.frontmatter.layout,
+          //     frontmatter: node.frontmatter,
+          //     title: node.frontmatter.title,
+          //     parent: node.frontmatter.parent,
+          //     child,
+          //   },
+          // })
+        } else {
           createPage({
             path: node.fields.slug,
             component: postTemplate,
@@ -89,7 +89,7 @@ exports.createPages = ({ actions, graphql }) => {
               child,
             },
           })
-        // }
+        }
       }
     })
   })
