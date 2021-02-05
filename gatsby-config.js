@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-remark-emoji`, // Emoji list: https://emojipedia.org/joypixels/
+    `gatsby-plugin-sitemap`,
     rss,
 
     // Read markdown/mdx files
@@ -140,6 +141,14 @@ module.exports = {
         name: `dummy`,
         path: `${__dirname}/src/z_`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'your blog url',
+        sitemap: 'padosum.dev/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
     },
   ],
 }
