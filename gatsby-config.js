@@ -146,7 +146,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'your blog url',
-        sitemap: 'padosum.dev/sitemap.xml',
+        sitemap: 'https://padosum.dev/sitemap.xml',
         policy: [{userAgent: '*', allow: '/'}]
       }
     },

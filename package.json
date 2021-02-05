@@ -6,6 +6,7 @@
   "description": "A simple starter for blog posts built with Gatsby js",
   "version": "0.1.0",
   "dependencies": {
+    "@babel/plugin-transform-spread": "7.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
@@ -81,5 +82,8 @@
   },
   "bugs": {
     "url": "https://github.com/EllisMin/gatsby-blog-mdx/issues"
+  },
+  "resolutions": {
+    "@babel/plugin-transform-spread": "7.12.1"
   }
 }
