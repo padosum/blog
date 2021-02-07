@@ -50,7 +50,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <Layout showTitle={true} isPostTemplate>
+      <Layout showTitle={true} isPostTemplate postList={this.props.data.allPost.edges}>
         <SEO title="Search Result" description="Search Result" />
         <div
           className="switch-container"
@@ -64,5 +64,19 @@ class Search extends React.Component {
   }
 }
 
-
+export const postQuery = graphql`
+  query BlogPosts {
+    allPost: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
 export default Search
