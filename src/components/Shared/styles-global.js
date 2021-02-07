@@ -422,4 +422,8 @@ export const GlobalStyles = createGlobalStyle`
       color: ${() => setThemeVars("#888", "#c9c9c9")}
     }
   }
+
+  .gsc-control-cse td {
+    border-bottom: 0;
+  }
 `

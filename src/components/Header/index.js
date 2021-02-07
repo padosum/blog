@@ -58,7 +58,7 @@ const Header = ({ siteTitle, showTitle, isPostTemplate, postList }) => {
               </StyledSearchContainer>
             </form>
           </div>
-          <a href="#" style={{ textAlign: "right"}} onClick={handleClick} >Random</a>
+          <a href="#" style={{ fontSize: "0.9rem"}} onClick={handleClick} >Random</a>
           <HeaderIcon
             accountInfo={config.socialMediaLinks.email}
             mediaName={"email"}
@@ -159,12 +159,13 @@ const StyledMediaIcons = styled.div`
 `
 
 const StyledSearchContainer = styled.div`
-  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 5px;
   
   input#search {
-    border: 1px solid grey;
-    float: left;
-    width: 78%;
+    flex: 1;
+    border: 1px solid #ccc;
     padding: 1px;
     cursor: pointer;
     font-size: 0.9rem;
@@ -173,20 +174,12 @@ const StyledSearchContainer = styled.div`
   }
 
   button {
-    float: left;
-    width: 22%;
     padding: 1px;
-    border: 1px solid grey;
+    border: 1px solid #ccc;
     border-left: none; /* Prevent double borders */
     cursor: pointer;
     font-size: 0.9rem;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-  }
-
-  ::after {
-    content: "";
-    clear: both;
-    display: table;
   }
 `
