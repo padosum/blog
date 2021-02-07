@@ -9,12 +9,12 @@ layout  :
 ---
 
 > 그냥 생각나서 정리해본다. 내가 본 것은 ✅  
-가나다순, 내기준 컴퓨터를 다루는 장면이 중요하거 컴퓨터 속 세상(가상현실?)이 등장하는 경우... 
+가나다순, 내기준 컴퓨터를 다루는 장면이 중요하고 컴퓨터 속 세상(가상현실?)이 등장하는 경우... 
 
 ## 영화
 * [ ] 2001: 스페이스 오디세이(2001: A Sapce Odyseey, 1968)
 * [ ] 가타카(Gattaca, 1997)
- [X] 그녀(Her, 2013)
+* [X] 그녀(Her, 2013)
 * [ ] 네트(The Net, 1995) 
 * [ ] 다이하드4.0(Live Free or Die Hard, 2007)
 * [ ] 디스커넥트(Disconnect, 2012)
@@ -64,7 +64,8 @@ layout  :
 * [ ] 접속! 트윕시(Twipsy)
 
 ## 다큐멘터리  
-* [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)  
+* [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)    
+  * 영화 서치랑 엄~~청 비슷한 화면이었다.  
       
 ## 참고자료
 - [https://en.wikipedia.org/wiki/List_of_films_about_computers](https://en.wikipedia.org/wiki/List_of_films_about_computers)
