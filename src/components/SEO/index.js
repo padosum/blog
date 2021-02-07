@@ -69,6 +69,9 @@ function SEO({ description, lang, meta, title }) {
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Oxanium&display=swap"
           rel="stylesheet"
         />
+        {/* LexiSaebomR */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tshahn/wf-LexiSaebomR@latest/lexisaebomr.css"
+        />
 
         {/* Facebook comments moderation */}
         <meta property="fb:app_id" content={process.env.FB_APP_ID} />

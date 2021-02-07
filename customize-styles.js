@@ -11,7 +11,7 @@ const styleConfig = {
   fontCodeBlocks: `Menlo, Monaco, monospace`, // Font for code blocks
 
   // These fonts will be used if above fonts are unavailable
-  fontsBackUp: `, sans-serif, -apple-system, BlinkMacSystemFont,
+  fontsBackUp: `, 'LexiSaebomR', sans-serif, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue'`,
 
   /* Colors for each Light / Dark Theme
