@@ -1,7 +1,7 @@
 ---
 title   : Gatsby에 Google Custom Search 적용하기   
 date    : 2021-02-07 17:04:55 +0900
-updated : 2021-02-07 17:29:27 +0900
+updated : 2021-02-07 18:15:28 +0900
 tags    : [React]
 excerpt : Gatsby에 Google Custom Search를 이용해 검색기능 추가하기  
 parent : 
@@ -62,5 +62,5 @@ layout :
 - [https://developers.google.com/custom-search/docs/element](https://developers.google.com/custom-search/docs/element)  
   
 ## 배운점   
-- 오래 걸렸는데 내가 React에 대해 기본이 탄탄하면 더 쉽게 끝났을 것 같다고 느꼈다.    
+- 오래 걸렸는데 내가 React에 대해 기본이 탄탄하면 더 쉽게 끝났을 것 같다고 느꼈다. 😵    
 - 공식문서를 잘~ 읽는 것이 개발에 매우 도움이 된다.  
