@@ -53,7 +53,7 @@ const Header = ({ siteTitle, showTitle, isPostTemplate, postList }) => {
           <div className="box">
             <form role="search" method="get" action="/search/">
               <StyledSearchContainer>
-                  <input type="text" name="searchString" id="search" placeholder="Search..."></input>
+                  <input type="text" name="searchString" id="search" placeholder="검색하기..."></input>
                   <button type="submit">Search</button>
               </StyledSearchContainer>
             </form>
@@ -160,17 +160,17 @@ const StyledMediaIcons = styled.div`
 
 const StyledSearchContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   margin-right: 5px;
+  flex-wrap: wrap;
   
   input#search {
     flex: 1;
     border: 1px solid #ccc;
     padding: 1px;
-    cursor: pointer;
+    margin: 0;
     font-size: 0.9rem;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px 0 0 5px;
+    -webkit-appearance: textfield;
   }
 
   button {
@@ -179,7 +179,7 @@ const StyledSearchContainer = styled.div`
     border-left: none; /* Prevent double borders */
     cursor: pointer;
     font-size: 0.9rem;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
   }
 `
