@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-01-31 19:45:00 +0900
+updated : 2021-02-07 17:29:27 +0900
 parent  : 
 layout  :
 ---
@@ -32,5 +32,7 @@ layout  :
 * Tools
 	* [The-Shell](/The-Shell)
 	* [Tauch-t](/Tauch-t)
+* Blog
+	* [Enable-google-custom-engine-in-Gatsby](/Enable-google-custom-engine-in-Gatsby)
 ---
 
