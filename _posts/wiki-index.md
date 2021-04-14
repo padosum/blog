@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-03-18 17:12:38 +0900
+updated : 2021-04-14 20:21:27 +0900
 parent  : 
 layout  :
 ---
@@ -36,5 +36,9 @@ layout  :
 	* [Graph-Online](/Graph-Online)
 * Blog
 	* [Enable-google-custom-engine-in-Gatsby](/Enable-google-custom-engine-in-Gatsby)
+* TIL
+	* [Today-I-Learned](/Today-I-Learned)
+	* [2021-04](/2021-04)
+		* [2021-04-14](/2021-04-14)
 ---
 
