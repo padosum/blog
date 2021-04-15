@@ -4,7 +4,7 @@ excerpt :
 date    : 2020-08-15 15:59:28 +0900
 updated : 2020-08-15 15:59:28 +0900
 tags    : [Book]
-parent  : [Book-list]
+parent  : [Book-list](/Book-list)
 layout  : 
 ---
 
