@@ -4,6 +4,7 @@ module.exports = {
     description: "blog & wiki",
     author: "padosum",
     twitter: '',
+    siteUrl: `https://padosum.dev/`, // For sitemap & RSS feed
   },
   plugins: [
     "gatsby-plugin-image",
