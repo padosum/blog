@@ -1,6 +1,7 @@
 {
   "name": "blog",
   "version": "1.0.0",
+  "main": "index.js",
   "private": true,
   "description": "blog",
   "author": "padosum",
