@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-04-20 00:19:17 +0900
+updated : 2021-04-21 12:25:46 +0900
 parent  : 
 layout  :
 ---
@@ -28,8 +28,11 @@ layout  :
 	* [[React-Native-tutorial]]
 	* [[React-Native-tutorial-2]]
 	* [[React-Native-folder-and-file-structure]]
-* Computer Science
+* Programming 
 	* [[REST-API]]
+	* [[SPA]]
+* Computer Science
+	* [[Architecture]]
 * Java
 	* [[Servlet-Database]] 
 * Tools
@@ -40,13 +43,6 @@ layout  :
 	* [[Enable-google-custom-engine-in-Gatsby]]
 * TIL
 	* [[Today-I-Learned]]
-	* [[2021-04]]
-		* [[2021-04-14]]
-		* [[2021-04-15]]
-		* [[2021-04-16]]
-		* [[2021-04-17]]
-		* [[2021-04-19]]
-		* [[2021-04-20]]
 * ETC
 	* [[AB-Testing]]
 ---
