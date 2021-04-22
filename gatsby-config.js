@@ -7,6 +7,13 @@ module.exports = {
     siteUrl: `https://padosum.dev/`, // For sitemap & RSS feed
   },
   plugins: [
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-156992915-1",
+      }
+    },
     {
       resolve: `gatsby-theme-garden`,
       options: {
@@ -15,5 +22,18 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Noto Serif KR`],
+        display: "swap"
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
+    }
   ],
 }

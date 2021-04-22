@@ -1,0 +1,110 @@
+body {
+    background-color: var(--main-bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+    margin: 0;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+hr {
+    border: 0 solid var(--separator);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top-width: 1px;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.875rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    border-left: 0.25em solid #dfe2e5;
+    color: var(--blockquote-text);
+    padding: 0 1em;
+}
+
+blockquote p {
+    margin: 1em 0em;
+}
+
+.layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-columns-scrolling-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-grow: 1;
+}
+
+.note-columns-container {
+    display: flex;
+    flex-grow: 1;
+    transition: width 100ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 800px) {
+    .note-columns-container {
+        width: unset !important;
+    }
+}
