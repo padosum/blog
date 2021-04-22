@@ -1,7 +1,6 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "main": "index.js",
   "private": true,
   "description": "blog",
   "author": "padosum",
@@ -16,22 +15,20 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "gatsby": "^3.2.1",
-    "gatsby-plugin-google-analytics": "^3.3.0",
-    "gatsby-plugin-image": "^1.3.0",
-    "gatsby-plugin-mdx": "^2.3.0",
-    "gatsby-plugin-react-helmet": "^4.3.0",
-    "gatsby-plugin-sharp": "^3.3.0",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "babel-preset-gatsby": "^1.3.0",
+    "gatsby": "^2.21.22",
+    "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-sitemap": "^3.3.0",
-    "gatsby-remark-images": "^5.0.0",
-    "gatsby-source-filesystem": "^3.3.0",
-    "gatsby-theme-networked-thought": "^0.4.2",
-    "gatsby-transformer-remark": "^4.0.0",
-    "gatsby-transformer-sharp": "^3.3.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "gatsby-theme-garden": "^0.1.58",
+    "prism-react-renderer": "^1.2.0",
+    "prismjs": "^1.23.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "@babel/plugin-proposal-export-default-from": "^7.12.13",
+    "@babel/plugin-syntax-export-default-from": "^7.12.13"
   }
 }

@@ -3,6 +3,6 @@
 
 ## 🌱 Based on
 - [Gatsby](https://www.gatsbyjs.com/)
-  - [gatsby-theme-networked-thought](https://github.com/ekampf/gatsby-theme-networked-thought)
+  - [gatsby-digital-garden](https://github.com/mathieudutour/gatsby-digital-garden)
 - [Vimwiki+Jekyll+Github.io로 나만의 위키를 만들자](https://johngrib.github.io/wiki/my-wiki/)
 - [OBSIDIAN](https://obsidian.md/)
