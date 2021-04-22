@@ -13,7 +13,7 @@ layout :
    
 ## 검색엔진 만들기    
 [https://programmablesearchengine.google.com/cse/create/new](https://programmablesearchengine.google.com/cse/create/new)    
-![gcse1](../_posts/images/Enable-google-custom-engine-in-Gatsby/107140745-8d69c800-6967-11eb-8c23-64f415033547.png)
+![gcse1](/images/Enable-google-custom-engine-in-Gatsby/107140745-8d69c800-6967-11eb-8c23-64f415033547.png)
  
  - 링크에 접속해 새 검색엔진 > 검색할 사이트, 언어, 검색 엔진 이름을 입력 후 [만들기]  
      
@@ -43,7 +43,7 @@ layout :
 ```  
 
 - `cx`는 검색엔진 수정 > 설정 > 기본사항에서 확인할 수 있다.   
-![gcse2](../_posts/images/Enable-google-custom-engine-in-Gatsby/107141353-89d84000-696b-11eb-94ba-6dc46b0bea91.png)  
+![gcse2](/images/Enable-google-custom-engine-in-Gatsby/107141353-89d84000-696b-11eb-94ba-6dc46b0bea91.png)  
   
   
   

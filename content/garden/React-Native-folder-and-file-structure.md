@@ -8,7 +8,7 @@ parent  :
 layout  :
 ---
   
-![react-native-folder](react-native-folder.png) 
+![react-native-folder](/images/react-native-folder.png) 
 
 - index.js  
 리액트 네이티브 프로젝트의 시작 파일. 이 파일을 시작으로 리액트 네이티브의 자바스크립트 코드가 번들링(Bundling)[^1]된다. 
