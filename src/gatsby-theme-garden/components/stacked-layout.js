@@ -16,7 +16,10 @@ import "gatsby-theme-garden/src/components/stacked-layout.css";
 import "gatsby-theme-garden/src/components/custom.css";
 
 const Content = ({ windowWidth, scrollContainer, stackedPages, index }) => {
-  const theme = localStorage.getItem('darkMode') == "true" ? 'github-dark' : 'github-light';
+  let theme = 'github-light';
+  if (typeof window !== 'undefined') {
+    theme = localStorage.getItem('darkMode') == "true" ? 'github-dark' : 'github-light';
+  }
 
   return (
     <div className="layout">
