@@ -12,7 +12,7 @@ import SEO from "gatsby-theme-garden/src/components/seo";
 import Utterances from "./Utterances"
 
 import "gatsby-theme-garden/src/components/theme.css";
-import "gatsby-theme-garden/src/components/stacked-layout.css";
+import "./stacked-layout.css";
 import "gatsby-theme-garden/src/components/custom.css";
 
 const Content = ({ windowWidth, scrollContainer, stackedPages, index }) => {

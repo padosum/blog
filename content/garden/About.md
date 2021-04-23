@@ -8,3 +8,4 @@ Learn, Enjoy, Solve, Share
 📝 [[매일 공부한 것을 기록]]하고 있습니다.  
 - 🗂 [[wiki-index]]
 - 📚 [[Book-list]]
+- [github](https://github.com/padosum)
