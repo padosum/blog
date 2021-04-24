@@ -22,10 +22,14 @@ h1 {
 }
 
 h2 {
-    @apply text-xl font-bold;
+    @apply text-2xl font-bold;
 }
 
 h3 {
+    @apply text-xl font-bold;
+}
+
+h4 {
     @apply font-bold;
 }
 
@@ -113,6 +117,16 @@ code {
 
 @tailwind components;
 @tailwind utilities;
+
+.highlight {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+}
 
 @media screen and (max-width: 800px) {
     .note-columns-container {

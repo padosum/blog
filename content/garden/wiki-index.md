@@ -1,13 +1,15 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-04-23 21:51:44 +0900
+updated : 2021-04-24 17:22:37 +0900
 parent  : 
 layout  :
 ---
 
 * [[Movies-with-a-computer]] 
 * [[Book-list]]
+* [[Algorithm]]
+	* [[Solve-Algorithms]]
 * JavaScript
 	* [[JavaScript-regular-expression]]
 	* [[JavaScript-Scope]]
@@ -15,6 +17,7 @@ layout  :
 	* [[JavaScript-closure]]
 	* [[JavaScript-Module]]
 	* [[Module-Bundler]]
+	* [[JavaScript-Spread-syntax]]
 
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
