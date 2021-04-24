@@ -20,6 +20,8 @@
     "gatsby": "^2.21.22",
     "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-postcss": "^2.2.4",
+    "gatsby-plugin-robots-txt": "^1.5.6",
     "gatsby-plugin-sass": "^4.3.0",
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-theme-garden": "^0.1.58",
@@ -27,8 +29,7 @@
     "prism-react-renderer": "^1.2.0",
     "prismjs": "^1.23.0",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "gatsby-plugin-postcss": "^2.2.4"
+    "react-dom": "^16.3.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.13.5",

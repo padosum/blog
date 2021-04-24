@@ -34,6 +34,14 @@ module.exports = {
       options: {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://padosum.dev',
+        sitemap: 'https://padosum.dev/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
     }
   ],
 }
