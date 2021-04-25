@@ -2,7 +2,7 @@
 title   : 전개 구문 
 date    : 2021-04-24 09:41:56 +0900
 updated : 2021-04-24 09:42:47 +0900
-aliases : 
+aliases : ["전개 구문"]
 private : false
 hidden  : false
 showReferences : true
