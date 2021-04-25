@@ -1,12 +1,5 @@
-
 /* purgecss start ignore */
 @tailwind base;
-
-/*********** TYPOGRAPHY **************/
-html {
-    font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    line-height: 1.5;
-}
 
 body {
     background-color: var(--main-bg);

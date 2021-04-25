@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Noto Serif KR`],
+        fonts: [`Noto Sans KR`],
         display: "swap"
       }
     },

@@ -1,7 +1,7 @@
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import Prism from "prism-react-renderer/prism"
-import github from "prism-react-renderer/themes/dracula"
+import theme from "prism-react-renderer/themes/oceanicNext"
 
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 
@@ -14,7 +14,7 @@ export default ({ children, className }) => {
     <Highlight
       {...defaultProps}
       code={children}
-      theme={github}
+      theme={theme}
       language={language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
