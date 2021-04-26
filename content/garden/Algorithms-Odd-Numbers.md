@@ -32,4 +32,3 @@ let arr = [12, 77, 38, 41, 53, 92, 85]
 console.log(solution(arr));
 ```
 - `Number.MAX_SAFE_INTEGER`는 JavaScript에서 안전한 최대 정수값 
-- 
