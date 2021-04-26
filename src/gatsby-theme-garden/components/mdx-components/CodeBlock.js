@@ -18,7 +18,7 @@ export default ({ children, className }) => {
       language={language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: "10px", borderRadius: "5px" }}>
+        <pre className={className} style={{ ...style, padding: "1.25rem 1.5rem", borderRadius: "5px" }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

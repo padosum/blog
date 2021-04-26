@@ -89,6 +89,11 @@ code {
     margin-right: 0.125rem;
 }
 
+pre {
+  @apply mb-4 p-2;
+  overflow-x: auto;
+}
+
 .layout {
     height: 100vh;
     display: flex;
