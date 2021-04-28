@@ -90,7 +90,7 @@ code {
 }
 
 pre {
-  @apply mb-4 p-2;
+  @apply p-2;
   overflow-x: auto;
 }
 

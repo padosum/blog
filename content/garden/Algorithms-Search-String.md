@@ -1,7 +1,7 @@
 ---
 title   : 문자열 탐색 문제ㅎ
 date    : 2021-04-27 17:05:50 +0900
-updated : 2021-04-27 17:06:21 +0900
+updated : 2021-04-28 09:51:22 +0900
 aliases : 
 private : false
 hidden  : false
@@ -103,4 +103,28 @@ function solution(str, target) {
 }
 
 console.log(solution('teachermode', 'e'));
+```
+
+## 문제 5
+- 대문자로 된 문자열을 입력받고 같은 문자가 연속으로 반복되는 경우 반복되는 문자 바로 오른쪽에 반복횟수를 표기해서 출력 반복횟수가 1인 경우 생략
+
+## 풀이 5
+```javascript
+function solution(str) {
+    let answer = '';
+    let prev = ''; 
+    let cnt = 1; 
+    for(let x of str) {
+        if (x === prev) {
+            cnt++; 
+        } else {
+            answer += (cnt !== 1 ? (cnt + x) : x); 
+            cnt = 1;
+        }
+        prev = x; 
+    }
+
+    return answer;
+}
+console.log(solution('KKHSSSSSSSE')); // 'K2HS7E'
 ```

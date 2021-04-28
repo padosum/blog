@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-04-26 14:03:20 +0900
+updated : 2021-04-28 11:22:24 +0900
 parent  : 
 layout  :
 ---
@@ -10,7 +10,9 @@ layout  :
 * [[Book-list]]
 * [[Algorithm]]
 	* [[Solve-Algorithms]]
+	* [[Brute-Force-Search-Algorithm]]
 * JavaScript
+	* [[JavaScript-Variables]]
 	* [[JavaScript-regular-expression]]
 	* [[JavaScript-Scope]]
 	* [[JavaScript-Destructuring-assignment]]

@@ -9,7 +9,7 @@ require("prismjs/components/prism-java")
 
 export default ({ children, className }) => {
   const language = className ? className.replace(/language-/, "") : ''
-
+  // console.log(tokens[tokens.length-1][0].content.match(/[\n]/g).length)
   return (
     <Highlight
       {...defaultProps}
@@ -17,15 +17,16 @@ export default ({ children, className }) => {
       theme={theme}
       language={language}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      {({ className, style, tokens, getLineProps, getTokenProps }) =>  (
         <pre className={className} style={{ ...style, padding: "1.25rem 1.5rem", borderRadius: "5px" }}>
-          {tokens.map((line, i) => (
+          {tokens.map((line, i) => (i !== tokens.length - 1) ? (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
                 <span key={key} {...getTokenProps({ token, key })} />
               ))}
             </div>
-          ))}
+          ): ''
+          )}
         </pre>
       )}
     </Highlight>

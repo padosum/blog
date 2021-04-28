@@ -1,7 +1,7 @@
 ---
 title   : 알고리즘 문제
 date    : 2021-04-24 17:22:01 +0900
-updated : 2021-04-27 21:58:59 +0900
+updated : 2021-04-28 10:03:57 +0900
 aliases : ["알고리즘 문제"]
 private : false
 hidden  : false
@@ -20,6 +20,7 @@ showReferences : true
 - [x] [[Algorithms-Duplicate]]
 - [x] [[Algorithms-Search-Array]]
 - [x] [[Algorithms-Search-String]]
-
+- [ ] [[Algorithms-Brute-Force-Search]]
+- [ ] 
 ## 프로그래머스
 - [x] [[2019-kakao-developer-winter-internship]]
