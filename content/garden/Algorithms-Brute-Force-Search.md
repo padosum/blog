@@ -1,7 +1,7 @@
 ---
 title   : 완전 탐색 (Brute-Force Search) 문제 
 date    : 2021-04-28 10:03:10 +0900
-updated : 2021-04-28 17:15:13 +0900
+updated : 2021-04-29 21:09:57 +0900
 aliases : 
 private : false
 hidden  : false
@@ -71,6 +71,88 @@ console.log(solution(numbers));
 ```
 
 ## 문제 3
-
+- 멘토링 짝 만들기 문제  
+- N명의 학생이 총 M번의 수학 테스트를 했을 때 한 학생이 M번의 수학 테스트에서 모두 등수가 앞서야 멘토, 멘티가 성립  
 
 ## 풀이 3 
+```javascript
+function solution(test) {
+    let answer = 0;
+    let n = test.length; 
+    let m = test[0].length;
+
+    for(let i = 1; i <= m; i++) {
+        for(let j = 1; j <= m; j++) {
+            let cnt = 0;
+
+            for(let k = 0; k < n; k++) {
+                let pi = 0; 
+                let pj = 0; 
+                for(let s = 0; s < m; s++) {
+                    if(test[k][s] === i) {
+                        pi = s;
+                    }
+                    if(test[k][s] === j) {
+                        pj = s;
+                    }
+                }
+                if(pi < pj) {
+                    cnt++; 
+                }
+
+                if(cnt === n) {
+                    answer++;
+                }
+            }
+
+        }
+    }
+
+    return answer;
+}
+
+let test = [
+    [3, 4, 1, 2],
+    [4, 3, 2, 1],
+    [3, 1, 4, 2]
+]
+console.log(solution(test));
+```
+- 최대한 이해하려고 노력했다. 대충 이해는 되는데... 이틀 뒤에 다시봐야겠다.  
+
+## 문제 4 
+- 상품
+
+## 풀이 4 
+- 총 비용으로 정렬하기  
+```javascript
+function solution(order, budget) {
+    let answer = 0;
+    order.sort((a, b) => (a[0]+a[1]) - (b[0]+b[1]));
+
+    for(let i = 0; i < order.length; i++) {
+        let money = budget - (order[i][0]/2 + order[i][1]); 
+        let cnt = 1;
+        for(let j=0; j<order.length; j++) {
+            if(j!== i && (order[j][0] + order[j][1]) > money) break;
+            if(j !== i && (order[j][0] + order[j][1]))  {
+                money -= (order[j][0] + order[j][1]);
+                cnt++; 
+            }
+        }
+
+        answer = Math.max(answer, cnt);
+    }
+
+    return answer;
+}
+
+let products = [
+    [6, 6],
+    [2, 2],
+    [4, 3],
+    [4, 5],
+    [10, 3] 
+]
+console.log(solution(products, 28));
+```
