@@ -156,3 +156,33 @@ let products = [
 ]
 console.log(solution(products, 28));
 ```
+
+## 문제 5
+- 1 부터 100 사이의 자연수가 적힌 N장의 카드, 그 중 3장을 뽑아 합한 값을 기록 -> k번째 큰 값은?
+
+## 풀이 5 
+```javascript
+function solution(n, k, cards) {
+    let answer = [];
+    let sum = 0; 
+
+    for(let i = 0; i < n; i++) {
+        for(let j = 0; j < n; j++) {
+            for(let s = 0; s < n; s++) {
+                if(i !== j && j !== s && i !== s) {
+                    sum = cards[i] + cards[j] + cards[s]; 
+                    answer.push(sum);
+                }
+            }
+        }
+    }
+    answer = [...new Set(answer)];
+    answer = answer.sort((a, b) => b-a);
+    console.log(answer);
+    return answer[k-1];
+}
+
+let arr = [13, 15, 34, 23, 45, 65, 33, 11, 26, 42];
+console.log(solution(10, 3, arr));
+```
+- `Set`에 대해 저번에 공부했음에도 불구하고 바로 떠오르지 않았다.  

@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-04-28 11:22:24 +0900
+updated : 2021-04-30 13:17:28 +0900
 parent  : 
 layout  :
 ---
@@ -66,11 +66,6 @@ layout  :
 	* [[Tauch-t]]
 	* [[Graph-Online]]
 	* [[Version-Control]]
-
-* Blog
-	* [[Enable-google-custom-engine-in-Gatsby]]
-* TIL
-	* [[Today-I-Learned]]
 * Security 
 	* [[SSL]]
 	* [[Encryption]]
@@ -78,6 +73,8 @@ layout  :
 * ETC
 	* [[AB-Testing]]
 	* [[Open-Source]] 
-
+* Blog
+	* [[Enable-google-custom-engine-in-Gatsby]]
+	* [[Today-I-Learned]]
 ---
 

@@ -9,7 +9,7 @@ import Note from "gatsby-theme-garden/src/components/note";
 import NoteWrapper from "gatsby-theme-garden/src/components/note-wrapper";
 import Header from "gatsby-theme-garden/src/components/header";
 import SEO from "gatsby-theme-garden/src/components/seo";
-import Utterances from "./Utterances"
+// import Utterances from "./Utterances"
 
 import "gatsby-theme-garden/src/components/theme.css";
 import "./stacked-layout.css";
@@ -38,7 +38,7 @@ const Content = ({ windowWidth, scrollContainer, stackedPages, index }) => {
               title={page.data.title}
             >
               <Note {...page.data} />
-              <Utterances repo='padosum/blog' theme={theme} title={page.data.title}/>
+              {/* <Utterances repo='padosum/blog' theme={theme} title={page.data.title}/> */}
             </NoteWrapper>
           ))}
         </div>
