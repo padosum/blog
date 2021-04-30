@@ -1,7 +1,7 @@
 ---
 title   : 효율성 문제
 date    : 2021-04-30 14:01:56 +0900
-updated : 2021-04-30 14:02:06 +0900
+updated : 2021-04-30 21:57:43 +0900
 aliases : 
 private : false
 hidden  : false
@@ -199,3 +199,64 @@ let recored = [12, 15, 11, 20, 25, 10, 20, 19, 13, 15];
 console.log(solution(recored, 3));
 
 ```
+
+## 문제 6
+- `Map` 이용하기  
+
+## 풀이 6
+```javascript
+function solution(str) {
+    let answer;
+    let sH = new Map(); 
+
+    for(let x of str) {
+        if(sH.has(x)) sH.set(x, sH.get(x)+1);
+        else sH.set(x, 1);
+    }
+    let max = Number.MIN_SAFE_INTEGER;
+
+    for(let [key, val] of sH) {
+        if(max < val) {
+            max = val; 
+            answer = key;  
+        }
+        
+    }
+    return answer;
+}
+
+let votes = 'BACBACCACCBDEDE';
+console.log(solution(votes));
+```
+
+## 문제 7
+- Anagram 여부 출력
+## 풀이 7 
+```javascript
+function solution(str1, str2) {
+    let answer;
+    let strHash = new Map();
+    let isAnagram = true; 
+
+    for(let x of str1) {
+        if(strHash.has(x)) strHash.set(x, strHash.get(x)+1);
+        else strHash.set(x, 1);
+    }
+
+    for(let x of str2) {
+        if(!strHash.has(x) || strHash.get(x) == 0) 
+            isAnagram = false; 
+        strHash.set(x, strHash.get(x)-1);
+    }
+
+    answer = isAnagram ? 'Yes' : 'No';
+
+    return answer;
+}
+
+let str1 = 'abaCC'
+let str2 = 'Caaab';
+console.log(solution(str1, str2)); // Yes 
+```
+- 비교할 때 하나씩 제거하면서 갯수를 비교했다. 저렇게 하지 않으면 hash값을 하나 더 만들어야 한다.  
+
