@@ -1,17 +1,24 @@
 {
     "plugins": [
-      ["@babel/plugin-proposal-decorators", { "legacy": true }],
-      "@babel/plugin-proposal-export-default-from"
-      // "@babel/plugin-syntax-export-default-from"
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
+        "@babel/plugin-proposal-export-default-from"
     ],
     "presets": [
-      [
-        "babel-preset-gatsby",
-        {
-          "targets": {
-            "browsers": [">0.25%", "not dead"]
-          }
-        }
-      ]
+        [
+            "babel-preset-gatsby",
+            {
+                "targets": {
+                    "browsers": [
+                        ">0.25%",
+                        "not dead"
+                    ]
+                }
+            }
+        ]
     ]
-  }
+}

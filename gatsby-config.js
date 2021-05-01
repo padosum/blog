@@ -30,12 +30,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
-      },
-    },
-    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: 'https://padosum.dev',
