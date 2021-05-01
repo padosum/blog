@@ -6,7 +6,7 @@ parent  :
 layout  :
 ---
 
-* [[Movies-with-a-computer]] 
+* [[Movies-with-a-computer]]
 * [[Book-list]]
 * [[Algorithm]]
 	* [[Solve-Algorithms]]

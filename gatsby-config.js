@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "🧑‍💻 LESS",
+    title: "🏎 LESS",
     description: "wiki",
     author: "padosum",
     twitter: '',

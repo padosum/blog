@@ -7,8 +7,7 @@ private : false
 hidden  : false
 showReferences : true
 ---
-
-<span class="highlight">빨리 코드를 작성하는 것보다 읽기 쉬운 코드를 작성하는 것이 중요</span>
+**빨리 코드를 작성하는 것보다 읽기 쉬운 코드를 작성하는 것이 중요**
 
 ## 좋은 코드를 짜기 위한 원칙 
 ### 간결한 코드 작성하기
