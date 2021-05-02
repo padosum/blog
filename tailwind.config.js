@@ -1,7 +1,7 @@
 module.exports = {
   purge: [
-    './src/**/*.js',
     './content/garden/*.md',
+    './src/**/*.js',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {

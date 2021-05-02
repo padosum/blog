@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-04-30 13:17:28 +0900
+updated : 2021-05-02 09:42:18 +0900
 parent  : 
 layout  :
 ---
@@ -11,6 +11,8 @@ layout  :
 * [[Algorithm]]
 	* [[Solve-Algorithms]]
 	* [[Brute-Force-Search-Algorithm]]
+* Web
+	* [[Reduce-Content-Download-Time]]
 * JavaScript
 	* [[JavaScript-Variables]]
 	* [[JavaScript-regular-expression]]
