@@ -14,7 +14,7 @@ showReferences : true
  Chrome의 Developer Tools에 Network 탭을 확인하면 속도 문제를 확인할 수 있다는 얘기를 들어 열어보았는데 처음 로드되는 부분에서 Waiting TTFB 시간도 길지만 **Content Download** 부분이 그에 비해 상당히 긴 것을 확인할 수 있었다.  
  
 **Content Download**는 content가 다운로드가 되는데 까지 기다린 시간을 의미했다.  같은 theme을 사용하는데 왜 내 사이트만 이렇게 content가 많을까?라는 생각을 하고 확인을 거듭해보니 해당 항목의 **Preview** 탭을 비교해볼 수 있었다.  
-![Pasted image 20210502094928](../content/garden/116798752-f196c500-ab2d-11eb-8234-977a3604d03a.png)
+![Pasted image 20210502094928](https://user-images.githubusercontent.com/6129764/116798752-f196c500-ab2d-11eb-8234-977a3604d03a.png)
 원래 위 스크린샷처럼 웹사이트의 모습이 미리보기가 되어야 하는데 나오지 않고 있었다.   
 **Response** 탭을 복사해서 긁어오니 엄청난 양의 css 코드가 추가되어 있었다.  
 이걸 지워야만 했다.    
