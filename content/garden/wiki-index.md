@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-02 09:42:18 +0900
+updated : 2021-05-02 12:19:11 +0900
 parent  : 
 layout  :
 ---
@@ -12,9 +12,11 @@ layout  :
 	* [[Solve-Algorithms]]
 	* [[Brute-Force-Search-Algorithm]]
 * Web
-	* [[Reduce-Content-Download-Time]]
+	* [[Network 탭 Content Download 속도 단축하기]]
 * JavaScript
 	* [[JavaScript-Variables]]
+	* [[JavaScript-Expression]]
+	* [[JavaScript-Data-Type]]
 	* [[JavaScript-regular-expression]]
 	* [[JavaScript-Scope]]
 	* [[JavaScript-Destructuring-assignment]]
@@ -79,4 +81,3 @@ layout  :
 	* [[Enable-google-custom-engine-in-Gatsby]]
 	* [[Today-I-Learned]]
 ---
-
