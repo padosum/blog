@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-02 12:19:11 +0900
+updated : 2021-05-03 09:53:06 +0900
 parent  : 
 layout  :
 ---
@@ -31,6 +31,7 @@ layout  :
 	* [[Vue-Components]]
 	* [[Vue-Components-Communication]]
 * Git
+	* [[Git commit hook 건너뛰기]]
 	* [[New-branch-not-showing-in-visual-studio]]
 	* [[Fetch]]
 	* [[Gitignore-not-working]]
