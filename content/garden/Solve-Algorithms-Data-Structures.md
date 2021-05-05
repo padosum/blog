@@ -106,3 +106,73 @@ let postfix = "352+*9-";
 console.log(solution(postfix));
 ```  
 - 숫자가 아닌 값이 들어가면 `isNaN()`은 `true`를 반환  
+
+## 문제 5
+- 레이저로 막대 가르기 
+
+## 풀이 5
+```javascript
+function solution(arrange) {
+    let answer = 0;
+    let stack = [];
+
+    for(let i = 0; i < arrange.length; i++) {
+        if(arrange[i] === '(') {
+            stack.push(arrange[i]);
+        } else {
+            stack.pop();
+            if(arrange[i-1] === '(') answer += stack.length;
+            else answer++; 
+        }
+    }
+    return answer;
+}
+
+
+let arrange = '(()()())(((())))'; // 10
+console.log(solution(arrange)); 
+```
+
+## 문제 6
+- 큐 문제   
+
+## 풀이 6
+```javascript
+function solution(n, k) {
+    let answer;
+    let queue = Array.from({length:n}, (v, i) => i+ 1);
+
+    while(queue.length > 0) {
+        for(let i = 1; i < k; i++) queue.push(queue.shift());
+        queue.shift();
+        if(queue.length === 1) answer = queue.shift(); 
+    }
+    
+    return answer;
+}
+
+console.log(solution(8, 3));
+```
+- `shift()`를 알면 간단히 풀 수 있다.  
+
+
+## 문제 7
+- 큐 문제 2 
+## 풀이 7 
+```javascript
+function solution(essential, plan) {
+    let answer = "YES";
+    let queue = essential.split('');
+
+    for(let x of plan) {
+        if(queue.includes(x)) {
+            if(x!== queue.shift()) answer = "NO"; 
+        }
+    }
+    if(queue.length > 0) answer = "NO";
+    return answer;
+}
+
+console.log(solution('CBA', 'CBDAGE'));
+```
+- 큐로 정해야 하는 것과 아닌 것을 구분 잘하는게 중요하다.  

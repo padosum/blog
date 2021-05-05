@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-03 09:53:06 +0900
+updated : 2021-05-05 22:36:09 +0900
 parent  : 
 layout  :
 ---
@@ -11,6 +11,7 @@ layout  :
 * [[Algorithm]]
 	* [[Solve-Algorithms]]
 	* [[Brute-Force-Search-Algorithm]]
+	* [[Sort-Algorithm]]
 * Web
 	* [[Network 탭 Content Download 속도 단축하기]]
 * JavaScript
