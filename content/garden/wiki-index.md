@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-06 14:22:32 +0900
+updated : 2021-05-08 12:38:37 +0900
 parent  : 
 layout  :
 ---
@@ -18,6 +18,9 @@ layout  :
 	* [[JavaScript-Variables]]
 	* [[JavaScript-Expression]]
 	* [[JavaScript-Data-Type]]
+	* [[JavaScript-Short-Circuit-Evaluation]]
+	* [[JavaScript-Object]]
+	* [[JavaScript-Object-Literal]]
 	* [[JavaScript-regular-expression]]
 	* [[JavaScript-Scope]]
 	* [[JavaScript-Destructuring-assignment]]
