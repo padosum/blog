@@ -1,18 +1,20 @@
 ---
 title   : DNS 
 date    : 2021-04-23 20:23:54 +0900
-updated : 2021-04-23 20:24:06 +0900
+updated : 2021-05-10 22:37:51 +0900
 aliases : 
 private : false
 hidden  : false
 showReferences : true
 ---
-
-
 도메인(Domain)과 아이피에 대한 정보를 매칭해둔 전세계에 공개된 DB
 
 TCP/IP를 기반으로 하는 통신은 모두 IP 주소를 기반으로 하고 있다.  
-복잡한 IP 주소를 공개적으로 사용하기는 쉽지 않다. 이 문제를 해결하기 위해 **DNS(Domain Name System)**라는 데이터베이스 시스템이 구성되었다. 
+복잡한 IP 주소를 공개적으로 사용하기는 쉽지 않고, IP가 변경될 수 있다. 이 문제를 해결하기 위해 **DNS(Domain Name System)**라는 데이터베이스 시스템이 구성되었다. 
+## DNS 사용 
+1. 도메인 명 google.com 요청 
+2. DNS 서버에서 응답, 도메인명이 `google.com`이면 IP가 `200.200.200.2`
+3. `200.200.200.2`로 접속 
 
 ## 누가 관리하는지?  
 - IP 주소를 관리하는 국제기관, ICANN에서 DNS를 관리한다.  
@@ -37,3 +39,4 @@ TCP/IP를 기반으로 하는 통신은 모두 IP 주소를 기반으로 하고 
 
 ## 참고
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
+- [inflearn-모든 개발자를 위한 HTTP 웹 기본 지식](https://inf.run/q4wV)

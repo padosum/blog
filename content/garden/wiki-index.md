@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-08 12:38:37 +0900
+updated : 2021-05-10 21:51:25 +0900
 parent  : 
 layout  :
 ---
@@ -14,6 +14,8 @@ layout  :
 	* [[Sort-Algorithm]]
 * Web
 	* [[Network 탭 Content Download 속도 단축하기]]
+	* [[Internet-Network]]
+	* [[HTTP]]
 * JavaScript
 	* [[JavaScript-Variables]]
 	* [[JavaScript-Expression]]
