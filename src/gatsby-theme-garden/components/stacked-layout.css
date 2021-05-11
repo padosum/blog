@@ -39,7 +39,11 @@ a:hover {
 ul {
     @apply list-disc pl-6 my-2;
 }
-  
+
+ul li {
+    word-break: keep-all;
+} 
+
 ol {
     @apply list-decimal pl-6 my-2;
 }
@@ -101,7 +105,7 @@ pre {
 
 .note-columns-scrolling-container {
     display: flex;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     overflow-y: hidden;
     flex-grow: 1;
 }
@@ -117,6 +121,6 @@ pre {
 
 @media screen and (max-width: 800px) {
     .note-columns-container {
-        width: unset !important;
+        width: 100% !important;
     }
 }

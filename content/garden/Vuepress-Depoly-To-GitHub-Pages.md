@@ -29,7 +29,7 @@ layout :
 
 ### Secrets 만들기  
 - 해당 repo > Settings > Secrets에서 `New repository secret` 
-![access_token](../_posts/images/Vuepress-Depoly-To-GitHub-Pages/111595400-71cbca00-880f-11eb-984d-9e86cf69dfc9.png)  
+![access_token](/images/Vuepress-Depoly-To-GitHub-Pages/111595400-71cbca00-880f-11eb-984d-9e86cf69dfc9.png)  
 - Name에는 `ACCESS_TOKEN`, Value에 아까 복사한 token을 넣는다.  
 
 ## 발생한 문제  
