@@ -1,7 +1,7 @@
 ---
 title   : DNS 
 date    : 2021-04-23 20:23:54 +0900
-updated : 2021-05-10 22:37:51 +0900
+updated : 2021-05-11 21:33:21 +0900
 aliases : 
 private : false
 hidden  : false
@@ -37,6 +37,6 @@ TCP/IP를 기반으로 하는 통신은 모두 IP 주소를 기반으로 하고 
 - 도메인 구입 후, 도메인 구매 대행 업체의 네임 서버에 도메인 정보를 등록할 수 있다. 
 	- 다른 DNS 서버로 그 정보 관리를 위임하도록 설정 가능 
 
-## 참고
+## reference 
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
 - [inflearn-모든 개발자를 위한 HTTP 웹 기본 지식](https://inf.run/q4wV)

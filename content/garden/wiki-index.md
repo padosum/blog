@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-10 21:51:25 +0900
+updated : 2021-05-11 21:08:33 +0900
 parent  : 
 layout  :
 ---
@@ -15,6 +15,7 @@ layout  :
 * Web
 	* [[Network 탭 Content Download 속도 단축하기]]
 	* [[Internet-Network]]
+	* [[URI]]
 	* [[HTTP]]
 * JavaScript
 	* [[JavaScript-Variables]]
