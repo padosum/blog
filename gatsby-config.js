@@ -4,10 +4,12 @@ module.exports = {
     description: "wiki",
     author: "padosum",
     twitter: '',
-    siteUrl: `https://padosum.dev`
+    siteUrl: `https://padosum.dev/`
   },
   plugins: [
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-google-analytics`,
