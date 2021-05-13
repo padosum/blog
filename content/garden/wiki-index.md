@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-11 21:08:33 +0900
+updated : 2021-05-13 22:50:24 +0900
 parent  : 
 layout  :
 ---
@@ -32,6 +32,7 @@ layout  :
 	* [[Module-Bundler]]
 	* [[JavaScript-Spread-syntax]]
 	* [[DOM]]
+	* [[JavaScript-Array-Like-Object]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
@@ -85,7 +86,9 @@ layout  :
 * ETC
 	* [[AB-Testing]]
 	* [[Open-Source]] 
+* Art
+	* [[Cubism]]
 * Blog
 	* [[Enable-google-custom-engine-in-Gatsby]]
 	* [[Today-I-Learned]]
----
+--
