@@ -1,8 +1,8 @@
 ---
-title   : 자바스크립트 클로저 
+title   : JavaScript 클로저 
 excerpt : 
 date    : 2020-06-03 00:18:47 +0900
-updated : 2020-06-03 00:19:15 +0900
+updated : 2021-05-14 18:15:16 +0900
 tags    : [Javascript]
 parent  : 
 layout  :

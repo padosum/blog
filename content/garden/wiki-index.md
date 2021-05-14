@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-13 22:50:24 +0900
+updated : 2021-05-14 18:23:28 +0900
 parent  : 
 layout  :
 ---
@@ -27,17 +27,19 @@ layout  :
 	* [[JavaScript-regular-expression]]
 	* [[JavaScript-Scope]]
 	* [[JavaScript-Destructuring-assignment]]
-	* [[JavaScript-closure]]
+	* [[JavaScript-Closure]]
 	* [[JavaScript-Module]]
 	* [[Module-Bundler]]
 	* [[JavaScript-Spread-syntax]]
 	* [[DOM]]
 	* [[JavaScript-Array-Like-Object]]
+	* [[JavaScript-Function]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
 	* [[Vue-Components]]
 	* [[Vue-Components-Communication]]
+	* [[Vue-Router]]
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
 	* [[Skip-Git-Commit-Hooks]]
@@ -64,6 +66,7 @@ layout  :
 	* [[Library]]
 	* [[Framework]]
 	* [[MVC]]
+	* [[Functional-Programming]]
 
 * Computer Science
 	* [[Architecture]]
@@ -88,6 +91,8 @@ layout  :
 	* [[Open-Source]] 
 * Art
 	* [[Cubism]]
+* Sociology
+	* [[Habitus]]	 
 * Blog
 	* [[Enable-google-custom-engine-in-Gatsby]]
 	* [[Today-I-Learned]]
