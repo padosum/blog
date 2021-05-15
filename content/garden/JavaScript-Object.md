@@ -40,7 +40,7 @@ user.sayHi(); // 안녕하세요!
 ## 객체 생성하기 
 자바스크립트는 다양한 객체 생성 방법을 지원한다. 
 - [[객체 리터럴]]
-- Object 생성자 함수
+- [[Object 생성자 함수]]
 - 생성자 함수
 - Object.create 메서드
 - 클래스(ES6)
@@ -137,8 +137,11 @@ let copyPerson = person;
 **"값에 의한 전달", "참조에 의한 전달" 모두 식별자가 기억하는 메모리 공간에 저장되어 있는 값을 복사한다는 점은 동일하다. 하지만 식별자가 기억하는 메모리 공간이 원시 값인지 참조 값인지가 다른 것** 
 책에선 자바스크립트에는 "참조에 의한 전달"은 존재하지 않고 "값에 의한 전달"만 존재한다고 나와있었다. 매번 공부를 하며 C나 Java나 다른 언어에 있는 참조에 의한 전달이 JavaScript에도 있다고 생각하며 의식하고 살았는데 결론을 보니, 꼬여있던 생각의 실타래가 풀린듯한 기분이다. 
 
+## 더 알아보기
+- [[JavaScript-Property-Attributes]]
 
 ## reference
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
 - [모던 JavaScript 튜토리얼](https://ko.javascript.info/)
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 
+- [자바스크립트 완벽 가이드](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966261796&orderClick=LAG&Kc=)

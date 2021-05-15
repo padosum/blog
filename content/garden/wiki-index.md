@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-14 18:23:28 +0900
+updated : 2021-05-15 23:09:28 +0900
 parent  : 
 layout  :
 ---
@@ -26,6 +26,9 @@ layout  :
 	* [[JavaScript-Object-Literal]]
 	* [[JavaScript-regular-expression]]
 	* [[JavaScript-Scope]]
+	* [[JavaScript-Scope-Chain]]
+	* [[JavaScript-Block-Level-Scope]]
+	* [[JavaScript-Property-Attributes]]
 	* [[JavaScript-Destructuring-assignment]]
 	* [[JavaScript-Closure]]
 	* [[JavaScript-Module]]
@@ -34,6 +37,9 @@ layout  :
 	* [[DOM]]
 	* [[JavaScript-Array-Like-Object]]
 	* [[JavaScript-Function]]
+	* [[JavaScript-Constructor-Function]]
+	* [[JavaScript-First-Class-Object]]
+	* [[JavaScript-Prototype]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
@@ -89,6 +95,7 @@ layout  :
 * ETC
 	* [[AB-Testing]]
 	* [[Open-Source]] 
+	* [[Paradigm]]
 * Art
 	* [[Cubism]]
 * Sociology
