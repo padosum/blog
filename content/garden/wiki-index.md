@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-15 23:09:28 +0900
+updated : 2021-05-16 18:56:55 +0900
 parent  : 
 layout  :
 ---
@@ -102,5 +102,5 @@ layout  :
 	* [[Habitus]]	 
 * Blog
 	* [[Enable-google-custom-engine-in-Gatsby]]
-	* [[Today-I-Learned]]
---
+	* [[Today-I-Learned]] 
+

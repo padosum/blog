@@ -1,0 +1,9 @@
+.random-button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.random-button svg g {
+  fill: var(--link);
+}

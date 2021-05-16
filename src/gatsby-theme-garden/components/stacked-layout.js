@@ -7,7 +7,7 @@ import {
 import { dataToNote, dataToSlug } from "gatsby-theme-garden/src/utils/data-to-note";
 import Note from "gatsby-theme-garden/src/components/note";
 import NoteWrapper from "gatsby-theme-garden/src/components/note-wrapper";
-import Header from "gatsby-theme-garden/src/components/header";
+import Header from "./header";
 import SEO from "gatsby-theme-garden/src/components/seo";
 // import Utterances from "./Utterances"
 

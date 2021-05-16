@@ -14,11 +14,11 @@ const DarkModeToggle = () => {
       theme: isDark ? 'github-light' : 'github-dark'
     };
 //    const utterances = document.querySelector('iframe').contentWindow; // try event.source instead
-    Array.from(document.getElementsByClassName("utterances-frame")).forEach(
-      function(element, index, array) {
-        element.contentWindow.postMessage(message, 'https://utteranc.es');
-      }
-    );
+    // Array.from(document.getElementsByClassName("utterances-frame")).forEach(
+    //   function(element, index, array) {
+    //     element.contentWindow.postMessage(message, 'https://utteranc.es');
+    //   }
+    // );
   }
 
   return (

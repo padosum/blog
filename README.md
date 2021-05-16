@@ -6,3 +6,7 @@
   - [gatsby-digital-garden](https://github.com/mathieudutour/gatsby-digital-garden)
 - [Vimwiki+Jekyll+Github.io로 나만의 위키를 만들자](https://johngrib.github.io/wiki/my-wiki/)
 - [OBSIDIAN](https://obsidian.md/)
+
+## 👏 Resources used 
+- [www.wishforge.games](https://freeicons.io/profile/2257)  
+
