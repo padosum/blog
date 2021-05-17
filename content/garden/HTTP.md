@@ -1,7 +1,7 @@
 ---
 title   : HTTP
 date    : 2021-05-10 21:47:34 +0900
-updated : 2021-05-11 21:31:22 +0900
+updated : 2021-05-17 00:40:21 +0900
 aliases : 
 private : false
 hidden  : false
@@ -70,7 +70,31 @@ showReferences : true
 - HTTP/2, HTTP/3에서 더 많은 최적화 
 
 ### HTTP 메시지
+- 요청 메시지와 응답 메시지의 구조는 조금 다르다.  
+- https://developer.mozilla.org/ko/docs/Web/HTTP/Messages
+- 시작 라인 - 헤더 - 본문 
 
+#### 시작 라인 
+- HTTP 요청 메시지
+	- 시작 라인 start-line = request-line
+	- [[HTTP 메서드]]
+	- 요청 대상(보통 절대경로)
+	- HTTP Version 
+- HTTP 응답 메시지
+	- 시작 라인 start-line = status-line 
+	- HTTP 버전
+	- [[HTTP 상태 코드]] 
+	- 이유 문구 (사람이 이해할 수 있는 짧은 상태 코드 설명 글)
+
+#### [[HTTP 헤더]]  
+- 헤더의 용도
+	- HTTP 전송에 필요한 모든 부가정보가 포함되어 있다. 
+		- 메시지 바디의 내용, 크기, 인증, 요청 브라우저 정보, 등...
+	- 표준 헤더가 많고 필요시 임의의 헤더 추가 가능 
+
+#### HTTP 메시지 바디 
+- 실제 전송할 데이터 
+- HTTP 문서, 이미지, 영상, JSON 등 Byte로 표현할 수 있는 모든 데이터 
 
 ## reference 
 - [inflearn-모든 개발자를 위한 HTTP 웹 기본 지식](https://inf.run/q4wV)

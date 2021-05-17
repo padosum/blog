@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-16 18:56:55 +0900
+updated : 2021-05-17 10:36:39 +0900
 parent  : 
 layout  :
 ---
@@ -40,12 +40,17 @@ layout  :
 	* [[JavaScript-Constructor-Function]]
 	* [[JavaScript-First-Class-Object]]
 	* [[JavaScript-Prototype]]
+		* [[JavaScript-Prototype-Chain]] 
+		* [[JavaScript-Property-Shadowing]]
+	* [[JavaScript-strict-mode]]
+	* [[JavaScript-Built-in-Objects]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
 	* [[Vue-Components]]
 	* [[Vue-Components-Communication]]
 	* [[Vue-Router]]
+	* [[Vue-Axios]]
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
 	* [[Skip-Git-Commit-Hooks]]

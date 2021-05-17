@@ -2,7 +2,7 @@
 title   : JavaScript 스코프 체인
 date    : 2021-05-15 16:13:22 +0900
 updated : 2021-05-15 16:13:34 +0900
-aliases : 
+aliases : ["스코프 체인"]
 private : false
 hidden  : false
 showReferences : true

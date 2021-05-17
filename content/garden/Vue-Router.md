@@ -1,7 +1,7 @@
 ---
 title   : 뷰 라우터
 date    : 2021-05-13 23:07:18 +0900
-updated : 2021-05-13 23:07:25 +0900
+updated : 2021-05-16 19:51:23 +0900
 aliases : 
 private : false
 hidden  : false
@@ -13,7 +13,7 @@ showReferences : true
 
 ## 라우터 뷰 
 - URL에 따라 뿌려주는 영역은 라우터에서 제공하는 `<router-view></router-view>` 태그로 지정할 수 있다. (뷰 인스턴스에 라우터를 연결해야함)  
-- `a` 태그가 생성된다.  
+- `<router-link>` 태그를 이용하면  `a` 태그가 생성된다.  
 
 ```html
 <body>
