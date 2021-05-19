@@ -9,11 +9,14 @@ showReferences : true
 ---
 ## HTTP API 만들기
 - 회원 정보 관리 API
-	- 회원 목록 조회
-	- 회원 조회
-	- 회원 등록
-	- 회원 수정
-	- 회원 삭제 
+	- 회원 목록 조회 `/members` **GET**
+	- 회원 조회 `/members/{id}` **POST**
+	- 회원 등록 `/members` **POST**
+	- 회원 수정 `/members/{id}` **PATCH, PUT, POST**
+    	- `PUT`은 덮는 것이기 때문에 데이터를 전부 다 보내야한다는 단점
+    	- `PATCH`를 쓰는 것이 가장 좋음 (부분 수정)
+    	- 애매하면 `POST`  
+	- 회원 삭제 `/members/{id}` **DELETE** 
 
 ### API [[URI]] 설계  
 - **가장 중요한 것은 리소스 식별**
@@ -66,5 +69,97 @@ showReferences : true
 - OPTIONS: 대상 리소스에 대한 통신 가능 옵션을 설명(CORS)
 - CONNECT, TRACE 
 
+## HTTP 메서드 속성  
 
-## HTTP 메서드 활용 
+### 안전(Safe)
+- **호출해도 리소스를 변경하지 않음** 
+  - `GET`은 안전, `POST` 안전하지 않음 
+- 안전은 해당 리소스가 변하냐 변하지 않냐만 고려한다. 그 이후 과정은 고려하지 않는다. 
+ 
+### 멱등(Idempotent)
+- **1번 호출, 2번 호출, 100번 호출...결과는 같은 것** 
+- `GET`, `PUT`, `DELETE` 
+- `POST`는 멱등이 아니다. 
+- 왜 이런 개념이 필요한가?
+  - 자동 복구 매커니즘 → 서버가 제대로 응답을 못주었을 때, 클라이언트가 다시 요청을 시도해도 되는지에 대한 판단 근거가 된다. 
+    - `GET`을 보내고 응답이 안왔을 때, `GET`은 멱등이기 때문에 다시 요청해도 되는 것!
+- 외부 요인으로 인해 리소스가 변경되는 것은 고려하지 않는다. 
+
+### 캐시가능(Cacheable)
+- 응답 결과 리소스를 캐시해서 사용해도 되는지?  
+- `GET`, `HEAD`, `POST`, `PATCH` 캐시가능 
+- 실제로는 `GET`, `HEAD` 정도만 캐시로 사용한다. 
+  - 이미지 같이 용량이 큰 것...
+
+
+## 메서드는 어떻게 활용할까?
+
+### 데이터 전송 
+- 쿼리 파라미터
+  - `GET`
+  - 검색어, 정렬 조건 
+- 메시지 바디 
+  - `POST`, `PUT`, `PATCH`
+  - 회원 가입, 상품 주문, 리소스 등록/변경 
+
+- 데이터 전송 상황들 
+  1. 정적 데이터 조회
+       - 이미지, 정적 문서
+       - 쿼리 파라미터 없이 리소스 경로로 
+  2. 동적 데이터 조회
+       - 검색, 게시판 목록 정렬
+       - 쿼리 파라미터 사용 
+       - `GET` 사용
+  3.  HTML Form
+        - 회원가입, 주문, 데이터 변경
+        - `POST` 사용 
+        - `Content-Type: application/x-www-form-urlencoded` 사용
+          - 전송 데이터를 url encoding, 메시지 바디를 통해 key=value (쿼리 파라미터 형식)
+        - `Content-Type: multipart/form-data`
+          - 파일 전송시 
+  4. HTTP API
+       - 회원가입, 주문, 데이터 변경
+       - 서버 to 서버, 앱 클라이언트, Ajax 
+       - `POST`, `PUT`, `PATCH`, `GET`(조회용, 쿼리파라미터)
+       - `Content-Type: application/json`을 주로 사용한다. 
+
+### POST
+- 클라이언트는 등록될 리소스의 URI을 모르고 서버에서 리소스 URI을 결정하고 만들어준다.
+  - 예를 들면 회원 신규 등록을 할 경우, 회원 아이디를 넘겨줌 `/members/10` 
+- 위와 같은 형식을 컬렉션이라고 한다.
+  - 서버가 관리하는 리소스 디렉토리, 서버가 리소스의 URI를 생성하고 관리 
+  - 컬렉션은 `/members`
+- **대부분은 컬렉션 기반을 사용한다.**
+
+### PUT 
+- 파일 관리 시스템 
+- 클라이언트가 새로 업로드할 파일 이름을 알고 있다. 없으면 새로 생성, 있으면 덮어버림 
+  - `/files/{filename}`
+  - `PUT`을 사용하는 것이 적절하다. 
+- 위와 같은 형식은 스토어(Store)
+  - 클라이언트가 리소스의 URI를 알고 관리
+  - 스토어는 `/files` 
+
+### HTML Form 
+- **`GET`, `POST`만 지원**
+- AJAX 기술 활용할 수 있다. 
+  - 순수한 HTML은 `GET`, `POST` 
+- 사용 예
+  - 회원 목록 `/members` **GET**
+  - 회원 등록 폼 `/members/new` **GET**
+  - 회원 등록 `/members/new`, **POST**
+  - 회원 조회 `/members/{id}` **GET**
+  - 회원 수정 폼 `/members/{id}/edit` **GET**
+  - 회원 수정 `/members/{id}/edit`, **POST**
+  - 회원 삭제 `/members/{id}/delete` **POST**
+
+#### 컨트롤 URI 
+- `GET`, `POST`만 지원하기에 제약이 있음, 제약을 해결하기 위해 동사로 된 리소스 경로 사용 
+- `POST`의 `/new`, `/edit`, `/delete`가 컨트롤 URI 
+- 최대한 HTTP 메서드로 해결하고 애매한 경우 사용하는 것
+
+## 참고하기 
+- [https://restfulapi.net/resource-naming/](https://restfulapi.net/resource-naming/)
+- 실제로 복잡해지면 설계가 어렵다. 
+  - 일단 컬렉션과 문서, HTTP 메서드로 해결한다. ("미네랄을 캐라" 이면 "캐라"를 제외하고 미네랄만 )
+  - 그래도 안된다면 컨트롤 URI
