@@ -94,3 +94,6 @@ showReferences : true
   - `Retry-After` 헤더 필드로 얼마뒤에 복구되는지 보낼 수 있다. 
 - 서버에서 웬만하면 500대 에러를 발생시키면 안된다. 
   - **진짜 서버에 문제가 있을때만! (심각한)**
+
+## reference 
+- [inflearn-모든 개발자를 위한 HTTP 웹 기본 지식](https://inf.run/q4wV)

@@ -2,7 +2,7 @@
 title   : 📖 독서 목록
 excerpt : 
 date    : 2020-06-21 09:19:17 +0900
-updated : 2021-04-25 10:42:22 +0900
+updated : 2021-05-20 22:45:24 +0900
 tags    : [Book]
 parent  : 
 layout  : category

@@ -13,9 +13,9 @@ showReferences : true
 	- 회원 조회 `/members/{id}` **POST**
 	- 회원 등록 `/members` **POST**
 	- 회원 수정 `/members/{id}` **PATCH, PUT, POST**
-    	- `PUT`은 덮는 것이기 때문에 데이터를 전부 다 보내야한다는 단점
-    	- `PATCH`를 쓰는 것이 가장 좋음 (부분 수정)
-    	- 애매하면 `POST`  
+  	- `PUT`은 덮는 것이기 때문에 데이터를 전부 다 보내야한다는 단점
+  	- `PATCH`를 쓰는 것이 가장 좋음 (부분 수정)
+  	- 애매하면 `POST`  
 	- 회원 삭제 `/members/{id}` **DELETE** 
 
 ### API [[URI]] 설계  
@@ -163,3 +163,6 @@ showReferences : true
 - 실제로 복잡해지면 설계가 어렵다. 
   - 일단 컬렉션과 문서, HTTP 메서드로 해결한다. ("미네랄을 캐라" 이면 "캐라"를 제외하고 미네랄만 )
   - 그래도 안된다면 컨트롤 URI
+
+## reference 
+- [inflearn-모든 개발자를 위한 HTTP 웹 기본 지식](https://inf.run/q4wV)
