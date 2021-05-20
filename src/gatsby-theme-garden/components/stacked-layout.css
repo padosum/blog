@@ -85,11 +85,12 @@ blockquote p {
 code {
     color: var(--code-text);
     background-color: var(--code-bg);
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
     padding-left: 0.125rem;
     padding-right: 0.125rem;
     margin-left: 0.125rem;
     margin-right: 0.125rem;
+    border: 1px solid; 
 }
 
 pre {
