@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-17 10:36:39 +0900
+updated : 2021-05-25 18:23:12 +0900
 parent  : 
 layout  :
 ---
@@ -86,6 +86,7 @@ layout  :
 	* [[FTP]]
 	* [[DNS]]
 	* [[Email]]
+	* [[Scaffolding]]
 * Java
 	* [[Servlet-Database]] 
 * Tools
