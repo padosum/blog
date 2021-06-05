@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 모듈화 
 date    : 2021-04-23 19:31:22 +0900
-updated : 2021-04-23 19:32:23 +0900
+updated : 2021-06-05 18:07:39 +0900
 aliases : 
 private : false
 hidden  : false
@@ -48,5 +48,20 @@ define(
 ## UMD 
 - CommonJS, AMD 방식에 모두 호환되는 모듈을 작성하고 싶은 경우에는 UMD (Universal Module Definition) 방식으로 모듈을 배포 할 수 있다. 
 
-## 참고 
+## ES6 Modules 
+
+### Import, Export 
+- Import와 Export는 자바스크립트의 코드를 모듈화할 수 있는 기능  
+```javascript
+// math.js
+export var pi = 3.14;
+```
+```javascript
+// app.js
+import { pi } from './math.js';
+console.log(pi); // 3.14
+```
+- **가급적 실무에서는 [[Webpack]]과 같은 모듈 번들러를 이용해 구현하기**
+## reference 
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
+- [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)

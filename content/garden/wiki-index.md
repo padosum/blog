@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-06-04 20:37:41 +0900
+updated : 2021-06-05 16:25:26 +0900
 parent  : 
 layout  :
 ---
@@ -17,6 +17,7 @@ layout  :
 	* [[Internet-Network]]
 	* [[URI]]
 	* [[HTTP]]
+	* [[Webpack]]
 * JavaScript
 	* [[JavaScript-Variables]]
 	* [[JavaScript-Expression]]
@@ -44,7 +45,6 @@ layout  :
 		* [[JavaScript-Property-Shadowing]]
 	* [[JavaScript-strict-mode]]
 	* [[JavaScript-Built-in-Objects]]
-	* [[Webpack]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
