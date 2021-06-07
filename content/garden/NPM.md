@@ -1,7 +1,7 @@
 ---
 title   : NPM
 date    : 2021-06-03 13:56:01 +0900
-updated : 2021-06-03 14:19:25 +0900
+updated : 2021-06-07 14:23:50 +0900
 aliases : 
 private : false
 hidden  : false
@@ -35,5 +35,9 @@ showReferences : true
   - js-compression 
   - imagemin 
 
+## scripts
+- custom scripts는 `npm run 명령어`로 실행한다.  
+  
+  
 ## reference 
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)

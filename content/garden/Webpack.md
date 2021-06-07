@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2021-06-06 23:33:57 +0900
+updated : 2021-06-07 15:04:46 +0900
 aliases : ["웹팩"]
 private : false
 hidden  : false
@@ -35,6 +35,16 @@ showReferences : true
 - 웹 애플리케이션의 전반적인 구조와 내용이 담겨져야 하는데 그렇게 해서 모듈 간의 의존 관계가 생기는 구조를 디펜던시 그래프라고 한다.  
 - 엔트리 포인트는 여러 개가 될 수도 있다.  
   - 싱글 페이지 애플리케이션이 아닌 경우  
+```javascript
+...
+entry: {
+    main: './src/app.js'
+},
+output: {
+    path: path.resolve('./dist'),
+    filename: '[name].js' // main.js
+}
+```
 ### output
 - 웹팩을 사용하고 난 뒤 결과물의 파일 경로  
 - 다양한 옵션을 추가해야 한다.  
@@ -42,7 +52,7 @@ showReferences : true
 ### loader
 - 자바스크립트 파일이 아닌 웹 자원(HTML, CSS, image, font 등)을 웹팩이 인식할 수 있도록 도와주는 속성
 - 여러 개의 로더를 사용하는 경우 **오른쪽에서 왼쪽 순으로 적용**된다.  
-```json
+```javascript
 {
   test: /\.scss$/,
   use: ['style-loader', 'css-loader', 'sass-loader']
@@ -51,6 +61,15 @@ showReferences : true
 ### plugin
 - 웹팩의 기본적인 동작에 추가적인 기능을 제공  
 - 로더가 파일을 해석하고 변환하는 과정에 관여한다면 플러그인은 해당 겨로가물의 형태를 바꾸는 역할 
+- HtmlWebpackPlugin
+    - 웹팩 빌드 결과물에 대해 html 파일을 만들어준다. 빌드 결과가 다 들어가있다.  
+
+## 웹팩 데브 서버 (Webpack Dev Server)  
+- 코드 한줄 변경시 다시 빌드해야 하는 번거로움을 해결하기 위한 도구
+    - 매번 웹팩 명령어를 실행하지 않아도 코드만 변경하고 저장하면 웹팩으로 빌드한 후 브라우저를 새로고침 해준다.  
+    - **웹팩 빌드 시간 까지 줄여준다.** 
+- 파일이 아닌 메모리 상으로만 빌드 결과물을 보여준다.
+    - 컴퓨터 구조상 **파일 입출력 보다 메모리 입출력이 속도가 빠르고 자원이 덜 소모되기 때문** 
   
 ## reference
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)
