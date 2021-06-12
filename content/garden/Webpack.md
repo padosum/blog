@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2021-06-07 15:04:46 +0900
+updated : 2021-06-12 23:58:23 +0900
 aliases : ["웹팩"]
 private : false
 hidden  : false
@@ -71,7 +71,10 @@ output: {
 - 파일이 아닌 메모리 상으로만 빌드 결과물을 보여준다.
     - 컴퓨터 구조상 **파일 입출력 보다 메모리 입출력이 속도가 빠르고 자원이 덜 소모되기 때문** 
   
-## reference
-- [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)
-  
+## [[Babel]]
 
+## [[Sass]] 
+- sass파일을 사용하기 위해 웹팩에서 `sass-loader`를 사용한다.  
+  
+## reference
+- [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe) 

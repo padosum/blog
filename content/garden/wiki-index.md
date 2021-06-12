@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-06-07 14:22:39 +0900
+updated : 2021-06-12 23:51:32 +0900
 parent  : 
 layout  :
 ---
@@ -46,6 +46,7 @@ layout  :
 	* [[JavaScript-strict-mode]]
 	* [[JavaScript-Built-in-Objects]]
 	* [[NPM]]
+	* [[Babel]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
@@ -80,6 +81,7 @@ layout  :
 	* [[Framework]]
 	* [[MVC]]
 	* [[Functional-Programming]]
+	* [[Sass]]
 
 * Computer Science
 	* [[Architecture]]
