@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-06-12 23:51:32 +0900
+updated : 2021-06-13 22:19:06 +0900
 parent  : 
 layout  :
 ---
@@ -47,6 +47,7 @@ layout  :
 	* [[JavaScript-Built-in-Objects]]
 	* [[NPM]]
 	* [[Babel]]
+	* [[ESLint]]
 * Vue.js
 	* [[Vue-js]]
 	* [[Vue-Instance]]
@@ -98,6 +99,7 @@ layout  :
 	* [[Tauch-t]]
 	* [[Graph-Online]]
 	* [[Version-Control]]
+	* [[Prettier]]
 * Security 
 	* [[SSL]]
 	* [[Encryption]]
