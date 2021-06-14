@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2021-06-12 23:58:23 +0900
+updated : 2021-06-14 12:05:49 +0900
 aliases : ["웹팩"]
 private : false
 hidden  : false
@@ -68,13 +68,93 @@ output: {
 - 코드 한줄 변경시 다시 빌드해야 하는 번거로움을 해결하기 위한 도구
     - 매번 웹팩 명령어를 실행하지 않아도 코드만 변경하고 저장하면 웹팩으로 빌드한 후 브라우저를 새로고침 해준다.  
     - **웹팩 빌드 시간 까지 줄여준다.** 
+- 개발용 서버  
+    - 배포시 잠재적 문제를 미리 확인(ajax 방식의 api연동에서 cors 문제 확인)  
 - 파일이 아닌 메모리 상으로만 빌드 결과물을 보여준다.
     - 컴퓨터 구조상 **파일 입출력 보다 메모리 입출력이 속도가 빠르고 자원이 덜 소모되기 때문** 
+- `npm i -D webpack-dev-server`로 설치 
+- `webpack serve`로 실행  
   
+### Webpack Dev Server 옵션  
+- [옵션들](https://webpack.js.org/configuration/dev-server/)
+- `--progress`를 추가하면 빌드 진행률을 보여준다.  
+
 ## [[Babel]]
 
 ## [[Sass]] 
 - sass파일을 사용하기 위해 웹팩에서 `sass-loader`를 사용한다.  
-  
+ 
+### Webpack Dev Server와 API  
+#### API mockup - devServer.before
+```javascript
+devServer: {
+  before: (app, server, compiler) => {
+    app.get("/api/users", (req, res) => {
+      res.json([
+	{ id: 1, name: "tomas" },
+	{ id: 2, name: "nicolas" },
+	{ id: 3, name: "james" } 
+      ])
+    })
+  }
+}
+```   
+#### API mockup - connect-api-mocker  
+- 특정 목업 폴더를 만들어 api 응답을 담은 파일을 저장하고 api로 제공해주는 기능 
+```bash
+npm i -D connect-api-mocker
+```
+```javascript
+// webpack.config.js:
+const apiMocker = require("connect-api-mocker")
+
+module.exports = {
+  devServer: {
+    before: (app, server, compiler) => {
+      app.use(apiMocker("/api", "mocks/api"))
+    },
+  },
+}
+```  
+- `/mocks/api` 디렉토리 내부 경로에 `GET.json` 응답파일을 만들면된다.  
+- `/api`로 들어온 요청에 대해 처리하겠다는 것  
+
+### CORS  
+- 실제 api 연동시, CORS 정책으로 인해 다른 서버의 api를 사용하지 못하는 경우가 있다.  
+- 해결방법
+  - 서버측에서 api 응답 헤더에 `Access-Control-Allow-Origin: *` 헤더 추가 
+  - webpack dev server에서 `proxy` 속성
+    - [https://webpack.js.org/configuration/dev-server/#devserverproxy](https://webpack.js.org/configuration/dev-server/#devserverproxy)
+
+### Hot Module Replacement  
+- 전체 화면을 갱신하지 않고 변경된 모듈만 갱신하는 기능  
+- `devServer.hot` 속성을 `true`로  
+- `module.hot` 객체의 `accept()` 메소드를 사용.  
+  - 감시할 모듈과 콜백 함수를 인자로 받고, 해당 모듈의 변경이 있으면 콜백 함수가 동작하는 방식이다.  
+  - 이런 동작을 **HMR 인터페이스를 구현한다**라고 한다.     
+- css, file loader 등이 핫로딩을 지원한다.  
+
+## 최적화 하기  
+### production 모드  
+- `mode: production`  
+- 운영환경에 적합한 번들 결과(최소화한 결과)를 만들 수 있다.    
+
+### optimazation 속성  
+- 빌드 과정을 커스터마이징  
+- `optimize-css-assets-webpack-plugin`: css 파일에 빈칸 없애는 압축 
+- `TerserWebpackPlugin`: 자바스크립트 코드 난독화, debugger, console.log 제거 등  
+
+### Code Splitting  
+- 결과물을 여러개로 쪼개는 것이 더 속도를 빠르게할 수도 있다. 큰 파일 하나 다운로드보다 작은 파일 여러개를 동시에 다운로드하는 것이 더 빠르기 때문이다.  
+- entry를 여러개로 분리
+  - `SplitChunksPlugin` 사용 
+    - 코드 분리시 중복을 예방 
+- dynamic import 
+- 개발 초기단계가 아닌 후에 용량이 커졌을 때 분리해도 된다.  
+
+### externals  
+- 서드 파티 라이브러리는 이미 패키지로 제공되었을 때 빌드 과정을 거쳤기에 프로세스에서 제외하는 것이 좋다. externals가  제공하는 기능이다.  
 ## reference
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe) 
+- [프론트엔드 개발환경의 이해와 실습](https://inf.run/PM8f)  
+  

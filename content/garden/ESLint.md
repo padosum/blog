@@ -1,7 +1,7 @@
 ---
 title   : ESLint
 date    : 2021-06-13 20:37:56 +0900
-updated : 2021-06-13 23:25:07 +0900
+updated : 2021-06-14 10:48:33 +0900
 aliases : 
 private : false
 hidden  : false
@@ -92,5 +92,59 @@ npm i -D eslint-plugin-prettier
   ]
 }
 ```
+
+## 자동화  
+- 린트를 매번 코딩시에 수시로 실행하는 것보다 자동화하는 것이 편하다.  
+  
+### Git Hooks
+- [husky](https://github.com/typicode/husky)는 깃 훅을 쉽게 사용할 수 있는 도구  
+```bash
+npm i -D husky
+```
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint app.js --fix"
+    }
+  }
+}
+```
+- 린트중 오류가 발생하면 커밋에 실패한다.  
+- [lint stage](https://github.com/okonet/lint-staged)은 변경된 파일만 린트로 검사하는 도구  
+  ```bash
+  {
+    "lint-staged": {
+      "*.js": "eslint --fix"
+    }
+  }
+  ```
+  ```json
+  {
+    "lint-staged": {
+      "*.js": "eslint --fix"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    }
+  }
+  ```
+  
+### 에디터 확장 도구 사용하기  
+- [https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
+```  
+- 저장시 린트 검사를 하는 옵션  
+
+## 생각  
+ESLint라 하면 여러 강의나 튜토리얼에서 "코드 오류를 수정해준다. 확장 프로그램을 설치해라." 하고 간단하게 설명만들었었는데 왜 필요한지, 어떻게 사용해야 하는지, 또 다른 사용법은 무엇인지 상세하게 알게되었다. 결국 기초와 원리가 중요함을 또 느꼈다. 그냥 확장프로그램이 만들어져 있으니 사용하는 것이 아니라 그걸 사용하는 이유와 어떤 부분에서 편리한 프로그램인지 한번 더 생각해볼 수 있었다.
+
 ## reference 
 - [https://jeonghwan-kim.github.io/series/2019/12/30/frontend-dev-env-lint.html](https://jeonghwan-kim.github.io/series/2019/12/30/frontend-dev-env-lint.html) 
