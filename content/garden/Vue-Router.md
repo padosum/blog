@@ -1,7 +1,7 @@
 ---
 title   : 뷰 라우터
 date    : 2021-05-13 23:07:18 +0900
-updated : 2021-05-16 19:51:23 +0900
+updated : 2021-06-16 23:22:42 +0900
 aliases : 
 private : false
 hidden  : false
@@ -9,7 +9,6 @@ showReferences : true
 ---
 ## 뷰 라우터?
 - 뷰에서 싱글 페이지 애플리케이션을 구현하거나 페이지 간 이동기능을 구현할 때 사용하는 라이브러리  
-
 
 ## 라우터 뷰 
 - URL에 따라 뿌려주는 영역은 라우터에서 제공하는 `<router-view></router-view>` 태그로 지정할 수 있다. (뷰 인스턴스에 라우터를 연결해야함)  
@@ -40,6 +39,10 @@ let MainComponent = {
 let router = new VueRouter({
     // 페이지의 라우팅 정보 -> 어떤 URL로 이동했을 때 어떤 페이지가 출력될지에 대한 정보 
     routes: [
+        { 
+	    path: '/',
+	    redirect: '/main',
+	},
         {
             // 페이지의 url 
             path: '/login',
@@ -58,7 +61,9 @@ new Vue({
     router:  router 
 });
 ```
-
+- 라우터 폴더명은 `/routes`로 작명하는 것이 관습 
+- `/views` 폴더에는 라우팅 정보만 담은 뷰만, 데이터를 가져오는 로직등은 제외하기 → 별도의 컴포넌트에서 불러오고, 라우터에서 컴포넌트를 등록  
+  
 ## 라우터 옵션 
 ### url에 있는 `#` 해쉬값 지우기 
 ```javascript
