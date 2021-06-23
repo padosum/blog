@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 모듈화 
 date    : 2021-04-23 19:31:22 +0900
-updated : 2021-06-05 18:07:39 +0900
+updated : 2021-06-23 10:33:38 +0900
 aliases : 
 private : false
 hidden  : false
@@ -62,6 +62,36 @@ import { pi } from './math.js';
 console.log(pi); // 3.14
 ```
 - **가급적 실무에서는 [[Webpack]]과 같은 모듈 번들러를 이용해 구현하기**
+  - 로딩 속도를 높이기 위해 번들링과 최적화를 수행한다. 불필요한 코드가 최종 결과물에서는 제거되어 빌드 결과물의 크기가 작아진다. (가지치기, tree-shaking) 
+### import `as`
+```javascript
+import {sayHi as hi, sayBye as bye} from './say.js'
+
+hi('lion')
+bye('lion')
+```
+- 모듈을 이름바꿔가져올 수 있다.   
+### export `as`  
+- 이름바꿔 내보내는 것도 가능하다.  
+```javascript
+// say.js
+export {sayHi as hi, sayBye as bye}
+```
+```javascript
+import * as say from './say.js'
+
+say.hi('lion')
+say.bye('lion')
+```
+
+### export default  
+- 모듈의 종류는 **복수의 함수가 있는 라이브러리 형태**와 **개체 하나만 선언된 모듈**이 있다.  
+- 보통은 개체 하나만 선언된 모듈을 많이 사용하는데 그렇게되면 자연스럽게 파일의 수가 많아진다.
+  - 모듈 이름을 잘 지어주고 폴더에 파일을 잘 나눈다면 코드 탐색은 어렵지 않다.  
+- `export default`는 **해당 모듈에는 개체가 하나만 있다**는 사실을 명시한다.  
+  - 모듈을 가져올 때 중괄호 없이 가져올 수 있고 원하는대로 이름을 지정해줄 수 있다. 그러므로 혼란을 방지하기 위한 규칙이 필요할 수 있다.  
+ 
 ## reference 
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)
+- [https://ko.javascript.info/import-export](https://ko.javascript.info/import-export)
