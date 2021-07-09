@@ -1,10 +1,11 @@
 import React from "react";
-import { basename } from "path";
 import { withPrefix } from "gatsby";
 import Tippy from "@tippyjs/react";
 import { MDXProvider } from "@mdx-js/react";
-import MDXRenderer from "gatsby-theme-garden/src/components/mdx-components/mdx-renderer";
 import { LinkToStacked } from "react-stacked-pages-hook";
+
+import { basename } from "../../utils/path";
+import MDXRenderer from "gatsby-theme-garden/src/components/mdx-components/mdx-renderer";
 
 import "gatsby-theme-garden/src/components/mdx-components/anchor-tag.css";
 

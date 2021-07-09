@@ -22,6 +22,7 @@ module.exports = {
       options: {
         rootNote: `/About`,
         contentPath: `${__dirname}/content/garden`,
+        parseWikiLinks: true,
       },
     },
     {
