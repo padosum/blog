@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-06-13 22:19:06 +0900
+updated : 2021-07-08 22:03:51 +0900
 parent  : 
 layout  :
 ---
@@ -100,6 +100,8 @@ layout  :
 	* [[Graph-Online]]
 	* [[Version-Control]]
 	* [[Prettier]]
+	* [[Coc-nvim-and-Coc-snippets]]
+	
 * Security 
 	* [[SSL]]
 	* [[Encryption]]
