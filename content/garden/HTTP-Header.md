@@ -95,7 +95,7 @@ showReferences : true
 - [[HTTP-Status-Codes]] 참고 
 
 ## Allow 
-- 허용 가능한 HTTP 메서드 
+- 허용 가능한 [[HTTP-Method|HTTP 메서드]] 
 - 405 (Method Not Allowed) 에서 응답에 포함해야 한다. 
 - `Allow: GET, HEAD, PUT`
 - 잘 사용하지 않는다. 

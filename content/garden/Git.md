@@ -51,9 +51,9 @@ git init
 ## 명령어 정리  
 
 - `git init`
-    - 해당 디렉토리의 버전 관리를 시작한다는 의미
+    - 해당 디렉토리의 [[Version-Control|버전 관리]]를 시작한다는 의미
 - `git status`
-    - 버전 관리가 되고 있는 디렉토리의 상태를 보여준다.
+    - [[Version-Control|버전 관리]]가 되고 있는 디렉토리의 상태를 보여준다.
 - `git add 파일명`
     - `git add .` : 현재 디렉토리의 모든 변경사항을 staging area로 옮긴다.
 - `git rm --cached <file>`

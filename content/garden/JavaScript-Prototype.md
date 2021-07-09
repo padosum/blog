@@ -112,9 +112,9 @@ function Person(name) {
 
 ## 객체 생성방식에 따른 프로토타입 결정 
 - 객체 생성방식이 다양한데 프로토타입은 객체가 생성되는 시점에 객체 생성 방식에 의해 결정된다. 
-- 객체 리터럴
+- [[JavaScript-Object-Literal|객체 리터럴]]
 	- `Object.prototype`
-- Object 생성자 함수 
+- [[JavaScript-Constructor-Function|Object 생성자 함수]] 
 	- `Object.prototype`
 - 생성자 함수 (`new` 연산자)
 	- 생성자 함수의 `prototype` 프로퍼티에 바인딩 되어 있는 객체 

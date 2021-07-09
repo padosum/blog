@@ -45,7 +45,7 @@ user.sayHi(); // 안녕하세요!
 - Object.create 메서드
 - 클래스(ES6)
 
-객체 리터럴 외의 방법들은 모두 [[JavaScript-Function|함수]]를 이용해 객체를 생성한다.  
+[[JavaScript-Object-Literal|객체 리터럴]] 외의 방법들은 모두 [[JavaScript-Function|함수]]를 이용해 객체를 생성한다.  
 
 ## 원시 값과 비교하기 
 ### 원시 타입과 객체 타입의 다른점 
