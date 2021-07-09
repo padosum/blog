@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-07-08 22:03:51 +0900
+updated : 2021-07-09 11:14:36 +0900
 parent  : 
 layout  :
 ---
@@ -101,6 +101,7 @@ layout  :
 	* [[Version-Control]]
 	* [[Prettier]]
 	* [[Coc-nvim-and-Coc-snippets]]
+	* [[ipTIME-UC306SD]]
 	
 * Security 
 	* [[SSL]]
