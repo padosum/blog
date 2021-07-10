@@ -2,7 +2,7 @@
 title   : 📖 독서 목록
 excerpt : 
 date    : 2020-06-21 09:19:17 +0900
-updated : 2021-06-17 23:40:25 +0900
+updated : 2021-07-10 22:09:02 +0900
 tags    : [Book]
 parent  : 
 layout  : category
@@ -16,3 +16,4 @@ aliases: ["독서 목록"]
 - [[Work-Will-Never-Betray-You|일은 배신하지 않는다]]
 - [[17-techs|학교에서 알려주지 않는 17가지 실무 개발 기술]]
 - [[Dokusho-suru-hito-dake-ga-tadoritsukeru-basho|책 읽는 사람만이 닿을 수 있는 곳]]
+- [[Agile]]
