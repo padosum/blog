@@ -48,7 +48,8 @@ layout  :
 	* [[NPM]]
 	* [[Babel]]
 	* [[ESLint]]
-* Vue.js
+* Vue.js  
+  * [[What-is-the-difference-between-the-views-and-components folders-in-a-vue-project|Vue.js Project에서 views 와 components 폴더의 차이]]
 	* [[Vue-js]]
 	* [[Vue-Instance]]
 	* [[Vue-Components]]
