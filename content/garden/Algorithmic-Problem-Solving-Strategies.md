@@ -3,7 +3,7 @@ title   : 알고리즘 문제 해결 전략
 date    : 2021-04-24 15:06:55 +0900
 updated : 2021-04-28 10:08:24 +0900
 aliases : 
-private : false
+private : true
 hidden  : false
 showReferences : true
 ---
