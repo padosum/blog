@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2021-06-14 12:05:49 +0900
+updated : 2021-07-26 20:35:36 +0900
 aliases : ["웹팩"]
 private : false
 hidden  : false
@@ -28,6 +28,9 @@ showReferences : true
 - 사용하지 않는 코드 관리
 - Dynamic Loading & Lazy Loading 미지원 
   - 원하는 모듈을 원하는 타이밍에 로딩할 수 있음 
+
+## 웹팩 설치  
+- `npm install -D webpack webpack-cli`  
 
 ## 웹팩의 속성 
 ### entry
