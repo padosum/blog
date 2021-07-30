@@ -26,7 +26,7 @@ showReferences : true
 - [https://babeljs.io](https://babeljs.io)
 - 최신 문법의 JavaScript를 구형 브라우저에서 실행가능하도록 번역해주는 트랜스파일러
 
-### TypeScript 
+### [[TypeScript]]
 - [https://www.typescriptlang.org](https://www.typescriptlang.org)  
 - JavaScript의 최신 문법 및 정적 타입을 지원    
 
