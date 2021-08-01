@@ -1,13 +1,12 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2021-08-01 20:02:49 +0900
+updated : 2021-08-01 21:47:35 +0900
 aliases : 
 private : false
 hidden  : false
 showReferences : true
 ---
-
 [[Version-Control|버전 관리]]를 위한 소프트웨어  
 
 ## 특징 
@@ -63,6 +62,11 @@ git init
     - 길고 상세한 commit message는 `git commit` 만 입력 후 commit message 창으로 이동하여 작성한다.
 - `git commit -am "commit message`
     - `add` 와 `commit`  동시에 하기, 한번이라도 commit을 한 대상만 가능하다.
+- `git commit -sm "commit message"`
+	- `-s` 옵션 포함시 라이센스 서명을 의미하는 Signed-off-by 내용을 commit message 안에 포함한다.  
+	- CLA를 사용하기도 한다.  
+- `git amend`최신 commit 수정  
+
 - `git log`
     - commit 내역 확인
     - [https://stackoverflow.com/questions/9483757/how-to-exit-git-log-or-git-diff](https://stackoverflow.com/questions/9483757/how-to-exit-git-log-or-git-diff)
@@ -91,6 +95,14 @@ git init
 - `git show <commit id> | grep "diff --git"`: commit에서 수정한 파일 확인  
 - `git push`
     - 원격 저장소로 local 저장소의 변경 사항을 반영
+- `git stash`
+	- 수정한 내용 임시 저장 
+- `git stash pop`
+	- 임시 저장한 내용 복구  
+- `git checkout -- <파일명>`  
+	- 수정한 내용 원래대로 복구  
+	- `checkout` 은 브랜치 변경시에도 사용. 도서관에서 책을 받는 것과 같은 의미. 저장소 디렉토리에 있는  `.git` 폴더에서 히스토리를 관리. `.git`에서 특정 히스토리를 꺼내는 것  
+
 
 ### `git config`
 - GitHub ID/PW 캐싱 데이터 삭제하기 
@@ -124,6 +136,13 @@ $ git config --global core.editor vim
   - `git reset`과의 차이
       - `git reset`은 되돌린 버전 이후 버전이 모두 사라지지만 `git revert` 는 되돌린 버전 이후 버전은 유지되고 revert 되었다는 사실을 담은 commit을 새로 추가하는 것
           - 하지만 `revert` 에 `-n` 옵션을 붙이면 commit이 남지 않을 수 있다.
+
+### 수정 내역 되감기  
+- `git rebase -i --root`
+	- 되감고 싶은 부분의 commit `pick`글자를 `edit`으로 수정  
+- `git rebase --abort` 되감기 취소 
+- `git rebase --continue` 되감았던 것 풀기  
+
 ### branch 
   - `git branch <브랜치명>` 브랜치 생성
   - `git branch` 현재 branch 목록 조회
@@ -196,6 +215,9 @@ $ git config --global core.editor vim
     1. base를 바꾸고자 하는 branch로 checkout 
     2. `git rebase <base가 될 브랜치명>`
 
+## blame  
+- 해당 소스라인에 대해 누가 마지막으로 수정했는지 commit ID 추적을 할 수 있다.
+- 소스코드 리딩 시 유용  
 
 ## 참고
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
