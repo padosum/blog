@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2021-07-07 22:56:02 +0900
+updated : 2021-08-01 20:02:49 +0900
 aliases : 
 private : false
 hidden  : false
@@ -67,8 +67,47 @@ git init
     - commit 내역 확인
     - [https://stackoverflow.com/questions/9483757/how-to-exit-git-log-or-git-diff](https://stackoverflow.com/questions/9483757/how-to-exit-git-log-or-git-diff)
     - [https://velog.io/@nmy0502/git-commit-err-vi](https://velog.io/@nmy0502/git-commit-err-vi)
+- `git shortlog -sn | nl`  
+	- commit 내역, `-s`는 개발자별 commit 수, `-nl`은 line number를 표시한다.  
+  - 누가 해당 프로젝트에 많이 기여했는가를 간단하게 볼 수 있다.  
+- `git log --oneline | wc -l`  
+	- 전체 커밋 수 세기
+	- `wc -l`은 파일 라인수  
+  - 특정 폴더에서? 
+		- `git log --oneline -- 폴더명`
+- `git log --oneline --no-merges`  
+	- merge commit 제외하고 조회  
+- `git log -p`
+  - commit 내역 상세 조회  
+- `git log --oneline --after=2021-07-23 --before=2021-08-08`  
+	- 특정 날짜 기준 커밋 내역 조회  
+  - inclusive 
+- `git log --reverse` 
+	- 과거순 조회  
+- `git log -n 5`  
+	- 특정 개수만 조회
+- `git show <commit id>`  
+	- commit 정보 조회
+- `git show <commit id> | grep "diff --git"`: commit에서 수정한 파일 확인  
 - `git push`
     - 원격 저장소로 local 저장소의 변경 사항을 반영
+
+### `git config`
+- GitHub ID/PW 캐싱 데이터 삭제하기 
+```bash
+$ git config --global --unset credential.helper  
+$ git config --system --unset credential.helper
+```  
+- user email, name 설정 
+```bash
+$ git config --global user.email "e-mail"
+$ git config --global user.name "author"
+```
+- 확인하기: `git config -l`  
+- 커밋 메시지 기본 편집기 설정 
+```bash
+$ git config --global core.editor vim 
+```
 
 ### 되돌리기 
 - `git reset`
@@ -93,7 +132,7 @@ git init
       - 어느 쪽이 병합의 대상인지 잘 생각해야한다.
       1. **병합의 결과**가 되는 대상에 checkout
       2. `git merge <병합할 브랜치명>`
-
+- `git branch -D <브랜치명>` 브랜치 삭제 
 ### 비교하기
 - 변경 내역 비교 명령어
 - 커밋 간의 비교
