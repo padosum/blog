@@ -1,7 +1,7 @@
 ---
 title   : 정렬 알고리즘
 date    : 2021-05-05 22:31:59 +0900
-updated : 2021-05-05 22:36:29 +0900
+updated : 2021-08-03 16:07:35 +0900
 aliases : 
 private : false
 hidden  : false
@@ -13,6 +13,7 @@ showReferences : true
 - [[Selection-Sort]]
 - [[Bubble-Sort]]
 - [[Insertion-Sort]]
-
+- [[Merge-Sort]]
+ 
 ## 참고  
 - [https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98](https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
