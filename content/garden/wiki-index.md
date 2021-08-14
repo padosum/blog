@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-07-09 11:14:36 +0900
+updated : 2021-08-14 21:22:41 +0900
 parent  : 
 layout  :
 ---
@@ -56,6 +56,7 @@ layout  :
 	* [[Vue-Components-Communication]]
 	* [[Vue-Router]]
 	* [[Vue-Axios]]
+	* [[Add-Utterances-To-Vue-Project|Vue Project에 Utterances 추가하기]]
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
 	* [[Skip-Git-Commit-Hooks]]
@@ -67,6 +68,7 @@ layout  :
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
 	* [[Vuepress-Depoly-To-GitHub-Pages]]
+	* [[Add-Favicon-With-Webpack|웹팩으로 파비콘 추가하기]]
 * React
 	* [[React-Props-and-State]]
 	* [[React-Context]]
