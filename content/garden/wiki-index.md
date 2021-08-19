@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-08-14 21:22:41 +0900
+updated : 2021-08-19 23:12:46 +0900
 parent  : 
 layout  :
 ---
@@ -85,6 +85,7 @@ layout  :
 	* [[Framework]]
 	* [[MVC]]
 	* [[Functional-Programming]]
+	* [[Declarative-Programming]]
 	* [[Sass]]
 
 * Computer Science
