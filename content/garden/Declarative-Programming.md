@@ -59,5 +59,5 @@ reunder() {
  
 
 ## reference 
-- Learning React  
+- [Learning React](https://www.hanbit.co.kr/store/books/look.php?p_code=B3942115529)
 
