@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-08-20 23:16:41 +0900
+updated : 2021-08-25 22:46:08 +0900
 parent  : 
 layout  :
 ---
@@ -18,6 +18,8 @@ layout  :
 	* [[URI]]
 	* [[HTTP]]
 	* [[Webpack]]
+	* [[SSR]]
+	* [[CSR]]
 * JavaScript
 	* [[JavaScript-Variables]]
 	* [[JavaScript-Expression]]
