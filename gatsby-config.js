@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "🏎 LESS",
+    title: "LESS",
     description: "wiki",
     author: "padosum",
     twitter: '',
@@ -31,6 +31,6 @@ module.exports = {
         fonts: [`Noto Sans KR`],
         display: "swap"
       }
-    }
+    },
   ],
 }

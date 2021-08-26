@@ -8,7 +8,7 @@ import { dataToNote, dataToSlug } from "gatsby-theme-garden/src/utils/data-to-no
 import Note from "gatsby-theme-garden/src/components/note";
 import NoteWrapper from "gatsby-theme-garden/src/components/note-wrapper";
 import Header from "./header";
-import SEO from "gatsby-theme-garden/src/components/seo";
+import SEO from "./seo";
 // import Utterances from "./Utterances"
 
 import "gatsby-theme-garden/src/components/theme.css";
