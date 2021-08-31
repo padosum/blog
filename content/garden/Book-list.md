@@ -8,7 +8,7 @@ parent  :
 layout  : category
 aliases: ["독서 목록"]
 ---
-- [[Apprenticeship-Patterns|프로그래머의 길, 멘토에게 묻다]] 
+- [[프로그래머의 길, 멘토에게 묻다]] 
 - [[Mercedes-benz-programmer|벤츠 타는 프로그래머]]
 - [[Developer-culter-that-saved-korea-by-baekjun-lim|임백준의 대살개문]]
 - [[Swipe-To-Unlock|IT 좀 아는 사람]]

@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-08-25 22:46:08 +0900
+updated : 2021-08-26 15:06:47 +0900
 parent  : 
 layout  :
 ---
@@ -69,6 +69,7 @@ layout  :
 	* [[Gitignore-not-working]]
 	* [[Git]]
 	* [[GitHub]]
+	* [[이미 커밋된 파일들을 .gitignore에 적용하기]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
