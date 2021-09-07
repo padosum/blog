@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-08-26 15:06:47 +0900
+updated : 2021-09-07 16:48:43 +0900
 parent  : 
 layout  :
 ---
@@ -53,6 +53,7 @@ layout  :
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
+	* [[TypeScript-Generics]]
 * Vue.js  
   * [[What-is-the-difference-between-the-views-and-components folders-in-a-vue-project|Vue.js Project에서 views 와 components 폴더의 차이]]
 	* [[Vue-js]]
