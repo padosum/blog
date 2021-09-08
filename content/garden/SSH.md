@@ -1,7 +1,7 @@
 ---
 title   : SSH (Secure Shell)
 date    : 2021-04-23 20:11:56 +0900
-updated : 2021-04-23 20:12:05 +0900
+updated : 2021-09-08 23:24:42 +0900
 aliases : 
 private : false
 hidden  : false
@@ -15,8 +15,8 @@ showReferences : true
 - RDP는 MS사에서 개발한 프로토콜로, Windows에는 원격 데스크탑 프로그램(서버 및 클라 이언트)이 포함되어 있다.
 - 하지만 Unix 계열 OS는 기본적으로 RDP 프로그램를 포함하지 않는다. 물론 RDP와 유사한 많은 오픈 프로토콜들이 개발되어 Unix 계열 서버를 GUI를 통해 원격 제어하는 것도 불가능하지는 않다.
 
-## CLI 원격 제어 
- - Unix 계열 OS는 **SSH(Secure Shell)** 프로토콜을 통해 서버를 CLI로 제어 할 수 있다. 
+## [[CLI]] 원격 제어 
+ - Unix 계열 OS는 **SSH(Secure Shell)** 프로토콜을 통해 서버를 [[CLI]]로 제어 할 수 있다. 
  - SSH는 서버와 클라이언트간의 인증 및 패킷 암호화를 위한 프로토콜 또는 그 프로그램을 일컫으며, 쉽게 는 SSH는 안전한 원격 셸이라고 생각해도 좋다. 
  - Unix 계열 OS는 기본적으로 SSH 프로그램(서버 및 클라이언트)을 포함하고 있다.
  - Windows 서버도 PowerShell 이라는 프로토콜을 통해 CLI 원격 제어를 제공할 수 있다.  

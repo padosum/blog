@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-07 16:48:43 +0900
+updated : 2021-09-08 23:20:49 +0900
 parent  : 
 layout  :
 ---
@@ -113,7 +113,8 @@ layout  :
 	* [[Prettier]]
 	* [[Coc-nvim-and-Coc-snippets]]
 	* [[ipTIME-UC306SD]]
-	
+  * [[CLI]]
+	* [[Vue-CLI]]
 * Security 
 	* [[SSL]]
 	* [[Encryption]]
