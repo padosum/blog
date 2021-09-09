@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-08 23:20:49 +0900
+updated : 2021-09-09 23:47:14 +0900
 parent  : 
 layout  :
 ---
@@ -115,6 +115,7 @@ layout  :
 	* [[ipTIME-UC306SD]]
   * [[CLI]]
 	* [[Vue-CLI]]
+	* [[Electron]]
 * Security 
 	* [[SSL]]
 	* [[Encryption]]

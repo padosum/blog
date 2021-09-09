@@ -1,8 +1,8 @@
 ---
 title   : 프레임워크(Framework) 
 date    : 2021-04-23 21:42:11 +0900
-updated : 2021-04-23 21:42:23 +0900
-aliases : 
+updated : 2021-09-09 23:48:52 +0900
+aliases : ["프레임워크"]
 private : false
 hidden  : false
 showReferences : true
@@ -13,5 +13,3 @@ showReferences : true
 - 프레임워크를 사용하려면 제공되는 문서 등을 통해 프레임워크의 작동 원리, 구성 요소, 커스터마이징, 설정 등을 충분히 이해할 필요가 있다. 
 	> 요즘 위키 사이트를 수정하는데 애먹고 있다. Framework를 충분히 이해하고 있지 않아서...
 - 짜여진 틀대로 개발자가 코드를 작성하면 프레임워크가 작동하면서 개발자의 코드를 호출하기 때문. 이러한 디자인 패턴을 제어의 반전(IoC; Inversion of Control)이라고 부르기도 한다.
-
-

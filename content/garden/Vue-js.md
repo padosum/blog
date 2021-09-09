@@ -1,14 +1,14 @@
 ---
 title   : Vue.js
 date    : 2021-04-26 09:41:29 +0900
-updated : 2021-04-26 09:41:44 +0900
+updated : 2021-09-09 23:50:01 +0900
 aliases : 
 private : false
 hidden  : false
 showReferences : true
 ---
 ## Vue.js가 무엇인가? 
-- UI를 만들기 위한 Progressive Framework 
+- UI를 만들기 위한 Progressive [[Framework]] 
   - 화면(view, 브라우저에서 사용자에게 보여지는 것)단 라이브러리  
 - View([[DOM]]) → Vue([[DOM]] Listeners) → Model(JavaScript)
 - View([[DOM]]) ← Vue(Data Bindings) ← Model(JavaScript)
