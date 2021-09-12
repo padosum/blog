@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2021-08-01 21:47:35 +0900
+updated : 2021-09-12 14:30:44 +0900
 aliases : 
 private : false
 hidden  : false
@@ -23,6 +23,8 @@ showReferences : true
 ## 저장소  
 - Git을 이용하면 특정 디렉토리를 기준으로 저장소(Repository)를 생성할 수 있다. 
 - 저장소는 루트 디렉토리(Top Level Directory) 하부에 `.git` 디렉토리를 생성하고, 루트 디렉토리에 생성되는 모든 파일에 대한 버전별 스냅샷(Snapshot; 특정 시점의 모든 데이터)을 `.git` 디렉토리에 저장하게 된다. 
+
+## [[How-Does-Git-Work|Git은 어떤 원리로 동작하는가?]]
 
 ###  git init 
 ```bash
