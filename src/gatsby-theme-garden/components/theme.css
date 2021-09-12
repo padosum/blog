@@ -21,8 +21,7 @@ body.light-mode {
     --link-bg: rgba(219, 234, 254, 1);
     --link-text: rgba(37, 99, 235, 1);
     --blockquote-text: #6a737d;
-    --code-text: #9c4221;
-    --code-bg: #fffaf0;
+    --code-bg: #eaeaea;
     --highlight-text: #1a202c;
     --highlight-bg: #fefcbf;
 
@@ -47,8 +46,7 @@ body.dark-mode {
     --link-bg: rgba(55, 48, 163, 1);
     --link-text: rgba(79, 70, 229, 1);
     --blockquote-text: #fafafc;
-    --code-text: #b8b8b8;
-    --code-bg: #202020;
+    --code-bg: #3b3d42;
     --highlight-text: #1a202c;
     --highlight-bg: #fcd34d;
 

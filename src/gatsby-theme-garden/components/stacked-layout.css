@@ -83,14 +83,12 @@ blockquote p {
 }
 
 code {
-    color: var(--code-text);
-    background-color: var(--code-bg);
-    /* border-radius: 0.25rem; */
-    padding-left: 0.125rem;
-    padding-right: 0.125rem;
-    margin-left: 0.125rem;
-    margin-right: 0.125rem;
-    border: 1px solid; 
+    background: var(--code-bg);
+    padding: 1px 6px;
+    margin: 0 2px;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 400;
 }
 
 pre {
