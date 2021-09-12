@@ -20,7 +20,7 @@ layout  :
 	* [[Webpack]]
 	* [[SSR]]
 	* [[CSR]]
-* JavaScript
+* [[JavaScript]]
 	* [[JavaScript-Variables]]
 	* [[JavaScript-Expression]]
 	* [[JavaScript-Data-Type]]
