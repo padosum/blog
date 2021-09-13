@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-12 13:44:34 +0900
+updated : 2021-09-13 22:52:58 +0900
 parent  : 
 layout  :
 ---
@@ -20,34 +20,11 @@ layout  :
 	* [[Webpack]]
 	* [[SSR]]
 	* [[CSR]]
-* [[JavaScript]]
-	* [[JavaScript-Variables]]
-	* [[JavaScript-Expression]]
-	* [[JavaScript-Data-Type]]
-	* [[JavaScript-Short-Circuit-Evaluation]]
-	* [[JavaScript-Object]]
-	* [[JavaScript-Object-Literal]]
-	* [[JavaScript-regular-expression]]
-	* [[JavaScript-Scope]]
-	* [[JavaScript-Scope-Chain]]
-	* [[JavaScript-Block-Level-Scope]]
-	* [[JavaScript-Property-Attributes]]
-	* [[JavaScript-Destructuring-assignment]]
-	* [[JavaScript-Closure]]
-	* [[JavaScript-Module]]
-	* [[Module-Bundler]]
-	* [[JavaScript-Spread-syntax]]
+	* [[Ajax]]
+	* [[Rendering]]
 	* [[DOM]]
-	* [[JavaScript-Array-Like-Object]]
-	* [[JavaScript-Function]]
-	* [[JavaScript-Constructor-Function]]
-	* [[JavaScript-First-Class-Object]]
-	* [[JavaScript-Prototype]]
-		* [[JavaScript-Prototype-Chain]] 
-		* [[JavaScript-Property-Shadowing]]
-	* [[JavaScript-strict-mode]]
-	* [[JavaScript-Built-in-Objects]]
-	* [[NPM]]
+* [[JavaScript]]
+	* [[Module-Bundler]]
 	* [[Babel]]
 	* [[ESLint]]
 * TypeScript  
@@ -95,7 +72,8 @@ layout  :
 	* [[Functional-Programming]]
 	* [[Declarative-Programming]]
 	* [[Sass]]
-
+	* [[Asynchronous]]
+	* [[Synchronous]]
 * Computer Science
 	* [[Architecture]]
 	* [[Hosting]]

@@ -1,13 +1,11 @@
 ---
 title   : JavaScript Data Type 
 date    : 2021-05-02 12:19:19 +0900
-updated : 2021-05-02 12:19:38 +0900
+updated : 2021-09-13 23:11:23 +0900
 aliases : ["데이터 타입"]
-private : false
-hidden  : false
-showReferences : true
 ---
-- 데이터 타입(Data type)은 값의 종류이다. 자바스크립트의 모든 값은 데이터 타입을 갖는다.  
+
+데이터 타입(Data type)은 값의 종류이다. 자바스크립트의 모든 값은 데이터 타입을 갖는다.  
 - **원시타입** 
 	- 숫자
 	- 문자열

@@ -1,16 +1,14 @@
 ---
 title   : JavaScript Expression
 date    : 2021-05-02 11:33:32 +0900
-updated : 2021-05-02 11:33:46 +0900
+updated : 2021-09-13 23:11:35 +0900
 aliases : ["자바스크립트 표현식"]
-private : false
-hidden  : false
-showReferences : true
 ---
+
 ## 값 
 - 값은 표현식이 평가되어 생성된 결과 
 	- 평가: 식을 해석해 값을 생성하거나 참조하는 것  
-- 모든 값은 [[데이터 타입]]을 가진다.  -> 비트의 나열 
+- 모든 값은 [[JavaScript-Data-Type|데이터 타입]]을 가진다.  -> 비트의 나열 
 
 
 ## 리터럴
