@@ -3,12 +3,10 @@ title   : 객체 리터럴
 date    : 2021-05-08 12:36:43 +0900
 updated : 2021-05-08 12:36:51 +0900
 aliases : ["객체 리터럴"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
-
-변수에 객체 리터럴이 할당되는 시점에 자바스크립트 엔진은 객체 리터럴을 해석해서 객체를 생성한다.
+## 객체 리터럴을 이용해 객체 만들기 
+변수에 [[JavaScript-Object|객체]] 리터럴이 할당되는 시점에 [[JavaScript-Engine|자바스크립트 엔진]]은 객체 리터럴을 해석해서 객체를 생성한다.
 ```javascript
 let person = {
     name: 'Lee jung-Seob 🐮',
@@ -41,8 +39,7 @@ console.log(obj); // {hello: "world"}
 ```
 
 ## 메서드  
-함수는 객체([[일급 객체]])이므로 값으로 취급할 수 있어서 프로퍼티 값으로 사용 가능하다. 프로퍼티 값이 함수일 경우 일반 함수와 구분을 위해 메서드(method)라고 부른다. 
-메서드란 객체에 묶여 있는 함수를 의미한다.  
+함수는 객체([[JavaScript-First-Class-Object|일급 객체]])이므로 값으로 취급할 수 있어서 프로퍼티 값으로 사용 가능하다. **프로퍼티 값이 함수일 경우 일반 함수와 구분을 위해 메서드(method)라고 부른다.** 메서드란 객체에 묶여 있는 함수이다.  
 ```javascript
 let user = {
   name: "John",
@@ -57,7 +54,7 @@ let user = {
 
 user.sayHi(); // John
 ```
-메서드 내부에서 사용하는 [[this]] 키워드는 객체 자신을 가리키는 참조변수다. 
+메서드 내부에서 사용하는 [[JavaScript-this|this]] 키워드는 객체 자신을 가리키는 참조변수다. 
 
 ## 프로퍼티 접근하기  
 프로퍼티에 접근하는 방법은 2가지  
@@ -76,7 +73,6 @@ console.log(person.name); // Lee
 
 // 대괄호 표기법
 console.log(person['age']); // 39 
-
 console.log(person.height); // undefined
 
 // 프로퍼티 값 갱신
@@ -100,6 +96,7 @@ let obj = {x, y};
 
 console.log(obj); // {x: 1, y: 2}
 ```
+
 ### 계산된 프로퍼티 이름 
 ```javascript
 const prefix = 'prop';

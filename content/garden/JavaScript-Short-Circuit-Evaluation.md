@@ -2,21 +2,17 @@
 title   : JavaScript 단축 평가 
 date    : 2021-05-08 12:00:08 +0900
 updated : 2021-05-08 12:00:37 +0900
-aliases : 
-private : false
-hidden  : false
-showReferences : true
+aliases : ["단축 평가"]
+tags: ["JavaScript"]
 ---
 **단축 평가(short-circuit evaluation)**  
 표현식을 평가하는 도중에 평가결과가 확정된 경우 나머지 평가 과정을 생략하는 것 
 
 ## 논리 연산자를 이용한 단축평가 
-| 단축 평가 표현식    | 평가 결과  |
-| ------------------- | ---------- |
-| `true || anything`  | `true`     |
-| `false || anything` | `anything` |
-| `true && anything`  | `anything` |
-| `false && anything` | `false`    |
+-  `true || anything` →  `true`   
+- `false || anything` →  `anything`
+- `true && anything`  →  `anything` 
+- `false && anything` →  `false`    
 
 ```javascript
 let done = true;
@@ -62,7 +58,7 @@ console.log(value); // undefined
 let str = '';
 
 let length = str?.length; 
-console.log(length); // 좌항 피연산자가 false로 평가되지만 null 또는 undefined가 아니기에 
+console.log(length); // 0, 좌항 피연산자가 false로 평가되지만 null 또는 undefined가 아니기에 
 // 우항의 프로퍼티 참조를 이어간다.  
 ```
 
@@ -76,7 +72,7 @@ let foo = null ?? 'default';
 console.log(foo); // "default"
 
 let foo = '' ?? 'default';
-console.log(foo); // 좌항 피연산자가 false로 평가되지만 null 또는 undefined가 아니기에 
+console.log(foo); // '', 좌항 피연산자가 false로 평가되지만 null 또는 undefined가 아니기에 
 // 좌항의 피연산자를 그대로 반환 
 ```
 
