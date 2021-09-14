@@ -3,9 +3,7 @@ title   : 라이브러리
 date    : 2021-04-23 21:41:44 +0900
 updated : 2021-04-23 21:42:01 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 - 독립적으로 **특정 기능을 수행하는 코드**
 - 모듈과 비슷한 개념 

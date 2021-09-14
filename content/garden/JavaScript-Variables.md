@@ -3,9 +3,7 @@ title   : JavaScript 변수
 date    : 2021-04-28 11:20:52 +0900
 updated : 2021-04-28 11:22:04 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ## 변수란? 
 메모리는 데이터를 저장할 수 있는 메모리 셀의 집합이고 이 메모리 셀 하나의 크기는 1바이트(8비트)이다. 즉 컴퓨터는 메모리 셀의 크기, 1바이트 단위로 데이터를 저장하거나 읽는다.  
@@ -47,7 +45,7 @@ var message = 'hello';
 
 #### 변수 이름은 어디에 등록되나? 
 - 변수 이름을 비롯한 모든 식별자는 [[실행 컨텍스트]]에 등록된다.  
-  - 실행 컨텍스트(Execution Context): 자바스크립트 엔진이 소스코드를 평가하고 실행하기 위해 필요한 환경을 제공하고 코드의 실행 결과를 실제로 관리하는 영역  
+  - 실행 컨텍스트(Execution Context): [[JavaScript-Engine|자바스크립트 엔진]]이 소스코드를 평가하고 실행하기 위해 필요한 환경을 제공하고 코드의 실행 결과를 실제로 관리하는 영역  
 
 ## 호이스팅 (Hoiisting)
 - hoisting: 끌어올림

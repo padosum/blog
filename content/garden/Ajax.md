@@ -3,9 +3,7 @@ title   : Ajax
 date    : 2021-09-13 22:27:00 +0900
 updated : 2021-09-13 22:45:34 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Web", "JavaScript"]
 ---
 Ajax (**A**synchronous **J**avaScript **A**nd **X**ML)
 

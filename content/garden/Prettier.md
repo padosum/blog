@@ -3,9 +3,7 @@ title   : Prettier
 date    : 2021-06-13 22:19:06 +0900
 updated : 2021-06-13 22:26:39 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Tools"]
 ---
 **Prettier, 프리티어**
 - 코드를 일관적인 스타일로 다듬어준다.  

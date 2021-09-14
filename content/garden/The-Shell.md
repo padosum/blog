@@ -3,9 +3,7 @@ title   : 셸(The Shell)
 excerpt : missing-semester 정리  
 date    : 2020-08-08 12:46:43 +0900
 updated : 2020-08-08 12:46:55 +0900
-tags    : [Shell, TIL]
-parent  : 
-layout  :
+tags    : [Shell]
 ---
 
 ## 셸(Shell) 이란 ?  

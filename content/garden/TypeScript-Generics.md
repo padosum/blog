@@ -3,9 +3,7 @@ title   : TypeScript Generics
 date    : 2021-09-07 16:48:44 +0900
 updated : 2021-09-07 16:49:01 +0900
 aliases : ["제네릭"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["TypeScript"]
 ---
 - 호출하는 시점에 타입을 넘겨줄 수 있다.  
 ```typescript

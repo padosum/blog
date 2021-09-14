@@ -3,9 +3,7 @@ title   : 프레임워크(Framework)
 date    : 2021-04-23 21:42:11 +0900
 updated : 2021-09-09 23:48:52 +0900
 aliases : ["프레임워크"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 
 - 말 그대로 특정 목적을 가진 소프트웨어의 뼈대를 구현한 코드

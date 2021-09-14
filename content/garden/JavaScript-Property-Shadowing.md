@@ -3,9 +3,7 @@ title   : JavaScript 프로퍼티 섀도잉
 date    : 2021-05-16 22:17:16 +0900
 updated : 2021-05-16 22:17:26 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 
 ```javascript

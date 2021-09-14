@@ -3,9 +3,7 @@ title   : 연필 몇 다스가 필요한가?
 date    : 2021-04-25 08:59:32 +0900
 updated : 2021-04-25 08:59:41 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제
 - 사람 수(n)을 입력받고 1인당 1자루씩 나눠주려면 총 몇 다스가 필요한지?  

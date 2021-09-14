@@ -3,9 +3,7 @@ title   : Git은 어떤 원리로 동작하는가?
 date    : 2021-09-12 13:43:41 +0900
 updated : 2021-09-12 13:44:33 +0900
 aliases : ["Git은 어떤 원리로 동작하는가?"] 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Git"]
 ---
 [[Git]]의 원리를 알기 위해 `.git`의 내부를 살펴보자.
 `git init` 명령어를 사용하면 `.git` 디렉토리가 생성된다.

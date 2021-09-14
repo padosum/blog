@@ -3,9 +3,7 @@ title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
 updated : 2021-07-26 20:35:36 +0900
 aliases : ["웹팩"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Web", "Webpack"]
 ---
 - [[모듈 번들러]]
 

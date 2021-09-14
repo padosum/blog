@@ -3,9 +3,7 @@ title   : URI
 date    : 2021-05-11 21:08:39 +0900
 updated : 2021-05-11 21:09:28 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Web"]
 ---
 ## URI
 **URI(Uniform Resource Identifier)**  

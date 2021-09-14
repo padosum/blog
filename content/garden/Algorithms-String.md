@@ -3,9 +3,7 @@ title   : 문자열 관련 문제
 date    : 2021-04-25 10:04:18 +0900
 updated : 2021-04-26 15:36:45 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제 1 
 - 입력받은 문자열에 `A`가 있다면 `#`으로 변경한다. 
@@ -164,5 +162,5 @@ console.log(solution('peaches')) // c
 ```
 
 ## 더 알아보기 
-- [[JavaScript-regular-expression]]
+- [[JavaScript-Regular-Expression]]
 

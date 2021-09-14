@@ -3,9 +3,7 @@ title   : JavaScript 프로토타입
 date    : 2021-05-15 23:02:57 +0900
 updated : 2021-05-15 23:03:17 +0900
 aliases : ["프로토타입"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 - 자바스크립트는 프로토타입 기반 객체지향 프로그래밍 언어다.
 

@@ -3,9 +3,7 @@ title   : 비동기
 date    : 2021-09-13 22:44:06 +0900
 updated : 2021-09-13 22:45:32 +0900
 aliases : ["비동기"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 **비동기(Asynchronous)**
 - 동시에 일어나지 않는 

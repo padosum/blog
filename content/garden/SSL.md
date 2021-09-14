@@ -2,10 +2,8 @@
 title   : SSL (Secure Sockets Layer)
 date    : 2021-04-23 20:40:23 +0900
 updated : 2021-04-23 20:40:32 +0900
-aliases : 
-private : false
-hidden  : false
-showReferences : true
+aliases :
+tags: ["Computer Science"]
 ---
  
 TCP/IP(또는 TCP 위의 HTTP 같은 응용프로토콜) 패킷이 유선이나 무선 환경을 통해 전송되는 순간을 생각해보면, 발신자와 수신자 사이의 네트워크엔 수 많은 라우터나 다른 노드들이 존재하고 있다. 이때 이 사이에 위치한 해커는 손쉽게 인터넷을 흐르는 패킷들을 감청(Packet Sniffing) 할 수 있다. 즉, 로그인을 하기 위해 전송한 아이디나 패스워드가 손쉽게 해커의 손에 들어갈 수 있다는 문제가 있는 것.

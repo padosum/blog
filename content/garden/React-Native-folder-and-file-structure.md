@@ -3,12 +3,10 @@ title   : 리액트 네이티브 폴더와 파일 구조
 excerpt : 
 date    : 2020-05-23 13:56:01 +0900
 updated : 2020-05-23 13:57:42 +0900
-tags    : [React]
-parent  : 
-layout  :
+tags    : ["React"]
 ---
   
-![react-native-folder](/images/React-Native-folder-and-file-structure/106074019-78fb2380-614e-11eb-8f32-5283507789f2.png) 
+![[106074019-78fb2380-614e-11eb-8f32-5283507789f2.png]] 
 
 - index.js  
 리액트 네이티브 프로젝트의 시작 파일. 이 파일을 시작으로 리액트 네이티브의 자바스크립트 코드가 번들링(Bundling)[^1]된다. 

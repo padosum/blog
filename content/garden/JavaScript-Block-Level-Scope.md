@@ -3,9 +3,7 @@ title   : 블록 레벨 스코프
 date    : 2021-05-15 17:05:36 +0900
 updated : 2021-05-15 17:05:43 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ## var 키워드로 선언한 변수의 문제 
 - **변수의 중복 선언이 허용**됨 
@@ -32,7 +30,7 @@ console.log(lscope); // 0
 console.log(foo); // ReferenceError: foo is not defined
 let foo;
 ```
-- `var` 키워드로 선언한 변수는 런타임 이전에 자바스크립트 엔진에 의해 암묵적으로 "선언 단계"와 "초기화 단계"가 한꺼번에 진행된다. 
+- `var` 키워드로 선언한 변수는 런타임 이전에 [[JavaScript-Engine|자바스크립트 엔진]]에 의해 암묵적으로 "선언 단계"와 "초기화 단계"가 한꺼번에 진행된다. 
 - 하지만 **`let` 키워드로 선언한 변수는 "선언 단계"와 "초기화 단계"가 분리되어 진행된다.** 자바스크립트 엔진에 의해 암묵적으로 선언 단계가 먼저 실행되지만 초기화는 변수 선언문에 도달했을 때 실행되는 것.
   - 스코프 시작 지점부터 초기화 시작 지점까지 변수를 참조할 수 없는 구간을 **일시적 사각지대(Temporal Dead Zone; TDZ)**라고 부른다.
 - TDZ를 나타내는 것이면 변수 호이스팅이 발생하지 않는 것인가? 

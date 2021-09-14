@@ -1,9 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-13 22:52:58 +0900
-parent  : 
-layout  :
+updated : 2021-09-14 15:14:41 +0900
 ---
 
 * [[Movies-with-a-computer]]
@@ -13,7 +11,7 @@ layout  :
 	* [[Brute-Force-Search-Algorithm]]
 	* [[Sort-Algorithm]]
 * Web
-	* [[Network 탭 Content Download 속도 단축하기]]
+	* [[Reduce-Content-Download-Time|Network 탭 Content Download 속도 단축하기]]
 	* [[Internet-Network]]
 	* [[URI]]
 	* [[HTTP]]
@@ -24,6 +22,7 @@ layout  :
 	* [[Rendering]]
 	* [[DOM]]
 * [[JavaScript]]
+  * [[JavaScript-Engine]] 
 	* [[Module-Bundler]]
 	* [[Babel]]
 	* [[ESLint]]
@@ -71,6 +70,7 @@ layout  :
 	* [[MVC]]
 	* [[Functional-Programming]]
 	* [[Declarative-Programming]]
+	* [[Object-Oriented-Programming]]
 	* [[Sass]]
 	* [[Asynchronous]]
 	* [[Synchronous]]
@@ -103,6 +103,7 @@ layout  :
 	* [[AB-Testing]]
 	* [[Open-Source]] 
 	* [[Paradigm]]
+	* [[TPO]]
 * Art
 	* [[Cubism]]
 * Sociology

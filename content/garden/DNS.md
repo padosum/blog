@@ -3,9 +3,7 @@ title   : DNS
 date    : 2021-04-23 20:23:54 +0900
 updated : 2021-05-11 21:33:21 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 도메인(Domain)과 아이피에 대한 정보를 매칭해둔 전세계에 공개된 DB
 

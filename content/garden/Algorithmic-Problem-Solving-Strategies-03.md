@@ -3,9 +3,6 @@ title   : 알고리즘 문제 해결 전략 03 - 코딩과 디버깅
 date    : 2021-04-24 16:09:09 +0900
 updated : 2021-04-24 16:09:27 +0900
 aliases : ["03 코딩과 디버깅"]
-private : false
-hidden  : false
-showReferences : true
 ---
 **빨리 코드를 작성하는 것보다 읽기 쉬운 코드를 작성하는 것이 중요**
 

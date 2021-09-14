@@ -2,10 +2,8 @@
 title   : 2019 카카오 개발자 겨울 인턴십 문제
 date    : 2021-04-27 21:58:38 +0900
 updated : 2021-04-27 21:58:59 +0900
-aliases : 
-private : false
-hidden  : false
-showReferences : true
+aliases :
+tags: ["Algorithm"]
 ---
 ## 크레인 인형뽑기 게임 
 ```javascript

@@ -3,9 +3,7 @@ title   : JavaScript strict mode
 date    : 2021-05-16 23:13:55 +0900
 updated : 2021-05-16 23:14:01 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ## strict mode ?? 
 - ES5 부터 지원된 엄격 모드(strict mode)

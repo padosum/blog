@@ -3,9 +3,7 @@ title   : 인터넷 네트워크
 date    : 2021-05-10 21:51:28 +0900
 updated : 2021-05-10 21:51:35 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Web"]
 ---
 ## 인터넷에서 컴퓨터 둘은 어떻게 통신하나?  
 - 클라이언트와 서버 

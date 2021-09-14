@@ -3,9 +3,7 @@ title   : 입체주의
 date    : 2021-05-13 16:45:55 +0900
 updated : 2021-05-13 16:48:22 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Art"]
 ---
 **입체주의 (Cubism)** 
 

@@ -3,9 +3,7 @@ title   : 유사 배열 객체
 date    : 2021-05-13 17:10:54 +0900
 updated : 2021-05-13 17:11:55 +0900
 aliases : ["유사 배열 객체"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 **유사 배열 객체(array-like-object)**
 

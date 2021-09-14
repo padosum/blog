@@ -3,9 +3,7 @@ title   : 자료구조 문제
 date    : 2021-05-04 19:59:32 +0900
 updated : 2021-05-04 22:53:33 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제 1 
 - 올바른 괄호인지 확인  

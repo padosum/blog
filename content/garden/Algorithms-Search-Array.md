@@ -3,9 +3,7 @@ title   : 배열 탐색 문제
 date    : 2021-04-27 13:45:05 +0900
 updated : 2021-04-27 13:45:17 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제 1 
 - 배열을 입력받고 바로 앞의 수보다 큰 수만 출력하기  

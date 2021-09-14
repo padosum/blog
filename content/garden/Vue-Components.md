@@ -3,9 +3,7 @@ title   : 뷰 컴포넌트
 date    : 2021-04-26 13:26:30 +0900
 updated : 2021-04-26 13:26:39 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Vue.js"]
 ---
 - 컴포넌트: 화면의 영역을 구분해 개발할 수 있는 뷰의 기능  
   - 재사용성이 올라가고 빠르게 화면을 만들 수 있다.  

@@ -2,10 +2,7 @@
 title   : Vuepress GitHub Pages에 배포하기  
 date    : 2021-03-18 17:12:06 +0900
 updated : 2021-03-18 17:12:38 +0900
-tags    : [Env]
-excerpt : 
-parent : 
-layout : 
+tags: ["Vue.js", "How to"]
 ---
 
  예전에 처음 정적 웹사이트를 만들고 배포했을 때는 GitHub Pages에 하는 경우가 많았는데 오랜만에 하려니 뚝딱 해내기가 힘들었다. 나중을 위해 기록한다.  
@@ -29,7 +26,7 @@ layout :
 
 ### Secrets 만들기  
 - 해당 repo > Settings > Secrets에서 `New repository secret` 
-![access_token](/images/Vuepress-Depoly-To-GitHub-Pages/111595400-71cbca00-880f-11eb-984d-9e86cf69dfc9.png)  
+![[111595400-71cbca00-880f-11eb-984d-9e86cf69dfc9.png]]
 - Name에는 `ACCESS_TOKEN`, Value에 아까 복사한 token을 넣는다.  
 
 ## 발생한 문제  

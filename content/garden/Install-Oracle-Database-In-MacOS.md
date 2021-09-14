@@ -4,8 +4,6 @@ excerpt :
 date    : 2020-06-10 21:47:50 +0900
 updated : 2020-06-10 21:58:35 +0900
 tags    : [Env]
-parent  : 
-layout  :
 ---
 
 ## Docker 설치 

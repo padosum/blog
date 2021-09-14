@@ -3,9 +3,6 @@ title   : HTTP 상태 코드
 date    : 2021-05-19 21:29:41 +0900
 updated : 2021-05-19 21:30:00 +0900
 aliases : ["HTTP 상태 코드"]
-private : false
-hidden  : false
-showReferences : true
 ---
 ## 상태 코드란 
 - 클라이언트가 보낸 요청의 처리 상태를 응답에서 알려주는 기능 

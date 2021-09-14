@@ -3,9 +3,7 @@ title   : Electron
 date    : 2021-09-09 23:46:35 +0900
 updated : 2021-09-09 23:48:04 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Framework"]
 ---
 - Electron은 JavaScript, HTML, CSS로 Desktop Ap을 만들 수 있는 [[Framework|프레임워크]]다. 
 - Node.js로 로컬 시스템에 접근한다.

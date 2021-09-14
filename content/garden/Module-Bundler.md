@@ -3,9 +3,7 @@ title   : 모듈 번들러
 date    : 2021-04-23 19:38:29 +0900
 updated : 2021-06-07 14:36:59 +0900
 aliases : ["모듈 번들러"] 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript", "Tools"]
 ---
 ## 정의
 - 대형 프로그램을 개발하다보면 스코프를 분리하고 코드의 재사용성을 높이기 위해 소스코드를 여러 파일로 분리하여 모듈화하기 마련이다. 

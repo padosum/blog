@@ -3,12 +3,10 @@ title   : 웹팩을 이용해 파비콘 추가하기
 date    : 2021-08-14 21:05:20 +0900
 updated : 2021-08-14 21:08:22 +0900
 aliases : ["웹팩으로 파비콘 추가하기"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["How to", "Webpack"]
 ---
 
-- `html-webpack-plugin`을 사용하면 된다.  
+`html-webpack-plugin`을 사용하면 된다.  
 ```bash
 npm i --save-dev html-webpack-plugin
 ```

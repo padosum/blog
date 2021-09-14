@@ -2,9 +2,7 @@
 title   : REST API
 date    : 2021-04-20 00:18:49 +0900
 updated : 2021-04-20 00:19:16 +0900
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 
 REST(Representational State Transfer)  

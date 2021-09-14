@@ -3,9 +3,7 @@ title   : 호스팅(Hosting)
 date    : 2021-04-23 20:08:17 +0900
 updated : 2021-04-23 20:08:33 +0900
 aliases : ["호스팅"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 
 ## 정의 

@@ -3,9 +3,7 @@ title   : JavaScript 생성자 함수
 date    : 2021-05-15 22:07:39 +0900
 updated : 2021-05-15 22:08:00 +0900
 aliases : ["Object 생성자 함수"] 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 
 ## Object 생성자 함수  

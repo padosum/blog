@@ -3,9 +3,7 @@ title   : ESLint
 date    : 2021-06-13 20:37:56 +0900
 updated : 2021-06-14 10:48:33 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ## Lint 
 - 보풀

@@ -3,9 +3,7 @@ title   : Git
 date    : 2021-04-23 19:50:26 +0900
 updated : 2021-09-12 14:30:44 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Git"]
 ---
 [[Version-Control|버전 관리]]를 위한 소프트웨어  
 

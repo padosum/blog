@@ -3,9 +3,7 @@ title   : MVC 패턴
 date    : 2021-04-23 21:51:29 +0900
 updated : 2021-05-25 18:19:47 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 
 ## MVC의 요소 

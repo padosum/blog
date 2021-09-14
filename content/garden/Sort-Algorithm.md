@@ -3,9 +3,7 @@ title   : 정렬 알고리즘
 date    : 2021-05-05 22:31:59 +0900
 updated : 2021-08-09 19:19:58 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 원소들을 번호순이나 사전 순서와 같이 일정한 순서대로 열거하는 알고리즘  
   

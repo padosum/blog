@@ -3,9 +3,7 @@ title   : 완전 탐색 알고리즘
 date    : 2021-04-28 10:04:38 +0900
 updated : 2021-04-28 10:04:47 +0900
 aliases : ["exhaustive search", "완전 탐색"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 **완전 탐색(exhaustive search) 알고리즘**
 - 무식하게 푼다(brute-force)라고도 표현한다.  

@@ -3,11 +3,9 @@ title   : 선언적 프로그래밍
 date    : 2021-08-19 23:12:47 +0900
 updated : 2021-08-19 23:14:23 +0900
 aliases : ["선언적 프로그래밍"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
-- [[Functional-Programming|함수형 프로그래밍]]은 선언적 프로그래밍이라는 더 넓은 프로그래밍 패러다임의 한 가지  
+- [[Functional-Programming|함수형 프로그래밍]]은 선언적 프로그래밍이라는 더 넓은 프로그래밍 [[Paradigm|패러다임]]의 한 가지  
 - 선언적 프로그래밍은 필요한 것을 달성하는 과정 하나하나를 기술하는 것보다 필요한 것이 어떤 것인지 기술하는 데 방점을 두고 애플리케이션의 구조를 세워나가는 프로그래밍 스타일이다.  
 
 ## 명령형 프로그래밍과의 비교로 알아보는 선언적 프로그래밍  
@@ -56,7 +54,9 @@ reunder() {
 ```  
 - 리액트는 선언적이다. `Home` 컴포넌트는 렌더링할 DOM을 보여주고, `render()`는 컴포넌트 안 내용 물에 따라 DOM을 렌더링한다. 실제로 DOM이 어떻게 렌더링될지는 추상화로 감춰져있다.  
 	- `Home` 컴포넌트를 렌더링하고 싶어하는 명확한 의도를 보여주는 것이다. 
- 
+
+## 함께보기
+ - [https://toss.im/slash-21/sessions/3-3](https://toss.im/slash-21/sessions/3-3)
 
 ## reference 
 - [Learning React](https://www.hanbit.co.kr/store/books/look.php?p_code=B3942115529)

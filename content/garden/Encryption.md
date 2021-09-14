@@ -3,9 +3,7 @@ title   : 암호화
 date    : 2021-04-23 21:04:11 +0900
 updated : 2021-04-23 21:04:18 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 
 - **임의의 키**를 통해 평문을 암호문으로 만드는 처리  

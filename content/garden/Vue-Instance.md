@@ -3,9 +3,7 @@ title   : 뷰 인스턴스
 date    : 2021-04-26 12:55:46 +0900
 updated : 2021-04-26 12:55:52 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Vue.js"]
 ---
 ## 뷰 인스턴스 사용하기
 ```javascript

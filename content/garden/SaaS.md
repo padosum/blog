@@ -1,11 +1,8 @@
 ---
-title   : 
+title   : SaaS
 date    : 2021-04-25 18:48:31 +0900
 updated : 2021-04-25 18:52:43 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
 ---
 **SaaS(Software-as-a-Service)**
 

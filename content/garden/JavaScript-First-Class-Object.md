@@ -3,9 +3,7 @@ title   : JavaScript 일급 객체
 date    : 2021-05-15 22:40:57 +0900
 updated : 2021-05-15 22:41:10 +0900
 aliases : ["일급 객체"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ## 일급 객체
 - 일급 객체의 조건 

@@ -3,9 +3,7 @@ title   : 뷰 라우터
 date    : 2021-05-13 23:07:18 +0900
 updated : 2021-06-16 23:22:42 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Vue.js"]
 ---
 ## 뷰 라우터?
 - 뷰에서 싱글 페이지 애플리케이션을 구현하거나 페이지 간 이동기능을 구현할 때 사용하는 라이브러리  

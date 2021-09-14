@@ -3,9 +3,7 @@ title   : 뷰 액시오스
 date    : 2021-05-16 19:53:50 +0900
 updated : 2021-05-16 19:53:57 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Vue.js"]
 ---
 뷰에서 권고하는 [[HTTP]] 통신 라이브러리 
 - Vue Resource가 원래 Vue.js를 위한 공식 라이브러리였다. → 예전 코드들에서 확인할 수 있음 

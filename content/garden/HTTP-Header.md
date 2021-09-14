@@ -3,9 +3,6 @@ title   : HTTP 헤더
 date    : 2021-05-20 12:50:50 +0900
 updated : 2021-05-20 12:51:06 +0900
 aliases : ["HTTP 헤더"] 
-private : false
-hidden  : false
-showReferences : true
 ---
 ## 용도 
 - **HTTP 전송에 필요한 모든 부가정보** 

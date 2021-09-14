@@ -2,10 +2,7 @@
 title   : .gitignore이 적용 안될 때   
 date    : 2021-01-23 14:28:19 +0900
 updated : 2021-01-23 14:30:12 +0900
-tags    : [Git]
-excerpt : 
-parent  : 
-layout  :
+tags    : ["Git", "How to"]
 ---
 
 ```bash 

@@ -3,9 +3,7 @@ title   : 스캐폴딩
 date    : 2021-05-25 18:22:12 +0900
 updated : 2021-05-25 18:22:51 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 **스캐폴딩(Scaffolding)**
 

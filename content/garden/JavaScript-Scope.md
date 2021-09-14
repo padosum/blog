@@ -3,9 +3,7 @@ title   : Javascript Scope
 excerpt : 자바스크립트의 유효범위
 date    : 2020-02-01 23:59:39 +0900
 updated : 2021-05-15 15:48:05 +0900
-tags    : [Javascript]
-parent  : 
-layout  :
+tags: ["JavaScript"]
 ---
 
 ## 스코프란? 

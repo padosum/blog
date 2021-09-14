@@ -3,9 +3,7 @@ title   : 리액트 네이티브 시작하기 - 2
 excerpt : 
 date    : 2020-05-23 23:30:50 +0900
 updated : 2020-05-23 23:31:08 +0900
-tags    : [React]
-parent  : 
-layout  :
+tags    : ["React"]
 ---
 
 ## index.js 

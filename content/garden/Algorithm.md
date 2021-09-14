@@ -3,9 +3,6 @@ title   : 알고리즘
 date    : 2021-04-24 17:22:23 +0900
 updated : 2021-04-24 17:22:37 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
 ---
 
 **알고리즘(Algorithm)**

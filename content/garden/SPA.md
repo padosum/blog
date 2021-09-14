@@ -3,9 +3,7 @@ title   : SPA
 date    : 2021-04-21 12:25:36 +0900
 updated : 2021-08-21 23:14:43 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 **SPA (Single Page Application)**
 

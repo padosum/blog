@@ -3,9 +3,7 @@ title   : 트랜스파일러
 date    : 2021-04-23 17:14:08 +0900
 updated : 2021-04-23 17:14:31 +0900
 aliases : ["트랜스파일러"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 
 ## 정의

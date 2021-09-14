@@ -3,9 +3,7 @@ title   : 컴퓨터가 등장하는 영화
 excerpt : 
 date    : 2020-01-27 16:47:14 +0900
 updated : 2021-02-07 18:13:16 +0900
-tags    : 
-parent  : 
-layout  :
+tags: ["movie"]
 ---
 
 > 그냥 생각나서 정리해본다. 내가 본 것은 ✅  

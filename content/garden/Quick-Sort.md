@@ -3,9 +3,7 @@ title   : 퀵 정렬(quick sort)
 date    : 2021-08-04 17:35:31 +0900
 updated : 2021-08-04 17:41:25 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 [[Merge-Sort]] 처럼 분할 정복 기법을 사용하는 알고리즘으로 이름에서도 알 수 있듯이 다른 정렬 알고리즘에 비해 훨씬 빠르게 동작한다.  
 

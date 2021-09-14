@@ -3,9 +3,6 @@ title   : HTTP 메서드
 date    : 2021-05-17 00:39:53 +0900
 updated : 2021-05-17 00:40:01 +0900
 aliases : ["HTTP 메서드"]
-private : false
-hidden  : false
-showReferences : true
 ---
 ## HTTP API 만들기
 - 회원 정보 관리 API

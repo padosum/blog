@@ -3,9 +3,7 @@ title   : TypeScript Utility Type
 date    : 2021-08-20 23:13:47 +0900
 updated : 2021-09-07 16:53:32 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["TypeScript"]
 ---
 ## 유틸리티 타입이란 
 -   이미 정해놓은 타입을 변환해서 새로운 타입을 만들고 싶은 경우가 있다. 그때 인터페이스, [[TypeScript-Generics|제네릭]] 등을 사용할 수 있지만 유틸리티 타입을 쓰면 더 간단히 타입 정의가 가능해진다.

@@ -1,11 +1,9 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-09-13 22:26:35 +0900
+updated : 2021-09-14 15:02:43 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 **자바스크립트 (JavaScript)**
 - 웹 브라우저에서 동작하는 프로그래밍 언어
@@ -31,8 +29,7 @@ showReferences : true
 
 ## [[Ajax]]
 
-## 자바스크립트 엔진
-- V8
+## [[JavaScript-Engine]]
 
 ## [[NPM]]
 
@@ -41,14 +38,15 @@ showReferences : true
 ## 자바스크립트 기본 문법
 - [[JavaScript-Variables]]
 - [[JavaScript-Expression]]
-- [[JavaScript-Data-Type]]  
+- [[JavaScript-Data-Type]] 
+- [[JavaScript-Type-Casting]]
 - [[JavaScript-Short-Circuit-Evaluation]]
-- [[JavaScript-regular-expression]]
+- [[JavaScript-Regular-Expression]]
 - [[JavaScript-Destructuring-assignment]]
 - [[JavaScript-Spread-syntax]]
 ## 자바스크립트 객체
 - [[JavaScript-Object]]
-- [[JavaScript-Object-Literal]
+- [[JavaScript-Object-Literal]]
 - [[JavaScript-Array-Like-Object]]
 - [[JavaScript-First-Class-Object]]
 ## 자바스크립트 함수 
@@ -66,6 +64,7 @@ showReferences : true
 ## 자바스크립트 클로저
 - [[JavaScript-Closure]]
 ---
+- [[JavaScript-this]]
 - [[JavaScript-strict-mode]]
 - [[JavaScript-Module]]
 - [[JavaScript-Built-in-Objects]]

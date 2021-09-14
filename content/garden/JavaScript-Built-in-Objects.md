@@ -3,9 +3,7 @@ title   : JavaScript 빌트인 객체
 date    : 2021-05-16 23:17:44 +0900
 updated : 2021-05-16 23:17:50 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ## 표준 빌트인 객체
 - https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects
@@ -13,7 +11,7 @@ showReferences : true
 ### 래퍼 객체 
 - 문자열이나 숫자, 불리언 등의 원시값이 있는데 왜 `String`, `Number`, `Boolean` 등 표준 빌트인 생성자 함수가 존재할까? 
 - 원시값은 객체가 아니므로, 프로퍼티나 메서드를 가질 수 없지만, 문자열 등은 객체 처럼 동작한다.
-	- 자바스크립트 엔진이 일시적으로 원시값을 연관된 객체로 변환해준다. 
+	- [[JavaScript-Engine|자바스크립트 엔진]]이 일시적으로 원시값을 연관된 객체로 변환해준다. 
 	- 임시로 생성되는 임시 객체를 **래퍼 객체(wrapper object)**라고 한다.  
 
 ### 전역 객체 

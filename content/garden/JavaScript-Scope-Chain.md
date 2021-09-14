@@ -3,9 +3,7 @@ title   : JavaScript 스코프 체인
 date    : 2021-05-15 16:13:22 +0900
 updated : 2021-05-15 16:13:34 +0900
 aliases : ["스코프 체인"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 
 자바스크립트에서 함수는 중첩될 수 있으니 함수의 지역 스코프도 중첩될 수가 있다. 스코프가 함수의 중첩에 의해 계층적 구조를 갖는다. 
@@ -28,7 +26,7 @@ console.log(a);
 ```
 - `outer` 함수와 `inner` 함수의 지역이 있으며, `inner` 함수는 `outer` 함수의 중첩 함수이다. 
   - `outer` 함수가 만든 지역 스코프는 `inner` 함수가 만든 지역 스코프의 상위 스코프이며, `outer` 함수의 지역 스코프의 상위 스코프는 전역 스코프이다. 이렇게 스코프가 계층적으로 연결된 것을 **스코프 체인(scope chain)**이라고 한다.    
-- 변수를 참조할 때 자바스크립트 엔진은 스코프 체인을 통해 변수를 참조하는 코드의 스코프에서 시작해서 없으면 상위 스코프 방향으로 이동해서 계속 찾아나간다. (identifier resolution)  
+- 변수를 참조할 때 [[JavaScript-Engine|자바스크립트 엔진]]은 스코프 체인을 통해 변수를 참조하는 코드의 스코프에서 시작해서 없으면 상위 스코프 방향으로 이동해서 계속 찾아나간다. (identifier resolution)  
 
 ## 스코프 체인에 의한 변수 검색  
 1. `outer` 함수가 호출되면 `outer`의 지역 스코프에서 `a`를 탐색한다. 

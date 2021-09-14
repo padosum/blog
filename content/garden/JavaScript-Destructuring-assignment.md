@@ -3,7 +3,7 @@ title   : 비구조화 할당
 excerpt : Destructuring assignment 구조 분해 할당
 date    : 2020-02-25 21:09:48 +0900
 updated : 2021-08-19 22:44:00 +0900
-tags    : [Javascript]
+tags: ["JavaScript"]
 ---
 
 ## 비구조화 할당

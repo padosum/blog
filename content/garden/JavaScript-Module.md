@@ -3,9 +3,7 @@ title   : JavaScript 모듈화
 date    : 2021-04-23 19:31:22 +0900
 updated : 2021-06-23 10:33:38 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 - HTML에서 로드된 JavaScript는 전역 공간에서 순차적으로 실행될 뿐, 모듈이란 개념은 존재하지 않는다. 
 - JavaScript에 인위적으로 모듈을 도입하는 **CommonJS**, **AMD(Asynchronous Module Definition)**라는 두 진영이 등장하게 되었다.  

@@ -3,9 +3,7 @@ title   : 버전 관리(Version Control)
 date    : 2021-04-23 19:45:37 +0900
 updated : 2021-04-23 19:46:42 +0900
 aliases : ["버전 관리"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 **버전 관리(Version Control, Revision Control**
 

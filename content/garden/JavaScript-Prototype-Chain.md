@@ -3,9 +3,7 @@ title   : JavaScript 프로토타입 체인
 date    : 2021-05-16 22:04:56 +0900
 updated : 2021-05-16 22:05:03 +0900
 aliases : ["프로토타입 체인"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["JavaScript"]
 ---
 ```javascript
 function Person(name) {

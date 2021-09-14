@@ -3,9 +3,6 @@ title   : HTTP
 date    : 2021-05-10 21:47:34 +0900
 updated : 2021-05-20 22:13:45 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
 ---
 **HTTP(HyperText Transfer Protocol)**   
 처음에는 HTML을 전송하기 위핸 프로토콜로 만들어졌는데 이젠 모든 것을 전송하기 위해 사용한다.  

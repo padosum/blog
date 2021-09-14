@@ -3,9 +3,6 @@ title   : 삽입 정렬(insertion sort)
 date    : 2021-05-05 22:35:20 +0900
 updated : 2021-05-05 22:35:30 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
 ---
 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교해 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘  
 

@@ -3,9 +3,7 @@ title   :
 date    : 2021-06-11 17:42:26 +0900
 updated : 2021-06-11 23:02:41 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Web", "JavaScript"]
 ---
 **Babel**
 - [[Transpiler]]

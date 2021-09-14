@@ -3,9 +3,7 @@ title   : 아비투스 (Habitus)
 date    : 2021-05-14 16:29:10 +0900
 updated : 2021-05-14 16:30:46 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Sociology"]
 ---
 **아비투스, 하비투스, 아비튀스(Habitus)**
 

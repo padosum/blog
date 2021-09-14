@@ -3,9 +3,6 @@ title   : ipTIME Extender-A3MU
 date    : 2021-06-22 23:05:53 +0900
 updated : 2021-06-22 23:07:22 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
 ---
 - 사용법은 매우 상세하게 설명서에 적혀있어서 간단했다.  
 - 기기끼리 연결하는 방법보다는 폰을 이용하는 편이 간편했다. (기기가 먼 경우)

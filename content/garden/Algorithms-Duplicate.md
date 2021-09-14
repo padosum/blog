@@ -3,9 +3,7 @@ title   : 중복 문자, 중복 단어
 date    : 2021-04-25 10:05:07 +0900
 updated : 2021-04-25 10:05:19 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제 1
 - 소문자인 하나의 문자열을 입력받고 중복된 문자를 제거해 출력  

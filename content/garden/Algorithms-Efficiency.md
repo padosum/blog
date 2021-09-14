@@ -3,9 +3,7 @@ title   : 효율성 문제
 date    : 2021-04-30 14:01:56 +0900
 updated : 2021-04-30 21:57:43 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제 1 
 - 정렬된 두 배열의 입력, 오름차순으로 합치기  

@@ -3,9 +3,7 @@ title   : 아키텍처
 date    : 2021-04-21 11:46:43 +0900
 updated : 2021-04-21 11:48:16 +0900
 aliases : ["아키텍처"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 아키텍처(architecture)
 

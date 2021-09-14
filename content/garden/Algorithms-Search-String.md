@@ -3,9 +3,7 @@ title   : 문자열 탐색 문제ㅎ
 date    : 2021-04-27 17:05:50 +0900
 updated : 2021-04-28 09:51:22 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제 1
 - 팰린드롬(회문): 앞에서 읽는 것과 뒤에서 읽는 것이 같은 문자열  

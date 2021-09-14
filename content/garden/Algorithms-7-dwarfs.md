@@ -2,10 +2,7 @@
 title   : 일곱 난쟁이 
 date    : 2021-04-25 10:03:23 +0900
 updated : 2021-04-26 14:39:19 +0900
-aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제
 - 아홉명의 키가 주어졌을 때, 합이 100이 되는 7명을 출력 

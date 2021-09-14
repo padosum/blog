@@ -3,9 +3,7 @@ title   : DOM
 date    : 2021-04-26 11:11:28 +0900
 updated : 2021-05-18 12:04:46 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Web", "JavaScript"]
 ---
 
 **문서 객체 모델(DOM; Document Object Model)**  

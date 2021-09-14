@@ -3,9 +3,7 @@ title   : Vue Project에 Utterances 추가하기
 date    : 2021-08-14 21:11:13 +0900
 updated : 2021-08-14 21:21:14 +0900
 aliases : ["Vue Project에 Utterances 추가하기"]
-private : false
-hidden  : false
-showReferences : true
+tags: ["How to", "Vue.js"]
 ---
 Vue 컴포넌트에 [Utterances](https://utteranc.es/) 를 추가하고 싶었다.   
 [vue-utterances](https://github.com/khalby786/vue-utterances)와 [utterances-vue-component](https://github.com/TomokiMiyauci/utterances-component)라는 이미 만들어진 컴포넌트들이 있었는데 모두 vue 3 버전에 가능해서 그냥 간단하게 만들기로 했다.  

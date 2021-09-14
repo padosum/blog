@@ -4,8 +4,6 @@ excerpt :
 date    : 2020-03-16 21:51:20 +0900
 updated : 2021-06-03 13:49:45 +0900
 tags    : [Env, Nodejs]
-parent  : 
-layout  : 
 ---
 
 ## Node.js의 필요성 

@@ -3,9 +3,7 @@ title   : Task Runner
 date    : 2021-04-23 19:27:31 +0900
 updated : 2021-04-23 19:28:30 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Programming"]
 ---
 **태스크 러너(Task Runner) ** 
 

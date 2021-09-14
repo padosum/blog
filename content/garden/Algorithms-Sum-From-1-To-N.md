@@ -3,9 +3,7 @@ title   : 1부터 n까지의 합 구하기
 date    : 2021-04-25 09:00:54 +0900
 updated : 2021-04-25 09:01:05 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제
 - 1부터 주어진 수(n)까지의 합 구하기

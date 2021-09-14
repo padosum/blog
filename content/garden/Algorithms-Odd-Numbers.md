@@ -3,9 +3,7 @@ title   : 홀수
 date    : 2021-04-25 10:01:16 +0900
 updated : 2021-04-25 10:01:24 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제
 - 주어진 배열에서 홀수들의 합과 홀수 중 가장 작은 값 반환하기  

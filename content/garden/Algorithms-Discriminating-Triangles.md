@@ -3,9 +3,7 @@ title   : 삼각형 판별하기
 date    : 2021-04-25 08:46:04 +0900
 updated : 2021-04-25 08:46:12 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Algorithm"]
 ---
 ## 문제
 - 입력받은 수(세 변의 길이)로 삼각형을 만들 수 있는지 확인 

@@ -3,9 +3,7 @@ title   : FTP
 date    : 2021-04-23 20:19:45 +0900
 updated : 2021-04-23 20:19:50 +0900
 aliases : 
-private : false
-hidden  : false
-showReferences : true
+tags: ["Computer Science"]
 ---
 
 **FTP (File Transfer Protocol)**
