@@ -1,5 +1,5 @@
 const path = require("path");
-const pathPrefix = "/content/garden";
+const pathPrefix = "/";
 const siteMetadata = {
   title: "Padosum's Personal Wiki && Blog",
   shortName: "Padosum Wiki",
