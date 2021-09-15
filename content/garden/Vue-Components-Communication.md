@@ -3,7 +3,7 @@ title   : 컴포넌트 통신
 date    : 2021-04-26 14:03:12 +0900
 updated : 2021-05-13 22:51:08 +0900
 aliases : 
-tags: ["vue.js"]
+tags: ["Vue.js"]
 ---
 
 ## 개요 
