@@ -15,5 +15,5 @@ git commit -m "comments" --no-verify
 커밋할 때 `--no-verify` 옵션을 붙여주면 hook이 실행되지 않았다.  
 평소에 github desktop을 사용하고 있어서 이런 옵션을 사용해보지 않았다. 편하지만 능사는 아니란 걸 알게되었다.
 
-## 참고자료 
+## reference 
 - [https://stackoverflow.com/questions/7230820/skip-git-commit-hooks](https://stackoverflow.com/questions/7230820/skip-git-commit-hooks)

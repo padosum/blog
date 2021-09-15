@@ -29,5 +29,5 @@ tags: ["Programming"]
 - JavaScript의 최신 문법 및 정적 타입을 지원    
 
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

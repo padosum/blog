@@ -55,7 +55,7 @@ tags    : [React]
 - 현재 탭에서 링크이동을 하고싶은데 `linkTarget` 속성이 DOM에서 사용할 수 없다는 오류가 나왔다.  
   - gcse를 불러오기 전에 element에 해당 속성을 넣어봤지만 해결되지 않았고 생각을 바꿔서 또 옵션에 있는건 아닐까 했는데 아니나 다를까 검색엔진 수정 > 검색 기능 > 고급 > 웹검색 설정 > 링크 대상에 `_parent`로 설정이 따로 가능했다.  
 
-## 참고  
+## reference  
 - [https://developers.google.com/custom-search/docs/element](https://developers.google.com/custom-search/docs/element)  
   
 ## 배운점   

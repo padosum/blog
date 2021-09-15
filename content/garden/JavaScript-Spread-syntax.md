@@ -56,9 +56,7 @@ const favSports = {
 }
 console.log(favSports) // {basketball: "농구", football: "축구", tennis: "테니스"}
 ```
-
-
   
   
-## 참고 
+## reference 
 - [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

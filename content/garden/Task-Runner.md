@@ -11,5 +11,5 @@ tags: ["Programming"]
 - 프로그램 개발에 수반되는 반복적인 작업(Task)를 스크립트로 작성해서 한번에 실행할 수 있게 도와주는 도구 
 -  [Gulp](http://gulpjs.com/), [Grunt](https://gruntjs.com/)
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

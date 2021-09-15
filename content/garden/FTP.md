@@ -12,5 +12,5 @@ tags: ["Computer Science"]
 - 암호화를 수행하지 않기 때문에 파일 정보 뿐 아니라 유저의 개인 정보가 노출될 수 있음 
 - 보안을 향상시키기 위해 SSH 프로토콜과 결합된 SFTP(22번 포트) 또는 SSL/TLS에서 작동하는 FTPS(21번 포트) 프로토콜을 이용할 수 있다.  
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

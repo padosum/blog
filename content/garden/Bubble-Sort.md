@@ -55,5 +55,5 @@ console.log(solution(arr1))
 ```
 
 
-## 참고
+## reference
 - [https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC)

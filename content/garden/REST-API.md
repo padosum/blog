@@ -51,5 +51,5 @@ REST(Representational State Transfer)
 - 토큰 위변조 문제
 	- 방지를 위해 토큰의 뒷 부분의 토큰의 내용과 특정 암호를 기반으로 Signature 문자열을 붙여 토큰을 생성 
 
-## 참고 
+## reference 
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

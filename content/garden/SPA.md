@@ -42,5 +42,5 @@ tags: ["Programming"]
 - 여러 화면을 구분하기 위해 각각의 접속 주소가 있을 것이다. 주소에 따라 다른 뷰를 보여주게 처리하는 것을 라우팅이라고 한다.   
 	- Vue나 React 등의 프레임워크에는 라우팅을 도와주는 라우터를 제공한다.   
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

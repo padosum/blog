@@ -66,6 +66,6 @@ tags: ["movie"]
 * [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)    
   * 영화 서치랑 엄~~청 비슷한 화면이었다.  
       
-## 참고자료
+## reference
 - [https://en.wikipedia.org/wiki/List_of_films_about_computers](https://en.wikipedia.org/wiki/List_of_films_about_computers)
 

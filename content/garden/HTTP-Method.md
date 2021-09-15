@@ -155,7 +155,7 @@ aliases : ["HTTP 메서드"]
 - `POST`의 `/new`, `/edit`, `/delete`가 컨트롤 URI 
 - 최대한 HTTP 메서드로 해결하고 애매한 경우 사용하는 것
 
-## 참고하기 
+## 같이보기 
 - [https://restfulapi.net/resource-naming/](https://restfulapi.net/resource-naming/)
 - 실제로 복잡해지면 설계가 어렵다. 
   - 일단 컬렉션과 문서, HTTP 메서드로 해결한다. ("미네랄을 캐라" 이면 "캐라"를 제외하고 미네랄만 )

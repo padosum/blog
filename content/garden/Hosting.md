@@ -18,5 +18,5 @@ tags: ["Computer Science"]
 - 용도에 따라 적절한 임대 방식을 선택할 수 있다. 
 	- 알아봐야 할 요소는 서비스의 규모, 최고관리자 권한 필요 여부, 주요 고객의 위치, 서버 자원을 탄력적으로 조절해야할 필요가 있는지? 
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

@@ -76,5 +76,5 @@ console.log(foo); // '', 좌항 피연산자가 false로 평가되지만 null �
 // 좌항의 피연산자를 그대로 반환 
 ```
 
-## 참고자료 
+## reference 
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)

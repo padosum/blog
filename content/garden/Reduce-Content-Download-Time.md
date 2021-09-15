@@ -43,6 +43,6 @@ module.exports = {
 - 마음에 드는 코드를 무턱대고 가져다쓰기 보다는 잘 알아보는 것이 중요하다는걸 다시 느꼈다.  
 - 그리고 Network 탭을 열어봐도 도대체 뭐가 문젠지 몰라서 시간을 많이 보냈는데 차근차근히 확인해보고 알아보니 해결할 수 있어서 다행이란 생각이 들었다.  
 
-## 참고  
+## reference  
 - [https://tailwindcss.com/docs/optimizing-for-production](https://tailwindcss.com/docs/optimizing-for-production)
 - [https://kamang-it.tistory.com/entry/WebPerformanceChrome-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%9D%98-%EC%84%B1%EB%8A%A5%EC%9D%84-%EB%B3%B4%EC%9E%901-%ED%81%AC%EB%A1%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC%EC%99%80-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C-%EB%B3%B4%EA%B8%B0](https://kamang-it.tistory.com/entry/WebPerformanceChrome-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%9D%98-%EC%84%B1%EB%8A%A5%EC%9D%84-%EB%B3%B4%EC%9E%901-%ED%81%AC%EB%A1%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC%EC%99%80-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C-%EB%B3%B4%EA%B8%B0)

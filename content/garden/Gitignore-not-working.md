@@ -11,5 +11,5 @@ git add .
 git commit -m "fixed untracked files"
 ```
 
-## 참고  
+## reference  
 - [https://stackoverflow.com/questions/11451535/gitignore-is-ignored-by-git](https://stackoverflow.com/questions/11451535/gitignore-is-ignored-by-git)

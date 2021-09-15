@@ -69,7 +69,7 @@ message = 'hello';
 - 하지만 이전에 있던 `hi`가 저장된 메모리 공간을 지우고 거기에 `hello`를 넣는 것이 아니라 새로운 메모리 공간을 확보해 거기에 `hello`를 저장하는 것!
   - 기존에 저장되어 있던 메모리 공간은 어떤 식별자와도 연결되지 않게 된다. → 가비지 콜렉터에 의해 메모리에서 자동 해제된다.  
 
-## 참고자료 
+## reference 
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
 - [코어 자바스크립트](https://search.kyobobook.co.kr/web/search?vPstrKeyWord=%25EC%25BD%2594%25EC%2596%25B4%2520%25EC%259E%2590%25EB%25B0%2594%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25BD%25ED%258A%25B8&orderClick=LAG)

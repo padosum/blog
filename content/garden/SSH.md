@@ -26,5 +26,5 @@ aliases :
 - 서버 sshd 측에서 비대칭키 기반 인증을 요구하는 경우 개인키가 필요하다. 
 	- 개인키와 쌍을 이루는 공개키가 원격 서버의 user의 특정 파일에 등록되어 있어야 한다. 
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

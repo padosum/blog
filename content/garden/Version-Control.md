@@ -20,5 +20,5 @@ tags: ["Computer Science"]
 -  [[Git]]
 -  SVN 
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

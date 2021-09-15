@@ -18,5 +18,5 @@ tags: ["Computer Science"]
 	- 수신자는 이메일 서비스 제공자가 제공하는 POP3(Post Office Protocol) 또는 IMAP(Internet Message Access Protocol) 를 통해 웹, GUI 프로그램 등 여러 클라이언트에서 이메일을 읽을 수 있다.  
 - POP3는 수신자가 클라이언트에서 이메일을 다운로드하면 서버에서 이메일을 바로 삭제한다. 반면 IMAP은 사용자가 삭제하기 전까지 이메일을 서버에 보관한다. 
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

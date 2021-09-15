@@ -219,5 +219,5 @@ $ git config --global core.editor vim
 - 해당 소스라인에 대해 누가 마지막으로 수정했는지 commit ID 추적을 할 수 있다.
 - 소스코드 리딩 시 유용  
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

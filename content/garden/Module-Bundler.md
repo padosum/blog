@@ -13,5 +13,5 @@ tags: ["JavaScript", "Tools"]
 ## [[Webpack]] 
 - 번들링 기능 뿐 아니라 [[Transpiler]], [[Task-Runner]] 기능도 포함할 수 있다. 
 
-## 참고
+## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)

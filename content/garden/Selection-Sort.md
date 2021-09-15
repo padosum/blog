@@ -38,5 +38,5 @@ console.log(solution(arr));
 ```
 
 
-## 참고 
+## reference 
 - [[https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D\_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC)]([https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D\_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC))
