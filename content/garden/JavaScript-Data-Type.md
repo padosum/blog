@@ -1,7 +1,7 @@
 ---
 title   : JavaScript Data Type 
 date    : 2021-05-02 12:19:19 +0900
-updated : 2021-09-14 12:44:58 +0900
+updated : 2021-09-15 17:15:14 +0900
 aliases : ["데이터 타입"]
 tags: ["JavaScript"]
 ---
@@ -28,6 +28,7 @@ tags: ["JavaScript"]
 - `NaN`: 산술 연산 불가(Not a Number)
 	- `NaN`은 어떠한 값과도 일치하지 않으며 심지어 `NaN`끼리도 일치하지 않는다. 
 		- 때문에 `isNaN()`함수가 제공된다.  
+			- ES6부터 `Number.isNaN()`이 추가되었다.
 
 ```javascript
 console.log(10 / 0); // Infinity
@@ -149,7 +150,19 @@ console.log(`My name is ${first} ${last}.`);
 2 * 5 ** 2; // 50
 ```
 
-
+## 네이티브
+자바스크립트 안에 내장 타입인 네이티브가 있다. ECMAScript 명세의 내장 객체를 말한다. 특정환경에 종속되지 않은 것을 말한다.  
+- `String()`
+- `Number()`
+- `Boolean()`
+- `Array()`
+- `Object()`
+- `Function()`
+- `RegExp()`
+- `Date()`
+- `Error()`
+- `Symbol()`
+- 
 ## reference 
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)

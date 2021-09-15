@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-09-14 15:02:43 +0900
+updated : 2021-09-15 23:37:16 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -27,31 +27,38 @@ tags: ["JavaScript"]
 ### ECMAScript, 자바스크립트
 - ECMAScript는 프로그래밍 언어, 값, 타입, 객체, 함수 등 핵심 문법을 규정하고, 자바스크립트는 ECMAScript와 함께 브라우저가 지원하는 [[DOM]], BOM, XMLHttpRequest, Web Storage 등을 포함하는 개념이다.  
 
-## [[Ajax]]
+## Ajax
+[[Ajax]]
 
-## [[JavaScript-Engine]]
+## 자바스크립트 엔진
+[[JavaScript-Engine]]
 
-## [[NPM]]
+## NPM
+[[NPM]]
 
 ---
 
 ## 자바스크립트 기본 문법
-- [[JavaScript-Variables]]
-- [[JavaScript-Expression]]
-- [[JavaScript-Data-Type]] 
-- [[JavaScript-Type-Casting]]
-- [[JavaScript-Short-Circuit-Evaluation]]
-- [[JavaScript-Regular-Expression]]
-- [[JavaScript-Destructuring-assignment]]
-- [[JavaScript-Spread-syntax]]
+- [[JavaScript-Variables|JavaScript 변수]]
+- [[JavaScript-Expression|자바스크립트 표현식]]
+- [[JavaScript-Data-Type|데이터 타입]] 
+- [[JavaScript-Type-Casting|타입 캐스팅]]
+- [[JavaScript-Short-Circuit-Evaluation|단축 평가]]
+- [[JavaScript-Regular-Expression|정규 표현식]]
+- [[JavaScript-Destructuring-assignment|구조분해문법]]
+- [[JavaScript-Spread-syntax|전개 구문]]
 ## 자바스크립트 객체
 - [[JavaScript-Object]]
 - [[JavaScript-Object-Literal]]
+- [[JavaScript-Array]]
 - [[JavaScript-Array-Like-Object]]
 - [[JavaScript-First-Class-Object]]
 ## 자바스크립트 함수 
 - [[JavaScript-Function]]
 - [[JavaScript-Constructor-Function]]
+- [[JavaScript-Arrow-Function]]
+- [[JavaScript-First-Class-Object|일급 객체]]
+
 ## 자바스크립트 스코프 
 - [[JavaScript-Scope]]
 - [[JavaScript-Scope-Chain]]
@@ -68,3 +75,7 @@ tags: ["JavaScript"]
 - [[JavaScript-strict-mode]]
 - [[JavaScript-Module]]
 - [[JavaScript-Built-in-Objects]]
+
+
+## 같이 보기
+- [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)

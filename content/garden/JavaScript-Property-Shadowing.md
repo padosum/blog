@@ -1,11 +1,10 @@
 ---
 title   : JavaScript 프로퍼티 섀도잉
 date    : 2021-05-16 22:17:16 +0900
-updated : 2021-05-16 22:17:26 +0900
+updated : 2021-09-15 22:18:19 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
-
 ```javascript
 const Person = (function () {
     function Person(name) {
@@ -19,13 +18,13 @@ const Person = (function () {
 	return Person; 
 }());
 
-const me = new Person('Lee');
+const me = new Person('padosum');
 
 me.sayHello = function () {
 	console.log(`🤙 Hello, My Name is ${this.name}`)
 };
 
-me.sayHello(); // 🤙 Hello, My Name is Lee
+me.sayHello(); // 🤙 Hello, My Name is padosum
 ```
 
 - 생성자 함수로 객체를 생성하고 프로토타입 프로퍼티와 같은 이름의 프로퍼티를 인스턴스에 추가하면, 프로토타입 프로퍼티에 덮어쓰는 것이 아니라 인스턴스 프로퍼티로 추가된다.  

@@ -11,7 +11,7 @@ tags: ["movie"]
 
 ## 영화
 * [ ] 2001: 스페이스 오디세이(2001: A Sapce Odyseey, 1968)
-* [ ] 가타카(Gattaca, 1997)
+* [X] 가타카(Gattaca, 1997)
 * [X] 그녀(Her, 2013)
 * [ ] 네트(The Net, 1995) 
 * [ ] 다이하드4.0(Live Free or Die Hard, 2007)
@@ -65,6 +65,7 @@ tags: ["movie"]
 ## 다큐멘터리  
 * [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)    
   * 영화 서치랑 엄~~청 비슷한 화면이었다.  
+* [X] 익스플레인: 세계를 해설하다 시즌 2 코딩의 세계 (2019)
       
 ## reference
 - [https://en.wikipedia.org/wiki/List_of_films_about_computers](https://en.wikipedia.org/wiki/List_of_films_about_computers)

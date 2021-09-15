@@ -1,12 +1,12 @@
 ---
 title   : JavaScript 빌트인 객체
 date    : 2021-05-16 23:17:44 +0900
-updated : 2021-05-16 23:17:50 +0900
-aliases : 
+updated : 2021-09-15 22:18:41 +0900
+aliases : ["래퍼 객체"]
 tags: ["JavaScript"]
 ---
 ## 표준 빌트인 객체
-- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects
 
 ### 래퍼 객체 
 - 문자열이나 숫자, 불리언 등의 원시값이 있는데 왜 `String`, `Number`, `Boolean` 등 표준 빌트인 생성자 함수가 존재할까? 
@@ -48,7 +48,6 @@ tags: ["JavaScript"]
 
 ## reference
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
-
 
 ---
 [^1] 네트워크를 통해 정보를 공유할 때 어떠한 시스템도 읽을 수 있는 아스키 문자 셋으로 변환하는 것 

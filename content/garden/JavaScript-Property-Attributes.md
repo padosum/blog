@@ -1,30 +1,28 @@
 ---
 title   : JavaScript 프로퍼티 어트리뷰트
 date    : 2021-05-15 17:49:40 +0900
-updated : 2021-05-15 17:49:54 +0900
+updated : 2021-09-15 21:14:04 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
 ## 프로퍼티 어트리뷰트 
-[[JavaScript-Object]]는 이름과 값으로 구성된 프로퍼티들의 정렬되지 않은 집합이다. 프로퍼티의 이름은 문자열, 객체는 문자열을 값에 대응시키는 구조라 할 수 있는데 단순히 문자열과 값의 대응관계 뿐 아니라 객체가 가진 고유 프로퍼티를 유지하는 것 외에 **[[프로토타입]]**이라고 하는 다른 객체의 프로퍼티를 상속받는다.  
+[[JavaScript-Object|객체]]는 이름과 값으로 구성된 프로퍼티들의 정렬되지 않은 집합이다. 프로퍼티의 이름은 문자열, 객체는 문자열을 값에 대응시키는 구조라 할 수 있는데 단순히 문자열과 값의 대응관계 뿐 아니라 객체가 가진 고유 프로퍼티를 유지하는 것 외에 **[[JavaScript-Prototype|프로토타입]]**이라고 하는 다른 객체의 프로퍼티를 상속받는다.  
 
 객체로 가장 많이 하는 작업은, "객체 생성 → 프로퍼티 추가 → 질의, 삭제, 테스트, 열거" 이다. **객체의 각 프로퍼티는 이름과 값 외에 프로퍼티 속성(property attribute)라고 하는 연관된 값을 갖는다.**   
 
 
 ## 내부 슬롯, 내부 메서드? 
 - ECMAScript 사양에서 프로퍼티의 특징을 내부적으로만 유효한 속성에 따라 설명한다. 
-- 내부 슬롯, 내부 메서드는 [[JavaScript-Engine|자바스크립트 엔진]]의 구현 알고리즘을 설명하기 위해 ECMAScript 사양에서 사용하는 의사 프로퍼티와 의사 메서드이다. 
+- 내부 슬롯, 내부 메서드는 [[JavaScript-Engine|자바스크립트 엔진]]의 구현 알고리즘을 설명하기 위해 ECMAScript 사양에서 사용하는 [[Pseudo Code|의사]] 프로퍼티와 [[Pseudo Code|의사]] 메서드이다. 
 - 자바스크립트 엔진의 내부 로직이므로 직접 접근하거나 호출할 수 있는 방법은 제공되지 않는다. → 일부 내부 슬롯과 내부 메서드에 한해 간접적으로 접근하는 수단은 제공된다.  
-  - ECMAScript 사양에 등장하는 `[[..]]`로 감싼 이름들이 내부 슬롯과 내부 메서드이다. 
+- ECMAScript 사양에 등장하는 `[[..]]`로 감싼 이름들이 내부 슬롯과 내부 메서드이다. 
 
 ### 예시  
 - 모든 객체는 `[[Prototype]]`이라는 내부 슬롯을 가지고 있다. 
 - 자바스크립트 엔진의 내부 로직이므로 직접 접근할 순 없지만 `__proto__`를 통해 간접적으로 접근이 가능하다. 
 ```javascript
 const o = {};
-
 o.[[Prototype]] // 에러, 직접 접근할 수 없다. 
-
 o.__proto__ // Object.prototype 
 ```
 
@@ -39,7 +37,7 @@ o.__proto__ // Object.prototype
   - 내부 슬롯이기에 직접 접근할 수 없지만 `Object.getOwnPropertyDescriptor`메서드를 이용해 간접적으로 확인이 가능하다. 
 	  - 해당 메서드는 프로퍼티 어트리뷰트 정보를 제공하는 **프로퍼티 디스크립터 객체**를 반환한다. 
 ```javascript
-const Person = {
+const person = {
     name: 'Lee'
 };
 console.log(Object.getOwnPropertyDescriptor(person, 'name'));
@@ -50,6 +48,7 @@ console.log(Object.getOwnPropertyDescriptors(person));
 ```
 
 ## 데이터 프로퍼티, 접근자 프로퍼티
+객체의 프로퍼티는 데이터 프로퍼티와 접근자 프로퍼티가있다.  
 
 ### 데이터 프로퍼티 
 - 키와 값으로 구성된 일반적인 프로퍼티 
@@ -179,7 +178,6 @@ function deepFreeze(target) {
     return target; 
 }
 ```
-
 ## reference
 - [자바스크립트 완벽 가이드](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966261796&orderClick=LAG&Kc=)
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 

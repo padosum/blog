@@ -2,7 +2,7 @@
 title   : JavaScript 변수  
 date    : 2021-04-28 11:20:52 +0900
 updated : 2021-04-28 11:22:04 +0900
-aliases : 
+aliases : ["JavaScript 변수"]
 tags: ["JavaScript"]
 ---
 ## 변수란? 

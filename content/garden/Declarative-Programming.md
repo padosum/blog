@@ -55,7 +55,7 @@ reunder() {
 - 리액트는 선언적이다. `Home` 컴포넌트는 렌더링할 DOM을 보여주고, `render()`는 컴포넌트 안 내용 물에 따라 DOM을 렌더링한다. 실제로 DOM이 어떻게 렌더링될지는 추상화로 감춰져있다.  
 	- `Home` 컴포넌트를 렌더링하고 싶어하는 명확한 의도를 보여주는 것이다. 
 
-## 함께보기
+## 같이 보기
  - [https://toss.im/slash-21/sessions/3-3](https://toss.im/slash-21/sessions/3-3)
 
 ## reference 

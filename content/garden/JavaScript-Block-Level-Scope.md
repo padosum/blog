@@ -2,7 +2,7 @@
 title   : 블록 레벨 스코프
 date    : 2021-05-15 17:05:36 +0900
 updated : 2021-05-15 17:05:43 +0900
-aliases : 
+aliases : ["블록 레벨 스코프"]
 tags: ["JavaScript"]
 ---
 ## var 키워드로 선언한 변수의 문제 
@@ -15,11 +15,12 @@ tags: ["JavaScript"]
 - ES6에서 `let` 키워드로 변수를 선언하는 것이 도입되었다.  
 - 변수 중복 선언이 불가능하다. 의도치 않게 재할당되는 것을 방지 
 - `let` 키워드를 사용하면 블록 레벨 유효범위를 사용할 수 있다. 
+
 ```javascript
 let lscope = 0;
 {
-    let lscope = 1;
-    console.log(lscope); // 1
+  let lscope = 1;
+  console.log(lscope); // 1
 }
 console.log(lscope); // 0
 ```

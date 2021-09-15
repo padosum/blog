@@ -74,6 +74,7 @@ updated : 2021-09-14 15:14:41 +0900
 	* [[Sass]]
 	* [[Asynchronous]]
 	* [[Synchronous]]
+	* [[Pseudo Code]]
 * Computer Science
 	* [[Architecture]]
 	* [[Hosting]]

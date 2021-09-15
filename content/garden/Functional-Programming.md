@@ -65,10 +65,11 @@ const setLanguage = (developer, language) => ({
 ### 순수 함수  
 - pure function 
 - 파라미터에 의해서만 반환값이 결정되는 함수 
-	- 인자가 같으면 항상 같은 값이나 함수를 반환하게 된다. 부수 효과가 없다. 
+	- 인자가 같으면 항상 같은 값이나 함수를 반환하게 된다. 즉 외부 상태에 의존하지 않고 오직 매개변수를 통해 함수 내부로 전달된 인수에게만 의존해 반환값을 만든다. **부수 효과가 없다**. 
+	- 외부 상태를 변경하지도 않는다.
 	- 순수 함수는 인자를 변경 불가능한 데이터로 취급한다. 
-
-
+- 반대로 외부 상태에 따라 반환값이 달라지는 함수를 비순수 함수라고 한다.
+    
 ```javascript
 let today = {
   title: "Learn TypeScript",
@@ -80,8 +81,10 @@ const doneTodo = (todo) => ({
   ...today,
   done = true 
 })
+
+console.log(doneTodo(today))
 ```
-- `doneTodo` 함수는 순수함수다. 받은 파라미터를 변경하지 않고 불변 데이터로 취급했기 때문이다. 
+- `doneTodo` 함수는 순수함수다. 받은 파라미터를 변경하지 않고 새로 만든 객체를 반환했기 때문이다. 
 - 리액트에서 UI를 순수 함수로 표현한다. 
 	- 다음 코드에서 함수는 DOM을 변경하지 않고 엘리먼트를 반환한다. 엘리먼트를 만드는 일만 책임지는 것. 부수 효과가 없다.  
 ```javascript
@@ -136,6 +139,7 @@ console.log(birthday) // 1994-05-13
 
 ## reference 
 - [Learning React](https://www.hanbit.co.kr/store/books/look.php?p_code=B3942115529)
+- [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
 
 
 
