@@ -1,9 +1,8 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-14 15:14:41 +0900
+updated : 2021-09-16 12:52:00 +0900
 ---
-
 * [[Movies-with-a-computer]]
 * [[Book-list]]
 * [[Algorithm]]
@@ -59,7 +58,9 @@ updated : 2021-09-14 15:14:41 +0900
 	* [[React-Native-tutorial]]
 	* [[React-Native-tutorial-2]]
 	* [[React-Native-folder-and-file-structure]]
-
+* CSS
+  * [[CSS를-HTML에-적용하는-세-가지-방법]] 
+  * [[CSS-규칙-우선순위]]
 * Programming 
 	* [[REST-API]]
 	* [[SPA]]

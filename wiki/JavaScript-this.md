@@ -1,26 +1,14 @@
 ---
 title   : JavaScript this
 date    : 2021-09-14 15:29:46 +0900
-updated : 2021-09-15 23:39:01 +0900
+updated : 2021-09-16 17:59:35 +0900
 aliases: ["this"]
 tags: ["JavaScript"]
 ---
 
 ## `this`
-[[Object-Oriented-Programming|객체]]의 메서드는 자신이 속한 객체의 상태(프로퍼티)를 참조하고 변경할 수 있어야 한다. 그러기 위해서는 **자신이 속한 객체를 가리키는 식별자를 참조할 수 있어야한다.**
+[[Object-Oriented-Programming|객체]]의 메서드는 자신이 속한 객체의 상태(프로퍼티)를 참조하고 변경할 수 있어야 한다. 자신이 속한 객체를 가리키는 식별자를 참조할 수 없다면 메서드의 활용도는 낮아질 것이다.  
 
-**객체 리터럴 방식에서**
-```javascript
-const circle = {
-  radius: 5,
-	getDiameter() {
-	  return 2 * circle.radius;
-	}
-};
-console.log(circle.getDiameter()); // circle 식별자에 객체가 할당된 이후 호출되기 때문에 circle.radius에 접근 가능
-```
-
-**생성자 함수 내부에서**
 ```javascript
 function Circle(radius) {
    this.radius = radius;
@@ -32,12 +20,9 @@ Circle.prototype.getDiameter = function () {
 
 const circle = new Circle(5);
 ```
-- 생성자 함수를 정의하는 시점에는 아직 인스턴스가 생성되기 전이므로 인스턴스를 가리킬 식별자를 알 수가 없다.  
-- 그래서 자바스크립트는 `this`라는 특수한 식별자를 제공한다.
-- `this`는 자신이 속한 객체 or 자신이 생성할 인스턴스를 가리키는 변수다.
-- `this`는 [[JavaScript-Engine|자바스크립트 엔진]]에 의해 암묵적으로 생성된다.
-- 함수를 호출하면 `arguments` 객체와 `this`가 함수 내부에 전달되는데 `this`가 가리키는 값은 함수 호출 방식에 의해 동적으로 결정된다.
----
+생성자 함수를 정의하는 시점에는 아직 인스턴스가 생성되기 전이므로 인스턴스를 가리킬 식별자를 알 수가 없다.  그래서 자바스크립트는 **`this`라는 특수한 식별자를 제공**한다.
+`this`는 자신이 속한 객체 or 자신이 생성할 인스턴스를 가리키는 변수로 [[JavaScript-Engine|자바스크립트 엔진]]에 의해 암묵적으로 생성된다. 
+함수를 호출하면 `arguments` 객체와 `this`가 함수 내부에 전달되는데 `this`가 가리키는 값은 함수 호출 방식에 의해 동적으로 결정된다.
 
 ## this 바인딩
 `this`와 `this`가 가리키는 값을 연결하는 과정을 `this` 바인딩이라고 한다. 자바스크립트에서는 `this` 바인딩이 함수 호출 방식에 따라 결정이된다.
