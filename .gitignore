@@ -2,10 +2,10 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-content/garden/.obsidian/cache
-content/garden/.obsidian/workspace
-content/garden/.obsidian
-content/garden/template/
+wiki/.obsidian/cache
+wiki/.obsidian/workspace
+wiki/.obsidian
+wiki/template/
 public
 
 # Icon must end with two \r
