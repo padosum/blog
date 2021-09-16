@@ -6,13 +6,14 @@
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop -H 0.0.0.0",
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby build",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
     "test": "echo test"
   },
   "dependencies": {
     "gatsby": "^3.12.0",
+    "gatsby-plugin-exclude": "^1.0.2",
     "gatsby-plugin-google-gtag": "^3.12.0",
     "gatsby-plugin-manifest": "^3.12.0",
     "gatsby-plugin-robots-txt": "^1.6.9",

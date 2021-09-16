@@ -66,5 +66,9 @@ module.exports = {
         trackingIds: ["UA-156992915-1"],
       },
     },
+    {
+      resolve: `gatsby-plugin-exclude`,
+      options: { paths: ['/wiki/template/**'] },
+    }
   ],
 };
