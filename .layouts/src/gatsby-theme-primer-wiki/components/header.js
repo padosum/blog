@@ -1,12 +1,9 @@
 import { Box, Link, StyledOcticon } from "@primer/components";
 import {
-  MarkGithubIcon,
   SearchIcon,
   ThreeBarsIcon,
   SunIcon,
   MoonIcon,
-  BookmarkIcon,
-  ZapIcon,
 } from "@primer/octicons-react";
 import { Link as GatsbyLink } from "gatsby";
 import React from "react";
@@ -20,6 +17,7 @@ import GraphButton from "gatsby-theme-primer-wiki/src/components/graph-button";
 import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 import { useTheme } from "@primer/components";
 import components from "gatsby-theme-primer-wiki/src/components/mdx-components";
+import logo from "../../../static/padosum.png";
 export const HEADER_HEIGHT = 66;
 function Header({
   isSearchEnabled,
@@ -52,7 +50,7 @@ function Header({
       >
         <Box display="flex" alignItems="center">
           <Link href="/" color="header.logo" mr={3} lineHeight="condensedUltra">
-            <StyledOcticon icon={ZapIcon} size="medium" />
+            <img src={logo} alft="padosum wiki" width="32" height="32"/>
           </Link>
 
           {siteMetadata.shortName ? (
