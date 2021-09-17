@@ -1,11 +1,11 @@
 const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
-  title: "Padosum's Personal Wiki && Blog",
+  title: "Padosum Personal Wiki",
   shortName: "Padosum Wiki",
   description:
     "최연정의 개인 위키입니다.",
-  imageUrl: "/graph-visualisation.jpg",
+  imageUrl: "/padosum_wiki.png",
   siteUrl: "https://padosum.dev",
   fbAppId: "",
 };
@@ -45,7 +45,7 @@ module.exports = {
         start_url: pathPrefix,
         background_color: `#f7f0eb`,
         display: `standalone`,
-        icon: path.resolve(__dirname, "./static/zap.svg"),
+        icon: path.resolve(__dirname, "./static/padosum.png"),
       },
     },
     { 
