@@ -10,7 +10,7 @@ Netlify에 대해 검색하면 항상 Vercel이 따라나왔다. 거기엔 항�
 
 ## Vercel에서 Domain 설정하기  
 vercel에 로그인 후 도메인을 설정할 프로젝트 선택 > Settings > Domains에 들어간다.  
-에
+
 ![[vercel domain 1.png]]
 
 설정할 도메인 주소를 입력하고 "Add" 버튼을 클릭한다.  
