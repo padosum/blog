@@ -53,6 +53,7 @@ tags: ["JavaScript"]
 - [[JavaScript-Array]]
 - [[JavaScript-Array-Like-Object]]
 - [[JavaScript-First-Class-Object]]
+- [[JavaScript-Class]]
 ## 자바스크립트 함수 
 - [[JavaScript-Function]]
 - [[JavaScript-Constructor-Function]]

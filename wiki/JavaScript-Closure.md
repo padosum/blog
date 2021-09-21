@@ -2,10 +2,11 @@
 title   : JavaScript 클로저 
 excerpt : 
 date    : 2020-06-03 00:18:47 +0900
-updated : 2021-09-20 22:52:45 +0900
+updated : 2021-09-21 13:42:10 +0900
 tags    : ["JavaScript"]
 aliases : ["클로저"]
 ---
+
 > 클로저란 어떤 함수 A에서 선언한 변수 a를 참조하는 내부함수 B를 외부로 전달할 경우 A의 실행 컨텍스트가 종료된 이후에도 변수 a가 사라지지 않는 현상을 말한다.  
 > 
 > **클로저**는 함수와 함수가 선언된 어휘적 환경의 조합이다. 클로저를 이해하려면 자바스크립트가 어떻게 변수의 유효범위를 지정하는지(Lexical scoping)를 먼저 이해해야 한다.
@@ -43,7 +44,7 @@ function outter() {
 		alert(text);
 	}
 }
-var inner = outter(); // ouuter() 내부에 return되는 함수가 들어간다. 
+var inner = outter(); // outter() 내부에 return되는 함수가 들어간다. 
 inner(); // 외부함수(outter())의 지역변수인 text가 그대로 접근이 가능함 
 ```
 `outter` 함수의 실행이 종료되면 `outter` 함수의 실행 컨텍스트가 콜 스택에서 제거되지만 렉시컬 환경은 `inner` 함수의 `[[Environment]]` 내부 슬롯에 의해 참조되고 있고, `inner` 함수는 전역 변수인 `inner`에 의해 참조되고 있으므로 가비지 컬렉션의 대상이 되지 않기 때문이다. 가비지 컬렉터는 누군가 참조하고 있는 메모리 공간을 함부로 해제하지 않는다.  
@@ -84,7 +85,7 @@ for(var index in arr) {
 	console.log(arr[index]()); // 5만 다섯번 
 }
 ```
-`for` 문의 `var i`는 함수 레벨 스코프를 갖는 전역 변수라 함수를 호출하면 전역 변수 `i`를 호출해 5만 다섯번 출력된다.
+`for` 문의 `var i`는 함수 레벨 스코프를 갖는 전역 변수라 함수를 호출하면 함수의 상위 스코프인 전역 스코프의 전역 변수 `i`를 호출한다. `i`는 `for`로 반복되어 `5`가 출력이 된다.  
 ```javascript
 var arr = []
 for (var i = 0; i < 5; i++) {
