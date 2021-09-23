@@ -7,7 +7,7 @@ tags: ["Framework"]
 ---
 - Electron은 JavaScript, HTML, CSS로 Desktop Ap을 만들 수 있는 [[Framework|프레임워크]]다. 
 - Node.js로 로컬 시스템에 접근한다.
-- HTML에서 JavaScript를 이용해 Electron API를 호출하면 Node에서 제공하는 API를 통해 로컬 시스템에 접근하는 것이 가능해진다.
+- HTML에서 JavaScript를 이용해 Electron [[API]]를 호출하면 Node에서 제공하는 API를 통해 로컬 시스템에 접근하는 것이 가능해진다.
 - 단점은, 간단한 앱이라도 큰 저장 공간이 필요하고 속도와 메모리 측면에서 가볍지 않다.
 
 
