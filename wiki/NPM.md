@@ -1,8 +1,8 @@
 ---
 title   : NPM
 date    : 2021-06-03 13:56:01 +0900
-updated : 2021-06-07 14:23:50 +0900
-aliases : 
+updated : 2021-09-24 21:30:08 +0900
+tags    : ["JavaScript"] 
 ---
 **NPM (Node Package Manager)**  
 
@@ -34,7 +34,19 @@ aliases :
 
 ## scripts
 - custom scripts는 `npm run 명령어`로 실행한다.  
-  
+
+### concurrently
+[concurrently](https://github.com/open-cli-tools/concurrently)를 사용하면 여러 개의 스크립트를 동시에 실행할 수 있다. server와 client를 동시에 실행시킬 때 사용한다.  
+```bash
+$ npm install concurrently
+```
+```json
+"scripts": {
+    "backend": "nodemon server/index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client \""
+  },
+```
+스크립트의 경로가 다른 곳에 있다면 `--prefix 경로`를 뒤에 붙여준다.
   
 ## reference 
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)

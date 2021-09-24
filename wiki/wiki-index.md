@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-17 22:36:59 +0900
+updated : 2021-09-24 22:57:35 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -26,6 +26,8 @@ updated : 2021-09-17 22:36:59 +0900
 	* [[Module-Bundler]]
 	* [[Babel]]
 	* [[ESLint]]
+	* [[NPM]]
+	* [[NPX]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
@@ -59,6 +61,8 @@ updated : 2021-09-17 22:36:59 +0900
 	* [[React-Native-tutorial]]
 	* [[React-Native-tutorial-2]]
 	* [[React-Native-folder-and-file-structure]]
+	* [[Redux]]
+  * [[Virtual-DOM]]
 * CSS
   * [[CSS를-HTML에-적용하는-세-가지-방법]] 
   * [[CSS-규칙-우선순위]]
