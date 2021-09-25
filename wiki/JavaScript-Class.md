@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 클래스
 date    : 2021-09-21 19:34:20 +0900
-updated : 2021-09-21 22:00:14 +0900
+updated : 2021-09-25 12:09:24 +0900
 tags    : ["JavaScript"]
 ---
 자바스크립트는 [[JavaScript-Prototype|프로토타입]] 기반 객체지향 언어이다. 프로토타입 기반의 객체지향 언어는 다음 코드와 같이 클래스 없이도 생성자 함수와 프로토타입을 통해 상속을 구현할 수 있다.  
@@ -284,3 +284,131 @@ class Bank {
 console.log(Bank.name); // KB
 console.log(Bank.getMoney()); // 100000000
 ```
+
+## 클래스 상속
+"상속"은 "물려받다"의 의미를 가지고 있다. 따라서 클래스 상속이란, 어떠한 클래스를 만들 때, 다른 클래스의 기능을 물려받는 것을 의미한다.  
+
+예를 들어, 다음과 같은 `Bird` 클래스가 있다고 가정하자.
+```javascript
+class Bird {
+  constructor(name) {
+	  this.name = name;
+		this.hasWing = true; 
+	}
+	
+	eat() { return 'eat'; } 
+}
+```
+다음과 같이 `Eagle` 클래스를 만들 때, 상속을 통해 `Bird` 클래스의 속성은 그대로 사용하고 자신만의 고유 속성을 추가해 확장이 가능하다.  `extends` 키워드가 제공되어 사용하면 상속을 통해 다른 클래스를 확장할 수 있다.
+```javascript
+class Eagle extends Bird {
+  fly() { return 'fly'; } 
+}
+
+let apollo = new Eagle('Apollo');
+console.log(apollo.eat()); // 'eat'
+console.log(apollo.fly()); // 'fly'
+console.log(apollo instanceof Bird); // true
+console.log(apollo instanceof Eagle); // true
+```
+
+### `extends`
+상속을 통해 확장된 클래스를 서브클래스/자식 클래스(subclass/child class), 서브클래스에게 상속된 클래스를 수퍼클래스/부모 클래스(superclass/parent class)라고 부른다. 
+인스턴스의 프로토타입 체인 뿐 아닌, 클래스 간의 프로토타입 체인도 생성된다. 따라서 프로토타입 메서드, 정적 메서드 모두 상속이 가능하다.  
+```javascript
+class Bird {} // superclass 
+
+class Eagle extends Bird {} // subclass 
+```
+
+클래스가 아닌 생성자 함수를 상속받아 클래스를 확장할 수도 있다. 
+```javascript
+function Animal (name) {
+  this.name = name;
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log(`🐶🐶🐶`);
+  }
+}
+
+let d = new Dog('hank');
+d.bark(); // 🐶🐶🐶
+```
+
+### `super`
+수퍼클래스와 서브클래스에서 `constructor`를 생략하면 빈 객체가 생성된다. (암묵적으로 생성) 프로퍼티를 소유하는 인스턴스를 생성하려면 `constructor` 내부에서 인스턴스에 프로퍼티를 추가해야 한다.  
+- `super`를 호출하면 는 수퍼클래스의 `constructor`를 호출해 인스턴스를 생성한다. 
+- `super`를 참조하면 수퍼클래스의 메서드를 호출할 수 있다.  
+
+#### `super` 호출하기
+다음 코드와 같이 수퍼클래스 `constructor` 내부에서 추가한 프로퍼티를 그대로 갖는 인스턴스를 생성하고 싶다면 서브클래스의 `constructor`를 생략하면 된다.  
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name; 
+  }
+}
+
+class Cat extends Animal {
+}
+
+let garfield = new Cat('Garfield');
+console.log(garfield); // Cat {name: 'Garfield'}
+```
+
+만약 수퍼클래스에서 추가한 프로퍼티와 서브클래스에서 추가한 프로퍼티 모두를 갖는 인스턴스를 생성하려면 서브클래스의 `constructor`에서 `super`를 호출해 수퍼클래스의 `constructor`에 전달할 인수를 전달할 수 있다. 
+```javascript
+class Bird {
+  constructor(name, weight) {
+    this.name = name;
+	this.weight = weight;
+  }
+}
+
+class Penguin extends Bird {
+  constructor(name, weight, species) {
+    super(name, weight); 
+	this.species = species;
+  }
+}
+
+let pingu = new Penguin('pingu', 5, 'adelie');
+console.log(pingu); // Penguin {name: 'pingu', weight: 5, species: 'adelie'}
+```
+
+##### `super` 호출 시 주의점 
+- 서브클래스에서 `constructor`를 생략하지 않는 경우 반드시 `super`를 호출해야 한다.  
+- 서브클래스의 `constructor`에서 `super`를 호출하기 전에는 `this`를 참조할 수 없다. 
+- 서브클래스가 아닌 클래스의 `constructor`나 함수에 `super`를 호출할 수 없다.  
+
+
+#### `super` 참조하기  
+메서드 내에서 `super`를 참조하면 수퍼클래스의 메서드를 호출할 수 있다.  
+```javascript
+class Cat {
+  constructor(name) {
+    this.name = name;
+  }
+	
+  speak() {
+    console.log(`I love boxes.`);
+  }
+}
+
+class Tiger extends Cat {
+  speak() {
+    super.speak();
+	console.log(`I love Pooh.`);
+  }
+}
+
+let t = new Tiger('tigger');
+t.speak(); // I love boxes.
+           // I love Pooh.
+```
+
+## reference
+- [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes#extends%EB%A5%BC_%ED%86%B5%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4_%EC%83%81%EC%86%8Dsub_classing)
+- [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
