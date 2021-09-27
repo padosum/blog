@@ -1,16 +1,14 @@
 ---
-title   : 비구조화 할당
+title   : 구조 분해 할당
 excerpt : Destructuring assignment 구조 분해 할당
 date    : 2020-02-25 21:09:48 +0900
-updated : 2021-08-19 22:44:00 +0900
+updated : 2021-09-27 22:08:40 +0900
 aliases : ["Destructuring"]
 tags: ["JavaScript"]
 ---
 
-## 비구조화 할당
-
+## 구조 분해 할당
 배열이나 객체의 속성을 해체해 그 값을 개별 변수에 담을 수 있게 하는 표현식.
-
 리액트를 배우려니까 정리해본다.
 
 ``` javascript
@@ -44,8 +42,14 @@ console.log(tiger); // TIGER
 console.log(human); // girl
 ```
 
-## 다른 사용 예  
+## 새로운 변수 이름으로 할당하기
+```javascript
+const { a: foo } = { a: 10 };
+console.log(foo); // 10
+console.log(a); // ReferenceError: a is not defined
+```
 
+## 다른 사용 예  
 ### Vuex  
 - `actions` 속성에서 `context` 인자 사용시
 - `commit`을 여러번 호출해야 하는 경우 코드 단순화를 위해 사용한다.  
@@ -58,7 +62,6 @@ actions: {
 ```
 
 **구조 분해는 선언적이다. 코드를 작성하는 사람의 의도가 더 잘 설명이 되는 코드이다. 구조분해로 사용하려는 것만 가져와 그것만 사용한다는 것을 선언한다.**   
-
 -> [[선언적 프로그래밍]]
 
 ## object literal enhancement  
