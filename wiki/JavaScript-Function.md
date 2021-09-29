@@ -172,7 +172,7 @@ add(2, 5, 10);
 	- `if`문을 사용해 `typeof`로 확인하기 
 	- [[TypeScript]]를 도입하거나 
 	- `arguments` 객체를 통해 인수 개수 확인하기 
-	- ES6에 도입된 매개변수 기본값으로 인수를 전달하지 않았을 경우와 `undefined`를 전달한 경우 처리하기
+	- [[JavaScript-Default-Parameter|ES6에 도입된 매개변수 기본값]]으로 인수를 전달하지 않았을 경우와 `undefined`를 전달한 경우 처리하기
 		```javascript
 		function add(a = 0, b = 0, c = 0) {
 				return a + b + c;

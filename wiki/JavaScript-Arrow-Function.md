@@ -54,4 +54,27 @@ console.log(birds.map(bird => bird.length));
 2. 화살표 함수는 함수 자체 `this`, `arguments`, `super`, `new.target` 바인딩을 갖지 않는다. 스코프 체인을 통해 상위 스코프의 `this`, `arguments`, `super`, `new.target`을 참조한다.  
 
 ### this  
-화살표 함수의 `this`는 일반 함수의 `this`와 다르다. [[JavaScript-this|this]] 바인딩은 함수의 호출 방식, 함수가 어떻게 호출되었는지에 따라 동적으로 결정되는데,
+화살표 함수의 `this`는 일반 함수의 `this`와 다르다. [[JavaScript-this|this]] 바인딩은 함수의 호출 방식, 함수가 어떻게 호출되었는지에 따라 동적으로 결정된다. 
+**일반 함수로 호출되는 모든 함수 내부의 `this`는 전역 객체를 가리키지만, 화살표 함수는 함수 자체의 `this` 바인딩을 갖지 않는다. 상위 스코프의 `this`를 그대로 참조한다.(lexical this - 렉시컬 스코프처럼 `this`가 함수가 정의된 위치에 의해 결정된다는 것을 의미 )** 
+
+화살표 함수로 메서드를 정의하는 것은 바람직하지 않다. 메서드 내부에는 메서드를 호출한 객체를 가리키는 `this`를 사용할 가능성이 높은데 화살표 함수를 사용하면 상위 스코프의 `this`를 참조하기 때문이다. 따라서 메서드를 정의할 때는 ES6 메서드 축약 표현으로 정의한 ES6 메서드를 사용하는 것이 좋다.  
+```javascript
+const bird = {
+  name: 'Pingu',
+  sayHi: () => console.log(`Hi ${this.name}`)
+};
+
+// 화살표 함수 내부의 this는 상위 스코프인 전역의 this가 가리키는 전역 객체를 가리킨다. window.name과 같다. 
+bird.sayHi(); // Hi 
+
+
+
+const bird = {
+  name: 'Pingu',
+  sayHi() {
+    console.log(`Hi ${this.name}`);
+  }
+};
+
+bird.sayHi(); // Hi Pingu 
+```

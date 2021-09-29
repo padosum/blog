@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2021-09-12 14:30:44 +0900
+updated : 2021-09-28 21:29:53 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -65,7 +65,7 @@ git init
 - `git commit -sm "commit message"`
 	- `-s` 옵션 포함시 라이센스 서명을 의미하는 Signed-off-by 내용을 commit message 안에 포함한다.  
 	- CLA를 사용하기도 한다.  
-- `git amend`최신 commit 수정  
+- `git commit --amend`최신 commit 수정  
 
 - `git log`
     - commit 내역 확인

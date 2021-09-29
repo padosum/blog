@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-24 22:57:35 +0900
+updated : 2021-09-29 23:09:42 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -28,6 +28,7 @@ updated : 2021-09-24 22:57:35 +0900
 	* [[ESLint]]
 	* [[NPM]]
 	* [[NPX]]
+	* [[JavaScript-객체로-된-배열-정렬하기]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
@@ -119,4 +120,3 @@ updated : 2021-09-24 22:57:35 +0900
 * Blog
 	* [[Enable-google-custom-engine-in-Gatsby]]
 	* [[Today-I-Learned]] 
-

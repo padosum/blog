@@ -78,6 +78,9 @@ tags: ["JavaScript"]
 - [[JavaScript-Built-in-Objects]]
 - [[JavaScript-Execution-Context]]
 
+## ES6  
+- [[JavaScript-Rest-Parameter]]
+- [[JavaScript-Default-Parameter]]
 
 ## 같이 보기
 - [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)
