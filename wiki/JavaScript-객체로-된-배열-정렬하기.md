@@ -2,7 +2,7 @@
 title   : JavaScript 객체로 된 배열 정렬하기
 date    : 2021-09-29 16:50:33 +0900
 updated : 2021-09-29 17:55:26 +0900
-aliases :
+aliases : ["JavaScript 객체로 된 배열 정렬하기"]
 tags    : ["JavaScript", "How to"]
 ---
 자바스크립트 객체로 구성된 배열을 알파벳 순으로 정렬하려고 한다. 보통 정렬을 할 때 `sort()`를 사용한다.
