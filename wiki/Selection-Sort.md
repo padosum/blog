@@ -1,7 +1,7 @@
 ---
 title   : 선택 정렬(selection sort)
 date    : 2021-05-05 22:33:53 +0900
-updated : 2021-05-05 22:34:58 +0900
+updated : 2021-10-01 11:27:25 +0900
 aliases :
 tags: ["Algorithm"]
 ---
@@ -39,4 +39,4 @@ console.log(solution(arr));
 
 
 ## reference 
-- [[https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D\_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC)]([https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D\_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC))
+- [https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D\_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC)

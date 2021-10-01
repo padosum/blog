@@ -46,7 +46,7 @@ tags: ["JavaScript"]
 - [[JavaScript-Short-Circuit-Evaluation|단축 평가]]
 - [[JavaScript-Regular-Expression|정규 표현식]]
 - [[JavaScript-Destructuring-assignment|구조분해문법]]
-- [[JavaScript-Spread-syntax|전개 구문]]
+- [[JavaScript-Spread-Syntax|전개 구문]]
 ## 자바스크립트 객체
 - [[JavaScript-Object]]
 - [[JavaScript-Object-Literal]]

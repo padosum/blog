@@ -82,6 +82,7 @@ updated : 2021-09-30 22:10:27 +0900
 	* [[Asynchronous]]
 	* [[Synchronous]]
 	* [[Pseudo Code]]
+	* [[Abstraction]]
 * Computer Science
 	* [[Architecture]]
 	* [[Hosting]]
