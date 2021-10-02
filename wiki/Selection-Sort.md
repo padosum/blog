@@ -1,9 +1,9 @@
 ---
 title   : 선택 정렬(selection sort)
 date    : 2021-05-05 22:33:53 +0900
-updated : 2021-10-01 11:27:25 +0900
+updated : 2021-10-02 10:23:39 +0900
 aliases :
-tags: ["Algorithm"]
+tags:
 ---
 ## 알고리즘의 순서  
 1. 주어진 리스트 중 최소값을 찾기 

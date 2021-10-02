@@ -13,7 +13,7 @@ tags: ["Programming"]
 
 ## CSS Transpiler 
 - CSS가 변수나 함수, nesting 등의 기능을 제공하지 않기 때문에 CSS 작성의 생산성을 높이기 위해 [LESS](https://lesscss.org), [SASS](https://sass-lang.com), [PostCSS](https://postcss.org)등의 CSS Transpiler가 등장했다.    
--  웹 프론트엔드의 생태계는 워낙 거미줄처럼 서로 엮여 있어서, 배보다 배꼽이 커지는 경우가 많습니다. 위의 PostCSS, LESS, SASS, SCSS, .. 무엇이 되었든 CSS3에 충분히 통달 한 후, 생산성 향상이 절실 할 때 시작해보는 것이 좋다.  
+-  웹 프론트엔드의 생태계는 워낙 거미줄처럼 서로 엮여 있어서, 배보다 배꼽이 커지는 경우가 많다. 위의 PostCSS, LESS, SASS, SCSS, .. 무엇이 되었든 CSS3에 충분히 통달 한 후, 생산성 향상이 절실 할 때 시작해보는 것이 좋다.  
 
 ## JavaScript Transpiler 
 - JavaScript의 가장 큰 골칫거리는 호환성 문제
@@ -23,6 +23,7 @@ tags: ["Programming"]
 ### Babel
 - [https://babeljs.io](https://babeljs.io)
 - 최신 문법의 JavaScript를 구형 브라우저에서 실행가능하도록 번역해주는 트랜스파일러
+- JSX를 순수 리액트로 트랜스파일링
 
 ### [[TypeScript]]
 - [https://www.typescriptlang.org](https://www.typescriptlang.org)  

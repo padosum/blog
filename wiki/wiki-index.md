@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-09-30 22:10:27 +0900
+updated : 2021-10-02 21:09:17 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -21,6 +21,8 @@ updated : 2021-09-30 22:10:27 +0900
 	* [[Rendering]]
 	* [[DOM]]
 	* [[Add-Custom-Domain-to-Vercel]]
+	* [[브라우저의-렌더링-과정]]
+	* [[Viewport|뷰포트]]
 * [[JavaScript]]
   * [[JavaScript-Engine]] 
 	* [[Module-Bundler]]
@@ -115,6 +117,7 @@ updated : 2021-09-30 22:10:27 +0900
 	* [[TPO]]
 * Art
 	* [[Cubism]]
+	* [[Fresco]]
 * Sociology
 	* [[Habitus]]	 
 * Blog
