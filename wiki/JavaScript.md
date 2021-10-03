@@ -88,6 +88,7 @@ tags: ["JavaScript"]
 - [[JavaScript-날짜-포맷-변경하기|JavaScript 날짜 포맷 변경하기]]
 - [[JavaScript-Regular-Expression|JavaScript 정규 표현식]]
 - [[JavaScript-문자열-검색|JavaScript 문자열 검색]]
+- [[JavaScript-Get-Map-Values-As-Array]]
 
 ## 같이 보기
 - [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)
