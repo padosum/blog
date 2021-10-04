@@ -1,62 +1,106 @@
 ---
 title   : DOM
 date    : 2021-04-26 11:11:28 +0900
-updated : 2021-05-18 12:04:46 +0900
+updated : 2021-10-04 13:50:15 +0900
 aliases : 
 tags: ["Web", "JavaScript"]
 ---
-
 **문서 객체 모델(DOM; Document Object Model)**  
 
+![[DOM Tree.png]]
 ## 개요 
 - 웹 브라우저가 HTML이나 XML 같은 구조화된 문서를 JavaScript로 제어할 수 있도록 추상화한 객체의 집합 
+	- **HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API(프로퍼티, 메서드)를 제공하는 트리 자료구조**이다.  
 - HTML을 구성하는 하나하나를 자바스크립트 객체로 보는 모델 
 
+---
+DOM에 대한 표준은 W3C와 WHATWG라는 두 단체가 공통된 표준을 만들어 오다가 2018년 4월부터 WHATWG이 단일 표준을 내놓기로 합의했다.  
+
+## HTML 요소, 노드 객체
+HTML 요소는 HTML 문서를 구성하는 개별적인 요소를 말한다. HTML 요소는 [[브라우저의-렌더링-과정|브라우저의 렌더링 과정]]을 통해 렌더링 엔진에 의해 파싱되어 **DOM을 구성하는 요소 노드 객체로 변환**된다.   
+HTML 요소들은 중첩 관계를 갖는다. 계층적인 부모-자식 관계가 형성되기 때문에 렌더링 엔진은 이러한 요소의 부모-자식 관계를 반영해서 객체화한 모든 노드 객체들을 [[Tree|트리 구조]]로 구성한다. 이렇게 구성된 **[[Tree|트리 구조]]를 DOM**이라고 한다. (DOM 트리라고 부르기도 함)
+
+### 노드 객체의 종류 
+노드 객체는 종류(타입)이 있고 상속 구조를 갖는다. 총 12개의 종류 중 중요한 4가지는 다음과 같다.  
+#### 문서 노드 
+document node
+- DOM 최상위에 존재하는 루트 노드로 `document` 객체를 가리킨다. `window`의 `document` 프로퍼티에 바인딩 되어 있어서 `window.document`로도 참조가 가능하다.  
+
+#### 요소 노드
+element node
+- HTML 요소를 가리키는 노드이다.
+- 요소 간 중첩에 의해 부모-자식 관계를 가지고 이를 통해 정보를 구조화 한다. → 문서의 구조를 표현한다. 
+
+#### 어트리뷰트 노드
+attribute node 
+- HTML 요소의 어트리뷰트를 가리키는 객체이다.
+- 어트리뷰트가 지정된 HTML 요소의 요소 노드와 연결되어 있다. 
+	- 하지만 부모 노드에는 연결되어있지 않으므로 요소 노드의 형제 노드는 아니다! 
+
+#### 텍스트 노드
+text node 
+- HTML 요소의 텍스트를 가리키는 객체이다.
+- 요소 노드의 자식 노드이며, 자식 노드는 갖지 못하는 리프 노드이다.  
+
+### 노드 객체의 상속 구조 
+DOM을 구성하는 노드 객체는 ECMAScript 사양에 정의된 것은 아니고, 브라우저 환경에서 따로 제공하는 호스트 객체이다. 하지만 자바스크립트 객체이므로 **프로토타입에 의한 상속 구조를 갖는다.**  
+**중요한 것은 이런 상속 구조들을 다 알고 외우는 것이 아니라 DOM API를 이용해 노드에 접근하고 HTML 구조, 내용, 스타일 등을 동적으로 변경하는 방법을 익히는 것**이다.  
+
+## 요소 노드 얻기 
+HTML 구조, 내용, 스타일을 동적으로 조작하기 위해선 HTML 요소 노드를 얻어야 한다.  
+- [[Get-Element|JavaScript 요소 찾기]]
+
+## 요소 노드 탐색하기
+- [[Find-element|JavaScript 자식, 부모, 형제 노드 찾기]]
+
+## 요소 노드 텍스트 조작하기  
+- [[Change-Text-Value-Using-JavaScript|JavaScript 텍스트 변경하기]]
+
 ## DOM 스크립트 
-- HTML Element를 자바스크립트로 조작하는 것
-```javascript
-var title = document.getElementById('title');
-var titleSpan = title.getElementsByTagName('span');
+DOM 스크립트는 HTML 요소를 자바스크립트로 조작하는 것을 의미한다.  DOM 스크립트에 의해 DOM에 새로운 노드가 추가되거나 삭제될 경우 리플로우와 리페인트가 발생해서 성능에 영향을 줄 수 있기 때문에 주의해서 다룰 필요가 있다.  
+- [[JavaScript-InnerHTML]]
+- [[JavaScript-Create-Node-and-Append-Node|JavaScript 노드 생성, 추가, 삽입, 이동, 복사, 삭제하기]]
 
-var title = document.querySelector('#title'); // 이걸 더 많이 사용한다.
-// document.querySelectorAll → 여러개 가져올 경우 
+## 어트리뷰트
+HTML 요소의 동작을 제어하기 위해 어트리뷰트를 통해  추가적으로 정보를 제공할 수 있다.  
+HTML 문서가 파싱될 때 HTML 요소의 어트리뷰트는 어트리뷰트 노드로 변환되고, 요소 노드와 연결된다. 이때, 모든 어트리뷰트 노드의 참조는 요소 노드의 `attribute` 프로퍼티에 저장된다.  
+![[Attributes.png]]
+```html
+<body>
+  <input id="name" type="text" value="john" />
+  <script>
+    const { attributes } = document.querySelector('#name');
+	console.log(attributes); // NamedNodeMap(3) [ id="name", type="text", value="john" ]
+  </script>
+<body>
 ```
 
-### CSS 클래스 관련 
-```javascript
-link.className = 'homepage'; // 클래스 설정하기 
-
-link.classList.add('foo'); // 클래스 추가하기 
-link.classList.remove('foo'); // 클래스 제거하기 
-link.classList.add('foo', 'bar' 'baz'); // 여러개 추가 
-link.classList.remove('foo', 'bar' 'baz'); // 여러개 제거 
-
-link.classList.contains('foo'); // 클래스 소유 여부 
+요소 노드 객체는 HTML 어트리뷰트에 대응하는 프로퍼티가 존재한다. 이 프로퍼티는 HTMl 어트리뷰트 값을 초기값으로 가지고 있다.  
+왜 굳이 `attribute` 프로퍼티와 요소 노드 객체의 프로퍼티, 두 가지 방식으로 관리를 하는 것일까?  
+`attributes` 프로퍼티에서 관리하는 어트리뷰트는 초기 값을 유지한다. 그리고 요소 노드 객체의 프로퍼티는 해당 프로퍼티의 값을 최신 상태로 유지한다. 초기 상태를 관리하지 않으면 웹 페이지를 처음 표시하거나, 새로고침 시 초기 상태를 표시할 수 없기 때문이다.  
+```html 
+<body>
+  <input id="name" type="text" value="john" />
+  <script>
+    const { attributes } = document.querySelector('#name');
+	console.log(attributes); // NamedNodeMap(3) [ id="name", type="text", value="john" ]
+	
+	el.value = "test"; // value 어트리뷰트 변경 
+    console.log(el.value); // test, 최신 상태 관리
+    console.log(attributes.value.value); // john, 초기 상태 관리 
+  </script>
+<body>
 ```
 
-### HTML Element 동적 생성 
-```javascript
-// element 생성
-var el = document.createElement('li'); 
-el.innerHTML ='<a href='https://google.com'>google</a>';
+### 어트리뷰트 조작하기 
+- [[JavaScript-Get-Set-Attribute|JavaScript 어트리뷰트 값 가져오기, 어트리뷰트 값 변경, 삭제하기]]
+- [[JavaScript-Data-Attribute|JavaScript data 어트리뷰트 사용하기]]
 
-// 위치 정하기, 부모 엘리먼트에 넣는다. 
-var ul = document.querySelector('ul');
-ul.appendChild(el);
-```
+## 스타일 
+- [[JavaScript-Change-Class-Attribute|JavaScript class 속성 변경하기]] 
 
-## 이벤트 Event 
-- 어떤 것으로 인해 일어나는 사건,, 웹에선 클릭 같은 것 
-- 이벤트로 인해 실행되는 함수를 이벤트 핸들러(이벤트 리스너)라고 한다. 
-```javascript
-element.addEventListener('click', 함수);
-```
+## 같이 보기 
+- [[Event|이벤트]]
 
-### 이벤트 객체, 위임 
-- 이벤트 핸들러 내부에 `this`는 `addEventListener`를 호출한 객체다. 
-- 이벤트 핸들러에 자동으로 들어오는 매개변수가 들어오는데 그게 바로 이벤트 객체다. 	
-	- 이벤트 객체에는 많은 정보가 들어있다. 
-	- `this` == `이벤트객체.currentTarget`  
-	- `이벤트객체.target` 실제로 발생한 곳 
-- 이벤트 위임: 상위 엘리먼트에 이벤트 리스너를 등록하고 자식 엘리먼트에 이벤트를 설정할 수 있는 것 
-
+## reference
+- [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
