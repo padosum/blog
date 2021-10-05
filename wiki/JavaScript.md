@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-10-04 12:48:59 +0900
+updated : 2021-10-05 21:48:29 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -99,5 +99,11 @@ tags: ["JavaScript"]
 - [[JavaScript-Data-Attribute|JavaScript data 어트리뷰트 사용하기]]
 - [[JavaScript-Get-Set-Attribute|JavaScript 어트리뷰트 값 가져오기, 어트리뷰트 값 변경, 삭제하기]]
 - [[JavaScript-Change-Class-Attribute|JavaScript class 속성 변경하기]]
+
+
+## Event 
+- [[Event]]
+- [[JavaScript-Add-An-Event-Handler]]
+- [[Event-Propagation-And-Delegation]]
 ## 같이 보기
 - [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)
