@@ -77,7 +77,7 @@ const Post = ({ data, pageContext, location }) => {
   } = frontmatter;
   const category = tags && tags[0];
   const datePublished = date
-    ? new Date(date)
+    ? new Date(date.split(' ')[0])
     : gitCreatedAt
     ? new Date(gitCreatedAt)
     : null;
