@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 자식, 부모, 형제 노드 찾기 
 date    : 2021-10-04 12:21:27 +0900
-updated : 2021-10-04 12:22:02 +0900
+updated : 2021-10-14 00:11:13 +0900
 aliases : ["JavaScript 자식, 부모, 형제 노드 찾기"]
 tags    : ["JavaScript"]
 ---
@@ -57,4 +57,8 @@ el.hasChildNodes();
 
 ## 노드 정보 얻기  
 노드 객체의 종류는 `Node.nodeType`을 사용하면 된다.  
+- 노드 객체 종류  
+	- `Node.ELEMENT_NODE`: 요소 노드 타입, 상수 1 반환 
+  - `Node.TEXT_NODE`: 텍스트 노드 타입, 상수 3 반환
+	- `Node.DOCUMENT_NODE`: 문서 노드 타입, 상수 9 반환
 노드 이름은 `Node.nodeName`

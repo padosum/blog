@@ -74,16 +74,17 @@ aliases :
 #### 시작 라인 
 - HTTP 요청 메시지
 	- 시작 라인 start-line = request-line
-	- [[HTTP 메서드]]
+	- [[HTTP-Method|HTTP 메서드]]
 	- 요청 대상(보통 절대경로)
 	- HTTP Version 
 - HTTP 응답 메시지
 	- 시작 라인 start-line = status-line 
 	- HTTP 버전
-	- [[HTTP 상태 코드]] 
+	- [[HTTP-Status-Codes|HTTP 상태 코드]] 
 	- 이유 문구 (사람이 이해할 수 있는 짧은 상태 코드 설명 글)
 
-#### [[HTTP 헤더]]  
+#### HTTP 헤더 
+[[HTTP-Header|HTTP 헤더]]
 - 헤더의 용도
 	- HTTP 전송에 필요한 모든 부가정보가 포함되어 있다. 
 		- 메시지 바디의 내용, 크기, 인증, 요청 브라우저 정보, 등...
