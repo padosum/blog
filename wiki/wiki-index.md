@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-10-04 09:26:33 +0900
+updated : 2021-10-21 21:10:37 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -107,6 +107,7 @@ updated : 2021-10-04 09:26:33 +0900
   * [[CLI]]
 	* [[Vue-CLI]]
 	* [[Electron]]
+	* [[ASCIIFlow]]
 * Security 
 	* [[SSL]]
 	* [[Encryption]]
@@ -116,6 +117,7 @@ updated : 2021-10-04 09:26:33 +0900
 	* [[Open-Source]] 
 	* [[Paradigm]]
 	* [[TPO]]
+  * [[VC]]
 * Art
 	* [[Cubism]]
 	* [[Fresco]]

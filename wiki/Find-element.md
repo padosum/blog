@@ -57,8 +57,8 @@ el.hasChildNodes();
 
 ## 노드 정보 얻기  
 노드 객체의 종류는 `Node.nodeType`을 사용하면 된다.  
-- 노드 객체 종류  
-	- `Node.ELEMENT_NODE`: 요소 노드 타입, 상수 1 반환 
-  - `Node.TEXT_NODE`: 텍스트 노드 타입, 상수 3 반환
-	- `Node.DOCUMENT_NODE`: 문서 노드 타입, 상수 9 반환
-노드 이름은 `Node.nodeName`
+- `Node.ELEMENT_NODE`: 요소 노드 타입, 상수 1 반환
+- `Node.TEXT_NODE`: 텍스트 노드 타입, 상수 3 반환
+- `Node.DOCUMENT_NODE`: 문서 노드 타입, 상수 9 반환
+
+노드 이름은 `Node.nodeName`를 사용한다.

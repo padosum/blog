@@ -62,7 +62,7 @@ git init
     - 길고 상세한 commit message는 `git commit` 만 입력 후 commit message 창으로 이동하여 작성한다.
 - `git commit -am "commit message`
     - `add` 와 `commit`  동시에 하기, 한번이라도 commit을 한 대상만 가능하다.
-- `git commit -sm "commit message"`
+- `git commit -sm "commit message"`**
 	- `-s` 옵션 포함시 라이센스 서명을 의미하는 Signed-off-by 내용을 commit message 안에 포함한다.  
 	- CLA를 사용하기도 한다.  
 - `git commit --amend`최신 commit 수정  
