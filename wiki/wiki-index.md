@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-10-21 21:10:37 +0900
+updated : 2021-10-22 22:40:06 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -53,6 +53,8 @@ updated : 2021-10-21 21:10:37 +0900
 	* [[GitHub]]
 	* [[이미 커밋된 파일들을 .gitignore에 적용하기]]
 	* [[How-Does-Git-Work]]
+* Development
+  * [[CI-CD|CI/CD]] 
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
