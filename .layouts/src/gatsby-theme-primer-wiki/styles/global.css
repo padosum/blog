@@ -1,7 +1,7 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 html {
-  font-family: 'Spoqa Han Sans Neo',
-    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Spoqa Han Sans Neo", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 body {
   overflow-wrap: break-word;
@@ -12,6 +12,7 @@ body {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+  line-height: 1.5;
 }
 html,
 body,
