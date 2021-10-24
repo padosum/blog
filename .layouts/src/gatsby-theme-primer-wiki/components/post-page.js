@@ -137,7 +137,7 @@ const Post = ({ data, pageContext, location }) => {
             <TableOfContents items={tableOfContents.items} />
           </Box>
         ) : null}
-        <Box width="100%" maxWidth="960px">
+        <Box width="100%" maxWidth="960px" lineHeight={1.5}>
           {shouldShowTitle && (
             <Box mb={4}>
               <Box display="flex" sx={{ alignItems: "center" }}>
