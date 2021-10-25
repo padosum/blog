@@ -81,3 +81,8 @@ td,
 th {
   padding: 0;
 }
+
+input::placeholder {
+  color: #c5ced7;
+  font-style: italic;
+}
