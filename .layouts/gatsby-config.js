@@ -27,6 +27,8 @@ module.exports = {
     {
       resolve: "gatsby-theme-primer-wiki",
       options: {
+        icon: "./static/icon.png",
+        sidebarComponents: ["latest", "tag"],
         nav: [
           {
             title: "Github",
@@ -35,7 +37,7 @@ module.exports = {
         ],
         editUrl:
           "https://github.com/padosum/blog/blob/master/",
-      },
+      }
     },
     {
       resolve: "gatsby-plugin-manifest",
@@ -45,7 +47,7 @@ module.exports = {
         start_url: pathPrefix,
         background_color: `#f7f0eb`,
         display: `standalone`,
-        icon: path.resolve(__dirname, "./static/padosum.png"),
+        icon: path.resolve(__dirname, "./static/icon.png"),
       },
     },
     { 
