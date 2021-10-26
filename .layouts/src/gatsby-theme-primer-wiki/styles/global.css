@@ -12,6 +12,7 @@ body {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+  word-break: keep-all;
 }
 html,
 body,
@@ -85,4 +86,8 @@ th {
 input::placeholder {
   color: #c5ced7;
   font-style: italic;
+}
+
+li {
+  line-height: 200%;
 }
