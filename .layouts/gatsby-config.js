@@ -1,7 +1,7 @@
 const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
-  title: "Padosum Personal Wiki",
+  title: "Personal Wiki by Padosum",
   shortName: "Padosum Wiki",
   description:
     "최연정의 개인 위키입니다.",
