@@ -71,7 +71,7 @@ const el = parentNode.querySelectorAll(selectors);
 const result = element.matches(selectorString);
 ```
 `Element.matches()`는 `Element`(`element`)가 인수로 전달한 CSS 선택자(`selectorString`)를 통해 취득할 수 있는지 확인할 수 있다.  
-💡 [[이벤트 위임]]을 사용할 때 유용하다.  
+💡 [[Event-Propagation-And-Delegation|이벤트 위임]]을 사용할 때 유용하다.  
 
 ## 🚨 주의할 점 (HTMLCollection과 NodeList)
 `HTMLCollection`과 `NodeList`는 [[JavaScript-Array-Like-Object|유사 배열 객체]]이면서 이터러블이기 때문에 `for...of`로 순환도 가능하고, [[JavaScript-Spread-Syntax|스프레드 연산자]]를 사용해 배열로 가져올 수 있다.  

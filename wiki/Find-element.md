@@ -23,7 +23,7 @@ tags    : ["JavaScript"]
 - 텍스트 노드, 요소 노드 
 
 
-### Element.firstelementChild
+### Element.firstElementChild
 - 첫 번째 자식 **요소 노드**를 반환한다. 
 
 ### Element.lastElementChild

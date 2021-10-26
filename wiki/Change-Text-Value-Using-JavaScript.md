@@ -2,7 +2,7 @@
 title   : JavaScript 텍스트 변경하기   
 date    : 2021-10-04 12:39:14 +0900
 updated : 2021-10-04 12:39:31 +0900
-aliases : JavaScript 텍스트 변경하기
+aliases : ["JavaScript 텍스트 변경하기"]
 tags    : ["JavaScript"]
 ---
 ## nodeValue

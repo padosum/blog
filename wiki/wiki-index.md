@@ -24,7 +24,7 @@ updated : 2021-10-26 17:50:20 +0900
 	* [[브라우저의-렌더링-과정]]
 	* [[Viewport|뷰포트]]
 	* [[Event]]
-	* [[Script-element-async-defer-attribute]]
+	* [[Script-element-async-defer-attribute|script 요소의 async, defer 어트리뷰트]]
 	* [[How-to-check-that-web-page-is-loaded|웹 페이지가 완전히 로드된 것을 확인하는 방법]]
 * [[JavaScript]]
   * [[JavaScript-Engine]] 
