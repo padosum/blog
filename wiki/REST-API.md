@@ -8,12 +8,12 @@ tags: ["Programming"]
 
 REST(Representational State Transfer)  
 
-- 클라이언트-서버 구조의 서비스에서 HTTP (일반적으로) 프로토콜을 기반으로 하는 서버를 구현할 수 있는 [[아키텍처]] 의 한 종류  
+- 클라이언트-서버 구조의 서비스에서 HTTP (일반적으로) 프로토콜을 기반으로 하는 서버를 구현할 수 있는 [[Architecture|아키텍처]] 의 한 종류  
 - 범용성 
   - 웹 브라우저를 포함해 HTTP 통신이 가능한 모든 클라이언트 플랫폼을 타겟으로 하기 때문  
   - REST API의 HTTP Response Body는 HTML 보다는 JSON, XML 등 여러 플랫폼에서 사용하기 적절한 포맷을 사용한다.  
 - 서버의 유용하는 자원들에 대해 CRUD(Create, Read, Update, Delete) 기능을 갖출 수 있도록 API를 설계  
-  - 다중 플랫폼을 타겟으로 하여 데이터 제어, 조회를 제공하는 서버에 REST [[아키텍처]]를 도입하면 적절한 것! 
+  - 다중 플랫폼을 타겟으로 하여 데이터 제어, 조회를 제공하는 서버에 REST 아키텍처를 도입하면 적절한 것! 
 - REST API의 각 엔드포인트는 **자원의 명사형(보통 복수형)에 자원의 고유 번호(PK)를 결합, HTTP Method를 동사로 결합**해 API 엔드포인트 자체가 자기서술적인 성격을 띄고 있다.   
 - REST API의 응답은 HTTP의 **Response Status Code를 활용, HTTP Response 헤더 자체가 그 결과를 서술할 수 있도록**한다.  
 

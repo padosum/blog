@@ -7,9 +7,9 @@ tags: ["Programming"]
 ---
 **SPA (Single Page Application)**
 
-- 고전적인 프로그램 [[아키텍처]] -> 모놀리식 아키텍처(Monolithic Architecture), 일체형 아키텍처  
-	- UI와 데이터 계층, 통신 계층이 모두 일체형으로 작성된 구조  
-- SPA는 [[REST API]]와 대응되는 JavaScript로 작성된 웹 프로그램 
+- 고전적인 프로그램 [[Architecture|아키텍처]] -> 모놀리식 아키텍처(Monolithic Architecture), 일체형 아키텍처  
+	- [[User-Interface|UI]]와 데이터 계층, 통신 계층이 모두 일체형으로 작성된 구조  
+- SPA는 [[REST-API|REST API]]와 대응되는 JavaScript로 작성된 웹 프로그램 
   - 페이지의 이동이 아닌, 자바스크립트가 해당 뷰에 필요한 컴포넌트들을 불러와 보여준다.  
 		
 ## 고전적인 웹과의 차이점  

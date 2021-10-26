@@ -85,7 +85,7 @@ const doneTodo = (todo) => ({
 console.log(doneTodo(today))
 ```
 - `doneTodo` 함수는 순수함수다. 받은 파라미터를 변경하지 않고 새로 만든 객체를 반환했기 때문이다. 
-- 리액트에서 UI를 순수 함수로 표현한다. 
+- 리액트에서 [[User-Interface|UI]]를 순수 함수로 표현한다. 
 	- 다음 코드에서 함수는 DOM을 변경하지 않고 엘리먼트를 반환한다. 엘리먼트를 만드는 일만 책임지는 것. 부수 효과가 없다.  
 ```javascript
 const Nav = (props) => <h1>{props.menu}</h1>

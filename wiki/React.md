@@ -5,7 +5,7 @@ updated : 2021-10-04 22:11:31 +0900
 aliases : ["리액트"] 
 tags    : ["React"]
 ---
-UI를 만들기 위한 JavaScript 라이브러리  
+[[User-Interface|UI]]를 만들기 위한 JavaScript 라이브러리  
 
 ## 프로젝트 만들기
 ### create-react-app 

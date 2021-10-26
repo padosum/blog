@@ -6,7 +6,7 @@ aliases :
 tags: ["Vue.js", "Framework"]
 ---
 ## Vue.js가 무엇인가? 
-- UI를 만들기 위한 Progressive [[Framework]] 
+- [[User-Interface|UI]]를 만들기 위한 Progressive [[Framework]] 
   - 화면(view, 브라우저에서 사용자에게 보여지는 것)단 라이브러리  
 - View([[DOM]]) → Vue([[DOM]] Listeners) → Model(JavaScript)
 - View([[DOM]]) ← Vue(Data Bindings) ← Model(JavaScript)
