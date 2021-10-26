@@ -124,7 +124,7 @@ const Post = ({ data, pageContext, location }) => {
       >
         {tableOfContents.items ? (
           <Box
-            sx={{ width: 220, flex: "0 0 auto", marginLeft: 6 }}
+            sx={{ width: 240, flex: "0 0 auto", marginLeft: 6 }}
             display={["none", null, "block"]}
             css={{ gridArea: "table-of-contents", overflow: "auto" }}
             position="sticky"
