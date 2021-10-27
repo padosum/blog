@@ -3,7 +3,7 @@ title   : script 요소의 async, defer 어트리뷰트
 date    : 2021-10-26 17:15:17 +0900
 updated : 2021-10-26 17:15:42 +0900
 aliases : ["script 요소의 async, defer 어트리뷰트"]
-tags    : ["web", "JavaScript"]
+tags    : ["Web", "JavaScript"]
 ---	
 
 ## Goal 
