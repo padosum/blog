@@ -1,10 +1,9 @@
 ---
 title   : DOM 변경을 감시하기, MutationObserver 
 date    : 2021-10-27 18:51:23 +0900
-updated : 2021-10-27 18:52:17 +0900
+updated : 2021-10-28 21:24:07 +0900
 aliases : ["DOM 변경을 감시하기, MutationObserver"]
 tags    : ["Web"]
-draft   : true
 ---
 사이드 프로젝트를 진행하면서 웹 페이지의 DOM이 변경되었음을 감지하는 방법이 필요했다. DOM이 변경되었을 때 발생하는 이벤트가 없을까하고 찾아보다가 **MutationObserver** API를 이용해 DOM이 변경되는 것을 감시할 수 있는 것을 확인했다.   
 
@@ -110,8 +109,8 @@ const target = document.querySelector(".box");
 const callback = function (mutations) {
   for (let mutation of mutations) {
     if (mutation.type === "attributes") {
-      console.log(`🎣 change attributes`);  
-	}
+      console.log(`🎣 change ${mutation.attributeName} attribute.`);  
+	  }
   }
 }
 
@@ -125,9 +124,55 @@ btn.addEventListener("click", function() {
   target.classList.toggle("blue", !target.classList.contains("blue"));
 });
 ```
+`mutation` object의 `attributeName` 속성을 통해 변경된 어트리뷰트 이름을 알 수 있다.  
 
 ### characterData 변경 감지하기  
+```html
+<button class="btn">Change Text</button>
+
+<p class="p1">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quis ex commodi accusantium dolorem unde obcaecati, recusandae at libero! Pariatur dolor harum est adipisci quidem, praesentium quam eveniet suscipit. Libero.
+</p>
+```
+
+```javascript
+const target = document.querySelector(".p1").childNodes[0],
+	  btn = document.querySelector(".btn");
+
+const callback = function (mutations) {
+  for (let mutation of mutations) {
+    if (mutation.type === "characterData") {
+	  console.log(`🎣 Change characterData.`);
+	}
+  }
+};
+
+const observer = new MutationObserver(callback);
+
+const config = { characterData: true };
+observer.observe(target, config);
+
+btn.addEventListener("click", function () {
+  target.textContent = "Change Text";
+});
+```
 
 ### 변경 기록하기  
+option에 `attributes: true`인 경우 `attributeOldValue: true`로 설정하면 `mutation` object의 `oldValue` 속성을 통해 변경 이전의 값을 얻을 수 있다.  `characterData: true`일 때도 마찬가지로 `characterDataOldValue: true`인 경우 `mutation.oldValue`로 변경 이전의 값을 얻을 수 있다.  
+```javascript
+const callback = function (mutations) {
+  for (let mutation of mutations) {
+    if (mutation.type === "attributes") {
+      console.log(mutation.oldValue); // 변경되기 전 속성 값 
+      console.log(`🎣 change ${mutation.attributeName} attributes.`);
+    }
+  }
+};
 
-## 결론 
+const observer = new MutationObserver(callback);
+const config = { attributes: true, attributeOldValue: true };
+```
+
+## reference
+- [MDN Web Docs - MutationObserver](https://developer.mozilla.org/ko/docs/Web/API/MutationObserver)  
+- [Getting to Know The MutationObserver API](https://www.smashingmagazine.com/2019/04/mutationobserver-api-guide/)
