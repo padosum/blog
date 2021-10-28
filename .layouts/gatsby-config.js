@@ -71,6 +71,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-exclude`,
       options: { paths: ['/wiki/template/**'] },
+    }, 
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-5398000784793847`
+			}
     }
   ],
 };
