@@ -51,13 +51,13 @@ module.exports = {
       },
     },
     { 
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-advanced-sitemap`,
     },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: siteMetadata.siteUrl,
-        sitemap: `${siteMetadata.siteUrl}/sitemap/sitemap-index.xml`,
+        sitemap: `${siteMetadata.siteUrl}/sitemap-pages.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
