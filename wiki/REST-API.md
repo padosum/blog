@@ -1,7 +1,7 @@
 ---
 title   : REST API
 date    : 2021-04-20 00:18:49 +0900
-updated : 2021-04-20 00:19:16 +0900
+updated : 2021-10-31 20:27:01 +0900
 aliases : ["REST API"]
 tags: ["Programming"]
 ---
@@ -51,6 +51,10 @@ REST(Representational State Transfer)
 - JWT는 유저의 상태(고유번호, 권한, 토큰 만료일자 등)를 JSON 포맷으로 구성, 이 텍스트를 특정 알고리즘(Base 64)에 따라 일련의 문자열로 인코딩한 토큰 
 - 토큰 위변조 문제
 	- 방지를 위해 토큰의 뒷 부분의 토큰의 내용과 특정 암호를 기반으로 Signature 문자열을 붙여 토큰을 생성 
+
+## 같이 보기
+- [비개발자를 위한 개발자어 풀이](https://ppss.kr/archives/76995)  
+	
 
 ## reference 
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
