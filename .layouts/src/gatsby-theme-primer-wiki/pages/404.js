@@ -26,9 +26,9 @@ const NotFoundPage = ({ data, location }) => {
             borderStyle="solid"
             p={3}
           >
-            <Text as='span' fontWeight="bold" color="text.primary">404: NOT_FOUND</Text>
+            <Text as='span' fontWeight="bold" color="text.primary">🚧 404: NOT_FOUND</Text>
             <Text as='span' ml={1}>페이지를 찾을 수 없습니다.</Text>
-            <Text as='p' mt={2}>페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다.</Text>
+            <Text as='p' mt={2}>페이지가 존재하지 않거나, 현재 작성 중인 문서입니다.</Text>
           </Box>
           <ButtonGroup display="block" my={2}>
             <Button onClick={() => navigate(-1)}>이전 페이지로</Button>
