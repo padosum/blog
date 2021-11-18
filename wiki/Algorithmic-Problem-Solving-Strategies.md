@@ -7,11 +7,12 @@ tags: ["Algorithm"]
 ---
 
 > a.k.a 종만북 요약 정리   
+> 🚧  **일시 중단**
 
-- [x] [[02 문제 해결 개관]]
-- [x] [[03 코딩과 디버깅]]
-- [ ] [[04 알고리즘의 시간 복잡도 분석]]
-- [ ] [[06 무식하게 풀기]]
+- [x] [[Algorithmic-Problem-Solving-Strategies-02|02 문제 해결 개관]]
+- [x] [[Algorithmic-Problem-Solving-Strategies-03|03 코딩과 디버깅]]
+- [ ] [[Algorithmic-Problem-Solving-Strategies-04|04 알고리즘의 시간 복잡도 분석]]
+- [ ] [[Algorithmic-Problem-Solving-Strategies-06|06 무식하게 풀기]]
 - [ ] 분할 정복
 - [ ] 동적 계획법
 - [ ] 선형 자료 구조
