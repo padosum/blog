@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 실행 컨텍스트
 date    : 2021-09-16 22:05:36 +0900
-updated : 2021-09-20 21:20:42 +0900
+updated : 2021-11-25 22:09:42 +0900
 tags    : ["JavaScript"]
 aliases : ["실행 컨텍스트"]
 ---
@@ -68,3 +68,15 @@ console.log(x + y); // 3
 	스코프에 포함된 식별자를 등록하고 등록된 식별자에 바인딩된 값을 관리한다.
 2. Outer Environment Reference 
   상위 스코프를 가리킨다. **해당 컨텍스트를 생성한 소스코드를 포함하는 상위 코드의 렉시컬 환경을 말한다. 스코프 체인을 구현한다.** 
+
+## 실행 컨텍스트의 객체
+실행 컨텍스트는 3가지 프로퍼티를 소유한다.
+- Variable Object 변수 객체
+	- 변수
+	- 매개변수(paramter), 인수(arguments)
+	- 함수 선언(함수 표현식은 제외)
+- Scope chain 스코프 체인
+- this value
+
+## 참고
+- [PoiemWeb - Execution Context](https://poiemaweb.com/js-execution-context)
