@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-primer-wiki",
       options: {
-        icon: "./static/icon.png",
+        icon: "./static/logo.png",
         sidebarComponents: ["latest", "tag"],
         nav: [
           {
@@ -47,10 +47,10 @@ module.exports = {
         start_url: pathPrefix,
         background_color: `#f7f0eb`,
         display: `standalone`,
-        icon: path.resolve(__dirname, "./static/icon.png"),
+        icon: path.resolve(__dirname, "./static/logo.png"),
       },
     },
-    { 
+    {
       resolve: `gatsby-plugin-advanced-sitemap`,
     },
     {
@@ -71,12 +71,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-exclude`,
       options: { paths: ['/wiki/template/**'] },
-    }, 
+    },
     {
       resolve: `gatsby-plugin-google-adsense`,
       options: {
         publisherId: `ca-pub-5398000784793847`
-			}
+      }
     }
   ],
 };
