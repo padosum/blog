@@ -15,8 +15,8 @@ let user = {     // 객체
   age: 30        // 프로퍼티, 키: "age", 값: 30
 };
 ```
-- 객체는 0개 이상의 프로퍼티로 구성된 집합, 프로퍼티는 키(key)와 값(value)으로 구성된다.    
-- 자바스크립트에서 사용할 수 있는 모든 값은 프로퍼티 값이 될 수 있고 함수도 [[JavaScript-First-Class-Object|일급 객체]]이므로 값으로 취급할 수 있다. **프로퍼티 값이 함수일 경우 일반 함수와 구분하기 위해 메서드(method)라고 부른다.**
+객체는 0개 이상의 프로퍼티로 구성된 집합, 프로퍼티는 키(key)와 값(value)으로 구성된다.    
+자바스크립트에서 사용할 수 있는 모든 값은 프로퍼티 값이 될 수 있고 함수도 [[JavaScript-First-Class-Object|일급 객체]]이므로 값으로 취급할 수 있다. **프로퍼티 값이 함수일 경우 일반 함수와 구분하기 위해 메서드(method)라고 부른다.**
 
 ```javascript
 let user = {
@@ -39,8 +39,10 @@ user.sayHi(); // 안녕하세요!
 자바스크립트는 다양한 객체 생성 방법을 지원한다. 
 - [[JavaScript-Object-Literal|객체 리터럴]]
 - [[JavaScript-Constructor-Function|Object 생성자 함수]]
-- 생성자 함수
+- [[JavaScript-Constructor-Function|생성자 함수]]
 - Object.create 메서드
+	- `Object.create()`를 사용하면 이미 있는 객체를 전달받아서 이를 상속받는 새로운 객체를 반환한다. 
+	- `Object.create(null)`을 쓰면 아무것도 상속받지 않은 객체를 만들 수 있다.
 - 클래스(ES6)
 
 [[JavaScript-Object-Literal|객체 리터럴]] 외의 방법들은 모두 [[JavaScript-Function|함수]]를 이용해 객체를 생성한다.  
