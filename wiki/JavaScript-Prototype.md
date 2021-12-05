@@ -40,8 +40,7 @@ const circle2 = new Circle(2);
 
 console.log(circle.getArea === circle2.getArea); // true  
 ```
-- 상속을 통해 불필요한 중복을 제거할 수 있다. 
-- `Circle` 생성자 함수가 생성한 모든 인스턴스는 자신의 프로토타입, 상위(부모) 객체 역할을 하는 `Circle.prototype`의 모든 프로퍼티와 메서드를 상속받는다.  
+`Circle` 생성자 함수가 생성한 모든 인스턴스는 자신의 프로토타입, 상위(부모) 객체 역할을 하는 `Circle.prototype`의 모든 프로퍼티와 메서드를 상속받는다. 이처럼 상속을 통해 불필요한 중복을 제거할 수 있다. 
 
 ## 프로토타입 객체
 - 프로토타입 객체(또는 프로토타입)란 객체 간 상속을 구현하기 위해 사용된다. 
@@ -51,6 +50,7 @@ console.log(circle.getArea === circle2.getArea); // true
 - 모든 객체는 하나의 프로토타입을 갖고(`[[Prototype]]` 값이 `null`인 객체는 프로토타입이 없다.) 모든 프로토타입은 생성자 함수와 연결되어 있다. 
 
 ### `__proto__` 접근자 프로퍼티
+- 💡 `__proto__`는 '던더 프로토'라고 발음한다.
 - **모든 객체는 `__proto__` 접근자 프로퍼티를 통해 자신의 프로토타입, `[[Prototype]]` 내부 슬롯에 간접적으로 접근이 가능하다.**
 - 접근자 프로퍼티는 자체적으로 값(`[[Value]]` 프로퍼티 어트리뷰트)를 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 `[[Get]]`, `[[Set]]` 프로퍼티 어트리뷰트로 구성된 프로퍼티이다.  [[JavaScript-Property-Attributes]] 참고
 - `__proto__` 접근자 프로퍼티는 객체가 직접 소유하는 것이 아닌 `Object.prototype`의 프로퍼티
@@ -105,31 +105,30 @@ function Person(name) {
 
 ## 객체 생성방식에 따른 프로토타입 결정 
 프로토타입은 객체가 생성되는 시점에 객체 생성 방식에 의해 결정된다. 
-- [[JavaScript-Object-Literal|객체 리터럴]]
-	- `Object.prototype`
-- [[JavaScript-Constructor-Function|Object 생성자 함수]] 
-	- `Object.prototype`
-- 생성자 함수 (`new` 연산자)
-	- 생성자 함수의 `prototype` 프로퍼티에 바인딩 되어 있는 객체 
+- [[JavaScript-Object-Literal|객체 리터럴]]: `Object.prototype`
+- [[JavaScript-Constructor-Function|Object 생성자 함수]]: `Object.prototype`
+- 생성자 함수 (`new` 연산자): 생성자 함수의 `prototype` 프로퍼티에 바인딩 되어 있는 객체 
 	```javascript
 	function Person(name) {
-	    this.name = name;
+		this.name = name;
 	}
-	
+
 	Person.prototype.sayHello = function() {
-	    console.log(`Hello, My Name is ${this.name}`);
+		console.log(`Hello, My Name is ${this.name}`);
 	}
-	
+
 	const me = new Person('Lee');
 	const you = new Person('Choi');
-	
+
 	me.sayHello();
 	you.sayHello(); 
 	```
+
 ## 프로토타입 체인
 [[JavaScript-Prototype-Chain|프로토타입 체인]]
+
 ## 프로퍼티 섀도잉
-[[JavaScript-Property-Shadowing]]
+[[JavaScript-Property-Shadowing|프로퍼티 섀도잉]]
 
 ## `instanceof` 연산자 
 `객체 instanceof 생성자 함수`
@@ -158,7 +157,7 @@ Person.staticMethod(); // staticMethod
 
 me.staticMethod(); // Error 
 ```
-- 생성자 함수가 생성한 인스턴스가 정적 프로퍼티/메서드를 호출할 수 없는 이유는 프로토타입 체인에 속하지 않았기 때문이다. 
+생성자 함수가 생성한 인스턴스가 정적 프로퍼티/메서드를 호출할 수 없는 이유는 프로토타입 체인에 속하지 않았기 때문이다. 
 
 ## 프로퍼티 확인하기 
 ### `in` 연산자 
@@ -168,12 +167,14 @@ me.staticMethod(); // Error
 - ES6에서는 `Reflect.has` 메서드가 도입되었다. 동일하게 동작 
 
 ### `Object.prototype.hasOwnProperty` 메서드 
-- 고유의 프로퍼티인 경우에만 `ture`, 상속받은 것이면 `false`
+고유의 프로퍼티인 경우에만 `ture`, 상속받은 것이면 `false`
 
 ## 프로퍼티 열거하기 
 ### `for ... in` 문 
-`for (변수선언문) in 객체) { ... }`  
-- 대상 객체 프로퍼티와 상속받은 프로퍼티까지 열거하지만 프로퍼티의 `[[Enumerable]]` 값이 `false`이면 열거되지 않는다.  
+```javascript
+for (변수선언문) in 객체) { ... }
+```
+대상 객체 프로퍼티와 상속받은 프로퍼티까지 열거하지만 프로퍼티의 `[[Enumerable]]` 값이 `false`이면 열거되지 않는다.  
 
 ### Object.keys, values, entries 메서드 
 열거 가능한 프로퍼티 값을 배열로 반환한다.
