@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 객체
 date    : 2021-05-08 12:23:41 +0900
-updated : 2021-09-14 14:59:39 +0900
+updated : 2021-12-06 09:41:56 +0900
 tags: ["JavaScript"]
 ---
 
@@ -40,10 +40,10 @@ user.sayHi(); // 안녕하세요!
 - [[JavaScript-Object-Literal|객체 리터럴]]
 - [[JavaScript-Constructor-Function|Object 생성자 함수]]
 - [[JavaScript-Constructor-Function|생성자 함수]]
-- Object.create 메서드
+- `Object.create` 메서드
 	- `Object.create()`를 사용하면 이미 있는 객체를 전달받아서 이를 상속받는 새로운 객체를 반환한다. 
 	- `Object.create(null)`을 쓰면 아무것도 상속받지 않은 객체를 만들 수 있다.
-- 클래스(ES6)
+- [[JavaScript-Class|클래스(ES6)]]
 
 [[JavaScript-Object-Literal|객체 리터럴]] 외의 방법들은 모두 [[JavaScript-Function|함수]]를 이용해 객체를 생성한다.  
 

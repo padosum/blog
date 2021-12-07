@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-10-31 20:39:17 +0900
+updated : 2021-12-07 22:33:14 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -18,6 +18,7 @@ updated : 2021-10-31 20:39:17 +0900
 	* [[SSR]]
 	* [[CSR]]
 	* [[Ajax]]
+	* [[JSON]]
 	* [[Rendering]]
 	* [[DOM]]
 	* [[Add-Custom-Domain-to-Vercel]]

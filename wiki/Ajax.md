@@ -17,4 +17,6 @@ Ajax (**A**synchronous **J**avaScript **A**nd **X**ML)
 	- `XMLHttpRequest` 객체를 통해 웹서버에 요청을 전달하고 웹서버는 처리한 요청을 다시 돌려준다. 그럼 자바스크립트가 해당 응답을 [[Rendering|렌더링]]한다.
 
 
-
+## 같이 보기  
+- [[JSON]]
+- [[XMLHttpRequest]]

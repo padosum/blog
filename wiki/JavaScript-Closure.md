@@ -2,7 +2,7 @@
 title   : JavaScript 클로저 
 excerpt : 
 date    : 2020-06-03 00:18:47 +0900
-updated : 2021-09-21 13:42:10 +0900
+updated : 2021-12-07 13:44:40 +0900
 tags    : ["JavaScript"]
 aliases : ["클로저"]
 ---
@@ -147,7 +147,7 @@ console.log(fund.getMoney()); // 200
 `this`를 바인딩해야 하는 점을 제외하면 [[JavaScript-this|bind 메서드]]와 실행 결과가 같다. 하지만 `this`의 값에 상관없이 사용하는 부분 적용 함수를 클로저를 통해 구현이 가능하다.  
 
 ### 디바운스
-
+[[JavaScript-Debounce-Throttle|디바운스와 스로틀]]
 
 
 ## 클로저 활용 커링 함수 

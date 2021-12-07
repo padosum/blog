@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-10-05 21:48:29 +0900
+updated : 2021-12-07 13:26:19 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -39,7 +39,7 @@ tags: ["JavaScript"]
 ---
 
 ## 자바스크립트 기본 문법
-- [[JavaScript-Variables|JavaScript 변수]]
+- [[JavaScript-Variables|변수]]
 - [[JavaScript-Expression|자바스크립트 표현식]]
 - [[JavaScript-Data-Type|데이터 타입]] 
 - [[JavaScript-Type-Casting|타입 캐스팅]]
@@ -47,37 +47,45 @@ tags: ["JavaScript"]
 - [[JavaScript-Regular-Expression|정규 표현식]]
 - [[JavaScript-Destructuring-assignment|구조분해문법]]
 - [[JavaScript-Spread-Syntax|전개 구문]]
+
+
 ## 자바스크립트 객체
-- [[JavaScript-Object]]
-- [[JavaScript-Object-Literal]]
-- [[JavaScript-Array]]
-- [[JavaScript-Array-Like-Object]]
-- [[JavaScript-First-Class-Object]]
-- [[JavaScript-Class]]
+- [[JavaScript-Object|객체]]
+- [[JavaScript-Object-Literal|객체 리터럴]]
+- [[JavaScript-Array|배열]]
+- [[JavaScript-Array-Like-Object|유사 배열 객체]]
+- [[JavaScript-First-Class-Object|일급 객체]]
+- [[JavaScript-Class|클래스]]
+- [[JavaScript-this|this]]
+
+
 ## 자바스크립트 함수 
-- [[JavaScript-Function]]
-- [[JavaScript-Constructor-Function]]
-- [[JavaScript-Arrow-Function]]
+- [[JavaScript-Function|함수]]
+- [[JavaScript-Constructor-Function|생성자 함수]]
+- [[JavaScript-Arrow-Function|화살표 함수]]
 - [[JavaScript-First-Class-Object|일급 객체]]
 
 ## 자바스크립트 스코프 
 - [[JavaScript-Scope]]
 - [[JavaScript-Scope-Chain]]
 - [[JavaScript-Block-Level-Scope]]
+
 ## 자바스크립트 프로토타입
 - [[JavaScript-Property-Attributes]]
 - [[JavaScript-Prototype]]
   - [[JavaScript-Prototype-Chain]] 
   - [[JavaScript-Property-Shadowing]]
+
 ## 자바스크립트 클로저
 - [[JavaScript-Closure]]
----
-- [[JavaScript-this]]
-- [[JavaScript-strict-mode]]
-- [[JavaScript-Module]]
+
+## ETC
+- [[JavaScript-strict-mode|strict mode]]
+- [[JavaScript-Module|모듈]]
 - [[JavaScript-Built-in-Objects]]
 - [[JavaScript-Execution-Context]]
-
+- [[JavaScript-Timer|타이머]]
+  - [[JavaScript-Debounce-Throttle|디바운스와 스로틀]]
 ## ES6  
 - [[JavaScript-Rest-Parameter]]
 - [[JavaScript-Default-Parameter]]
@@ -88,7 +96,7 @@ tags: ["JavaScript"]
 - [[JavaScript-날짜-포맷-변경하기|JavaScript 날짜 포맷 변경하기]]
 - [[JavaScript-Regular-Expression|JavaScript 정규 표현식]]
 - [[JavaScript-문자열-검색|JavaScript 문자열 검색]]
-- [[JavaScript-Get-Map-Values-As-Array]]
+- [[JavaScript-Get-Map-Values-As-Array|JavaScript Map의 value를 배열로 가져오기]]
 
 ## DOM
 - [[DOM]]
@@ -102,8 +110,10 @@ tags: ["JavaScript"]
 
 
 ## Event 
-- [[Event]]
-- [[JavaScript-Add-An-Event-Handler]]
-- [[Event-Propagation-And-Delegation]]
+- [[Event|이벤트]]
+- [[JavaScript-Add-An-Event-Handler|JavaScript 이벤트 핸들러 등록하는 방법]]
+- [[Event-Propagation-And-Delegation|이벤트 전파와 위임]]
+
+
 ## 같이 보기
 - [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)
