@@ -89,6 +89,10 @@ input::placeholder {
     font-style: italic;
 }
 
+ul {
+    margin-bottom: 16px;
+}
+
 li {
     line-height: 1.5;
 }
