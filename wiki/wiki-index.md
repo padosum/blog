@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-12-07 22:33:14 +0900
+updated : 2021-12-08 22:51:36 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -38,6 +38,7 @@ updated : 2021-12-07 22:33:14 +0900
 	* [[ESLint]]
 	* [[NPM]]
 	* [[NPX]]
+  * [[Asynchronous-JavaScript]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
