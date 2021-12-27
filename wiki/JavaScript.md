@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-12-07 13:26:19 +0900
+updated : 2021-12-27 19:55:04 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -57,13 +57,14 @@ tags: ["JavaScript"]
 - [[JavaScript-First-Class-Object|일급 객체]]
 - [[JavaScript-Class|클래스]]
 - [[JavaScript-this|this]]
-
+- [[JavaScript-Iterator]]
 
 ## 자바스크립트 함수 
 - [[JavaScript-Function|함수]]
 - [[JavaScript-Constructor-Function|생성자 함수]]
 - [[JavaScript-Arrow-Function|화살표 함수]]
 - [[JavaScript-First-Class-Object|일급 객체]]
+- [[JavaScript-Generator]]
 
 ## 자바스크립트 스코프 
 - [[JavaScript-Scope]]
@@ -86,6 +87,8 @@ tags: ["JavaScript"]
 - [[JavaScript-Execution-Context]]
 - [[JavaScript-Timer|타이머]]
   - [[JavaScript-Debounce-Throttle|디바운스와 스로틀]]
+- [[JavaScript-Asynchronous-Programming|비동기 프로그래밍]]
+
 ## ES6  
 - [[JavaScript-Rest-Parameter]]
 - [[JavaScript-Default-Parameter]]
