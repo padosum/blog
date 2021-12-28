@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-12-27 19:55:04 +0900
+updated : 2021-12-28 20:18:05 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -28,7 +28,9 @@ tags: ["JavaScript"]
 - ECMAScript는 프로그래밍 언어, 값, 타입, 객체, 함수 등 핵심 문법을 규정하고, 자바스크립트는 ECMAScript와 함께 브라우저가 지원하는 [[DOM]], BOM, XMLHttpRequest, Web Storage 등을 포함하는 개념이다.  
 
 ## Ajax
-[[Ajax]]
+- [[Ajax]]
+- [[JSON]]
+- [[XMLHttpRequest]]
 
 ## 자바스크립트 엔진
 [[JavaScript-Engine]]

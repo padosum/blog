@@ -1,7 +1,7 @@
 ---
 title   : 웹 페이지가 완전히 로드된 것을 확인하는 방법
 date    : 2021-10-23 19:48:58 +0900
-updated : 2021-10-23 19:48:58 +0900
+updated : 2021-12-28 20:27:45 +0900
 aliases : ["HTML 문서 로딩 관련 이벤트", DOMContentLoaded"]
 tags: ["How to", "Web", "JavaScript"]
 ---
@@ -73,6 +73,7 @@ window.addEventListener("DOMContentLoaded", function () {
 ## 같이 보기
 - [[브라우저의-렌더링-과정|브라우저의 렌더링 과정]]
 - [[Script-element-async-defer-attribute|script 요소의 async, defer 어트리뷰트]]
+- [[XMLHttpRequest]]
 
 ## reference 
 - [문서의 로드시점 - onload, DOMContentLoaded](https://webdir.tistory.com/515)
