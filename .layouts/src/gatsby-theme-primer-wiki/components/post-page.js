@@ -79,8 +79,8 @@ const Post = ({ data, pageContext, location }) => {
   const datePublished = date
     ? new Date(date.split(' ')[0])
     : gitCreatedAt
-    ? new Date(gitCreatedAt)
-    : null;
+      ? new Date(gitCreatedAt)
+      : null;
 
   const postSeoData = {
     title,
@@ -93,8 +93,8 @@ const Post = ({ data, pageContext, location }) => {
     dateModified: dateModified
       ? new Date(dateModified)
       : lastUpdatedAt
-      ? new Date(lastUpdatedAt)
-      : datePublished,
+        ? new Date(lastUpdatedAt)
+        : datePublished,
     category,
     imageUrl: frontmatter.image ? frontmatter.image.publicURL : null,
     imageAlt: imageAlt,
@@ -124,7 +124,7 @@ const Post = ({ data, pageContext, location }) => {
       >
         {tableOfContents.items ? (
           <Box
-            sx={{ width: 240, flex: "0 0 auto", marginLeft: 6 }}
+            sx={{ width: 220, flex: "0 0 auto", marginLeft: 6 }}
             display={["none", null, "block"]}
             css={{ gridArea: "table-of-contents", overflow: "auto" }}
             position="sticky"

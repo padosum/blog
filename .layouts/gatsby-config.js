@@ -28,6 +28,7 @@ module.exports = {
       resolve: "gatsby-theme-primer-wiki",
       options: {
         icon: "./static/logo.png",
+        contentMaxWidth: 1440,
         sidebarComponents: ["latest", "tag"],
         nav: [
           {
