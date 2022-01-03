@@ -1,7 +1,7 @@
 ---
 title   : JavaScript Promise
 date    : 2021-12-08 22:44:36 +0900
-updated : 2021-12-08 22:45:12 +0900
+updated : 2022-01-03 14:05:27 +0900
 aliases : ["프로미스"]
 tags    : ["JavaScript"] 
 ---
@@ -284,8 +284,10 @@ fetch(url, {
 - 프로미스는 체이닝(연쇄 호출)이 가능하다. 
 - 콜백 지옥과 비교해서 유지보수 편의성이 뛰어나다.
 	- **제품의 전체적인 생명주기에서 유지보수 편의성이 코드를 누군가가 좋아하는 스타일로 작성하는 것보다 더 중요하다.**
-	- 프로미스를 사용하면 내포의 깊이를 줄일 수 있지만 조금 더 읽기 편한 코드를 원한다면 `async/await`을 사용하는 것이 좋다. 
+	- 프로미스를 사용하면 내포의 깊이를 줄일 수 있지만 조금 더 읽기 편한 코드를 원한다면 `async/await`을 사용하는 것이 좋다. [[JavaScript-Async-Await|JavaScript async/await]] 참고
 
+## 같이 보기
+- [JavaScript Visualized: Promises & Async/Await](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
 
 ## reference
 - [[한-권으로-읽는-컴퓨터-구조와-프로그래밍|한 권으로 읽는 컴퓨터 구조와 프로그래밍]]
