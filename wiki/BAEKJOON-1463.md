@@ -1,7 +1,7 @@
 ---
 title   : 백준 1463 JavaScript 
 date    : 2021-11-18 18:23:42 +0900
-updated : 2021-11-20 10:33:36 +0900
+updated : 2022-01-12 12:57:30 +0900
 aliases : 
 tags    : 
 ---
@@ -42,9 +42,9 @@ function recur(dpArr, num) {
 const readFileSyncPath = require('path').basename(__filename).replace(/js$/, 'txt');
 // const readFileSyncPath = '/dev/stdin';
 const N = parseInt(require('fs').readFileSync(readFileSyncPath).toString().trim());
-const DP = new Array(N + 1).fill(0);
+const DP = Array.from({ length: N + 1 }, i => 0);
 
-for (let i = 2; i <= N; i++) {
+DP.forEach((v, i) => {
   DP[i] = DP[i - 1] + 1;
 
   if (i % 2 === 0) {
@@ -54,8 +54,9 @@ for (let i = 2; i <= N; i++) {
   if (i % 3 === 0) {
     DP[i] = Math.min(DP[i], DP[i / 3] + 1);
   }
-}
-
+});
 console.log(DP[N]);
 ```
 반복문의 현재 값에 해당하는 연산 횟수는 처음에 이전 값의 횟수에 1을 더해 초기화 해준다. 정수 X에 사용할 수 있는 연산 중 "1을 뺀다"가 있기 때문에 그 연산 횟수에 1을 더한 값을 우선 가지고 있는 것이다. 그 다음에 2로 나누어 떨어지거나 3으로 나누어 떨어졌을 때의 값과 비교해서 작은 값으로 할당한다. 그렇게 해야 연산 횟수의 최솟값을 얻을 수 있다. 
+
+![[boj_1463.png]]

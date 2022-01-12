@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2021-12-28 20:18:05 +0900
+updated : 2022-01-12 15:20:32 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -102,6 +102,7 @@ tags: ["JavaScript"]
 - [[JavaScript-Regular-Expression|JavaScript 정규 표현식]]
 - [[JavaScript-문자열-검색|JavaScript 문자열 검색]]
 - [[JavaScript-Get-Map-Values-As-Array|JavaScript Map의 value를 배열로 가져오기]]
+- [[JavaScript-toLocaleString]]
 
 ## DOM
 - [[DOM]]
