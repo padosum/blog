@@ -1,7 +1,7 @@
 ---
 title   : 백준 11727 JavaScript 
 date    : 2021-11-23 08:35:39 +0900
-updated : 2021-11-23 08:36:28 +0900
+updated : 2022-01-13 08:52:54 +0900
 aliases : 
 tags    : 
 ---
@@ -20,12 +20,12 @@ const DP = new Array(N + 1).fill(0);
 const MOD = 10007;
 
 
-function tiling(width) {
+const tiling = (width) => {
   if (width <= 1) return 1;
 
   if (DP[width] !== 0) return DP[width];
 
-  DP[width] = (tiling(width - 2) + tiling(width - 2) + tiling(width - 1)) % MOD;
+  DP[width] = (tiling(width - 2)*2 + tiling(width - 1)) % MOD;
 
   return DP[width];
 }
