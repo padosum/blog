@@ -1,7 +1,7 @@
 ---
 title   : 백준 9095 JavaScript 
 date    : 2021-11-22 15:08:09 +0900
-updated : 2021-11-22 15:08:24 +0900
+updated : 2022-01-14 16:52:22 +0900
 aliases : 
 tags    : 
 ---
@@ -29,12 +29,9 @@ tags    :
 ```javascript
 const readFileSyncPath = require('path').basename(__filename).replace(/js$/, 'txt');
 // const readFileSyncPath = '/dev/stdin';
-const input = require('fs').readFileSync(readFileSyncPath).toString().split("\n");
-const T = Number(input[0]);
-const num = [];
-for (let i = 1; i <= T; i++) {
-  num.push(Number(input[i]));
-}
+const input = require('fs').readFileSync(readFileSyncPath).toString().trim().split("\n");
+
+const num = input.slice(1).map(Number);
 const maxNum = Math.max(...num);
 const DP = new Array(maxNum + 1).fill(0);
 
@@ -42,11 +39,13 @@ DP[1] = 1;
 DP[2] = 2;
 DP[3] = 4;
 
-for (let i = 4; i <= maxNum; i++) {
-  DP[i] = DP[i - 1] + DP[i - 2] + DP[i - 3];
-}
+DP.forEach((v, i) => {
+   if (i > 3) {
+     DP[i] = DP[i - 1] + DP[i - 2] + DP[i - 3];       
+   } 
+});
 
 num.forEach(v => {
   console.log(DP[v]);
-})
+});
 ```
