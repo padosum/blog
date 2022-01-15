@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-12-08 22:51:36 +0900
+updated : 2022-01-15 23:13:37 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -63,6 +63,7 @@ updated : 2021-12-08 22:51:36 +0900
 	* [[How-Does-Git-Work]]
 * Development
   * [[CI-CD|CI/CD]] 
+  * [[SDK]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]

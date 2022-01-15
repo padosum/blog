@@ -1,10 +1,11 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2021-07-26 20:35:36 +0900
+updated : 2022-01-15 21:56:33 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
+
 - [[모듈 번들러]]
 
 ## 모듈
@@ -59,6 +60,10 @@ output: {
   use: ['style-loader', 'css-loader', 'sass-loader']
 }
 ```
+- `babel-loader`: ECMAScript 2015 이전 규격의 코드를 ECMAScript 5 규격으로 변환
+- `style-loader`: 동적으로 `style` 태그를 생성해 CSS를 적용
+- `css-loader`: CSS 파일 간의 의존관계를 해소
+
 ### plugin
 - 웹팩의 기본적인 동작에 추가적인 기능을 제공  
 - 로더가 파일을 해석하고 변환하는 과정에 관여한다면 플러그인은 해당 겨로가물의 형태를 바꾸는 역할 
@@ -73,8 +78,19 @@ output: {
     - 배포시 잠재적 문제를 미리 확인(ajax 방식의 api연동에서 cors 문제 확인)  
 - 파일이 아닌 메모리 상으로만 빌드 결과물을 보여준다.
     - 컴퓨터 구조상 **파일 입출력 보다 메모리 입출력이 속도가 빠르고 자원이 덜 소모되기 때문** 
-- `npm i -D webpack-dev-server`로 설치 
-- `webpack serve`로 실행  
+- `npm i -D webpack-dev-server`로 설치
+```javascript
+// webpack.config.js 
+module.exports = {
+  // ...
+  devServer: {
+    contentBase: path.join(__dirname, '/'),
+    historyApiFallback: true,
+    port: 3000
+  },
+};
+```
+- `npx webpack-dev-server --mode=development --hot --inline --open`
   
 ### Webpack Dev Server 옵션  
 - [옵션들](https://webpack.js.org/configuration/dev-server/)
