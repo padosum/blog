@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2022-01-15 21:56:33 +0900
+updated : 2022-01-21 09:40:27 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
@@ -62,7 +62,7 @@ output: {
 ```
 - `babel-loader`: ECMAScript 2015 이전 규격의 코드를 ECMAScript 5 규격으로 변환
 - `style-loader`: 동적으로 `style` 태그를 생성해 CSS를 적용
-- `css-loader`: CSS 파일 간의 의존관계를 해소
+- `css-loader`: `.css` 파일을 읽어들이기 위해 사용, CSS 파일 간의 의존관계를 해소
 
 ### plugin
 - 웹팩의 기본적인 동작에 추가적인 기능을 제공  
