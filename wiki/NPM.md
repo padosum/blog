@@ -1,12 +1,12 @@
 ---
 title   : NPM
 date    : 2021-06-03 13:56:01 +0900
-updated : 2021-09-24 21:30:08 +0900
+updated : 2022-01-23 20:42:29 +0900
 tags    : ["JavaScript"] 
 ---
 **NPM (Node Package Manager)**  
 
-- 명령어로 자바스크립트 라이브러리를 설치하고 관리할 수 있는 패키지 매니저, 전 세계 자바스크립트 개발자들이 자바스크립트 라이브러리를 공개된 저장소에 올려놓고 `npm` 명령어로 편하게 다운받을 수 있다. 
+- 명령어로 자바스크립트 라이브러리를 설치하고 관리할 수 있는 [[Package-Manager|패키지 매니저]], 전 세계 자바스크립트 개발자들이 자바스크립트 라이브러리를 공개된 저장소에 올려놓고 `npm` 명령어로 편하게 다운받을 수 있다. 
 
 ## NPM 설치 
 - `npm install` 
@@ -31,6 +31,11 @@ tags    : ["JavaScript"]
   - sass
   - js-compression 
   - imagemin 
+
+## NPM 명령어
+### `npm ci`
+`node_modules`가 없는 경우에 `npm install`보다 2배 이상 빠르다. 
+
 
 ## scripts
 - custom scripts는 `npm run 명령어`로 실행한다.  
