@@ -1,8 +1,8 @@
 ---
-title   : Sass
+title   : Sass, Scss
 date    : 2021-06-12 23:45:37 +0900
 updated : 2022-01-21 20:01:03 +0900
-aliases : 
+aliases : ["Sass", "Scss"]
 tags: ["Programming"]
 ---
 

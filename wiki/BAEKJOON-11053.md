@@ -1,7 +1,7 @@
 ---
 title   : 백준 11053 JavaScript 
 date    : 2022-01-21 15:13:40 +0900
-updated : 2022-01-21 15:14:25 +0900
+updated : 2022-01-24 11:40:10 +0900
 aliases : 
 tags    : 
 ---
@@ -9,24 +9,67 @@ tags    :
 [백준 11053](https://www.acmicpc.net/problem/11053)
 
 ## 풀이
+
+이 문제는 [[Dynamic-Programming|Dynamic Programming]]으로 풀이한다.  
+우선 **증가하는 수열**이 되어야 하는 조건이 있다.  
+주어진 배열(여기선 `A`)을 순회하면서 그 전에 위치한 수와 크기를 비교한다.  
+
+현재 순회하고 있는 값(`i`)의 전 단계(`i-1`)에 증가하는 수열의 길이를 `DP[i-1]`에 저장해놨으므로 현재 값이 크다면 거기에 `1`을 더해주면 된다. 
+
+기본적으로 자기 자신을 포함할테니 `DP` 배열의 값은 모두 `1`로 초기화한다. 
+
+![[boj_11053_1.jpg]]
+`DP[0]`, 10(`A`)보다 작은 경우의 이전 값이 없으므로 그대로 둔다.  
+
+![[boj_11053_2.jpg]]
+`DP[1]`, 20(`A[1]`)보다 작은 수 10(`A[0]`)이 있으므로 1을 더한다. ➡️  **`DP[1] = 2`**
+
+![[boj_11053_3.jpg]]
+`DP[2]`, 10(`A[2]`)보다 작은 수는 없으므로 그대로 둔다. 
+
+![[boj_11053_4.jpg]]
+`DP[3]`, 30(`A[3]`)보다 작은 수는 10(`A[0]`)과 20(`A[1]`)이 있다. 
+- 10(`A[0]`)과 비교할 때, `DP[0]`, `DP[3]` 모두 1이다. `DP[3]`에 1을 더한 2를 할당한다. ➡️  **`DP[3] = 2`**
+- 20(`A[1]`)과 비교할 때, 20보다 작은 수로 만들어진 수열의 길이는 2(`DP[1]`) 여기에 1을 더하면 3이 된다.  기존 `DP[3]`의 값보다 크므로 교체한다. ➡️  **`DP[3] = 3`**
+
+![[boj_11053_5.jpg]]
+`DP[4]`, 20(`A[4]`)보다 작은 수는 10(`A[0]`)이 있다.
+그러므로 `DP[0]`에 1을 더한 2를 할당한다. ➡️  **`DP[4] = 2`**
+
+![[boj_11053_6.jpg]]
+`DP[5]`, 50(`A[5]`)보다 작은 수 10(`A[0]`), 20(`A[1]`), 30(`A[3]`)이 있다.
+- 10(`A[0]`)과 비교할 때, `DP[0]`과 `DP[5]`는 모두 1이다. `DP[5]`에 1을 더한 2를 할당한다.➡️ **`DP[5] = 2`**
+- 20(`A[1]`)과 비교할 때, `DP[1]`과 `DP[5]`는 모두 2다. `DP[5]`에 1을 더한 3을 할당한다. ➡️ **`DP[5] = 3`**
+- 30(`A[3]`)과 비교할 때, `DP[3]`과 `DP[5]`는 모두 3이다. `DP[5]`에 1을 더한 5를 할당한다. ➡️ **`DP[5] = 4`**
+
+
+## 코드
+**가장 긴 수열을 구해야 하므로 만들어진 `DP` 배열에서 최댓값을 출력하면 된다.** 
 ```javascript
-const readFileSyncPath = require('path').basename(__filename).replace(/js$/, 'txt');
-// const readFileSyncPath = '/dev/stdin';
+const readFileSyncPath = '/dev/stdin';
 const input = require('fs').readFileSync(readFileSyncPath).toString().split("\n");
 const N = Number(input.splice(0, 1));
 const A = input[0].split(" ").map(Number);
-const DP = new Array(N + 1).fill(1);
+const DP = new Array(N).fill(1);
 
-let result = 1;
-for (let i = 0; i <= N; i++) {
-  let maxVal = A[i];
+for (let i = 0; i < N; i++) {
+  let currVal = A[i];      // 현재 값
   for (j = 0; j < i; j++) {
-    if (maxVal > A[j]) {
-      DP[i] = Math.max(DP[i], DP[j] + 1);
+    if (currVal > A[j]) {  // 현재 값이 순회하는 값보다 크면
+      DP[i] = Math.max(DP[i], DP[j] + 1); // DP[j]에 만들어진 수열 길이와 현재(i) 길이 비교 
     }
   }
-  result = Math.max(result, DP[i])
 }
 
-console.log(result);
+// 최댓값 
+console.log(Math.max(...DP));
 ```
+
+
+## 되돌아보기
+처음 나의 풀이는 🐶떡같았다. `DP`를 사용해야하는 것을 알면서도 배열만 `DP`라는 것을 선언해놓고 이용하지를 않았다. 그래서 이전 값과 비교만 하다가 반복문이 끝났다. 
+`DP`에 대한 더 많은 문제 풀이가 필요하다... 
+
+
+## reference 
+- https://bitwise.tistory.com/215
