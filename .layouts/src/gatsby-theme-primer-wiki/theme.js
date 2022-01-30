@@ -3,7 +3,7 @@ const theme = {
     light: {
       colors: {
         header: {
-          bg: "#1a8dee",
+          bg: "#586069",
           text: "#ffffff"
         },
         auto: {
