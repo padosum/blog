@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-01-24 19:03:42 +0900
+updated : 2022-01-30 21:47:35 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -31,7 +31,14 @@ updated : 2022-01-24 19:03:42 +0900
 * CSS 
   * [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   * [[CSS-z-index]]
-	* [[CSS-Length-Units|CSS 길이 단위]]
+  * [[CSS-Length-Units|CSS 길이 단위]]
+  * [[CSS를-HTML에-적용하는-세-가지-방법]] 
+  * [[CSS-규칙-우선순위]]
+  * [[CSS-Box-Model]]
+  * [[CSS-clip-path]]
+* [[Sass]]
+  * [[Sass-mixin-include]]
+  * [[Compiling-Sass-in-Visual-Studio-Code]]
 * [[JavaScript]]
   * [[JavaScript-Engine]] 
 	* [[Module-Bundler]]
@@ -79,12 +86,6 @@ updated : 2022-01-24 19:03:42 +0900
 	* [[React-Native-folder-and-file-structure]]
 	* [[Redux]]
   * [[Virtual-DOM]]
-* CSS
-  * [[CSS를-HTML에-적용하는-세-가지-방법]] 
-  * [[CSS-규칙-우선순위]]
-  * [[CSS-Box-Model]]
-* [[Sass]]
-  * [[Sass-mixin-include]]
 * Programming 
 	* [[REST-API]]
 	* [[SPA]]

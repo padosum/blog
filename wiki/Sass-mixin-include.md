@@ -3,7 +3,7 @@ title   : SASS, SCSS mixin과 include
 date    : 2022-01-24 18:12:38 +0900
 updated : 2022-01-24 18:13:30 +0900
 aliases : 
-tags    : ["SASS", "SCSS"] 
+tags    : ["Sass", "SCSS"] 
 ---
 ## Goal
 [[SASS|Sass와 SCSS]]에서 `mixin`, `include`에 대해 알아본다.  
