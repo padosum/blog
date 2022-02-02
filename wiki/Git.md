@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2021-09-28 21:29:53 +0900
+updated : 2022-02-02 23:00:38 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -22,7 +22,8 @@ tags: ["Git"]
 - Git을 이용하면 특정 디렉토리를 기준으로 저장소(Repository)를 생성할 수 있다. 
 - 저장소는 루트 디렉토리(Top Level Directory) 하부에 `.git` 디렉토리를 생성하고, 루트 디렉토리에 생성되는 모든 파일에 대한 버전별 스냅샷(Snapshot; 특정 시점의 모든 데이터)을 `.git` 디렉토리에 저장하게 된다. 
 
-## [[How-Does-Git-Work|Git은 어떤 원리로 동작하는가?]]
+## Git은 어떤 원리로 동작하는가?
+[[How-Does-Git-Work|Git은 어떤 원리로 동작하는가?]]
 
 ###  git init 
 ```bash
@@ -219,5 +220,19 @@ $ git config --global core.editor vim
 - 해당 소스라인에 대해 누가 마지막으로 수정했는지 commit ID 추적을 할 수 있다.
 - 소스코드 리딩 시 유용  
 
+## 기타 
+
+### git log를 file로 export 하는 법 
+```
+$ git --no-pager log > log.txt
+
+# 다른 옵션도 사용면 된다. 
+$ git --no-pager log --reverse > log.txt
+
+# 클립보드로 복사하기 (Mac)
+$ git --no-pager log --reverse | pbcopy
+```
+
 ## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
+- [https://stackoverflow.com/questions/10330425/how-do-i-export-a-git-log-to-a-text-file](https://stackoverflow.com/questions/10330425/how-do-i-export-a-git-log-to-a-text-file)
