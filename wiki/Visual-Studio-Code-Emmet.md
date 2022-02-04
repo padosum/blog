@@ -1,7 +1,7 @@
 ---
 title   : Visual Studio Code Emmet 정리  
 date    : 2022-02-02 13:19:50 +0900
-updated : 2022-02-02 13:21:02 +0900
+updated : 2022-02-02 13:21:02 +0900
 aliases : ["Visual Studio Code Emmet 정리"]
 tags    : 
 ---
