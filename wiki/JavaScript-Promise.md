@@ -1,4 +1,4 @@
----
+ㄹ괄---
 title   : JavaScript Promise
 date    : 2021-12-08 22:44:36 +0900
 updated : 2022-01-03 14:05:27 +0900
@@ -227,7 +227,7 @@ rejected.catch(console.log); // Error: Error
 만약 인수로 전달받은 배열의 프로미스가 하나라도 `rejected` 상태가 되면 나머지 프로미스가 `fulfilled` 상태가 되는 것을 기다리지 않고 즉시 종료한다.  
 
 ### Promise.race
-`Promise.race`는 `Promise.all`처럼 프로미스를 요소로 갖는 배열 등의 이터러블을 인수로 받는다. 하지만 모든 프로미스가 `fulfilled` 상태가 되는 것을 기다리진 않고 가장 먼저 `fulfilled` 상태가 된 프로미스의 처리 결괄를 `resolve`하는 새로운 프로미스를 반환한다.  
+`Promise.race`는 `Promise.all`처럼 프로미스를 요소로 갖는 배열 등의 이터러블을 인수로 받는다. 하지만 모든 프로미스가 `fulfilled` 상태가 되는 것을 기다리진 않고 가장 먼저 `fulfilled` 상태가 된 프로미스의 처리 결과를 `resolve`하는 새로운 프로미스를 반환한다.  
 
 전달받은 프로미스 중 하나라도 `rejected`가 되면 `Promise.all` 처럼 에러를 `reject`하는 새로운 프로미스를 즉시 반환한다. 
 
