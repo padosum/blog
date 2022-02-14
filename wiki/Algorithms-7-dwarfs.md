@@ -1,7 +1,7 @@
 ---
 title   : 일곱 난쟁이 
 date    : 2021-04-25 10:03:23 +0900
-updated : 2021-04-26 14:39:19 +0900
+updated : 2022-02-14 08:34:17 +0900
 aliases : ["일곱 난쟁이"]
 ---
 ## 문제
@@ -37,7 +37,7 @@ console.log(solution(arr));
 
 ## 더 알아보기
 - [[splice]]
-- [[reduce]]
-- [[map]]
+- [[Higher-Order-Function|reduce]]
+- [[Higher-Order-Function|map]]
 
 
