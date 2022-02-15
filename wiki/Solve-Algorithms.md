@@ -1,7 +1,7 @@
 ---
 title   : 알고리즘 문제
 date    : 2021-04-24 17:22:01 +0900
-updated : 2022-02-14 08:46:50 +0900
+updated : 2022-02-15 10:16:47 +0900
 aliases : ["알고리즘 문제"]
 tags: ["Algorithm"]
 ---
@@ -36,7 +36,7 @@ tags: ["Algorithm"]
 - [[BAEKJOON-6588]]
 - [[BAEKJOON-1676]]
 - [[BAEKJOON-2004]]
-- [[BEAKJOON-9613]]
+- [[BAEKJOON-9613]]
 - [[BAEKJOON-17087]]
 - [[BAEKJOON-1373]]
 - [[BAEKJOON-11005]]
@@ -61,7 +61,7 @@ tags: ["Algorithm"]
 - [[BAEKJOON-1309]]
 - [[BAEKJOON-11057]]
 - [[BAEKJOON-9465]]
-- [[BEAKJOON-2156]]
+- [[BAEKJOON-2156]]
 - [[BAEKJOON-1932]]
 - [[BAEKJOON-11055]]
 - [[BAEKJOON-11722]]
@@ -70,3 +70,4 @@ tags: ["Algorithm"]
 - [[BAEKJOON-2133]]
 - [[BAEKJOON-17404]]
 - [[BAEKJOON-2309]]
+- [[BAEKJOON-3085]]

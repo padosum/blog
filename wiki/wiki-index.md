@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-02-05 22:20:17 +0900
+updated : 2022-02-15 13:13:08 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -28,6 +28,7 @@ updated : 2022-02-05 22:20:17 +0900
 	* [[Script-element-async-defer-attribute|script 요소의 async, defer 어트리뷰트]]
 	* [[How-to-check-that-web-page-is-loaded|웹 페이지가 완전히 로드된 것을 확인하는 방법]]
   * [[MutationObserver|DOM 변경을 감시하기, MutationObserver]]
+	* [[How-to-access-localhost-from-another-device]]
 * CSS 
   * [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   * [[CSS-z-index]]

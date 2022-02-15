@@ -1,7 +1,7 @@
 ---
 title   : 백준 2309 JavaScript 
 date    : 2022-02-14 08:46:52 +0900
-updated : 2022-02-14 08:48:56 +0900
+updated : 2022-02-15 10:24:21 +0900
 aliases : 
 tags    : 
 ---
@@ -37,3 +37,6 @@ for (let i = 0; i < dwarfs.length; i++) {
 }
 answer.forEach(v => console.log(v))
 ```
+
+## 같이 보기
+- [[Brute-Force-Search-Algorithm|완전 탐색]]
