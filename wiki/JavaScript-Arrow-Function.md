@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 화살표 함수
 date    : 2021-09-15 15:55:37 +0900
-updated : 2021-09-15 15:55:38 +0900
+updated : 2022-02-24 20:28:53 +0900
 aliases : ["화살표 함수"]
 ---
 화살표 함수는 `function` 키워드 대신 화살표(`=>`)를 사용해 기존의 함수 정의 방식보다 간략하게 함수를 정의할 수 있다.  
@@ -67,8 +67,6 @@ const bird = {
 // 화살표 함수 내부의 this는 상위 스코프인 전역의 this가 가리키는 전역 객체를 가리킨다. window.name과 같다. 
 bird.sayHi(); // Hi 
 
-
-
 const bird = {
   name: 'Pingu',
   sayHi() {
@@ -77,4 +75,22 @@ const bird = {
 };
 
 bird.sayHi(); // Hi Pingu 
+```
+
+하지만 [[JavaScript-Class|클래스]] 에서 클래스 필드를 정의했을 때 화살표 함수 내부의 `this`는 클래스 필드를 가리킨다.  
+```javascript
+class Bird {
+  name = 'Pingu'
+
+  constructor() {
+    console.log(this.name)
+  }
+    
+  sayHi = () => {
+    console.log(`Hi, ${this.name}`)
+  }
+}
+
+const bird = new Bird()
+bird.sayHi() // Hi, Pingu 
 ```
