@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-02-23 14:40:04 +0900
+updated : 2022-02-27 22:45:42 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -76,6 +76,9 @@ updated : 2022-02-23 14:40:04 +0900
 * Development
   * [[CI-CD|CI/CD]] 
   * [[SDK]]
+* Testing
+    * [[TDD]] 
+    * [[Jasmine]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
