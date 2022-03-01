@@ -1,7 +1,7 @@
 ---
 title   : React  
 date    : 2021-10-04 22:08:12 +0900
-updated : 2021-10-04 22:11:31 +0900
+updated : 2022-03-01 23:41:19 +0900
 aliases : ["리액트"] 
 tags    : ["React"]
 ---
@@ -11,8 +11,15 @@ tags    : ["React"]
 ### create-react-app 
 리액트 개발 팀은 자동으로 리액트 프로젝트를 생성해주는 `create-react-app`이라는 [[CLI]]를 만들었다. 개발자가 직접 [[Webpack]], [[Babel]], [[ESLint]] 등 여러 도구를 직접 설정하지 않아도 빠르게 리액트 프로젝트를 시작할 수 있게 만들어준다.  
 ```bash
-npx create-react-app my-app
+$ npx create-react-app my-app
 ```
+
+### 개발 서버 실행 
+```bash
+$ npm start
+```
+### 프로젝트 구조 
+`index.js`은 가장 먼저 실행되는 파일이다.
 
 ## 엘리먼트
 엘리먼트는 React 앱의 가장 작은 단위이다. 화면에 표시할 내용을 기술한다.   
