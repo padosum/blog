@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2022-01-12 15:20:32 +0900
+updated : 2022-03-04 15:55:21 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -119,7 +119,10 @@ tags: ["JavaScript"]
 - [[Event|이벤트]]
 - [[JavaScript-Add-An-Event-Handler|JavaScript 이벤트 핸들러 등록하는 방법]]
 - [[Event-Propagation-And-Delegation|이벤트 전파와 위임]]
+- [[How-To-Handle-Child-Elements-Of-A-Target-Element-When-Delegating-And-Event|이벤트 위임을 사용할 때 타겟 엘리먼트의 자식 엘리먼트를 다루는 방법]]
 
+## Errors 
+- [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
 
 ## 같이 보기
 - [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)

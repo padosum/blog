@@ -3,7 +3,7 @@ title   : 다른 기기(컴퓨터/모바일)에서 localhost에 접근하는 방
 date    : 2022-02-15 13:13:09 +0900
 updated : 2022-02-15 13:52:53 +0900
 aliases : ["다른 기기에서 localhost에 접근하는 방법"]
-tags    : ["How to", "Web"]
+tags    : ["How to", "Web", "Vite"]
 ---
 ## Goal
 내 컴퓨터에 실행 중인 웹페이지를 모바일에 실행시키는 방법 알아보기  

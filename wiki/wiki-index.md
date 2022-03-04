@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-02-27 22:45:42 +0900
+updated : 2022-03-04 15:45:40 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -15,13 +15,15 @@ updated : 2022-02-27 22:45:42 +0900
 	* [[URI]]
 	* [[HTTP]]
 	* [[Webpack]]
+	* [[Vite]]
 	* [[SSR]]
 	* [[CSR]]
 	* [[Ajax]]
 	* [[JSON]]
 	* [[Rendering]]
 	* [[DOM]]
-	* [[Add-Custom-Domain-to-Vercel]]
+	* [[Add-Custom-Domain-to-Vercel|Netlify에서 Vercel로 도메인 설정하기]]
+	* [[Add-Subdomain-to-Vercel|Vercel에서 서브도메인 추가하기]]
 	* [[브라우저의-렌더링-과정]]
 	* [[Viewport|뷰포트]]
 	* [[Event]]
@@ -38,6 +40,7 @@ updated : 2022-02-27 22:45:42 +0900
   * [[CSS-규칙-우선순위]]
   * [[CSS-Box-Model]]
   * [[CSS-clip-path]]
+  * [[How-To-Handle-Child-Elements-Of-A-Target-Element-When-Delegating-And-Event|이벤트 위임을 사용할 때 타겟 엘리먼트의 자식 엘리먼트를 다루는 방법]]
 * [[Sass]]
   * [[Sass-mixin-include]]
   * [[Compiling-Sass-in-Visual-Studio-Code]]
@@ -51,6 +54,7 @@ updated : 2022-02-27 22:45:42 +0900
 	* [[Yarn]]
 	* [[NPX]]
   * [[Asynchronous-JavaScript]]
+  * [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
@@ -76,6 +80,9 @@ updated : 2022-02-27 22:45:42 +0900
 * Development
   * [[CI-CD|CI/CD]] 
   * [[SDK]]
+  * [[404-Not-Found-In-Vercel-With-Vite|Vercel에서 배포 후 404 Not Found가 나타나는 문제]]
+  * [[Environment-Variables-In-Vercel-With-Vite|Vercel에서 환경 변수 설정하기]]
+  * [[Configure-Proxy-With-Vercel|Vercel에서 Proxy 설정하기]]
 * Testing
     * [[TDD]] 
     * [[Jasmine]]
