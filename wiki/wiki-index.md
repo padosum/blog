@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-03-04 15:45:40 +0900
+updated : 2022-03-08 12:04:19 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -77,6 +77,7 @@ updated : 2022-03-04 15:45:40 +0900
 	* [[GitHub]]
 	* [[이미 커밋된 파일들을 .gitignore에 적용하기]]
 	* [[How-Does-Git-Work]]
+  * [[Git-pre-commit-Hooks]]
 * Development
   * [[CI-CD|CI/CD]] 
   * [[SDK]]
