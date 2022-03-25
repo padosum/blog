@@ -2,7 +2,7 @@
 title   : 컴퓨터가 등장하는 영화
 excerpt : 
 date    : 2020-01-27 16:47:14 +0900
-updated : 2021-09-16 08:35:36 +0900
+updated : 2022-03-25 21:27:12 +0900
 tags: ["movie"]
 ---
 
@@ -39,8 +39,9 @@ tags: ["movie"]
 * [X] 이미테이션 게임(The Imitation Game, 2014)
     * 현대의 컴퓨터는 아니지만...
 * [X] 인터스텔라(Interstellar, 2014)
-* [ ] 접속(1997)
+* [X] 접속(1997)
     * 계속 보다가 자고있음...  
+    * 봤다. 뭔가 예전 영화들을 짬뽕한 느낌... 키보드 소리가 좋다.
 * [X] 주먹왕 랄프(Wreck-It Ralph, 2012)
 * [X] 주먹왕 랄프 2: 인터넷 속으로(Ralph Breaks the Internet)
 * [X] 쥬라기 공원(Jurassic Park, 1993)
