@@ -2,7 +2,7 @@
 title   : 컴퓨터가 등장하는 영화
 excerpt : 
 date    : 2020-01-27 16:47:14 +0900
-updated : 2022-03-25 21:27:12 +0900
+updated : 2022-04-04 22:33:37 +0900
 tags: ["movie"]
 ---
 
@@ -16,7 +16,6 @@ tags: ["movie"]
 * [ ] 네트(The Net, 1995) 
 * [ ] 다이하드4.0(Live Free or Die Hard, 2007)
 * [ ] 디스커넥트(Disconnect, 2012)
-* [X] 디지몬 어드벤처: 우리들의 워 게임! (Digimon Adventure: Our War Game!, デジモンアドベンチャー／ぼくらのウォーゲーム, 2000) 
 * [X] 떼시스 (TESIS, 1996)
     * 카메라 구매내역 검색할때 
 * [ ] 마이너리티 리포트(Minority Report, 2002)
@@ -28,7 +27,6 @@ tags: ["movie"]
 * [X] 서치(Searching, 2018)
 * [X] 소스 코드(Source Code, 2011)
 * [X] 소셜 네트워크(The Social Network, 2010)
-* [X] 썸머 워즈(Summer Wars, サマーウォーズ, 2009)
 * [ ] 스니커드(Sneakers, 1992)
 * [X] 아이언맨(Iron Man, 2008)
 * [X] 아이언맨 2(Iron Man 2, 2012)
@@ -42,8 +40,6 @@ tags: ["movie"]
 * [X] 접속(1997)
     * 계속 보다가 자고있음...  
     * 봤다. 뭔가 예전 영화들을 짬뽕한 느낌... 키보드 소리가 좋다.
-* [X] 주먹왕 랄프(Wreck-It Ralph, 2012)
-* [X] 주먹왕 랄프 2: 인터넷 속으로(Ralph Breaks the Internet)
 * [X] 쥬라기 공원(Jurassic Park, 1993)
 * [ ] 코어(The Core, 2003)
     * 보긴봤는데 한 7년전이라 기억이 잘 안난다...
@@ -62,8 +58,14 @@ tags: ["movie"]
 * [ ] 업로드 (2020)
 
 ## 애니메이션 
+* [X] 노인 Z(Roujin Z, 1991)
+    * 내용을 전혀 모르고 봤는데 볼만 했다.
+    * 할아버지가 해킹을 하는데 ALGOL을 사용한다.
+* [X] 디지몬 어드벤처: 우리들의 워 게임! (Digimon Adventure: Our War Game!, デジモンアドベンチャー／ぼくらのウォーゲーム, 2000) 
+* [X] 썸머 워즈(Summer Wars, サマーウォーズ, 2009)
 * [ ] 접속! 트윕시(Twipsy)
-
+* [X] 주먹왕 랄프(Wreck-It Ralph, 2012)
+* [X] 주먹왕 랄프 2: 인터넷 속으로(Ralph Breaks the Internet)
 ## 다큐멘터리  
 * [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)    
   * 영화 서치랑 엄~~청 비슷한 화면이었다.  
