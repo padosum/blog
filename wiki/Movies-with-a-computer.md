@@ -1,8 +1,7 @@
-592---
+---
 title   : 컴퓨터가 등장하는 영화
-excerpt : 
 date    : 2020-01-27 16:47:14 +0900
-updated : 2022-04-04 22:33:37 +0900
+updated : 2022-04-06 18:36:52 +0900
 tags: ["movie"]
 ---
 
@@ -66,7 +65,8 @@ tags: ["movie"]
 * [ ] 접속! 트윕시(Twipsy)
 * [X] 주먹왕 랄프(Wreck-It Ralph, 2012)
 * [X] 주먹왕 랄프 2: 인터넷 속으로(Ralph Breaks the Internet)
-## 다큐멘터리  
+
+## 다큐멘터리
 * [X] 고양이는 건드리지 마라: 인터넷 킬러 사냥 (Don't F**k With Cats: Hunting an Internet Killer, 2019)    
   * 영화 서치랑 엄~~청 비슷한 화면이었다.  
 * [X] 익스플레인: 세계를 해설하다 시즌 2 코딩의 세계 (2019)
