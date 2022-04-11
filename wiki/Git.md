@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2022-02-02 23:00:38 +0900
+updated : 2022-04-11 23:22:53 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -47,6 +47,17 @@ git init
 - 해당 파일들을 애초에 tracking하지 않도록 하는 설정파일
 - 루트 디렉토리(혹은 하위 폴더)에 .gitignore 텍스트 파일을 작성하면된다.  
 - [https://git-scm.com/docs/gitignore](https://git-scm.com/docs/gitignore) 참고 
+
+### 이미 원격 저장소에 올라간 파일을 .gitignore에 적용하는 법
+```
+$ git rm --cached .
+
+$ git add .
+
+$ git commit -m "update .gitignore"
+
+$ git push
+```
 
 ## 명령어 정리  
 
