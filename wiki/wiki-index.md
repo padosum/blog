@@ -1,14 +1,15 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-04-09 23:15:46 +0900
+updated : 2022-04-13 17:20:12 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
 * [[Algorithm]]
 	* [[Solve-Algorithms]]
 	* [[Brute-Force-Search-Algorithm]]
-	* [[Sort-Algorithm]]
+	* [[Sort-Algorithm]]]
+	* [[DFS]]
 * Web
 	* [[Reduce-Content-Download-Time|Network 탭 Content Download 속도 단축하기]]
 	* [[Internet-Network]]
