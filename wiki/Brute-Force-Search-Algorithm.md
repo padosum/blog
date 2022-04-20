@@ -1,7 +1,7 @@
 ---
 title   : 완전 탐색 알고리즘
 date    : 2021-04-28 10:04:38 +0900
-updated : 2022-04-19 23:42:39 +0900
+updated : 2022-04-20 22:50:20 +0900
 aliases : ["exhaustive search", "완전 탐색"]
 tags: ["Algorithm"]
 ---
@@ -11,4 +11,12 @@ tags: ["Algorithm"]
 - 컴퓨터의 장점을 활용하는 알고리즘
 	- 더 빠른 알고리즘의 기반이 되기도 하기 때문에 잘 익혀둘 필요가 있다.  
 
-
+## 관련 문제
+- [[Algorithms-Brute-Force-Search|완전 탐색 문제]]
+- [[BAEKJOON-2309|백준 2309번 일곱 난쟁이]]
+- [[BAEKJOON-2231|백준 2231번 분해합]]
+- [[BAEKJOON-3085|백준 3085번 사탕게임]]
+- [[BAEKJOON-10448]]
+- [[BAEKJOON-2503]]
+- [[BAEKJOON-1018]]
+- [[BAEKJOON-1182]]
