@@ -182,17 +182,19 @@ const Post = ({ data, pageContext, location }) => {
           <MDXProvider components={{ a: AnchorTag }}>
             <MDXRenderer>{body}</MDXRenderer>
           </MDXProvider>
-          {slug === "/" &&
-            primerWikiThemeConfig.shouldShowLatestOnIndex &&
-            latestPosts.length > 0 && (
-              <Box>
-                <components.h2>Recently Updated</components.h2>
-                <TagPosts
-                  nodes={latestPosts}
-                  shouldShowInstantView={false}
-                ></TagPosts>
-              </Box>
-            )}
+          {
+          // slug === "/" &&
+          //   primerWikiThemeConfig.shouldShowLatestOnIndex &&
+          //   latestPosts.length > 0 && (
+          //     <Box>
+          //       <components.h2>Recently Updated</components.h2>
+          //       <TagPosts
+          //         nodes={latestPosts}
+          //         shouldShowInstantView={false}
+          //       ></TagPosts>
+          //     </Box>
+          //   )
+            }
           {slug === "/" &&
             primerWikiThemeConfig.shouldShowSidebarListOnIndex &&
             sidebarItems.length > 0 &&
