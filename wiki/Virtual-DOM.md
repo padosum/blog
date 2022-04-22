@@ -97,6 +97,6 @@ const IngredientsList = ({items}) =>
   - `ReactDOM.render`는 현재 DOM을 그대로 두고 애플리케이션의 상태가 변할 때, 필요한 DOM 엘리먼트만 변경한다. 
 
 
-#### reference
+## reference
 - [Learning React](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162240373&orderClick=LAG&Kc=)
 - [프론트엔드 개발자라면 알고 있어야 할 브라우저의 동작 과정](https://wormwlrm.github.io/2021/03/27/How-browsers-work.html)

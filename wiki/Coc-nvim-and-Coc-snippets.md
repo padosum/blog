@@ -1,7 +1,7 @@
 ---
 title   : coc.nvim과 coc-snippets  
 date    : 2021-07-08 22:03:55 +0900
-updated : 2021-07-08 22:19:32 +0900
+updated : 2022-04-22 23:47:40 +0900
 aliases : ["coc.nvim과 coc-snippets"]
 tags: ["How to", "Tools"]
 ---
@@ -18,11 +18,47 @@ neovim에서 작업을 할 때 snippets으로 자주쓰는 코드를 입력하�
   ```
 - coc-snippets는 `:CocInstall coc-snippets`으로 설치한다.  
 
+단축키는 다음과 같이 지정할 수 있다. 
+```vim
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+```
+
 ### Commands 
 - `:CocList snippets`: 스니펫 목록 조회  
 - `:CocCommand snippets.editSnippets`: 현재 파일 형식의 사용자 스니펫 수정  
 - `:CocCommand snippets.openSnippetFiles`: 현재 파일 형식의 스니펫 파일 열
 
+### Snippet 설정하기
+`:CocCommand snippets.editSnippets`로 연 파일에서 다음과 같이 작성한다.
+```
+snippet til "Today I Learn"
+## Today I Learn
+### ${1}
+endsnippet
+```
+`snippet` 뒤에 스니펫을 트리거 이름을 적는다. 그 다음줄 부터 스니펫을 작성한 다음 `endsnippet`을 적는다. `${1}`은 placeholder인데 스니펫을 불러온다음 커서를 적힌 번호 순서대로 이동시킬 수 있다. 단축키에 지정한대로 `<C-j>`, `<C-k>`로 이동하면 되는데 나는 `<tab>`이 편해서 다음과 같이 수정했다. [출처](https://github.com/neoclide/coc-snippets/issues/5)
+```vim
+" To make completion works like VSCode
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+```
 
 ## reference
 - [https://github.com/neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)

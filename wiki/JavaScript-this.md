@@ -1,7 +1,7 @@
 ---
 title   : JavaScript this
 date    : 2021-09-14 15:29:46 +0900
-updated : 2021-12-05 17:26:24 +0900
+updated : 2022-04-22 21:30:46 +0900
 aliases: ["this"]
 tags: ["JavaScript"]
 ---
