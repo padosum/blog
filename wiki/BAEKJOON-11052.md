@@ -1,9 +1,10 @@
 ---
 title   : 백준 11052 JavaScript
 date    : 2021-11-23 22:57:50 +0900
-updated : 2022-01-15 09:37:29 +0900
+updated : 2022-04-27 23:43:17 +0900
 aliases : 
 tags    :
+created: 2022-04-27 21:54:45 +0900
 ---
 ## 문제
 [백준 11052](https://www.acmicpc.net/problem/11052)
@@ -28,7 +29,7 @@ N = 3일 때, P3x1 또는 P2x1+P1x1 또는 P1x2 + P1x1
 ...
 - `n-n`개 구매시 금액 최댓값에 `n`개 짜리 카드팩 1개 (-> `n`개 짜리 카드팩 1개 구매와 같음)
 
-위와 같이 반복된다. 특정 개수의 금액 최댓값을 반복해서 계산해야 하므로, [[Dynamic-Programming|메모제이션]]을 이용해 배열에 저장해둔다. 
+위와 같이 반복된다. 특정 개수의 금액 최댓값을 반복해서 계산해야 하므로, [[Dynamic-Programming|메모이제이션]]을 이용해 배열에 저장해둔다. 
 반복문은 n-1,...0이 아닌 1~n까지의 순으로 반복되게 했다. 순서는 상관없다. 
 ```javascript
 const readFileSyncPath = require('path').basename(__filename).replace(/js$/, 'txt');

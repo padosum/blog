@@ -1,9 +1,10 @@
 ---
 title   : 백준 1463 JavaScript 
 date    : 2021-11-18 18:23:42 +0900
-updated : 2022-01-12 12:57:30 +0900
+updated : 2022-04-27 23:43:10 +0900
 aliases : 
 tags    : 
+created: 2022-04-27 21:54:36 +0900
 ---
 ## 문제
 [백준 1463](https://www.acmicpc.net/problem/1463)
@@ -12,7 +13,7 @@ tags    :
 [[Dynamic-Programming]]으로 풀어야 한다. DP에 대해 처음 알게되어서 풀이를 검색해보니 다른 언어들은 재귀를 이용해 풀고 있었다. 하지만 자바스크립트에서 재귀를 사용하니 `RangeError: Maximum call stack size exceeded` 에러를 내뿜었다.  
 다른 방법이 필요해보였다.  
 
-우선 재귀를 이용해 계산을 한다면,  정수 N에 대해 3으로 나누어 떨어지는 경우, 2로 나누어 떨어지는 경우, 그리고 -1을 빼는 경우를 계속 재귀시키고 이미 계산한 경우에는 메모제이션을 적용해 다시 계산하지 않고 배열에서 불러온다.  
+우선 재귀를 이용해 계산을 한다면,  정수 N에 대해 3으로 나누어 떨어지는 경우, 2로 나누어 떨어지는 경우, 그리고 -1을 빼는 경우를 계속 재귀시키고 이미 계산한 경우에는 메모이제이션을 적용해 다시 계산하지 않고 배열에서 불러온다.  
 ```javascript
 const readFileSyncPath = '/dev/stdin';
 let N = parseInt(require('fs').readFileSync(readFileSyncPath).toString().trim());
