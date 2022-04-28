@@ -1,26 +1,26 @@
-import React from "react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import Layout from "./layout";
-import ReferencesBlock from "gatsby-theme-primer-wiki/src/components/references-block";
-import { MDXProvider } from "@mdx-js/react";
-import components from "gatsby-theme-primer-wiki/src/components/mdx-components";
-import SEO from "gatsby-theme-primer-wiki/src/components/seo";
-import { Box, Heading, Text, useTheme } from "@primer/components";
-import { HEADER_HEIGHT } from "gatsby-theme-primer-wiki/src/components/header";
-import PageFooter from "gatsby-theme-primer-wiki/src/components/page-footer";
-import TableOfContents from "gatsby-theme-primer-wiki/src/components/table-of-contents";
-import TagsBlock from "gatsby-theme-primer-wiki/src/components/tags-block";
-import { getSidebarItems } from "gatsby-theme-primer-wiki/src/utils/sidebar-items";
-import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
-import TagPosts from "gatsby-theme-primer-wiki/src/components/tag-posts";
-import { Giscus } from "@giscus/react";
+import React from 'react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Layout from './layout'
+import ReferencesBlock from 'gatsby-theme-primer-wiki/src/components/references-block'
+import { MDXProvider } from '@mdx-js/react'
+import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
+import SEO from 'gatsby-theme-primer-wiki/src/components/seo'
+import { Box, Heading, Text, useTheme } from '@primer/components'
+import { HEADER_HEIGHT } from 'gatsby-theme-primer-wiki/src/components/header'
+import PageFooter from 'gatsby-theme-primer-wiki/src/components/page-footer'
+import TableOfContents from 'gatsby-theme-primer-wiki/src/components/table-of-contents'
+import TagsBlock from 'gatsby-theme-primer-wiki/src/components/tags-block'
+import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-items'
+import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
+import TagPosts from 'gatsby-theme-primer-wiki/src/components/tag-posts'
+import { Giscus } from '@giscus/react'
 
-function TagsList({ type = "normal", title, url, items, depth = 0 }) {
-  items = items || [];
+function TagsList({ type = 'normal', title, url, items, depth = 0 }) {
+  items = items || []
   return (
     <li>
       <components.a href={url}>
-        {type === "tag" ? `#${title}` : title}
+        {type === 'tag' ? `#${title}` : title}
       </components.a>
       {Array.isArray(items) && items.length > 0 ? (
         <components.ul>
@@ -30,20 +30,20 @@ function TagsList({ type = "normal", title, url, items, depth = 0 }) {
         </components.ul>
       ) : null}
     </li>
-  );
+  )
 }
 const Post = ({ data, pageContext, location }) => {
-  const post = data.mdx;
+  const post = data.mdx
   const tagsOutbound = data.tagsOutbound || {
     nodes: [],
-  };
+  }
 
-  const primerWikiThemeConfig = useThemeConfig();
+  const primerWikiThemeConfig = useThemeConfig()
   const sidebarItems = getSidebarItems(
     pageContext.sidebarItems,
     pageContext.tagsGroups
-  );
-  const latestPosts = pageContext.latestPosts;
+  )
+  const latestPosts = pageContext.latestPosts
   const {
     tableOfContents,
     frontmatter,
@@ -53,7 +53,7 @@ const Post = ({ data, pageContext, location }) => {
     inboundReferences,
     outboundReferences,
     excerpt,
-  } = post;
+  } = post
 
   const {
     title,
@@ -64,7 +64,7 @@ const Post = ({ data, pageContext, location }) => {
     url,
     editUrl,
     shouldShowTitle,
-  } = fields;
+  } = fields
 
   const {
     date,
@@ -74,13 +74,13 @@ const Post = ({ data, pageContext, location }) => {
     tags,
     language,
     seoTitle,
-  } = frontmatter;
-  const category = tags && tags[0];
+  } = frontmatter
+  const category = tags && tags[0]
   const datePublished = date
     ? new Date(date.split(' ')[0])
     : gitCreatedAt
-      ? new Date(gitCreatedAt)
-      : null;
+    ? new Date(gitCreatedAt)
+    : null
 
   const postSeoData = {
     title,
@@ -93,8 +93,8 @@ const Post = ({ data, pageContext, location }) => {
     dateModified: dateModified
       ? new Date(dateModified)
       : lastUpdatedAt
-        ? new Date(lastUpdatedAt)
-        : datePublished,
+      ? new Date(lastUpdatedAt)
+      : datePublished,
     category,
     imageUrl: frontmatter.image ? frontmatter.image.publicURL : null,
     imageAlt: imageAlt,
@@ -102,12 +102,12 @@ const Post = ({ data, pageContext, location }) => {
     slug,
     tags: tags || [],
     language,
-  };
+  }
   const AnchorTag = (props) => (
     <components.a {...props} references={outboundReferences} />
-  );
+  )
 
-  const { resolvedColorMode } = useTheme();
+  const { resolvedColorMode } = useTheme()
   return (
     <Layout pageContext={pageContext} location={location}>
       <SEO post={postSeoData}></SEO>
@@ -118,15 +118,15 @@ const Post = ({ data, pageContext, location }) => {
         width="100%"
         p={[4, 5, 6, 7]}
         sx={{
-          justifyContent: "center",
-          flexDirection: "row-reverse",
+          justifyContent: 'center',
+          flexDirection: 'row-reverse',
         }}
       >
         {tableOfContents.items ? (
           <Box
-            sx={{ width: 220, flex: "0 0 auto", marginLeft: 6 }}
-            display={["none", null, "block"]}
-            css={{ gridArea: "table-of-contents", overflow: "auto" }}
+            sx={{ width: 220, flex: '0 0 auto', marginLeft: 6 }}
+            display={['none', null, 'block']}
+            css={{ gridArea: 'table-of-contents', overflow: 'auto' }}
             position="sticky"
             top={HEADER_HEIGHT + 24}
             maxHeight={`calc(100vh - ${HEADER_HEIGHT}px - 24px)`}
@@ -140,7 +140,7 @@ const Post = ({ data, pageContext, location }) => {
         <Box width="100%" maxWidth="960px" lineHeight={1.5}>
           {shouldShowTitle && (
             <Box mb={4}>
-              <Box display="flex" sx={{ alignItems: "center" }}>
+              <Box display="flex" sx={{ alignItems: 'center' }}>
                 <Heading as="h1" mr={2}>
                   {title}
                 </Heading>
@@ -154,7 +154,7 @@ const Post = ({ data, pageContext, location }) => {
               borderStyle="solid"
               borderColor="border.primary"
               borderRadius={2}
-              display={["block", null, "none"]}
+              display={['block', null, 'none']}
               mb={5}
               bg="auto.gray.1"
             >
@@ -171,8 +171,8 @@ const Post = ({ data, pageContext, location }) => {
               <Box
                 p={3}
                 sx={{
-                  borderTop: "1px solid",
-                  borderColor: "border.gray",
+                  borderTop: '1px solid',
+                  borderColor: 'border.gray',
                 }}
               >
                 <TableOfContents items={tableOfContents.items} />
@@ -183,19 +183,19 @@ const Post = ({ data, pageContext, location }) => {
             <MDXRenderer>{body}</MDXRenderer>
           </MDXProvider>
           {
-          // slug === "/" &&
-          //   primerWikiThemeConfig.shouldShowLatestOnIndex &&
-          //   latestPosts.length > 0 && (
-          //     <Box>
-          //       <components.h2>Recently Updated</components.h2>
-          //       <TagPosts
-          //         nodes={latestPosts}
-          //         shouldShowInstantView={false}
-          //       ></TagPosts>
-          //     </Box>
-          //   )
-            }
-          {slug === "/" &&
+            // slug === "/" &&
+            //   primerWikiThemeConfig.shouldShowLatestOnIndex &&
+            //   latestPosts.length > 0 && (
+            //     <Box>
+            //       <components.h2>Recently Updated</components.h2>
+            //       <TagPosts
+            //         nodes={latestPosts}
+            //         shouldShowInstantView={false}
+            //       ></TagPosts>
+            //     </Box>
+            //   )
+          }
+          {slug === '/' &&
             primerWikiThemeConfig.shouldShowSidebarListOnIndex &&
             sidebarItems.length > 0 &&
             sidebarItems.map((item) => {
@@ -212,10 +212,10 @@ const Post = ({ data, pageContext, location }) => {
                           items={child.items}
                         ></TagsList>
                       </components.ul>
-                    );
+                    )
                   })}
                 </Box>
-              );
+              )
             })}
           <ReferencesBlock references={inboundReferences} />
           {primerWikiThemeConfig.shouldSupportTags && (
@@ -231,11 +231,11 @@ const Post = ({ data, pageContext, location }) => {
             term={title}
             reactionsEnabled="1"
             emitMetadata="0"
-            theme={resolvedColorMode === "day" ? "light" : "dark_high_contrast"}
+            theme={resolvedColorMode === 'day' ? 'light' : 'dark_high_contrast'}
           />
         </Box>
       </Box>
     </Layout>
-  );
-};
-export default Post;
+  )
+}
+export default Post
