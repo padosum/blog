@@ -1,10 +1,9 @@
 ---
 title   : 백준 11052 JavaScript
 date    : 2021-11-23 22:57:50 +0900
-updated : 2022-04-27 23:43:17 +0900
+updated : 2022-04-29 20:53:16 +0900
 aliases : 
 tags    :
-created: 2022-04-27 21:54:45 +0900
 ---
 ## 문제
 [백준 11052](https://www.acmicpc.net/problem/11052)

@@ -1,12 +1,12 @@
 ---
 title   : 백준 1699 JavaScript 
 date    : 2022-01-27 10:42:31 +0900
-updated : 2022-01-27 10:43:22 +0900
-aliases : 
+updated : 2022-04-29 20:53:15 +0900
+aliases : ["백준 1699 제곱수의 합"]
 tags    : 
 ---
 ## 문제
-[백준 1699]()
+[백준 1699](https://www.acmicpc.net/problem/1699)
 
 ## 풀이
 [[Dynamic-Programming|Dynamic Programming]]을 이용해 풀이를 하면,  

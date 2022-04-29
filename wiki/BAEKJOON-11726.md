@@ -1,7 +1,7 @@
 ---
 title   : 백준 11726 JavaScript 
 date    : 2021-11-21 19:34:58 +0900
-updated : 2022-04-27 23:43:30 +0900
+updated : 2022-04-29 20:52:51 +0900
 aliases : 
 tags    : 
 created: 2022-04-27 21:54:55 +0900
@@ -17,7 +17,6 @@ created: 2022-04-27 21:54:55 +0900
 - 1x2 타일이 처음 나온 경우를 제외해 가로 길이 -2인 경우
 
 로 재귀적으로 계산을 할 수 있다.  
-
 ```javascript
 const readFileSyncPath = require('path').basename(__filename).replace(/js$/, 'txt');
 // const readFileSyncPath = '/dev/stdin';
@@ -40,3 +39,42 @@ console.log(tiling(N));
 ```
 
 ![[boj_11726.png]]
+
+## 다른 풀이
+**바텀업** 방식으로도 풀 수 있다.
+```javascript
+const readFileSyncPath = require('path')
+  .basename(__filename)
+  .replace(/js$/, 'txt')
+
+// const readFileSyncPath = '/dev/stdin';
+
+const input = require('fs')
+  .readFileSync(readFileSyncPath)
+  .toString()
+  .trim()
+  .split('\n')
+
+const n = Number(input)
+
+const DP = Array.from({ length: n + 1 }).fill(0)
+
+// n=1
+// 2x1 => 1가지
+
+// n=2
+// 2x1 2개, 1x2 2개 => 2가지
+
+// n=3
+// 2x1이 처음 배치되었다면, (n-1) 직사각형을 채우는 방법 수와 같음
+// 1x2이 처음 배치되었다면, (n-2) 직사각형을 채우는 방법 수와 같음
+
+DP[1] = 1
+DP[2] = 2
+const MOD = 10007
+for (let i = 3; i <= n; i++) {
+  DP[i] = (DP[i - 1] + DP[i - 2]) % MOD
+}
+
+console.log(DP[n])
+```

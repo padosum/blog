@@ -31,3 +31,6 @@ tags    : ["Test"]
 
 ## TDD 장점
 - 리팩터링과 유지보수가 쉬워진다.
+
+## 같이 보기
+- [누구나 테스트 주도 개발 당장 시작 할 수 있는 방법](https://www.sungdoo.dev/programming/easiest-way-to-start-tdd)

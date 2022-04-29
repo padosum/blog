@@ -1,7 +1,7 @@
 ---
 title   : 백준 11727 JavaScript 
 date    : 2021-11-23 08:35:39 +0900
-updated : 2022-01-13 08:52:54 +0900
+updated : 2022-04-29 20:52:51 +0900
 aliases : 
 tags    : 
 ---
@@ -31,4 +31,45 @@ const tiling = (width) => {
 }
 
 console.log(tiling(N));
+```
+
+## 다른 풀이
+[[Dynamic-Programming|바텀업]] 방식으로도 풀 수 있다.
+```javascript
+const readFileSyncPath = require('path')
+  .basename(__filename)
+  .replace(/js$/, 'txt')
+
+// const readFileSyncPath = '/dev/stdin';
+
+const input = require('fs')
+  .readFileSync(readFileSyncPath)
+  .toString()
+  .trim()
+  .split('\n')
+
+const n = Number(input[0])
+
+// n = 1
+// 2x1 => 1가지
+
+// n = 2
+// 2x1 2개
+// 2x2 1개
+// 1x2 2개 => 3가지
+
+// n = 3
+// 처음에 2x1로 채운 경우, 2x(n-1) 직사각형을 채우는 방법 수
+// 처음에 2x2로 채운 경우, 2x(n-2) 직사각형을 채우는 방법 수
+// 처음에 1x2로 채운 경우, 2x(n-2) 직사각형을 채우는 방법 수
+const DP = Array.from({ length: n + 1 }).fill(0)
+
+DP[1] = 1
+DP[2] = 3
+
+const MOD = 10007
+for (let i = 3; i <= n; i++) {
+  DP[i] = (DP[i - 1] + DP[i - 2] + DP[i - 2]) % 10007
+}
+console.log(DP[n])
 ```
