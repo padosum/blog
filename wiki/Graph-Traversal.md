@@ -6,6 +6,8 @@ aliases : ["그래프 순회"]
 tags    : ["Algorithm"]
 ---
 
+**[[Graph|그래프]] 순회 (Graph Traversal)**
+
 ## 정의
 - 하나의 노드로 시작해 모든 노드를 순서대로 방문하는 것
 
