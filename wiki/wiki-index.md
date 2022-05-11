@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-05-01 12:25:26 +0900
+updated : 2022-05-11 11:31:16 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -86,6 +86,7 @@ updated : 2022-05-01 12:25:26 +0900
   * [[404-Not-Found-In-Vercel-With-Vite|Vercel에서 배포 후 404 Not Found가 나타나는 문제]]
   * [[Environment-Variables-In-Vercel-With-Vite|Vercel에서 환경 변수 설정하기]]
   * [[Configure-Proxy-With-Vercel|Vercel에서 Proxy 설정하기]]
+  - [[Create-a-Telegram-bot-with-Python]]
 * Testing
     * [[TDD]] 
     * [[Jasmine]]
