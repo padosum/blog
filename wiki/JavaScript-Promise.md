@@ -1,7 +1,7 @@
-ㄹ괄---
+---
 title   : JavaScript Promise
 date    : 2021-12-08 22:44:36 +0900
-updated : 2022-01-03 14:05:27 +0900
+updated : 2022-05-12 16:56:33 +0900
 aliases : ["프로미스"]
 tags    : ["JavaScript"] 
 ---
