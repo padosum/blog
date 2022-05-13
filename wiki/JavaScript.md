@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2022-03-04 15:55:21 +0900
+updated : 2022-05-13 23:58:38 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -103,6 +103,7 @@ tags: ["JavaScript"]
 - [[JavaScript-문자열-검색|JavaScript 문자열 검색]]
 - [[JavaScript-Get-Map-Values-As-Array|JavaScript Map의 value를 배열로 가져오기]]
 - [[JavaScript-toLocaleString]]
+- [[Passing-parameters-to-a-callback-function|JavaScript에서 콜백 함수로 파라미터를 넘기는 방법]]
 
 ## DOM
 - [[DOM]]
