@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 텍스트 변경하기   
 date    : 2021-10-04 12:39:14 +0900
-updated : 2021-10-04 12:39:31 +0900
+updated : 2022-05-18 23:52:09 +0900
 aliases : ["JavaScript 텍스트 변경하기"]
 tags    : ["JavaScript"]
 ---
@@ -33,3 +33,8 @@ tags    : ["JavaScript"]
 
 비슷한 프로퍼티로 `innerText`가 있는데, 이 프로퍼티는 CSS에 의해 표시되지 않는 요소( `visibility:hidden;`)의 텍스트는 반환하지 않기 때문에 CSS를 고려하므로 속도가 느려서 사용하지 않는 것이 좋다.  
 
+## Text 노드 생성하기
+`createTextNode()`를 사용해서 `Text` 노드를 생성할 수 있다.
+```js
+const textNode = document.createTextNode('Hello')
+```

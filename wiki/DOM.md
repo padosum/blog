@@ -1,7 +1,7 @@
 ---
 title   : DOM
 date    : 2021-04-26 11:11:28 +0900
-updated : 2021-10-04 13:50:15 +0900
+updated : 2022-05-18 23:51:44 +0900
 aliases : 
 tags: ["Web", "JavaScript"]
 ---
@@ -9,8 +9,10 @@ tags: ["Web", "JavaScript"]
 
 ![[DOM Tree.png]]
 ## 개요 
-- 웹 브라우저가 HTML이나 XML 같은 구조화된 문서를 JavaScript로 제어할 수 있도록 추상화한 객체의 집합 
-	- **HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API(프로퍼티, 메서드)를 제공하는 트리 자료구조**이다.  
+- 웹 브라우저가 HTML이나 XML 같은 구조화된 문서를 JavaScript로 제어할 수 있도록 추상화한 객체의 집합
+- HTML 문서는 브라우저에 의해 해석되어 실제 문서를 나타내는 **노드 개체들의 트리구조**로 변환된다.
+	- 이 트리구조가 DOM이다. DOM은 **HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API(프로퍼티, 메서드)를 제공하는 트리 자료구조**이다.
+	- **DOM의 목적은 JavaScript를 이용해 HTML 문서에 대한 스크립트 작성(CRUD, 이벤트 처리)을 위한 프로그래밍 인터페이스를 제공하는 것**이다.
 - HTML을 구성하는 하나하나를 자바스크립트 객체로 보는 모델 
 
 ---
@@ -30,21 +32,59 @@ document node
 element node
 - HTML 요소를 가리키는 노드이다.
 - 요소 간 중첩에 의해 부모-자식 관계를 가지고 이를 통해 정보를 구조화 한다. → 문서의 구조를 표현한다. 
+- `<body>`, `<a>`, `<p>`, `<script>`, `<style>`, `<html>`...
 
 #### 어트리뷰트 노드
 attribute node 
 - HTML 요소의 어트리뷰트를 가리키는 객체이다.
 - 어트리뷰트가 지정된 HTML 요소의 요소 노드와 연결되어 있다. 
 	- 하지만 부모 노드에는 연결되어있지 않으므로 요소 노드의 형제 노드는 아니다! 
+- `class="line"`
 
 #### 텍스트 노드
 text node 
 - HTML 요소의 텍스트를 가리키는 객체이다.
-- 요소 노드의 자식 노드이며, 자식 노드는 갖지 못하는 리프 노드이다.  
+- 요소 노드의 자식 노드이며, 자식 노드는 갖지 못하는 리프 노드이다.
+- 줄바꿈과 공백을 포함한다.
+
+#### DOCUMENT_FRAGMENT_NODE
+- `document.createDocumentFragment()`
+
+#### DOCUMENT_TYPE_NODE
+- `<!DOCTYPE html>`
+
+위 노드 객체의 종류들은 JavaScript 브라우저 환경에서 `Node` 객체의 속성으로 기록되는 상수 값의 속성과 동일하다.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>console.log(Node.ELEMENT_NODE) // 1</script>
+  </body>
+</html
+```
 
 ### 노드 객체의 상속 구조 
-DOM을 구성하는 노드 객체는 ECMAScript 사양에 정의된 것은 아니고, 브라우저 환경에서 따로 제공하는 호스트 객체이다. 하지만 자바스크립트 객체이므로 **프로토타입에 의한 상속 구조를 갖는다.**  
+DOM을 구성하는 노드(`Node`) 객체는 ECMAScript 사양에 정의된 것은 아니고, 브라우저 환경에서 따로 제공하는 호스트 객체이다. 하지만 자바스크립트 객체이므로 **프로토타입에 의한 상속 구조를 갖는다.**  (`Object.prototype`)
 **중요한 것은 이런 상속 구조들을 다 알고 외우는 것이 아니라 DOM API를 이용해 노드에 접근하고 HTML 구조, 내용, 스타일 등을 동적으로 변경하는 방법을 익히는 것**이다.  
+
+모든 노드 개체는 속성과 메서드를 1차적으로 `Node` 객체로부터 상속받는다. 이 속성 및 메서드는 DOM을 조작, 조사, 탐색하는 기준이 되는 값과 함수다.
+[Node 속성, 메서드](https://developer.mozilla.org/ko/docs/Web/API/Node)
+
+## 노드의 유형과 이름 식별하기
+모든 노드는 `Node`로부터 상속받는 `nodeType`, `nodeName` 속성을 가진다.
+- [Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
+	- `Node.ELEMENT_NODE`: `1`
+	- `Node.ATTRIBUTE_NODE`: `2`
+	- `Node.TEXT_NODE`: `3`
+	- `Node.CDATA_SECTION_NODE`: `4`
+	- `Node.PROCESSING_INSTRUCTION_NODE`: `7`
+	- `Node.COMMENT_NODE`: `8`
+	- `Node.DOCUMENT_NODE`: `9`
+	- `Node.DOCUMENT_TYPE_NODE`: `10`
+	- `Node.DOCUMENT_FRAGMENT_NODE`: `11`
+- [Node.nodeName](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName)
+
+**노드의 유형을 판별하는 것은 해당 노드에서 사용 가능한 속성과 메서드를 알 수 있게 해주므로, 스크립트를 작성할 때 매우 유용하다!**
 
 ## 요소 노드 얻기 
 HTML 구조, 내용, 스타일을 동적으로 조작하기 위해선 HTML 요소 노드를 얻어야 한다.  
@@ -104,3 +144,4 @@ HTML 문서가 파싱될 때 HTML 요소의 어트리뷰트는 어트리뷰트 �
 
 ## reference
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
+- 안재우 역, 코디 린들리 저, 《DOM을 깨우치다》, O'Reilly, 2013년
