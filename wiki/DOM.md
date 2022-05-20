@@ -1,7 +1,7 @@
 ---
 title   : DOM
 date    : 2021-04-26 11:11:28 +0900
-updated : 2022-05-18 23:51:44 +0900
+updated : 2022-05-20 23:32:08 +0900
 aliases : 
 tags: ["Web", "JavaScript"]
 ---
@@ -9,11 +9,10 @@ tags: ["Web", "JavaScript"]
 
 ![[DOM Tree.png]]
 ## 개요 
-- 웹 브라우저가 HTML이나 XML 같은 구조화된 문서를 JavaScript로 제어할 수 있도록 추상화한 객체의 집합
-- HTML 문서는 브라우저에 의해 해석되어 실제 문서를 나타내는 **노드 개체들의 트리구조**로 변환된다.
-	- 이 트리구조가 DOM이다. DOM은 **HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API(프로퍼티, 메서드)를 제공하는 트리 자료구조**이다.
-	- **DOM의 목적은 JavaScript를 이용해 HTML 문서에 대한 스크립트 작성(CRUD, 이벤트 처리)을 위한 프로그래밍 인터페이스를 제공하는 것**이다.
-- HTML을 구성하는 하나하나를 자바스크립트 객체로 보는 모델 
+- 웹 브라우저가 HTML이나 XML 같은 구조화된 문서를 JavaScript로 제어할 수 있도록 추상화한 객체의 집합을 말한다. ([JavaScript가 아니더라도 제어할 수 있다!](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction#dom_and_javascript))
+- HTML 문서는 브라우저에 의해 해석되어 실제 문서를 나타내는 **노드 개체들의 트리구조**로 변환되는데 이 트리구조가 DOM이다.
+- DOM은 **HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API(프로퍼티, 메서드)를 제공하는 트리 자료구조**이다.
+- **DOM의 목적은 JavaScript를 이용해 HTML 문서에 대한 스크립트 작성(CRUD, 이벤트 처리)을 위한 프로그래밍 인터페이스를 제공하는 것**이다.
 
 ---
 DOM에 대한 표준은 W3C와 WHATWG라는 두 단체가 공통된 표준을 만들어 오다가 2018년 4월부터 WHATWG이 단일 표준을 내놓기로 합의했다.  
