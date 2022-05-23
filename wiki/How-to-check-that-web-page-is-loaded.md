@@ -1,7 +1,7 @@
 ---
 title   : 웹 페이지가 완전히 로드된 것을 확인하는 방법
 date    : 2021-10-23 19:48:58 +0900
-updated : 2021-12-28 20:27:45 +0900
+updated : 2022-05-23 22:28:14 +0900
 aliases : ["HTML 문서 로딩 관련 이벤트", DOMContentLoaded"]
 tags: ["How to", "Web", "JavaScript"]
 ---
@@ -47,6 +47,20 @@ object.addEventListener("load", script);
 window.addEventListener("load", script);
 ```
 
+### onerror 
+`onload` 이벤트와 반대로 에러가 발생하면 `onerror` 이벤트가 발생한다. 
+`onerror` 이벤트를 사용하면 "error 404"와 같이 서버가 다운되어 스크립트를 불러올 수 없는 경우에 확인이 가능할 것이다. 
+```javascript
+let script = document.createElement("script")
+script.src = "https://example.com/404.js"
+document.head.append(script)
+
+script.onerror = function () {
+  alert("Error loading " + this.src) // Error loading https://example.com/404.js
+}
+```
+
+```
 ## DOMContentLoaded 이벤트
 HTML 문서의 로드와 파싱이 완료되어 DOM 생성이 완료된 직후에 발생한다.  **`onload` 이벤트보다 먼저 발생한다.**
 ```javascript
@@ -69,7 +83,6 @@ window.addEventListener("DOMContentLoaded", function () {
 `readystatechange` 이벤트는 `load` 이벤트 바로 직전에 발생한다. 따라서 `load` 대신 `readystatechange`를 사용해서 얻는 이점이 별로 없다. [^2]
 
 
-## 
 ## 같이 보기
 - [[브라우저의-렌더링-과정|브라우저의 렌더링 과정]]
 - [[Script-element-async-defer-attribute|script 요소의 async, defer 어트리뷰트]]
@@ -80,6 +93,7 @@ window.addEventListener("DOMContentLoaded", function () {
 - 안재우 역, 코디 린들리 저, 《DOM을 깨우치다》, O'Reilly, 2013년
 - 한선용 역, 니콜라스 자카스 저, 《프론트엔드 개발자를 위한 자바스크립트 프로그래밍》, 인사이트, 2013년
 - 구경택·박경욱·변치훈·이의호 역, 데이비드 플래너건 저, 《자바스크립트 완벽 가이드》, 인사이트, 2013년
+- [JAVASCRIPT.INFO - Resource loading: onload and onerror](https://ko.javascript.info/onload-onerror)
 
 [^1]: 안재우 역, 코디 린들리 저, 《DOM을 깨우치다》, O'Reilly, 2013년, 146쪽
 [^2]: 구경택·박경욱·변치훈·이의호 역, 데이비드 플래너건 저, 《자바스크립트 완벽 가이드》, 인사이트, 2013년, 567쪽

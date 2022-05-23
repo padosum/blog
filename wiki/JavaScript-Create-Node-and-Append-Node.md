@@ -1,12 +1,12 @@
 ---
 title   : JavaScript 노드 생성, 추가, 삽입, 이동, 복사, 삭제하기 
 date    : 2021-10-04 12:50:15 +0900
-updated : 2022-05-18 23:52:00 +0900
+updated : 2022-05-23 22:28:14 +0900
 aliases : ["JavaScript 노드 생성, 추가, 삽입, 이동, 복사, 삭제하기"]
 tags    : ["JavaScript"]
 ---
 ## 노드 생성과 추가 과정  
-노드를 생성하고 DOM에 추가하는 과정은 다음과 같다.  
+노드를 생성하고 [[DOM]]에 추가하는 과정은 다음과 같다.  
 ```javascript
 const $li = document.createElement('li'); // 요소 노드 생성하기
 
@@ -23,7 +23,30 @@ el.appendChild($li);
 ### 여러 개의 노드 생성하고 추가하기
 **여러 개의 노드를 생성 시마다 요소 노드에 추가하면 비용이 많이 든다.** 그래서 추가해야 할 요소들을 컨테이너 요소의 자식 노드로 추가한 다음, 컨테이너 요소를 추가할 요소 노드의 자식으로 추가하면 DOM은 한 번만 변경된다.  
 하지만 이런식으로 추가를 하면 불필요한 **컨테이너 요소도 함께 추가된다는 단점이 있다.**  
-컨테이너 요소를 추가되지 않게 하려면 `DocumentFragment` 노드를 사용하면 된다.  `DocumentFragment`는 DOM의 일부가 아니기 때문에 변경해도 문서에 영향을 미치지 않는다. 그래서 성능에 영향이 없다.  
+컨테이너 요소를 추가되지 않게 하려면 `DocumentFragment` 노드를 사용하면 된다. `DocumentFragment`는 메모리상에서만 존재하는 빈 문서 템플릿이라고 생각하면 된다. 따라서 DOM의 일부가 아니기 때문에 변경해도 문서에 영향을 미치지 않는다. 그래서 성능에 영향이 없다.  
+```html
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      const docFrag = document.createDocumentFragment();
+      for (let i = 0; i < 10; i++) {
+        const p = document.createElement("p");
+        p.textContent = i;
+        docFrag.appendChild(p);
+      }
+
+      console.log(docFrag.textContent); // 0123456789
+    </script>
+  </body>
+</html>
+```
+`DocumentFragment`를 DOM에 추가할 때 생성한 메모리상의 위치에 더 이상 존재하지 않게 된다. 만약 이후에도 `DocumentFragment`의 내용을 메모리상에서 유지하려면 `cloneNode`를 사용해서 추가할 `DocumentFragment`를 복제하면 된다.
+```javascript
+el.appendChild(docFrag.cloneNode(true))
+```
+
 [MDN Web Docs - DocumentFragment](https://developer.mozilla.org/ko/docs/Web/API/DocumentFragment) 참고 
 
 ## 노드 삽입하기 
@@ -115,4 +138,5 @@ el.remove() // 제거된다.
 ```
 
 ## reference
+- 안재우 역, 코디 린들리 저, 《DOM을 깨우치다》, O'Reilly, 2013년
 - [https://developer.mozilla.org/ko/docs/Web/API/DocumentFragment](https://developer.mozilla.org/ko/docs/Web/API/DocumentFragment)

@@ -1,7 +1,7 @@
 ---
 title   : 이벤트
 date    : 2021-10-04 09:26:33 +0900
-updated : 2021-10-25 22:05:38 +0900
+updated : 2022-05-23 22:28:08 +0900
 aliases : ["이벤트"] 
 tags    : ["JavaScript"]
 ---
@@ -35,8 +35,19 @@ element.addEventListener('click', 함수);
 ### 이벤트 전파와 위임 
 - [[Event-Propagation-And-Delegation|이벤트 전파와 위임]]
 
+## 기본 브라우저 이벤트 취소하기
+브라우저는 HTML 페이지를 사용자에게 보여줄 때 사전에 구성된 여러 이벤트를 제공한다. 링크를 클릭하면 클릭 이벤트가 호출되거나 체크박스를 클릭하면 박스가 체크되고, 텍스트 필드에 텍스트 입력을하면 텍스트가 입력되어 화면에 표시되는 것 등이 있다. 이러한 브라우저의 기본 이벤트를 호출되지 않도록 막을 수 있다. `preventDefault()` 메서드를 호출하면 된다.
 
-### 이벤트 핸들러 내부의 this에 대하여 
-- 이벤트 핸들러 내부에 `this`는 `addEventListener`를 호출한 객체다. 
-- `this` == `이벤트객체.currentTarget`  
+```javascript
+document.querySelector('a').addEventListener("click", (e) => {
+  e.preventDefault() // 링크를 클릭하는 이벤트가 취소된다.
+})
+```
+
+`preventDefault()`는 [[Event-Propagation-And-Delegation|이벤트가 전파되는 것]]을 중지시키지는 않는다.  
+
+이벤트 핸들러의 끝에서 `false`를 반환하면 `preventDefault()`를 호출한 것과 동일한 결과를 갖는다.
+```html
+<a href="/" onclick="return false">이동되지 않는다!</a>
+```
 

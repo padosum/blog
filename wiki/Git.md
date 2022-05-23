@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2022-04-11 23:22:53 +0900
+updated : 2022-05-23 11:44:03 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -68,7 +68,9 @@ $ git push
 - `git add 파일명`
     - `git add .` : 현재 디렉토리의 모든 변경사항을 staging area로 옮긴다.
 - `git rm --cached <file>`
-    - 해당 파일을 staging area에서 제외
+    - 해당 파일을 추적되지 않는 상태로 만든다.
+- `git restore --staged <file>`
+	- staging area에 있는 파일을 unstaged 로 되돌린다.
 - `git commit -m "commit message`
     - commit message: 나중에 커밋을 봤을 때 왜 커밋했는지 확인할 수 있다.
     - 길고 상세한 commit message는 `git commit` 만 입력 후 commit message 창으로 이동하여 작성한다.

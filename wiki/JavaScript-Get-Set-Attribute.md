@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 어트리뷰트 값 가져오기, 어트리뷰트 값 변경, 삭제하기 
 date    : 2021-10-04 13:21:14 +0900
-updated : 2021-10-04 13:27:56 +0900
+updated : 2022-05-23 22:28:01 +0900
 aliases : ["JavaScript 어트리뷰트 값 가져오기, 어트리뷰트 값 변경, 삭제하기"]
 tags    : ["JavaScript"]
 ---
@@ -17,6 +17,19 @@ const attribute = element.getAttribute(attributeName);
 ```javascript
 const result = element.hasAttribute(name);
 ```
+
+값이 정의되었는지 여부에 관계없이 `true`다. 따라서 값을 가지고 있지 않은 `Boolean` 어트리뷰트의 경우에 `true`가 나온다.
+```html
+<body>
+  <input type="checkbox" checked></input>
+
+  <script>
+    const att = document.querySelector('input')
+    console.log(att.hasAttribute('checked')) // true
+  </script>
+</body>
+```
+
 
 ## 어트리뷰트 값 변경하기 
 `Element.setAttribute()` 메서드를 이용한다.

@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2022-05-19 23:51:33 +0900
+updated : 2022-05-23 22:28:01 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -115,6 +115,7 @@ tags: ["JavaScript"]
 - [[JavaScript-Data-Attribute|JavaScript data 어트리뷰트 사용하기]]
 - [[JavaScript-Get-Set-Attribute|JavaScript 어트리뷰트 값 가져오기, 어트리뷰트 값 변경, 삭제하기]]
 - [[JavaScript-Change-Class-Attribute|JavaScript class 속성 변경하기]]
+- [[Node-Geometry]]
 
 
 ## Event 

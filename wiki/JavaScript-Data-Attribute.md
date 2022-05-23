@@ -1,7 +1,7 @@
 ---
 title   : JavaScript data 어트리뷰트 사용하기 
 date    : 2021-10-04 13:28:54 +0900
-updated : 2021-10-04 13:34:23 +0900
+updated : 2022-05-23 22:28:01 +0900
 aliases : ["JavaScript data 어트리뷰트 사용하기"]
 tags    : ["JavaScript"]
 ---
@@ -25,5 +25,12 @@ tags    : ["JavaScript"]
 </body>
 ```
 
+## data 어트리뷰트 값 삭제하기
+```javascript
+el.removeAttribute('data-id')
+
+// DOM에서 제거하기
+delete dataset.id
+```
 ## reference
 - [https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)

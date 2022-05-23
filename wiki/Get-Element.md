@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 요소 찾기 
 date    : 2021-10-04 11:01:22 +0900
-updated : 2021-10-04 11:02:19 +0900
+updated : 2022-05-23 22:28:01 +0900
 aliases : ["JavaScript 요소 찾기"]
 tags    : ["JavaScript"]
 ---
@@ -105,7 +105,11 @@ const result = element.matches(selectorString);
 결과 
 ![[HTMLCollection.png]]
 
-`NodeList` 객체도 `childNodes` 프로퍼티가 반환하는 경우 `HTMLCollection` 객체처럼 실시간으로 노드 객체의 상태를 반영하기 때문에 사용 시 주의해야 할 필요가 있다.  
+**`NodeList` 객체도 `childNodes` 프로퍼티가 반환하는 경우** `HTMLCollection` 객체처럼 **실시간으로 노드 객체의 상태를 반영**하기 때문에 사용 시 주의해야 할 필요가 있다.  
+
+반면에 `querySelectorAll()` 메서드는 라이브 상태의 element 리스트를 반환하지 않는다. 즉 문서의 변경 내용을 반영하지 않는다. 
+
+`querySelectorAll()`이나 `getElementsByTagName()`에 문자열 `*`을 전달하면 문서 내 모든 element 리스트를 반환한다.
 
 ## reference
 - [https://developer.mozilla.org/ko/docs/Web/API/Document/getElementsByTagName](https://developer.mozilla.org/ko/docs/Web/API/Document/getElementsByTagName)

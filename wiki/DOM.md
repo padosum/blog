@@ -1,7 +1,7 @@
 ---
 title   : DOM
 date    : 2021-04-26 11:11:28 +0900
-updated : 2022-05-20 23:32:08 +0900
+updated : 2022-05-23 22:27:32 +0900
 aliases : 
 tags: ["Web", "JavaScript"]
 ---
@@ -44,7 +44,11 @@ attribute node
 text node 
 - HTML 요소의 텍스트를 가리키는 객체이다.
 - 요소 노드의 자식 노드이며, 자식 노드는 갖지 못하는 리프 노드이다.
-- 줄바꿈과 공백을 포함한다.
+- **줄바꿈과 공백을 포함**한다.
+	- 공백도 결국 문자이기 때문이다.
+	- 따라서 HTML 문서를 최소화하거나 압축하지 않는 한 일반적으로 상당한 수의 공백과 줄 바꿈 text 노드를 가지게 된다.
+- `document.createTextNode()`를 사용해 프로그래밍적으로 텍스트 노드를 생성할 수 있다.
+- `data`나 `nodeValue` 속성을 사용해서 요소에 포함된 텍스트 노드를 추출할 수 있다. 
 
 #### DOCUMENT_FRAGMENT_NODE
 - `document.createDocumentFragment()`
@@ -95,6 +99,9 @@ HTML 구조, 내용, 스타일을 동적으로 조작하기 위해선 HTML 요�
 ## 요소 노드 텍스트 조작하기  
 - [[Change-Text-Value-Using-JavaScript|JavaScript 텍스트 변경하기]]
 
+## 요소 위치 확인하기
+- [[Node-Geometry]]
+
 ## DOM 스크립트 
 DOM 스크립트는 HTML 요소를 자바스크립트로 조작하는 것을 의미한다.  DOM 스크립트에 의해 DOM에 새로운 노드가 추가되거나 삭제될 경우 리플로우와 리페인트가 발생해서 성능에 영향을 줄 수 있기 때문에 주의해서 다룰 필요가 있다.  
 - [[JavaScript-InnerHTML]]
@@ -134,9 +141,78 @@ HTML 문서가 파싱될 때 HTML 요소의 어트리뷰트는 어트리뷰트 �
 ### 어트리뷰트 조작하기 
 - [[JavaScript-Get-Set-Attribute|JavaScript 어트리뷰트 값 가져오기, 어트리뷰트 값 변경, 삭제하기]]
 - [[JavaScript-Data-Attribute|JavaScript data 어트리뷰트 사용하기]]
+- [[JavaScript-Change-Class-Attribute|JavaScript class 속성 변경하기]] 
 
 ## 스타일 
-- [[JavaScript-Change-Class-Attribute|JavaScript class 속성 변경하기]] 
+### 요소의 계산된 스타일 가져오기
+DOM 노드 객체는 `style`이라는 어트리뷰트를 가지고 있다. 해당 어트리뷰트를 사용해 설정된 스타일값들을 가져올 수 있다.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: red"></div>
+    <script>
+      console.log(rect.style);
+    </script>
+  </body>
+</html>
+
+```
+하지만 인라인 스타일만 가져온다. 인라인 스타일시트 외에 외부 스타일시트 등 모두를 가져오려면 어떻게 해야할까?
+`getComputedStyle`을 사용하면 요소의 계산된 스타일을 가져올 수 있다.
+위 코드에서 `getComputedStyle`를 사용하면 요소를 그리기 위해 설정된 스타일들을 읽을 수 있다.
+```javascript
+console.log(window.getComputedStyle(rect))
+```
+
+### DOM 내의 스타일시트에 접근하기
+`document.styleSheets`는 문서 내 명시적으로 연결(`<link>`)되거나 내장(`<style>`)된 모든 스타일시트 개체 리스트에 접근할 수 있게 해준다. `styleSheets`는 라이브 상태다. 포함된 스타일시트가 변경되면 `document.styleSheets`의 값도 변경된다.
+
+`.sheet` 속성을 사용해 DOM 내 요소의 스타일시트에 접근할 수도 있다.
+```html
+<head>
+  <link id="link" href="http://stylesheet-example.com/" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <script>
+    console.log(document.querySelector('#link').sheet)
+  </script>
+</body>
+```
+
+### .style 속성을 사용해 값 편집하기
+요소 노드의 인라인 스타일을 조작할 수 있는 `.style` 속성이 있다.
+```javascript
+const el = document.querySelector('div')
+el.style.backgroundColor = 'red'
+```
+
+stylesheet에도 적용 가능하다.
+```javascript
+const styleSheet = document.querySelector('#styleEl').sheet
+styleSheet.cssRules[0].style.color = 'purple'
+```
+
+### 외부 스타일시트를 프로그래밍적으로 추가하기
+`<link>` 노드를 생성해서 DOM에 추가한다.
+```javascript
+const linkEl = document.createElement("link");
+linkEl.setAttribute("rel", "stylesheet");
+linkEl.setAttribute("type", "text/css");
+linkEl.setAttribute("href", "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+);
+
+document.head.appendChild(linkEl);
+```
 
 ## 같이 보기 
 - [[Event|이벤트]]

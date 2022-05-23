@@ -1,12 +1,12 @@
 ---
 title   : 이벤트 전파와 위임
 date    : 2021-10-05 21:45:52 +0900
-updated : 2021-10-05 21:48:10 +0900
+updated : 2022-05-23 22:28:01 +0900
 aliases : ["이벤트 전파와 위임"]
 tags    : ["DOM", "Web", "JavaScript"]
 ---
 ## 이벤트 전파
-[[DOM]] 요소 노드에서 발생한 이벤트는 DOM 트리를 통해 전파된다. 이를 이벤트 전파(event propagation)라고 한다. 
+[[DOM]] 요소 노드에서 발생한 이벤트는 DOM 트리를 통해 전파되면서 다른 노드에서 동일한 이벤트를 발생시킨다. 이를 이벤트 전파(event propagation)라고 한다. 
 ```html
 <!DOCTYPE html>
 <html>
@@ -26,6 +26,90 @@ tags    : ["DOM", "Web", "JavaScript"]
 - 타깃 단계(Target phase): 이벤트가 실제 타깃 요소에 전달되는 단계
 - 버블링 단계(Bubbling Phase): 이벤트가 하위 요소에서 상위 요소로 전파되는 단계 
 
+```html
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div>Click Me</div>
+    <script>
+      window.addEventListener("click", () => {
+          console.log("1 캡처링 단계 - window의 click 이벤트 호출");
+        }, true);
+
+      document.addEventListener(
+        "click", () => {
+          console.log("2 캡처링 단계 - document의 click 이벤트 호출");
+        }, true
+      );
+
+      document.documentElement.addEventListener(
+        "click", () => {
+          console.log("3 캡처링 단계 - <html> element의 click 이벤트 호출");
+        }, true
+      );
+
+      document.body.addEventListener(
+        "click", () => {
+          console.log("4 캡처링 단계 - <body> element의 click 이벤트 호출");
+        }, true
+      );
+
+      document.querySelector("div").addEventListener(
+        "click", () => {
+          console.log("5 캡처링 단계 - <div> element의 click 이벤트 호출");
+        }, true
+      );
+
+      document.querySelector("div").addEventListener(
+        "click", () => {
+          console.log("6 타깃 단계 - <div> element의 click 이벤트 호출");
+        }, false
+      );
+
+      document.body.addEventListener(
+        "click", () => {
+          console.log("7 버블링 단계 - <body> element의 click 이벤트 호출");
+        }, false
+      );
+
+      document.documentElement.addEventListener(
+        "click", () => {
+          console.log("8 버블링 단계 - <html> element의 click 이벤트 호출");
+        }, false
+      );
+
+      document.addEventListener(
+        "click", () => {
+          console.log("9 버블링 단계 - document의 click 이벤트 호출");
+        }, false
+      );
+
+      window.addEventListener(
+        "click", () => {
+          console.log("10 버블링 단계 - window의 click 이벤트 호출");
+        }, false
+      );
+    </script>
+  </body>
+</html>
+```
+위 코드에서 "Click Me"라는 텍스트가 있는 `<div>`를 클릭하면 다음과 같이 로그가 찍힐 것이다. 이벤트가 전파되는 흐름을 로그로 확인할 수 있다.
+```
+1 캡처링 단계 - window의 click 이벤트 호출
+2 캡처링 단계 - document의 click 이벤트 호출
+3 캡처링 단계 - <html> element의 click 이벤트 호출
+4 캡처링 단계 - <body> element의 click 이벤트 호출
+5 캡처링 단계 - <div> element의 click 이벤트 호출
+6 타깃 단계 - <div> element의 click 이벤트 호출
+7 버블링 단계 - <body> element의 click 이벤트 호출
+8 버블링 단계 - <html> element의 click 이벤트 호출
+9 버블링 단계 - document의 click 이벤트 호출
+10 버블링 단계 - window의 click 이벤트 호출
+```
+
+캡처링 단계는 거의 쓰이지 않는다고 한다. 그렇게 된 이유는 현실의 사고 흐름과 비슷하게 만들어진 논리적 배경이 있다고 한다[^1] . 통상적으로 이벤트는 버블링 단계 도중에 호출되는 것으로 가정된다[^2].
+
 **이벤트는, 이벤트를 발생시킨 이벤트 타깃과 이벤트 전파를 통해 상위 DOM 요소에서도 캐치가 가능하다.**  
 
 ### 이벤트 버블링을 통해 전파되지 않는 이벤트 
@@ -38,7 +122,13 @@ tags    : ["DOM", "Web", "JavaScript"]
 - `focusin/focusout`
 - `mouseover/mouseout`
 
+## 이벤트 전파를 중지시키기
+이벤트 핸들러내에 `stopPropagation()`을 호출하면 캡처링 버블링을 막을 수 있다. 
 ## 이벤트 전파의 활용, 이벤트 위임
 이벤트 위임이란, 이벤트 전파를 활용해 하위 요소들에 이벤트 핸들러를 각각 등록할 필요 없이, 하나의 상위 요소에 이벤트 핸들러를 등록하는 방법이다. 
 또한 동적으로 하위 DOM 요소가 추가되어도 추가될 때마다 이벤트 핸들러를 등록하지 않아도 되는 장점이 있다.  
 
+> 작성중...
+
+[^1]: 안재우 역, 코디 린들리 저, 《DOM을 깨우치다》, O'Reilly, 2013년, 160쪽
+[^2]: https://ko.javascript.info/bubbling-and-capturing#ref-65
