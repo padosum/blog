@@ -1,16 +1,16 @@
 ---
 title   : 구조 분해 할당
-excerpt : Destructuring assignment 구조 분해 할당
 date    : 2020-02-25 21:09:48 +0900
-updated : 2021-10-01 13:02:12 +0900
+updated : 2022-05-24 11:55:46 +0900
 aliases : ["Destructuring"]
 tags: ["JavaScript"]
 ---
+
 ## 구조 분해 할당
 배열이나 객체의 속성을 해체해 그 값을 개별 변수에 담을 수 있게 하는 표현식.
 리액트를 배우려니까 정리해본다.
 
-``` javascript
+```javascript
 var a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
@@ -41,12 +41,28 @@ console.log(human); // girl
 ```
 
 ## 새로운 변수 이름으로 할당하기
-```javascript
+```javascriptasda
 const { a: foo } = { a: 10 };
 console.log(foo); // 10
 console.log(a); // ReferenceError: a is not defined
 ```
 
+## 중첩된 구조의 객체에서 Destructuring 사용하기
+
+다음과 같이 객체가 중첩되어 있는 경우에도 사용이 가능하다.
+```javascript
+const user = {
+  id: 513,
+  name: 'padosum',
+  age: 100,
+  address: {
+    city: 'Busan',
+    country: 'Republic of Korea'
+  }
+}
+const { name, age, address: { city } } = user
+console.log(name, age, city) // padosum 100 Busan
+```
 ## 다른 사용 예  
 ### Vuex  
 - `actions` 속성에서 `context` 인자 사용시
@@ -60,7 +76,7 @@ actions: {
 ```
 
 **구조 분해는 선언적이다. 코드를 작성하는 사람의 의도가 더 잘 설명이 되는 코드이다. 구조분해로 사용하려는 것만 가져와 그것만 사용한다는 것을 선언한다.**   
--> [[선언적 프로그래밍]]
+-> [[Declarative-Programming|선언적 프로그래밍]]
 
 ## object literal enhancement  
 - 구조 분해의 반대라 할 수 있다.  

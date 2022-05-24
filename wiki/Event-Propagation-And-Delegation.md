@@ -1,7 +1,7 @@
 ---
 title   : 이벤트 전파와 위임
 date    : 2021-10-05 21:45:52 +0900
-updated : 2022-05-23 22:28:01 +0900
+updated : 2022-05-24 23:19:48 +0900
 aliases : ["이벤트 전파와 위임"]
 tags    : ["DOM", "Web", "JavaScript"]
 ---
@@ -123,7 +123,75 @@ tags    : ["DOM", "Web", "JavaScript"]
 - `mouseover/mouseout`
 
 ## 이벤트 전파를 중지시키기
-이벤트 핸들러내에 `stopPropagation()`을 호출하면 캡처링 버블링을 막을 수 있다. 
+이벤트 핸들러내에 `stopPropagation()`을 호출하면 캡처링 버블링을 막을 수 있다. 하지만 노드나 개체에 직접 연결된 이벤트는 호출된다. 또한 브라우저의 기본 이벤트를 막진 않는다.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div>Click ME</div>
+    <script>
+      document.querySelector("div").addEventListener("click", () => {
+        console.log("<div>를 클릭!");
+      });
+
+      document.querySelector("div").addEventListener("click", (e) => {
+        console.log("<div>의 클릭 이벤트 호출, 버블링과 캡처링은 막는다.");
+        e.stopPropagation();
+      });
+
+      document.querySelector("div").addEventListener("click", () => {
+        console.log("<div>를 클릭!");
+      });
+
+      document.body.addEventListener("click", () => {
+        console.log(
+          "stopPropagation()으로 캡처링 및 버블링을 중지시켰기 때문에 <div>를 클릭하면 호출되지 않는다."
+        );
+      });
+    </script>
+  </body>
+</html>
+```
+위 코드에서 두 번째 `addEventListener` 메소드 내부에 `stopPropagation()`을 호출했기 때문에 `<div>`를 클릭하면 `<div>`에 연결된 이벤트는 호출되지만 `<body>` 클릭 이벤트는 호출되지 않는 것을 확인할 수 있다.
+
+`stopImmediatePropataion()`을 사용하면 이벤트 전파를 중지(`stopPropagation()`을 사용한 것과 같이)시킬 뿐만 아니라 `stopImmediatePropagation()` 메서드를 호출한 `addEventListener()` 이후에 등록된 이벤트도 중지시킨다.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div>Click ME</div>
+    <script>
+      document.querySelector("div").addEventListener("click", () => {
+        console.log("<div>를 클릭!");
+      });
+
+      document.querySelector("div").addEventListener("click", (e) => {
+        console.log("<div>의 클릭 이벤트 호출, 버블링과 캡처링은 막는다.");
+        e.stopImmediatePropagation();
+      });
+
+	  // 호출되지 않는다!
+      document.querySelector("div").addEventListener("click", () => {
+        console.log("<div>를 클릭!");
+      });
+
+      document.body.addEventListener("click", () => {
+        console.log(
+          "stopImmediatePropagation()으로 캡처링 및 버블링을 중지시켰기 때문에 <div>를 클릭하면 호출되지 않는다."
+        );
+      });
+    </script>
+  </body>
+</html>
+```
+
+`stopImmediatePropagation()`도 `stopPropatation()` 처럼 브라우저의 기본 이벤트는 막지 못한다.
+
+
 ## 이벤트 전파의 활용, 이벤트 위임
 이벤트 위임이란, 이벤트 전파를 활용해 하위 요소들에 이벤트 핸들러를 각각 등록할 필요 없이, 하나의 상위 요소에 이벤트 핸들러를 등록하는 방법이다. 
 또한 동적으로 하위 DOM 요소가 추가되어도 추가될 때마다 이벤트 핸들러를 등록하지 않아도 되는 장점이 있다.  

@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2022-05-23 11:44:03 +0900
+updated : 2022-05-24 17:35:36 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -57,6 +57,17 @@ $ git add .
 $ git commit -m "update .gitignore"
 
 $ git push
+```
+
+### 특정 폴더 내의 파일을 제외하는 방법
+```
+folder/*
+```
+
+만약 특정 폴더(여기선 `folder/`) 내부 파일 중 특정 파일은 저장소에 공유하고 싶다면 다음과 같이 설정하면 된다.
+`folder/` 디렉토리 내의 파일 중 `somefile`은 포함하는 것
+```
+!folder/somefile
 ```
 
 ## 명령어 정리  

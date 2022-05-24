@@ -1,7 +1,7 @@
 ---
 title   : Javascript 정규 표현식
 date    : 2020-01-31 19:37:16 +0900
-updated : 2020-01-31 20:05:29 +0900
+updated : 2022-05-24 17:35:18 +0900
 aliases : ["JavaScript 정규 표현식"]
 tags: ["JavaScript"]
 ---
@@ -196,6 +196,9 @@ const regexp = /.md$/; // .md로 끝이 나는지 확인
 regexp.test(str); // true 
 regexp.test(str2); // false
 ```
+
+## 같이 보기
+- [[Useful-Regex-Snippets-in-JavaScript|유용한 자바스크립트 정규표현식 코드 조각모음]]
 
 ## reference
 - [MDN Web Docs](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
