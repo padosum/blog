@@ -1,7 +1,7 @@
 ---
 title   : 스프레드 연산자 
 date    : 2021-04-24 09:41:56 +0900
-updated : 2021-10-01 12:57:20 +0900
+updated : 2022-05-26 14:54:39 +0900
 aliases : ["전개 구문", "스프레드 연산자"]
 tags: ["JavaScript"]
 ---
@@ -61,7 +61,20 @@ const favSports = {
 console.log(favSports) // {basketball: "농구", football: "축구", tennis: "테니스"}
 
 ```
-  
-  
+
+### 중복 제거하기
+배열을 `Set`으로 변경하면 중복이 제거된다. `Set`을 스프레드 연산자로 펼치면 배열로 사용할 수 있다.
+```javascript
+const arr = [1, 2, 3, 4, 1, 2, 3]
+const newArr = [...new Set(arr)];
+console.log(newArr) // [1, 2, 3, 4]
+```
+
+### 문자열을 배열로 변경하기
+```javascript
+const name = 'padosum'
+console.log([...name]) // ["p", "a", "d", "o", "s", "u", "m"]
+```
 ## reference 
 - [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [7 ES6 Spread Operator Tricks Every Developer Should Know](https://javascript.plainenglish.io/7-es6-spread-operator-tricks-every-developer-should-know-f162d602c9d6)
