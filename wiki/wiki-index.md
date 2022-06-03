@@ -1,14 +1,14 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-05-11 11:31:16 +0900
+updated : 2022-06-04 00:41:53 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
 * [[Algorithm]]
 	* [[Solve-Algorithms]]
 	* [[Brute-Force-Search-Algorithm]]
-	* [[Sort-Algorithm]]]
+	* [[Sort-Algorithm]]
 	* [[DFS]]
   * [[Graph]]
 * Web
@@ -34,6 +34,7 @@ updated : 2022-05-11 11:31:16 +0900
   * [[MutationObserver|DOM 변경을 감시하기, MutationObserver]]
 	* [[How-to-access-localhost-from-another-device]]
 	* [[Setting-query-string-using-Fetch-GET-request|fetch GET 요청시 파라미터 넘기기]]
+  * [[Chrome-Devtools-Tips]]
 * CSS 
   * [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   * [[CSS-z-index]]
@@ -103,6 +104,7 @@ updated : 2022-05-11 11:31:16 +0900
 	* [[React-Native-tutorial-2]]
 	* [[React-Native-folder-and-file-structure]]
 	* [[Redux]]
+	* [[Using-the-Public-Folder|Electron, React로 만든 프로젝트에서 Public 폴더 사용하기]]
   * [[Virtual-DOM]]
 * Programming 
 	* [[REST-API]]
@@ -138,6 +140,7 @@ updated : 2022-05-11 11:31:16 +0900
 	* [[Prettier]]
 	* [[Coc-nvim-and-Coc-snippets]]
 	* [[ipTIME-UC306SD]]
+	* [[Tree-command|mac에서 디렉토리 구조를 텍스트로 나타내는 방법]]
   * [[CLI]]
 	* [[Vue-CLI]]
 	* [[Electron]]
