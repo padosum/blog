@@ -1,3 +1,7 @@
+<div>
+ <img src="https://github.com/padosum/blog/blob/master/.layouts/static/logo.png?raw=true" width="80" height="80"/>
+</div>
+
 # Padosum Wiki
 
 👋 안녕하세요  
