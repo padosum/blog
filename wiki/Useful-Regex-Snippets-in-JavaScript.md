@@ -1,7 +1,7 @@
 ---
 title   : 유용한 자바스크립트 정규표현식 코드 조각모음
 date    : 2022-05-19 23:41:36 +0900
-updated : 2022-05-24 17:35:18 +0900
+updated : 2022-06-06 22:36:36 +0900
 aliases : ["유용한 자바스크립트 정규표현식 코드 조각모음"]
 tags    : ["JavaScript", "How to"]
 ---
@@ -33,3 +33,6 @@ const word = '공장'
 str.replace(new RegExp(`(${word})`, 'ig'), "<em>$1</em>");
 // "간장 <em>공장</em> <em>공장</em>장은 강 <em>공장</em>장이고 된장 <em>공장</em> <em>공장</em>장은 공 <em>공장</em>장이다."
 ```
+
+## 날짜 포맷 변경하기
+[[JavaScript-날짜-포맷-변경하기|JavaScript 날짜 포맷 변경하기]]

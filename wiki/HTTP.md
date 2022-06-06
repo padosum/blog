@@ -1,11 +1,11 @@
 ---
 title   : HTTP
 date    : 2021-05-10 21:47:34 +0900
-updated : 2021-05-20 22:13:45 +0900
+updated : 2022-06-06 22:51:42 +0900
 aliases : 
 ---
 **HTTP(HyperText Transfer Protocol)**   
-처음에는 HTML을 전송하기 위핸 프로토콜로 만들어졌는데 이젠 모든 것을 전송하기 위해 사용한다.  
+처음에는 HTML을 전송하기 위한 프로토콜로 만들어졌는데 이젠 모든 것을 전송하기 위해 사용한다.  
 - HTML, TEXT
 - image, 음성, 영상, 파일
 - JSON, XML(API)
