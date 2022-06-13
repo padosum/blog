@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-06-04 00:41:53 +0900
+updated : 2022-06-13 23:00:54 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -58,6 +58,7 @@ updated : 2022-06-04 00:41:53 +0900
 	* [[NPX]]
   * [[Asynchronous-JavaScript]]
   * [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
+  * [[Fix-Cannot-use-import-statement-outside-a-module|Cannot use import statement outside a module 오류 해결하기]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
@@ -141,11 +142,12 @@ updated : 2022-06-04 00:41:53 +0900
 	* [[Coc-nvim-and-Coc-snippets]]
 	* [[ipTIME-UC306SD]]
 	* [[Tree-command|mac에서 디렉토리 구조를 텍스트로 나타내는 방법]]
+	* [[ASCIIFlow]]
+	* [[Visual-Studio-Code-Emmet]]
+	* [[Visual-Studio-Code-Prettier-Remove-Semicolon|VSCode Prettier Extension에서 세미콜론 없애기]]
   * [[CLI]]
 	* [[Vue-CLI]]
-	* [[Electron]]
-	* [[ASCIIFlow]]
-  * [[Visual-Studio-Code-Emmet]]
+* [[Electron]]
 * Security 
 	* [[SSL]]
 	* [[Encryption]]
