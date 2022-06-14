@@ -1,7 +1,7 @@
 ---
 title   : CI/CD 
 date    : 2021-10-22 22:37:53 +0900
-updated : 2021-10-22 22:38:26 +0900
+updated : 2022-06-14 14:24:17 +0900
 aliases : ["CI/CD"] 
 tags    : ["Development"]
 ---
@@ -15,6 +15,9 @@ CI/CD 방법의 대표적인 툴은 **Travis**와 **Jenkins**가 있다.
 - 개발자가 수동 작업에 대한 부담을 덜고 오류, 버그를 줄이는데 도움이 되며 생산성이 향상된다.
 - 테스트를 수행하면서 버그를 조기에 발견하고 해결할 수 있다.
 - 자주 프로젝트 결과물을 업데이트할 수 있다.  
+- ➡️  리팩터링하기 좋다.
+
+CI에 따르면 모든 팀원이 하루에 최소 한 번은 마스터와 통합한다. 이렇게 하면 다른 브랜치들과의 차이가 크게 벌어지는 브랜치가 없어져서 머지의 복잡도를 상당히 낮출 수 있다. 하지만 CI를 적용하기 위해선 마스터를 건강하게 유지하고, 거대한 기능을 잘게 쪼개는 법을 배우고, 각 기능을 끌 수 있는 기능 토글(feature toggle, feature flag)을 적용해 완료되지 않은 기능이 시스템 전체를 망치지 않도록 해야 한다. [^1]
 
 ## CD (Continuous Delivery/Deployment)
 **지속적 제공/배포**  
@@ -26,3 +29,5 @@ CI/CD 방법의 대표적인 툴은 **Travis**와 **Jenkins**가 있다.
 - [https://tecoble.techcourse.co.kr/post/2021-08-14-ci-cd/](https://tecoble.techcourse.co.kr/post/2021-08-14-ci-cd/)
 - [https://aws.amazon.com/ko/devops/continuous-integration/](https://aws.amazon.com/ko/devops/continuous-integration/)
 - [https://www.redhat.com/ko/topics/devops/what-is-ci-cd](https://www.redhat.com/ko/topics/devops/what-is-ci-cd)
+
+[^1]: 개앞맵시(이복연)·남기혁 역, 마틴 파울러 저, 《리팩터링 (2판)》, 한빛미디어, 2021년

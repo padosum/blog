@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2022-05-23 22:28:01 +0900
+updated : 2022-06-14 23:36:47 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -91,6 +91,10 @@ tags: ["JavaScript"]
   - [[JavaScript-Debounce-Throttle|디바운스와 스로틀]]
 - [[JavaScript-Asynchronous-Programming|비동기 프로그래밍]]
 
+## 테스트
+- [[Jasmine]]
+- [[JavaScript-Test-With-Mocha|Mocha로 JavaScript 테스트 코드 작성하기]]
+
 ## ES6  
 - [[JavaScript-Rest-Parameter]]
 - [[JavaScript-Default-Parameter]]
@@ -117,7 +121,6 @@ tags: ["JavaScript"]
 - [[JavaScript-Change-Class-Attribute|JavaScript class 속성 변경하기]]
 - [[Node-Geometry]]
 
-
 ## Event 
 - [[Event|이벤트]]
 - [[JavaScript-Add-An-Event-Handler|JavaScript 이벤트 핸들러 등록하는 방법]]
@@ -126,6 +129,8 @@ tags: ["JavaScript"]
 
 ## Errors 
 - [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
+- [[Fix-Cannot-use-import-statement-outside-a-module|Cannot use import statement outside a module 오류 해결하기]]
+- [[JavaScript-Arrow-Function-Hoisting|화살표 함수가 호이스팅된다는 착각]]
 
 ## 같이 보기
 - [자바스크립트는 무엇으로 구성되어 있을까?](https://ui.toast.com/weekly-pick/ko_20200219)

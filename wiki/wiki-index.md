@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-06-13 23:00:54 +0900
+updated : 2022-06-14 21:37:59 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -59,6 +59,7 @@ updated : 2022-06-13 23:00:54 +0900
   * [[Asynchronous-JavaScript]]
   * [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
   * [[Fix-Cannot-use-import-statement-outside-a-module|Cannot use import statement outside a module 오류 해결하기]]
+  * [[JavaScript-Arrow-Function-Hoisting|화살표 함수가 호이스팅된다는 착각]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
@@ -92,6 +93,7 @@ updated : 2022-06-13 23:00:54 +0900
 * Testing
     * [[TDD]] 
     * [[Jasmine]]
+    * [[JavaScript-Test-With-Mocha]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
