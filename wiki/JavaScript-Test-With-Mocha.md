@@ -1,7 +1,7 @@
 ---
 title   : Mocha로 JavaScript 테스트 코드 작성하기 
 date    : 2022-06-14 21:38:10 +0900
-updated : 2022-06-14 23:36:48 +0900
+updated : 2022-06-15 14:53:01 +0900
 aliases : ["Mocha로 JavaScript 테스트 코드 작성하기"]
 tags    : ["JavaScript", "Test"]
 ---
@@ -28,6 +28,20 @@ describe('pow', () => {
   it('n 제곱', () => {
     assert.equal(pow(2, 3), 8)
   })
+})
+```
+
+일반적으로 `it` 구문 하나에 검증도 하나씩만 하는 것이 좋다. 앞 검증을 통과하지 못하면 나머지 검증은 해보지 못하고 테스트가 실패하기 때문이다.
+
+### beforeEach
+`beforeEach` 구문은 각각의 테스트 바로 전에 실행된다. 각 테스트 모두 공통된 객체를 사용하고 있을 때 최상단으로 변수를 끌어올려서 사용하면, 테스트 실행시마다 해당 객체가 변경될 수 있으므로, `beforeEach`를 이용해 매번 새로운 변수를 사용할 수 있도록 하는 것이 좋다.
+```javascript
+describe("province", () => {
+  let v
+  beforeEach(() => {
+    v = new Rectangle(12)
+  })
+  // ...
 })
 ```
 

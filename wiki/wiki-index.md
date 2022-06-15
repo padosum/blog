@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-06-14 21:37:59 +0900
+updated : 2022-06-15 22:35:48 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -127,6 +127,7 @@ updated : 2022-06-14 21:37:59 +0900
 	* [[User-Interface]]
 * Computer Science
 	* [[Architecture]]
+	  * [[Uniform-Access-Principle]] 
 	* [[Hosting]]
 	* [[SSH]]
 	* [[FTP]]
