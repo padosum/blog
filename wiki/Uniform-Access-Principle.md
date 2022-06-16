@@ -11,20 +11,23 @@ tags    : ["Programming"]
 다음과 같이 `Book` 클래스로 인스턴스 `book1`, `book2`를 생성했을 때, 가격을 알고 싶다면 `price`가 필드인지, 계산된 값(함수 호출)인지 구분할 수 없다. 같은 방식으로 접근하는 것이다. 인스턴스를 생성한 클라이언트가 가격이 저장된 가격인지 계싼된 것인지 신경쓰거나 알 필요가 없어야 한다는 것
 ```javascript
 class Book {
+  #name
+  #price
+  #year
   constructor(name, price, year) {
-    this._name = name
-    this._price = price
-    this._year = year
+    this.#name = name
+    this.#price = price
+    this.#year = year
   }
 
   get name() {
-    return this._name
+    return this.#name
   }
   get price() {
-    return this._year < 2010 ? this._price - this._price * 0.5 : this._price
+    return this.#year < 2010 ? this.#price - this.#price * 0.5 : this.#price
   }
   get year() {
-    return this._year
+    return this.#year
   }
 }
 
