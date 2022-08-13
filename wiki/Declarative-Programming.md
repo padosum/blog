@@ -1,7 +1,7 @@
 ---
 title   : 선언적 프로그래밍
 date    : 2021-08-19 23:12:47 +0900
-updated : 2022-02-24 19:11:14 +0900
+updated : 2022-08-13 23:44:12 +0900
 aliases : ["선언적 프로그래밍"]
 tags: ["Programming"]
 ---
@@ -59,6 +59,7 @@ reunder() {
 
 ## 같이 보기
  - [https://toss.im/slash-21/sessions/3-3](https://toss.im/slash-21/sessions/3-3)
+- [선언형, 명령형 코드 그리고 추상화](https://milooy.github.io/dev/220810-abstraction-and-declarative-programming/)
 
 ## reference 
 - [Learning React](https://www.hanbit.co.kr/store/books/look.php?p_code=B3942115529)
