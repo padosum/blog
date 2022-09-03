@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-06-15 22:35:48 +0900
+updated : 2022-09-03 14:16:20 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -109,6 +109,8 @@ updated : 2022-06-15 22:35:48 +0900
 	* [[Redux]]
 	* [[Using-the-Public-Folder|Electron, React로 만든 프로젝트에서 Public 폴더 사용하기]]
   * [[Virtual-DOM]]
+	* [[React-빌드-후-API-통신-오류-문제|React 빌드 후 API 통신 오류 문제]]
+
 * Programming 
 	* [[REST-API]]
 	* [[SPA]]
