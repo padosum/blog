@@ -1,7 +1,7 @@
 ---
 title   : Javascript 정규 표현식
 date    : 2020-01-31 19:37:16 +0900
-updated : 2022-05-24 17:35:18 +0900
+updated : 2022-09-05 19:47:36 +0900
 aliases : ["JavaScript 정규 표현식"]
 tags: ["JavaScript"]
 ---
@@ -199,6 +199,7 @@ regexp.test(str2); // false
 
 ## 같이 보기
 - [[Useful-Regex-Snippets-in-JavaScript|유용한 자바스크립트 정규표현식 코드 조각모음]]
+- [RegExr - 정규표현식을 배우는 사이트](https://regexr.com/)
 
 ## reference
 - [MDN Web Docs](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
