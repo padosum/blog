@@ -28,8 +28,8 @@ module.exports = {
       options: {
         icon: './static/logo.png',
         contentMaxWidth: 1440,
-        shouldSupportLatest: false,
-        // sidebarComponents: ["latest", "tag"],
+        shouldSupportLatest: true,
+        sidebarComponents: ['latest', 'tag'],
         nav: [
           {
             title: 'Github',
