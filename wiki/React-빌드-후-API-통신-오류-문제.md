@@ -3,7 +3,7 @@ title   : React 빌드 후 API 통신 오류 문제
 date    : 2022-08-15 21:33:58 +0900
 updated : 2022-08-15 21:40:18 +0900
 aliases : ["React 빌드 후 API 통신 오류 문제"]
-tags: ["react"]
+tags: ["react", "How to"]
 ---
 
 ## 문제

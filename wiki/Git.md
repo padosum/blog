@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2022-05-24 17:35:36 +0900
+updated : 2022-09-06 14:12:58 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -127,7 +127,8 @@ folder/*
 - `git checkout -- <파일명>`  
 	- 수정한 내용 원래대로 복구  
 	- `checkout` 은 브랜치 변경시에도 사용. 도서관에서 책을 받는 것과 같은 의미. 저장소 디렉토리에 있는  `.git` 폴더에서 히스토리를 관리. `.git`에서 특정 히스토리를 꺼내는 것  
-
+- `git notes add <해시>`
+  - commit을 수정하지 않아도 노트를 남길 수 있다.[^1]
 
 ### `git config`
 - GitHub ID/PW 캐싱 데이터 삭제하기 
@@ -257,6 +258,11 @@ $ git --no-pager log --reverse > log.txt
 $ git --no-pager log --reverse | pbcopy
 ```
 
+- [Dangit, Git!?!](https://dangitgit.com/ko)
+  - Git을 사용하면서 겪은 문제들에 대한 해결책 
+
 ## reference
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
 - [https://stackoverflow.com/questions/10330425/how-do-i-export-a-git-log-to-a-text-file](https://stackoverflow.com/questions/10330425/how-do-i-export-a-git-log-to-a-text-file)
+
+[^1]: https://gaeulbyul.bearblog.dev/git-notes/
