@@ -1,9 +1,9 @@
 ---
 title   : 웹 접근성을 준수해 Checkbox와 Radio 커스텀하기 
 date    : 2022-09-12 15:34:26 +0900
-updated : 2022-09-13 23:07:42 +0900
+updated : 2022-09-16 18:01:00 +0900
 aliases : ["웹 접근성을 준수해 Checkbox와 Radio 커스텀하기"]
-tags    : ["CSS"]
+tags    : ["CSS", "accessibility"]
 ---
 ## Goal
 **checkbox와 radio를 원하는 모양으로 커스텀하는 방법**을 익혀서 구현해야할 일이 생길때 당황하지 않고 작업하기 
