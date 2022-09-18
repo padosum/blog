@@ -56,9 +56,10 @@ const WindowButton = () => {
         justifyContent="center"
         alignItems="center"
         fontWeight="700"
-        pb="2px"
       >
-        <Text color="black">×</Text>
+        <Text color="black" pt="2px" fontSize={12}>
+          ×
+        </Text>
       </Box>
     </Box>
   )
