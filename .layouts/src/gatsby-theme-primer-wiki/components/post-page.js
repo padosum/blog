@@ -7,13 +7,15 @@ import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
 import SEO from 'gatsby-theme-primer-wiki/src/components/seo'
 import { Box, Heading, Text, useTheme } from '@primer/components'
 import { HEADER_HEIGHT } from 'gatsby-theme-primer-wiki/src/components/header'
-import PageFooter from 'gatsby-theme-primer-wiki/src/components/page-footer'
-import TableOfContents from 'gatsby-theme-primer-wiki/src/components/table-of-contents'
+import WindowFooter from './window-footer'
+import TableOfContents from './table-of-contents'
 import TagsBlock from 'gatsby-theme-primer-wiki/src/components/tags-block'
 import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-items'
 import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
-import TagPosts from 'gatsby-theme-primer-wiki/src/components/tag-posts'
 import { Giscus } from '@giscus/react'
+import LastUpdated from './last-updated'
+import WindowButton from './window-button'
+import WindowTitle from './window-title'
 
 function TagsList({ type = 'normal', title, url, items, depth = 0 }) {
   items = items || []
@@ -103,7 +105,7 @@ const Post = ({ data, pageContext, location }) => {
     tags: tags || [],
     language,
   }
-  const AnchorTag = (props) => (
+  const AnchorTag = props => (
     <components.a {...props} references={outboundReferences} />
   )
 
@@ -131,108 +133,163 @@ const Post = ({ data, pageContext, location }) => {
             top={HEADER_HEIGHT + 24}
             maxHeight={`calc(100vh - ${HEADER_HEIGHT}px - 24px)`}
           >
-            <Text display="inline-block" fontWeight="bold" mb={1}>
-              On this page
-            </Text>
-            <TableOfContents items={tableOfContents.items} />
-          </Box>
-        ) : null}
-        <Box width="100%" maxWidth="960px" lineHeight={1.5}>
-          {shouldShowTitle && (
-            <Box mb={4}>
-              <Box display="flex" sx={{ alignItems: 'center' }}>
-                <Heading as="h1" mr={2}>
-                  {title}
-                </Heading>
-              </Box>
-            </Box>
-          )}
-
-          {tableOfContents.items ? (
             <Box
-              borderWidth="1px"
-              borderStyle="solid"
-              borderColor="border.primary"
-              borderRadius={2}
-              display={['block', null, 'none']}
-              mb={5}
-              bg="auto.gray.1"
+              bg="bg.window"
+              p="2px 0"
+              border="2px solid"
+              borderColor="#fff8ff #000000 #000000 #fff8ff"
             >
-              <Box p={3}>
-                <Box
+              <Box>
+                <Text
                   display="flex"
-                  flexDirection="row"
-                  justifyContent="space-between"
                   alignItems="center"
+                  fontWeight="bold"
+                  mb={1}
+                  padding="2px 4px 3px 4px"
+                  width="100%"
+                  bg="bg.tocTitle"
                 >
-                  <Text fontWeight="bold">On this page</Text>
-                </Box>
+                  <img src={'/mycomputer.png'}></img>&nbsp; On this page
+                </Text>
               </Box>
               <Box
-                p={3}
-                sx={{
-                  borderTop: '1px solid',
-                  borderColor: 'border.gray',
-                }}
+                width="98.5%"
+                bg="bg.post"
+                borderWidth="2px"
+                borderStyle="ridge groove groove ridge"
+                borderColor="#7f787f #fff8ff #fff8ff #7f787f"
               >
                 <TableOfContents items={tableOfContents.items} />
               </Box>
+              <WindowFooter count={tableOfContents.items.length}></WindowFooter>
             </Box>
-          ) : null}
-          <MDXProvider components={{ a: AnchorTag }}>
-            <MDXRenderer>{body}</MDXRenderer>
-          </MDXProvider>
-          {
-            // slug === "/" &&
-            //   primerWikiThemeConfig.shouldShowLatestOnIndex &&
-            //   latestPosts.length > 0 && (
-            //     <Box>
-            //       <components.h2>Recently Updated</components.h2>
-            //       <TagPosts
-            //         nodes={latestPosts}
-            //         shouldShowInstantView={false}
-            //       ></TagPosts>
-            //     </Box>
-            //   )
-          }
-          {slug === '/' &&
-            primerWikiThemeConfig.shouldShowSidebarListOnIndex &&
-            sidebarItems.length > 0 &&
-            sidebarItems.map((item) => {
-              return (
-                <Box key={item.title}>
-                  <components.h2>{item.title}</components.h2>
-                  {item.items.map((child) => {
-                    return (
-                      <components.ul key={child.title}>
-                        <TagsList
-                          title={child.title}
-                          url={child.url}
-                          type={child.type}
-                          items={child.items}
-                        ></TagsList>
-                      </components.ul>
-                    )
-                  })}
+          </Box>
+        ) : null}
+        <Box
+          width="100%"
+          lineHeight={1.5}
+          mb={4}
+          bg="bg.window"
+          border="2px solid"
+          borderColor="#fff8ff #000000 #000000 #fff8ff"
+          p="2px 0"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <WindowTitle title={title}></WindowTitle>
+          <Box
+            padding="0 10px"
+            margin="3px 0 3px 0"
+            width="100%"
+            fontStyle="color: black"
+          >
+            <LastUpdated lastUpdated={lastUpdated}></LastUpdated>
+          </Box>
+
+          <Box
+            width="98.5%"
+            bg="bg.post"
+            borderWidth="2px"
+            borderStyle="ridge groove groove ridge"
+            borderColor="#7f787f #fff8ff #fff8ff #7f787f"
+            p="3"
+          >
+            {shouldShowTitle && (
+              <Box>
+                <Box display="flex" sx={{ alignItems: 'center' }}>
+                  <Heading as="h1" mr={2}>
+                    {title}
+                  </Heading>
                 </Box>
-              )
-            })}
-          <ReferencesBlock references={inboundReferences} />
-          {primerWikiThemeConfig.shouldSupportTags && (
-            <TagsBlock tags={tags} nodes={tagsOutbound.nodes} />
-          )}
-          <PageFooter editUrl={editUrl} lastUpdated={lastUpdated} />
-          <Giscus
-            repo="padosum/blog"
-            repoId="MDEwOlJlcG9zaXRvcnkyMzYzMzcwMzM="
-            category="General"
-            categoryId="DIC_kwDODhY3ic4B_Fb9"
-            mapping="specific"
-            term={title}
-            reactionsEnabled="1"
-            emitMetadata="0"
-            theme={resolvedColorMode === 'day' ? 'light' : 'dark_high_contrast'}
-          />
+              </Box>
+            )}
+
+            {tableOfContents.items ? (
+              <Box
+                borderWidth="1px"
+                borderStyle="solid"
+                borderColor="border.primary"
+                display={['block', null, 'none']}
+                mb={5}
+              >
+                <Box p={3}>
+                  <Box
+                    display="flex"
+                    flexDirection="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Text fontWeight="bold">On this page</Text>
+                  </Box>
+                </Box>
+                <Box
+                  p={3}
+                  sx={{
+                    borderTop: '1px solid',
+                    borderColor: 'border.gray',
+                  }}
+                >
+                  <TableOfContents items={tableOfContents.items} />
+                </Box>
+              </Box>
+            ) : null}
+            <MDXProvider components={{ a: AnchorTag }}>
+              <MDXRenderer>{body}</MDXRenderer>
+            </MDXProvider>
+            {
+              // slug === "/" &&
+              //   primerWikiThemeConfig.shouldShowLatestOnIndex &&
+              //   latestPosts.length > 0 && (
+              //     <Box>
+              //       <components.h2>Recently Updated</components.h2>
+              //       <TagPosts
+              //         nodes={latestPosts}
+              //         shouldShowInstantView={false}
+              //       ></TagPosts>
+              //     </Box>
+              //   )
+            }
+            {slug === '/' &&
+              primerWikiThemeConfig.shouldShowSidebarListOnIndex &&
+              sidebarItems.length > 0 &&
+              sidebarItems.map(item => {
+                return (
+                  <Box key={item.title}>
+                    <components.h2>{item.title}</components.h2>
+                    {item.items.map(child => {
+                      return (
+                        <components.ul key={child.title}>
+                          <TagsList
+                            title={child.title}
+                            url={child.url}
+                            type={child.type}
+                            items={child.items}
+                          ></TagsList>
+                        </components.ul>
+                      )
+                    })}
+                  </Box>
+                )
+              })}
+            <ReferencesBlock references={inboundReferences} />
+            {primerWikiThemeConfig.shouldSupportTags && (
+              <TagsBlock tags={tags} nodes={tagsOutbound.nodes} />
+            )}
+            <Giscus
+              repo="padosum/blog"
+              repoId="MDEwOlJlcG9zaXRvcnkyMzYzMzcwMzM="
+              category="General"
+              categoryId="DIC_kwDODhY3ic4B_Fb9"
+              mapping="specific"
+              term={title}
+              reactionsEnabled="1"
+              emitMetadata="0"
+              theme={
+                resolvedColorMode === 'day' ? 'light' : 'dark_high_contrast'
+              }
+            />
+          </Box>
         </Box>
       </Box>
     </Layout>

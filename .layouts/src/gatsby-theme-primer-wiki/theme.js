@@ -3,7 +3,7 @@ const theme = {
     light: {
       colors: {
         header: {
-          bg: '#0070ed',
+          bg: '#808080;',
           text: '#ffffff',
         },
         auto: {
@@ -19,6 +19,30 @@ const theme = {
             '#2f363d',
             '#24292e',
           ],
+        },
+        bg: {
+          primary: '#008082',
+          window: '#bfb8bf',
+          post: '#fff8ff',
+          tocTitle: '#808080',
+          title: '#00007f',
+        },
+        text: {
+          window: '#1b1f23',
+        },
+      },
+    },
+    dark: {
+      colors: {
+        bg: {
+          primary: '#008082',
+          window: '#bfb8bf',
+          post: '#0d1117',
+          tocTitle: '#808080',
+          title: '#00007f',
+        },
+        text: {
+          window: '#1b1f23',
         },
       },
     },
