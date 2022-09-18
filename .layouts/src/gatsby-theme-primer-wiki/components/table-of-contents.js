@@ -3,6 +3,20 @@ import React from 'react'
 import { useScrollSpy } from 'gatsby-theme-primer-wiki/src/hooks/use-scrollspy'
 import styled from 'styled-components'
 
+const FolderItem = styled.div`
+  padding-left: ${props => (props.depth > 0 ? '6px' : 0)};
+  &:before {
+    margin-top: -17px;
+    position: absolute;
+    content: '';
+    height: 30px;
+    border-style: dotted;
+    border-color: rgb(102, 102, 102);
+    border-width: 0px 0px 1px 1px;
+    width: 5px;
+  }
+`
+
 function TableOfContents({ items, depth }) {
   const activeId = useScrollSpy(
     items.map(({ url }) => `[id="${url.slice(1)}"]`),
@@ -11,23 +25,11 @@ function TableOfContents({ items, depth }) {
     }
   )
 
-  const FolderItem = styled.div`
-    padding-left: ${depth > 0 ? `6px` : 0};
-    &:before {
-      margin-top: -17px;
-      position: absolute;
-      content: '';
-      height: 30px;
-      border-style: dotted;
-      border-color: rgb(102, 102, 102);
-      border-width: 0px 0px 1px 1px;
-      width: 5px;
-    }
-  `
+  console.log({ items, depth })
   return (
     <Box as="ul" m={0} p={0} css={{ listStyle: 'none' }}>
       {items.map(item => (
-        <FolderItem as="li" key={item.url} pl={depth > 0 ? 3 : 0}>
+        <FolderItem as="li" key={item.url} depth={depth}>
           {item.title ? (
             <>
               <Link
@@ -50,7 +52,6 @@ function TableOfContents({ items, depth }) {
                 ) : (
                   <img src={'/folder.ico'} bg="bg.primary" alt="folder"></img>
                 )}
-                &nbsp;
                 {item.title}
               </Link>
             </>
