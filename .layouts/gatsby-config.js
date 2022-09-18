@@ -29,6 +29,7 @@ module.exports = {
         icon: './static/logo.png',
         contentMaxWidth: 1440,
         shouldSupportLatest: true,
+        defaultIndexLatestPostCount: 20,
         sidebarComponents: ['latest', 'tag'],
         nav: [
           {
