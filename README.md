@@ -17,3 +17,4 @@
 - [Obsidian](https://obsidian.md/)
 - [Vimwiki+Jekyll+Github.io로 나만의 위키를 만들자](https://johngrib.github.io/wiki/my-wiki/)
 - [theowenyoung/gatsby-theme-primer-wiki](https://github.com/theowenyoung/gatsby-theme-primer-wiki)
+- [windows-95](https://github.com/h01000110/windows-95)
