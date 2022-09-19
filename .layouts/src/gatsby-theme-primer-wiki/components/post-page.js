@@ -14,7 +14,6 @@ import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-item
 import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
 import { Giscus } from '@giscus/react'
 import LastUpdated from './last-updated'
-import WindowButton from './window-button'
 import WindowTitle from './window-title'
 
 function TagsList({ type = 'normal', title, url, items, depth = 0 }) {
@@ -57,6 +56,7 @@ const Post = ({ data, pageContext, location }) => {
     excerpt,
   } = post
 
+  console.log({ frontmatter, fields, rawBody })
   const {
     title,
     lastUpdatedAt,
@@ -184,7 +184,10 @@ const Post = ({ data, pageContext, location }) => {
             width="100%"
             fontStyle="color: black"
           >
-            <LastUpdated lastUpdated={lastUpdated}></LastUpdated>
+            <LastUpdated
+              created={frontmatter.date}
+              lastUpdated={lastUpdatedAt}
+            ></LastUpdated>
           </Box>
 
           <Box
