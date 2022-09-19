@@ -30,7 +30,7 @@ module.exports = {
         contentMaxWidth: 1440,
         shouldSupportLatest: true,
         defaultIndexLatestPostCount: 20,
-        sidebarComponents: ['latest', 'tag'],
+        sidebarComponents: ['tag'],
         lastUpdatedText: '최근 수정 시각',
         nav: [
           {
