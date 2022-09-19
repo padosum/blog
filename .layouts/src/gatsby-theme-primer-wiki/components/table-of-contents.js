@@ -25,7 +25,6 @@ function TableOfContents({ items, depth }) {
     }
   )
 
-  console.log({ items, depth })
   return (
     <Box as="ul" m={0} p={0} css={{ listStyle: 'none' }}>
       {items.map(item => (
