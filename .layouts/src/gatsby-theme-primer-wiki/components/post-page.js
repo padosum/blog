@@ -56,7 +56,6 @@ const Post = ({ data, pageContext, location }) => {
     excerpt,
   } = post
 
-  console.log({ frontmatter, fields, rawBody })
   const {
     title,
     lastUpdatedAt,
