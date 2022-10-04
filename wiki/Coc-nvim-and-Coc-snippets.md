@@ -1,7 +1,7 @@
 ---
 title   : coc.nvim과 coc-snippets  
 date    : 2021-07-08 22:03:55 +0900
-updated : 2022-10-04 16:29:37 +0900
+updated : 2022-10-04 22:46:38 +0900
 aliases : ["coc.nvim과 coc-snippets"]
 tags: ["How to", "Tools"]
 ---
@@ -41,7 +41,8 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 ```
 
 <kbd>Tab</kbd>으로 자동완성을 하려면 다음과 같이 설정한다.
-```
+
+```vim
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -82,7 +83,7 @@ let g:coc_snippet_prev = '<S-TAB>'
 <kbd>Tab</kbd> 으로 자동완성을하게 되면 vimwiki가 테이블에서 다음 컬럼 이동시 <kbd>Tab</kbd>을 사용하기 때문에 제대로 동작하지 않는다.
 
 vim 설정파일에서 다음을 추가한다.
-```
+```vim
 let g:vimwiki_table_mappings = 0
 ```
 
