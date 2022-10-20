@@ -1,13 +1,13 @@
-const path = require('path')
-const pathPrefix = '/'
+const path = require("path");
+const pathPrefix = "/";
 const siteMetadata = {
-  title: 'Personal Wiki by Padosum',
-  shortName: 'Padosum Wiki',
-  description: '최연정의 개인 위키입니다.',
-  imageUrl: '/padosum_wiki.png',
-  siteUrl: 'https://padosum.dev',
-  fbAppId: '',
-}
+  title: "Personal Wiki by Padosum",
+  shortName: "Padosum Wiki",
+  description: "최연정의 개인 위키입니다.",
+  imageUrl: "/padosum_wiki.png",
+  siteUrl: "https://padosum.dev",
+  fbAppId: "",
+};
 module.exports = {
   siteMetadata,
   pathPrefix,
@@ -16,63 +16,63 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'content',
+        name: "content",
         path: `${__dirname}/..`,
         ignore: [`**/\.*/**/*`],
       },
     },
     {
-      resolve: 'gatsby-theme-primer-wiki',
+      resolve: "gatsby-theme-primer-wiki",
       options: {
-        icon: './static/logo.png',
+        icon: "./static/logo.png",
         contentMaxWidth: 1440,
         shouldSupportLatest: true,
         defaultIndexLatestPostCount: 20,
-        sidebarComponents: ['tag'],
-        lastUpdatedText: '최근 수정 시각',
+        sidebarComponents: ["latest", "tag"],
+        lastUpdatedText: "최근 수정 시각",
         nav: [
           {
-            title: 'Github',
-            url: 'https://github.com/padosum/blog/',
+            title: "Github",
+            url: "https://github.com/padosum/blog/",
           },
         ],
-        editUrl: 'https://github.com/padosum/blog/blob/master/',
+        editUrl: "https://github.com/padosum/blog/blob/master/",
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: siteMetadata.title,
         short_name: siteMetadata.shortName,
         start_url: pathPrefix,
         background_color: `#f7f0eb`,
         display: `standalone`,
-        icon: path.resolve(__dirname, './static/logo.png'),
+        icon: path.resolve(__dirname, "./static/logo.png"),
       },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         host: siteMetadata.siteUrl,
         sitemap: `${siteMetadata.siteUrl}/sitemap-pages.xml`,
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: ['UA-156992915-1'],
+        trackingIds: ["UA-156992915-1"],
       },
     },
     {
       resolve: `gatsby-plugin-exclude`,
-      options: { paths: ['/wiki/template/**'] },
+      options: { paths: ["/wiki/template/**"] },
     },
     {
       resolve: `gatsby-plugin-google-adsense`,
@@ -81,4 +81,4 @@ module.exports = {
       },
     },
   ],
-}
+};
