@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-09-03 14:16:20 +0900
+updated : 2022-10-27 15:06:12 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
