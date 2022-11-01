@@ -3,7 +3,7 @@ title   : Vanilla JavaScript로 Drag and Drop 구현하기
 date    : 2022-09-15 11:58:22 +0900
 updated : 2022-09-16 19:42:52 +0900
 aliases : ["Vanilla JavaScript로 Drag and Drop 구현하기"]
-tags    : ["JavaScript", "Web", "DnD", "accessibility"]
+tags    : ["JavaScript", "Web", "DnD", "accessibility", "How to"]
 ---
 ## Goal 
 - Vanilla JavaScript로 Drag and Drop 기능을 구현하기
