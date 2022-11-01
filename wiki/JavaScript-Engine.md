@@ -1,7 +1,7 @@
 ---
 title   : 자바스크립트 엔진(JavaScript Engine) 
 date    : 2021-09-14 15:00:06 +0900
-updated : 2021-09-14 15:02:25 +0900
+updated : 2022-11-01 23:09:13 +0900
 aliases : ["자바스크립트 엔진"]
 tags: ["JavaScript"]
 ---
@@ -10,6 +10,8 @@ tags: ["JavaScript"]
 
 ## 종류
 - V8: Google Chrome
+	- Node.js®는 [Chrome V8 JavaScript 엔진](https://v8.dev/)으로 빌드된 JavaScript 런타임입니다. [https://nodejs.org/ko/](https://nodejs.org/ko/)
+	- C++로 작성되었다.
 - 스파이더몽키: Mozilla Firefox
 - 웹킷: Safari
 - 차크라: MS Edge
