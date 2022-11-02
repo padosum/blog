@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2022-09-06 14:12:58 +0900
+updated : 2022-11-02 22:59:38 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -258,7 +258,32 @@ $ git --no-pager log --reverse > log.txt
 $ git --no-pager log --reverse | pbcopy
 ```
 
-- [Dangit, Git!?!](https://dangitgit.com/ko)
+### repository 미러링
+
+어떤 repository를 다른 repository로 migration하는 방법이다.
+[참고](https://stackoverflow.com/questions/17371150/moving-git-repository-content-to-another-repository-preserving-history)
+
+1. migration할 repository를 bare clone 한다.
+```bash
+git clone --bare https://github.com/exampleuser/old-repository.git
+```
+
+> bare 저장소는 워킹 디렉토리가 없는 저장소라고 한다. bare 저장소 디렉토리는 관례에 따라 `.git` 글자가 이름에 붙는다.
+
+2. 새 저장소로 mirror-push 한다. mirror-push를 하면 branch, commit 이력들이 유지된다.
+```bash
+cd old-repository.git
+git push --mirror https://github.com/exampleuser/new-repository.git
+```
+
+3. bare 저장소를 삭제하자.
+```bash
+cd ..
+rm -rf old-repository.git
+```
+
+
+### [Dangit, Git!?!](https://dangitgit.com/ko)
   - Git을 사용하면서 겪은 문제들에 대한 해결책 
 
 ## reference
