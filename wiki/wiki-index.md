@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-11-02 22:59:42 +0900
+updated : 2022-11-04 00:10:42 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -47,6 +47,8 @@ updated : 2022-11-02 22:59:42 +0900
   * [[CSS-Box-Model]]
   * [[CSS-clip-path]]
   * [[How-To-Handle-Child-Elements-Of-A-Target-Element-When-Delegating-And-Event|이벤트 위임을 사용할 때 타겟 엘리먼트의 자식 엘리먼트를 다루는 방법]]
+  * [[Preventing-Double-Borders-in-CSS-Grid|CSS Grid에서 이중 Border 삭제하기]]
+  * [[CSS-General-Sibling-Combinator]]
 * [[Sass]]
   * [[Sass-mixin-include]]
   * [[Compiling-Sass-in-Visual-Studio-Code]]
@@ -63,6 +65,8 @@ updated : 2022-11-02 22:59:42 +0900
   * [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
   * [[Fix-Cannot-use-import-statement-outside-a-module|Cannot use import statement outside a module 오류 해결하기]]
   * [[JavaScript-Arrow-Function-Hoisting|화살표 함수가 호이스팅된다는 착각]]
+* Node.js
+	* [[Working-With-Environment-Variables-in-Node.js|Node.js에서 환경 변수 사용하기]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]

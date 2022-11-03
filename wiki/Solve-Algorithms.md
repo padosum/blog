@@ -1,11 +1,13 @@
 ---
 title   : 알고리즘 문제
 date    : 2021-04-24 17:22:01 +0900
-updated : 2022-05-01 13:58:46 +0900
+updated : 2022-11-04 00:10:36 +0900
 aliases : ["알고리즘 문제"]
 tags: ["Algorithm"]
 created: 2022-04-25 21:39:48 +0900
 ---
+
+- [[factorial]]
 
 ## [인프런 강좌](https://inf.run/wv2V)
 - [x] [[Algorithms-Find-Min-Value|최솟값 찾기]]
