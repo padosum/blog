@@ -1,10 +1,11 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2022-11-02 22:59:38 +0900
+updated : 2022-11-04 00:10:39 +0900
 aliases : 
 tags: ["Git"]
 ---
+
 [[Version-Control|버전 관리]]를 위한 소프트웨어  
 
 ## 특징 
@@ -69,6 +70,13 @@ folder/*
 ```
 !folder/somefile
 ```
+
+## .DS_Store를 제외하기
+`.DS_Store` 파일은 mac에서 시스템이 폴더에 접근할 때 해당 폴더에 대한 메타데이터를 저장하는 파일이다. 계속 생겨서 거슬린다. 제외시키려면 gitignore에 다음과 같이 추가하면 된다.
+```js
+**/.DS_Store
+```
+[참고](https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder)
 
 ## 명령어 정리  
 
