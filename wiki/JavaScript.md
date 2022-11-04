@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 
 date    : 2021-09-12 21:49:58 +0900
-updated : 2022-06-14 23:36:47 +0900
+updated : 2022-11-04 13:33:19 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -109,6 +109,7 @@ tags: ["JavaScript"]
 - [[JavaScript-toLocaleString]]
 - [[Passing-parameters-to-a-callback-function|JavaScript에서 콜백 함수로 파라미터를 넘기는 방법]]
 - [[Useful-Regex-Snippets-in-JavaScript|유용한 자바스크립트 정규표현식 코드 조각모음]]
+- [[Using-JavaScript-querySelector]]
 
 ## DOM
 - [[DOM]]

@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-11-04 00:10:42 +0900
+updated : 2022-11-04 23:56:16 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -49,6 +49,7 @@ updated : 2022-11-04 00:10:42 +0900
   * [[How-To-Handle-Child-Elements-Of-A-Target-Element-When-Delegating-And-Event|이벤트 위임을 사용할 때 타겟 엘리먼트의 자식 엘리먼트를 다루는 방법]]
   * [[Preventing-Double-Borders-in-CSS-Grid|CSS Grid에서 이중 Border 삭제하기]]
   * [[CSS-General-Sibling-Combinator]]
+  * [[CSS-Focus-Selector]]
 * [[Sass]]
   * [[Sass-mixin-include]]
   * [[Compiling-Sass-in-Visual-Studio-Code]]
