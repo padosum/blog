@@ -91,6 +91,7 @@ updated : 2022-11-04 23:56:16 +0900
 	* [[이미 커밋된 파일들을 .gitignore에 적용하기]]
 	* [[How-Does-Git-Work]]
 	* [[Clone-Github-Wiki]]
+	* [[Git-switch|Git switch 명령어]]
   * [[Git-pre-commit-Hooks]]
 * Development
   * [[CI-CD|CI/CD]] 
