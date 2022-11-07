@@ -1,7 +1,7 @@
 ---
 title   : 유용한 자바스크립트 정규표현식 코드 조각모음
 date    : 2022-05-19 23:41:36 +0900
-updated : 2022-06-06 22:36:36 +0900
+updated : 2022-11-08 00:14:40 +0900
 aliases : ["유용한 자바스크립트 정규표현식 코드 조각모음"]
 tags    : ["JavaScript", "How to"]
 ---
@@ -36,3 +36,6 @@ str.replace(new RegExp(`(${word})`, 'ig'), "<em>$1</em>");
 
 ## 날짜 포맷 변경하기
 [[JavaScript-날짜-포맷-변경하기|JavaScript 날짜 포맷 변경하기]]
+
+## 유효성 검사
+[[Regex-Snippets-in-JavaScript-with-Validation|유효성 검사를 위한 정규표현식]]

@@ -1,7 +1,7 @@
 ---
 title   : 템플릿 엔진
 date    : 2022-11-01 23:00:07 +0900
-updated : 2022-11-01 23:46:38 +0900
+updated : 2022-11-08 00:15:00 +0900
 aliases : ["템플릿 엔진"]
 tags    : ["Node.js", "How to"]
 draft : false
@@ -20,7 +20,10 @@ draft : false
 - **하지만 개인적으로 jsp, asp를 경험한 기억 때문에 ejs가 이해하기 쉬웠다.**  
 	- ~~하지만 pug파일의 vscode 아이콘이 귀엽다.~~
 - 프로젝트 진행시에 편한 방식으로 선택해서 하면 좋을 것 같다.
-	- ~~앞으로 사용할 일이 있을진 모르겠다...~~
+-  [[2022-11-06|사용해본 걸 복습하는 겸 프로젝트를 클론하기로 했는데 문제가 생겼다.]]
+	- 나는 단순히 ejs 문법이 내가 보기 편해서 사용해보기로 했었는데 막상 프로젝트 작업을 하고 나니, 공통적으로 사용하고싶은 HTML 구조가 필요했다. (`input` 태그 같은...)
+	- 하지만 ejs의 경우에는 "Layout" 이라는 기능을 제공해서 **정적인** HTML을 **include**할 수는 있는데
+	- 그때그때 다르게 동작하도록 동적인 HTML 구조를 추가할 수는 없었다. 이게 아쉬웠다. **pug는 [mixins](https://pugjs.org/language/mixins.html) 이라는 기능이 제공되는데 HTML 구조를 인수를 전달해서 만들 수 있다!** 
 
 ## express-generator를 이용해 앱 skeleton 생성하기
 
@@ -66,7 +69,7 @@ pug로 생성한 프로젝트와 다를 바 없다. 차이점이 있다면 views
 ├── bin
 │   └── www
 ├── package.json
-├── public
+├── public 
 │   ├── images
 │   ├── javascripts
 │   └── stylesheets
@@ -79,6 +82,40 @@ pug로 생성한 프로젝트와 다를 바 없다. 차이점이 있다면 views
     ├── index.pug
     └── layout.pug
 ```
+
+## Iteration
+ejs:  `<% %>`만 잘 넣어주면 된다.
+```ejs
+<% for(var i = 1; i <= menuCnt; i++){ %>
+  <li><img src="/images/menu<%=i%>.png" /> 메뉴<%= i %></li>
+<% } %>
+```
+
+pug
+```pug
+each _, i in Array(5)
+  li = i
+```
+
+## Conditionals
+ejs:  `<% %>`를 잘 넣고 잘 닫자.
+```ejs
+<% if (description) { %>
+  <p class="description">blablabla...</p>
+<% } %>
+```
+
+
+
+## includes
+> 작성중
+
+## Inheritance
+
+## Mixins
+[[Load-SVG-using-Pug-Mixin|Pug Mixin을 사용해 SVG 불러오기]]
+
+> 작성중
 
 
 ## 참고 자료
