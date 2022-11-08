@@ -1,7 +1,7 @@
 ---
 title   : 템플릿 엔진
 date    : 2022-11-01 23:00:07 +0900
-updated : 2022-11-08 00:15:00 +0900
+updated : 2022-11-08 23:48:25 +0900
 aliases : ["템플릿 엔진"]
 tags    : ["Node.js", "How to"]
 draft : false
@@ -23,7 +23,7 @@ draft : false
 -  [[2022-11-06|사용해본 걸 복습하는 겸 프로젝트를 클론하기로 했는데 문제가 생겼다.]]
 	- 나는 단순히 ejs 문법이 내가 보기 편해서 사용해보기로 했었는데 막상 프로젝트 작업을 하고 나니, 공통적으로 사용하고싶은 HTML 구조가 필요했다. (`input` 태그 같은...)
 	- 하지만 ejs의 경우에는 "Layout" 이라는 기능을 제공해서 **정적인** HTML을 **include**할 수는 있는데
-	- 그때그때 다르게 동작하도록 동적인 HTML 구조를 추가할 수는 없었다. 이게 아쉬웠다. **pug는 [mixins](https://pugjs.org/language/mixins.html) 이라는 기능이 제공되는데 HTML 구조를 인수를 전달해서 만들 수 있다!** 
+	- 그때그때 다르게 동작하도록 동적인 HTML 구조를 추가할 수는 없었다. 이게 아쉬웠다. **pug는 [mixins](https://pugjs.org/language/mixins.html) 이라는 기능이 제공되는데 HTML 구조를 인수를 전달해서 만들 수 있다!**  [[2022-11-08|2022년 11월 08일]], mixins을 사용해보면서 pug의 매력에 완전히 빠져버렸다!
 
 ## express-generator를 이용해 앱 skeleton 생성하기
 
@@ -113,6 +113,7 @@ ejs:  `<% %>`를 잘 넣고 잘 닫자.
 ## Inheritance
 
 ## Mixins
+[[Pug-Mixins]]
 [[Load-SVG-using-Pug-Mixin|Pug Mixin을 사용해 SVG 불러오기]]
 
 > 작성중

@@ -1,7 +1,7 @@
 ---
 title   : 구조 분해 할당
 date    : 2020-02-25 21:09:48 +0900
-updated : 2022-05-24 11:55:46 +0900
+updated : 2022-11-08 23:48:03 +0900
 aliases : ["Destructuring"]
 tags: ["JavaScript"]
 ---
@@ -38,6 +38,21 @@ const [lion, tiger, human = "girl"] = ["LION", "TIGER"];
 console.log(lion);  // LION
 console.log(tiger); // TIGER
 console.log(human); // girl
+```
+
+기본값을 넣어줄 때 기억해야 할 중요한 사실은, **기본값은 값이 정의되지 않은 경우에만 할당된다는 것**이다. [참고](https://wesbos.com/destructuring-default-values)
+```js
+const { name = 'padosum' } = { name: undefined }
+console.log(name) // padosum
+
+const { name = 'padosum' } = { name: null }
+console.log(name) // null
+
+const { name = 'padosum' } = { name: false }
+console.log(name) // false
+
+const { name = 'padosum' } = { name: 0 }
+console.log(name) // 0
 ```
 
 ## 새로운 변수 이름으로 할당하기

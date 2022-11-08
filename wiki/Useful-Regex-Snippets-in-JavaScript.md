@@ -34,6 +34,17 @@ str.replace(new RegExp(`(${word})`, 'ig'), "<em>$1</em>");
 // "간장 <em>공장</em> <em>공장</em>장은 강 <em>공장</em>장이고 된장 <em>공장</em> <em>공장</em>장은 공 <em>공장</em>장이다."
 ```
 
+## 특정 문자열이 대문자로 이뤄져있나?
+```js
+const str = 'PADOSUM'
+
+if (/^[A-Z]*$/.test(str)) {
+  // 대문자
+} else {
+  // 소문자
+}
+```
+
 ## 날짜 포맷 변경하기
 [[JavaScript-날짜-포맷-변경하기|JavaScript 날짜 포맷 변경하기]]
 
