@@ -1,7 +1,7 @@
 ---
 title   : 내가 우아한테크캠프를 통해 배운 것
 date    : 2022-11-09 21:03:21 +0900
-updated : 2022-11-09 21:32:54 +0900
+updated : 2022-11-11 00:11:09 +0900
 aliases : ["내가 우아한테크캠프를 통해 배운 것"]
 tags: ["우아한테크캠프"]
 draft : false
@@ -56,4 +56,5 @@ draft : false
 
 
 
-
+## Database
+- [[MySQL-Workbench-create-script|MySQL Workbench에서 테이블 생성 및 데이터 insert script 얻기]]
