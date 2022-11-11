@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 클래스
 date    : 2021-09-21 19:34:20 +0900
-updated : 2022-10-27 22:16:12 +0900
+updated : 2022-11-12 00:23:37 +0900
 aliases : ["JavaScript 클래스"]
 tags    : ["JavaScript"]
 ---
@@ -349,6 +349,27 @@ class Dog extends Animal {
 
 let d = new Dog('hank');
 d.bark(); // 🐶🐶🐶
+```
+
+그리고 상속받은 클래스에서 만든 객체는 부모 클래스에 정의된 메서드에도 접근할 수 있다.
+```js
+class Animal {
+  constructor(name) {
+    this.name = name
+  }
+  sayHello() {
+	console.log(`${this.name}, 안녕!`)
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log(`🐶🐶🐶`)
+  }
+}
+
+const river = new Dog('river')
+river.sayHello() // river, 안녕!
 ```
 
 ### `super`
