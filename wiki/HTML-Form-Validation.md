@@ -1,8 +1,8 @@
 ---
-title   : 유효성 검사에 대하여 
+title   : 유효성 검사
 date    : 2022-11-14 17:51:40 +0900
-updated : 2022-11-14 19:31:42 +0900
-aliases : ["유효성 검사에 대하여"]
+updated : 2022-11-15 00:03:25 +0900
+aliases : ["유효성 검사"]
 tags : ["form", "validation", "accessibility"]
 draft : false
 ---
@@ -42,7 +42,7 @@ submit 버튼을 클릭했을 때 값을 확인하기도 하고, form 내부의 
 타입이 `text`, `tel`, `email`, `url`, `password`, `search`인 경우에 사용할 수 있다.  
 
 `required` 어트리뷰트를 설정했을 때 아무런 값을 입력하지 않으면 Chrome에서 다음과 같은 메시지가 표시된다.
-![[Pasted image 20221114175303.png]]
+![[form-validation-message-1.png]]
 `pattern` 어트리뷰트를 다음 코드처럼 영어만 입력되도록 지정하면,
 ```html
 <form action="">
@@ -53,7 +53,7 @@ submit 버튼을 클릭했을 때 값을 확인하기도 하고, form 내부의 
 ```
 
 처음 submit 버튼을 클릭한 후로 다음과 같은 메시지가 표시된다.
-![[Pasted image 20221114175456.png]]
+![[form-validation-message-2.png]]
 
 그리고 `title` 어트리뷰트에 pattern에 대한 상세 설명을 추가할 수 있다. 이건 프로그래머스 과제관에 나와있어서 궁금했는데 검색해보니 찾을 수 있었다.
 ```html
@@ -65,13 +65,13 @@ submit 버튼을 클릭했을 때 값을 확인하기도 하고, form 내부의 
 />
 ```
 
-![[Pasted image 20221114175725.png]]
+![[form-validation-message-3.png]]
 
 아주 편리해보였는데 Safari만 보더라도 다음과 같이 `title`에 적은 내용을 표시해주지 않고 있었다.
-![[Pasted image 20221114180429.png]]
+![[form-validation-message-4.png]]
 
 파이어폭스도 글자가 너무 작았다.
-![[Pasted image 20221114180454.png]]
+![[form-validation-message-5.png]]
 
 [MDN 문서](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern#accessibility_concerns)에서 **많은 사용자 에이전트가 접근 가능한 방식으로 속성을 노출하지 않기 때문에** 텍스트 콘텐츠의 시각적 표시를 위해 `title` 속성에 의존하는 것은 일반적으로 권장되지 않는다고 적혀있었는데 여러 브라우저로 확인해보니 이 말이 와닿았다. 각자 다르고, 심지어 나오지 않는 브라우저가 있다면 이 속성만으로 패턴을 설명하면 안되겠다. 다른 위치에도 꼭 표시해줘야 함을 알 수 있었다.
 
