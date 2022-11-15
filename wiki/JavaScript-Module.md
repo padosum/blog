@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 모듈화 
 date    : 2021-04-23 19:31:22 +0900
-updated : 2021-06-23 10:33:38 +0900
+updated : 2022-11-15 00:26:04 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -14,6 +14,19 @@ var someModule = require('someModule');
 
 exports.doSomethingElse = function() {
     return someModule.doSomething() + "bar"; 
+}
+```
+
+```js
+const { hello, bye } = require('./hello')
+
+// hello.js
+const hello = 'hello';
+const bye = 'bye';
+
+module.exports = {
+  hello,
+  bye
 }
 ```
 - Node.js의 모듈 패턴은 CommonJS 방식을 따른다.  
