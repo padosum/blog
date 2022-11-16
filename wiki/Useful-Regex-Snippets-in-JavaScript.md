@@ -1,7 +1,7 @@
 ---
 title   : 유용한 자바스크립트 정규표현식 코드 조각모음
 date    : 2022-05-19 23:41:36 +0900
-updated : 2022-11-08 00:14:40 +0900
+updated : 2022-11-16 23:51:33 +0900
 aliases : ["유용한 자바스크립트 정규표현식 코드 조각모음"]
 tags    : ["JavaScript", "How to"]
 ---
@@ -23,6 +23,16 @@ console.log(str); // "sonic-free-games"
 ## 알파벳이 아닌 경우 공백으로 바꾸기
 ```javascript
 string.replace(/[^A-Za-z]/g, ' ')
+```
+
+## 문자열에서 숫자만 가져오기
+```js
+const onlyNumber = string.replace(/[^0-9]+/g, '')
+```
+
+`0-9`는 `\d`로 대체할 수 있다.
+```js
+const onlyNumber = string.replace(/[^\d]+/g, '')
 ```
 
 ## 특정 문자열을 태그로 감싸기
