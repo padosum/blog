@@ -99,3 +99,7 @@ input::placeholder {
 code {
   font-family: 'NeoDunggeunmo Code';
 }
+
+strong {
+  color: #0366d6;
+}
