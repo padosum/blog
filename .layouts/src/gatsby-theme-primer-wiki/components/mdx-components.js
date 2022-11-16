@@ -18,7 +18,7 @@ import {
 import HorizontalRule from 'gatsby-theme-primer-wiki/src/components/horizontal-rule'
 import Image from 'gatsby-theme-primer-wiki/src/components/image'
 import ImageContainer from 'gatsby-theme-primer-wiki/src/components/image-container'
-import InlineCode from 'gatsby-theme-primer-wiki/src/components/inline-code'
+import InlineCode from './inline-code'
 import List from 'gatsby-theme-primer-wiki/src/components/list'
 import Note from 'gatsby-theme-primer-wiki/src/components/note'
 import Paragraph from 'gatsby-theme-primer-wiki/src/components/paragraph'
