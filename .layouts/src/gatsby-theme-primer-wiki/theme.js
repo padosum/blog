@@ -33,6 +33,7 @@ const theme = {
         },
         text: {
           window: '#1b1f23',
+          primary: '#24292e',
         },
       },
     },
@@ -47,10 +48,11 @@ const theme = {
         },
         text: {
           window: '#1b1f23',
+          primary: '#c9d1d9',
         },
       },
     },
   },
-};
+}
 
-export default theme;
+export default theme
