@@ -1,6 +1,6 @@
 import Blockquote from 'gatsby-theme-primer-wiki/src/components/blockquote'
 import Caption from 'gatsby-theme-primer-wiki/src/components/caption'
-import Code from 'gatsby-theme-primer-wiki/src/components/code'
+import Code from './code'
 import DescriptionList from 'gatsby-theme-primer-wiki/src/components/description-list'
 import {
   Do,
