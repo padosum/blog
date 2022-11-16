@@ -1,4 +1,8 @@
 const theme = {
+  fonts: {
+    normal: 'NeoDunggeunmo',
+    mono: 'NeoDunggeunmo Code',
+  },
   colorSchemes: {
     light: {
       colors: {
@@ -47,6 +51,6 @@ const theme = {
       },
     },
   },
-}
+};
 
-export default theme
+export default theme;
