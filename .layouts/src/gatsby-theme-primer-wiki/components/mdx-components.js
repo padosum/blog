@@ -19,7 +19,7 @@ import HorizontalRule from 'gatsby-theme-primer-wiki/src/components/horizontal-r
 import Image from 'gatsby-theme-primer-wiki/src/components/image'
 import ImageContainer from 'gatsby-theme-primer-wiki/src/components/image-container'
 import InlineCode from './inline-code'
-import List from 'gatsby-theme-primer-wiki/src/components/list'
+import List from './list'
 import Note from 'gatsby-theme-primer-wiki/src/components/note'
 import Paragraph from 'gatsby-theme-primer-wiki/src/components/paragraph'
 import Table from 'gatsby-theme-primer-wiki/src/components/table'
