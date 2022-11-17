@@ -58,3 +58,4 @@ draft : false
 
 ## Database
 - [[MySQL-Workbench-create-script|MySQL Workbench에서 테이블 생성 및 데이터 insert script 얻기]]
+- [[Node-MySQL2|Node MySQL2]]

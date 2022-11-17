@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 모듈화 
 date    : 2021-04-23 19:31:22 +0900
-updated : 2022-11-15 00:26:04 +0900
+updated : 2022-11-17 23:56:44 +0900
 aliases : 
 tags: ["JavaScript"]
 ---
@@ -31,6 +31,20 @@ module.exports = {
 ```
 - Node.js의 모듈 패턴은 CommonJS 방식을 따른다.  
 - 백엔드, 서버사이드를 위한 방식 
+
+
+### Node.js에서 
+`require` 함수를 호출할 때 `index.js` 파일은 이름을 생략할 수 있다. 
+생략 시 해당 디렉토리의 `index.js` 파일을 로드한다.
+
+`someModule/index.js` 파일이 있을 때
+```js
+const someModule = require('./someModule')
+```
+
+
+모듈 확장자는 생략이 가능하다!
+확장자가 없으면 Node.js는 `.js`, `.json`, `.node` 확장자를 추가해 필요한 파일을 로드하려고 시도한다고 한다.[^1]
 
 
 ## AMD 
@@ -106,3 +120,5 @@ say.bye('lion')
 - [https://okky.kr/article/400839](https://okky.kr/article/400839)
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)
 - [https://ko.javascript.info/import-export](https://ko.javascript.info/import-export)
+
+[^1]: https://nodejs.org/api/modules.html#file-modules
