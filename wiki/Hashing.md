@@ -1,7 +1,7 @@
 ---
 title   : 해싱(Hashing)
 date    : 2021-04-23 21:19:23 +0900
-updated : 2021-04-23 21:19:35 +0900
+updated : 2022-11-18 23:50:15 +0900
 aliases : ["해싱"]
 tags: ["Computer Science"]
 ---
@@ -33,3 +33,13 @@ tags: ["Computer Science"]
 
 ## 안전성이 검증된 해싱 라이브러리
 -  bcrypt는 Digest 자체에 소금값과 해시값 및 반복 횟수를 같이 보관하기 때문에, 비밀번호 해싱 을 적용하는데 있어서 DB 설계를 복잡하게 할 필요가 없다.
+
+
+## 해싱 알고리즘
+
+[Password Hashing: Scrypt, Bcrypt and ARGON2]
+- 이 글의 저자는 argon2를 사용할 것을 추천하고 있다.
+- 글의 내용을 다 이해하진 못했지만 공격자 입장에서 해싱된 암호를 풀기 위해 GPU, FPGA, ASIC로 연산을 하는 듯 하다.
+	- Scrypt는 Bcrypt에 비해 memory hardness와 관련해 디자인이 더 좋다고 한다.
+	- 계산할 때 필요한 메모리가 적으면 GPU와 ASIC로 병렬 계산을 해서 쉽게 암호를 풀 수 있기 때문에 메모리를 많이 쓰게 만드는 것
+	- argon2는 PHC(Password Hashing Competition)에서 우승했다고 한다.
