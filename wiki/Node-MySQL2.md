@@ -1,13 +1,13 @@
 ---
 title   : Node-MySQL2
 date    : 2022-11-17 23:51:18 +0900
-updated : 2022-11-17 23:56:30 +0900
+updated : 2022-11-19 15:28:08 +0900
 aliases : ["Node MySQL2"]
 tags: ["Node.js", "MySQL"]
 draft : false
 ---
 
-### connection pools
+## connection pools
 - Connection은 DB에 접속하고, query 문을 실행하고, 결과를 받고, 연결을 종료하는 흐름이다. 
 	- 연결을 종료하지 않으면 리소스가 계속 낭비된다. 
 - 많은 사람이 Connection을 하면 어떻게 될까? 매번 Connection을 만들고, 다쓰면 종료하고, 계속 반복될 것이며, 다른 사람의 커넥션 종료까지 또 기다리게 된다... 서버에  큰 부하를 줄 것이다.
