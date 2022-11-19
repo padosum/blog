@@ -8,7 +8,7 @@ tags: ["Computer Science"]
 
 ## 해싱의 필요성
 - 개인정보보호법
-	- 시스템이 인터넷에서 격리된 네트워크에 위치하는 경우나, 예외적인 개인정보 항목을 다루는 경우를 제외하고 국가에서 권고하는 **상용 암호화 알고리즘을 이용해 개인정보를 암호화하도록** 법적으로 요구하고 있따.  
+	- 시스템이 인터넷에서 격리된 네트워크에 위치하는 경우나, 예외적인 개인정보 항목을 다루는 경우를 제외하고 국가에서 권고하는 **상용 암호화 알고리즘을 이용해 개인정보를 암호화하도록** 법적으로 요구하고 있다.  
 - 외부 해킹 뿐 아니라, 내부 DB 관리자의 개인정보 악용을 방지하기 위해 암호화가 필요하다. 
 - DB 저장시
 	- 개인정보를 해싱하여 복원할 수 없도록 함 
@@ -37,7 +37,7 @@ tags: ["Computer Science"]
 
 ## 해싱 알고리즘
 
-[Password Hashing: Scrypt, Bcrypt and ARGON2]
+[Password Hashing: Scrypt, Bcrypt and ARGON2](https://medium.com/analytics-vidhya/password-hashing-pbkdf2-scrypt-bcrypt-and-argon2-e25aaf41598e)
 - 이 글의 저자는 argon2를 사용할 것을 추천하고 있다.
 - 글의 내용을 다 이해하진 못했지만 공격자 입장에서 해싱된 암호를 풀기 위해 GPU, FPGA, ASIC로 연산을 하는 듯 하다.
 	- Scrypt는 Bcrypt에 비해 memory hardness와 관련해 디자인이 더 좋다고 한다.
