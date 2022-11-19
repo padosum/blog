@@ -27,13 +27,15 @@ const theme = {
         bg: {
           primary: '#008082',
           window: '#bfb8bf',
-          post: '#fff8ff',
+          post: 'hsla(0,0%,100%,.8)',
           tocTitle: '#808080',
           title: '#00007f',
         },
         text: {
           window: '#1b1f23',
           primary: '#24292e',
+          neutralMuted: 'rgba(175,184,193,0.2)',
+          h1: '#08367F',
         },
       },
     },
@@ -42,17 +44,19 @@ const theme = {
         bg: {
           primary: '#008082',
           window: '#bfb8bf',
-          post: '#0d1117',
+          post: '#200840',
           tocTitle: '#808080',
           title: '#00007f',
         },
         text: {
           window: '#1b1f23',
-          primary: '#c9d1d9',
+          primary: '#ffffff',
+          neutralMuted: 'rgba(110,118,129,0.4)',
+          h1: 'hsl(78, 62%, 47%)',
         },
       },
     },
   },
-}
+};
 
-export default theme
+export default theme;
