@@ -37,7 +37,7 @@ function TableOfContents({ items, depth }) {
                 py={1}
                 href={item.url}
                 fontSize={[2, null, 1]}
-                color="auto.gray.6"
+                color="text.primary"
                 bg="bg.post"
                 sx={{
                   fontWeight: item.url === `#${activeId}` ? 'bold' : 'medium',
@@ -51,7 +51,7 @@ function TableOfContents({ items, depth }) {
                 ) : (
                   <img src={'/folder.ico'} bg="bg.primary" alt="folder"></img>
                 )}
-                {item.title}
+                {` ${item.title}`}
               </Link>
             </>
           ) : null}

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Box, Text } from '@primer/components'
-import WindowButton from './window-button'
+import React from 'react';
+import { Box, Text } from '@primer/components';
+import WindowButton from './window-button';
 
 const WindowTitle = ({ title }) => {
   return (
@@ -13,13 +13,13 @@ const WindowTitle = ({ title }) => {
     >
       <Box display="flex" alignItems="center">
         <img src={'/file.png'}></img>
-        <Text fontWeight="bold" color="#bfb8bf" fontSize={14}>
+        <Text fontWeight="bold" color="#bfb8bf" fontSize={16}>
           {title}
         </Text>
       </Box>
       <WindowButton></WindowButton>
     </Box>
-  )
-}
+  );
+};
 
-export default WindowTitle
+export default WindowTitle;

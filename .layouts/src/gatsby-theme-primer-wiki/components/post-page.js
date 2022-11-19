@@ -1,23 +1,23 @@
-import React from 'react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import Layout from './layout';
-import ReferencesBlock from 'gatsby-theme-primer-wiki/src/components/references-block';
-import { MDXProvider } from '@mdx-js/react';
-import components from 'gatsby-theme-primer-wiki/src/components/mdx-components';
-import SEO from 'gatsby-theme-primer-wiki/src/components/seo';
-import { Box, Heading, Text, useTheme } from '@primer/components';
-import { HEADER_HEIGHT } from 'gatsby-theme-primer-wiki/src/components/header';
-import WindowFooter from './window-footer';
-import TableOfContents from './table-of-contents';
-import TagsBlock from 'gatsby-theme-primer-wiki/src/components/tags-block';
-import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-items';
-import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config';
-import { Giscus } from '@giscus/react';
-import LastUpdated from './last-updated';
-import WindowTitle from './window-title';
+import React from 'react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Layout from './layout'
+import ReferencesBlock from 'gatsby-theme-primer-wiki/src/components/references-block'
+import { MDXProvider } from '@mdx-js/react'
+import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
+import SEO from 'gatsby-theme-primer-wiki/src/components/seo'
+import { Box, Heading, Text, useTheme } from '@primer/components'
+import { HEADER_HEIGHT } from 'gatsby-theme-primer-wiki/src/components/header'
+import WindowFooter from './window-footer'
+import TableOfContents from './table-of-contents'
+import TagsBlock from 'gatsby-theme-primer-wiki/src/components/tags-block'
+import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-items'
+import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
+import { Giscus } from '@giscus/react'
+import LastUpdated from './last-updated'
+import WindowTitle from './window-title'
 
 function TagsList({ type = 'normal', title, url, items, depth = 0 }) {
-  items = items || [];
+  items = items || []
   return (
     <li>
       <components.a href={url}>
@@ -31,20 +31,20 @@ function TagsList({ type = 'normal', title, url, items, depth = 0 }) {
         </components.ul>
       ) : null}
     </li>
-  );
+  )
 }
 const Post = ({ data, pageContext, location }) => {
-  const post = data.mdx;
+  const post = data.mdx
   const tagsOutbound = data.tagsOutbound || {
     nodes: [],
-  };
+  }
 
-  const primerWikiThemeConfig = useThemeConfig();
+  const primerWikiThemeConfig = useThemeConfig()
   const sidebarItems = getSidebarItems(
     pageContext.sidebarItems,
     pageContext.tagsGroups
-  );
-  const latestPosts = pageContext.latestPosts;
+  )
+  const latestPosts = pageContext.latestPosts
   const {
     tableOfContents,
     frontmatter,
@@ -54,7 +54,7 @@ const Post = ({ data, pageContext, location }) => {
     inboundReferences,
     outboundReferences,
     excerpt,
-  } = post;
+  } = post
 
   const {
     title,
@@ -65,7 +65,7 @@ const Post = ({ data, pageContext, location }) => {
     url,
     editUrl,
     shouldShowTitle,
-  } = fields;
+  } = fields
 
   const {
     date,
@@ -75,13 +75,13 @@ const Post = ({ data, pageContext, location }) => {
     tags,
     language,
     seoTitle,
-  } = frontmatter;
-  const category = tags && tags[0];
+  } = frontmatter
+  const category = tags && tags[0]
   const datePublished = date
     ? new Date(date.split(' ')[0])
     : gitCreatedAt
     ? new Date(gitCreatedAt)
-    : null;
+    : null
 
   const postSeoData = {
     title,
@@ -103,12 +103,12 @@ const Post = ({ data, pageContext, location }) => {
     slug,
     tags: tags || [],
     language,
-  };
+  }
   const AnchorTag = props => (
     <components.a {...props} references={outboundReferences} />
-  );
+  )
 
-  const { resolvedColorMode } = useTheme();
+  const { resolvedColorMode } = useTheme()
   return (
     <Layout pageContext={pageContext} location={location}>
       <SEO post={postSeoData}></SEO>
@@ -200,7 +200,7 @@ const Post = ({ data, pageContext, location }) => {
             {shouldShowTitle && (
               <Box>
                 <Box display="flex" sx={{ alignItems: 'center' }}>
-                  <Heading as="h1" mr={2}>
+                  <Heading as="h1" mr={2} color="text.h1">
                     {title}
                   </Heading>
                 </Box>
@@ -269,10 +269,10 @@ const Post = ({ data, pageContext, location }) => {
                             items={child.items}
                           ></TagsList>
                         </components.ul>
-                      );
+                      )
                     })}
                   </Box>
-                );
+                )
               })}
             <ReferencesBlock references={inboundReferences} />
             {primerWikiThemeConfig.shouldSupportTags && (
@@ -295,6 +295,6 @@ const Post = ({ data, pageContext, location }) => {
         </Box>
       </Box>
     </Layout>
-  );
-};
-export default Post;
+  )
+}
+export default Post

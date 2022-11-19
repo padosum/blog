@@ -7,16 +7,9 @@ import {
   DoDontContainer,
   Dont,
 } from 'gatsby-theme-primer-wiki/src/components/do-dont'
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-} from 'gatsby-theme-primer-wiki/src/components/heading'
+import { H1, H2, H3, H4, H5, H6 } from './heading'
 import HorizontalRule from 'gatsby-theme-primer-wiki/src/components/horizontal-rule'
-import Image from 'gatsby-theme-primer-wiki/src/components/image'
+import Image from './image'
 import ImageContainer from 'gatsby-theme-primer-wiki/src/components/image-container'
 import InlineCode from './inline-code'
 import List from './list'
