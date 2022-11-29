@@ -1,7 +1,7 @@
 ---
 title   : Node-MySQL2
 date    : 2022-11-17 23:51:18 +0900
-updated : 2022-11-19 15:28:08 +0900
+updated : 2022-11-29 22:19:34 +0900
 aliases : ["Node MySQL2"]
 tags: ["Node.js", "MySQL"]
 draft : false
@@ -16,25 +16,40 @@ draft : false
 
 다음과 같이 작성하면 `pool.getConnection()` -> `connection.query()` -> `connection.release()` 의 흐름으로 실행된다고 한다. [참고](https://github.com/mysqljs/mysql#pooling-connections)
 ```js
-var mysql = require('mysql');
-var pool  = mysql.createPool({
-  connectionLimit : 10,
-  host            : 'example.org',
-  user            : 'bob',
-  password        : 'secret',
-  database        : 'my_db'
+const mysql = require('mysql');
+// pool에 모든 연결을 미리 생성하는 것은 아니고, 연결 제한(connectionLimit)에 도달할 때까지 요청시 생성된다.
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  database: 'test',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 pool.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
   if (error) throw error;
   console.log('The solution is: ', results[0].solution);
+  // query가 resolve 되면 connection은 release된다.
 });
 ```
 
 하지만 저번에 프로젝트를 진행할 때 이걸 제대로 이해하지 못한 채로 [코드를 엉망으로](https://github.com/padosum/web-fleamarket-9/blob/af2ae074f149fabcfe2622f03e688ce60fd3fbfa/server/src/db/db.module.ts#L11-L24) 작성했었다.  
 
-모듈을 만들어놓고 거기서 connection을 만들었다. 그래서 해당 connection이 종료되었을 때도 모듈을 사용하는 다른 곳에서 그 사실을 모르기에 계속 쿼리 요청을 하게 된다.  
+모듈을 만들어놓고 거기서 connection을 pool에서 가져왔다. 당 connection을 열어둔 채로 대기하기 때문에 대기 시간이 지나버리면 자동으로 연결이 끊기게 된다. 하지만 모듈을 사용하는 다른 곳에서 그 사실을 모르기에 계속 쿼리 요청을 하게 된다.  
 `pool`을 반환해서 사용하는 곳에서 `getConnection()`을 해야 한다.  
+
+```js
+// pool에서 연결을 가져오고
+pool.getConnection(function(err, conn) {
+   conn.query(/* ... */);
+   // connection이 완료되었을 때 종료해주기
+   pool.releaseConnection(conn);
+})
+```
+
+`pool.query`를 사용하는 것이 `pool.getConnection()` -> `connection.query()` -> `connection.release()`를 모두 사용하는 것이지만 직접 수동으로 `connection`을 가져오는 경우엔 `release`를 해줘야 한다. `release`를 해주지 않으면! 아무도 사용할 수 없는 많은 대기상태의 연결이 생겨버린다. 꼭 종료해줘야 한다. [^1]
+
 
 코드를 다시 보는 것은 상당히 부끄러운 마음이 들었다. 넘 괴로웠지만 꾹 참고 미래의 나를 위해 봤다.  
 **코드에서도 내가 참 마음이 급했다는게 느껴졌다.** 하지만 이제라도 알게되어서 다행이다. 좋다.
@@ -63,7 +78,7 @@ Mysql2를 사용하면 **prepared statements** 를 얻을 수 있다고 한다. 
  > 
  > 주요 차이점은 `query`를 사용하면 매개변수가 드라이버측에 보간되는 반면에 `execute`를 사용하면 서버에 보간된다는 것
 
-보간이란 단어는 예전에 얼핏 들어는 본 것 같은데 기억이 나지 않았다. 프로그래밍에서는 '중간에 무언가 끼워넣는다'는 의미라고 한다.[^1]
+보간이란 단어는 예전에 얼핏 들어는 본 것 같은데 기억이 나지 않았다. 프로그래밍에서는 '중간에 무언가 끼워넣는다'는 의미라고 한다.[^2]
 
 
 그래서 다음과 같이 예시를 보여줬는데.. 
@@ -95,5 +110,5 @@ execute:
 
 
 
-
-[^1]: https://www.inflearn.com/questions/536047
+[^1]: https://stackoverflow.com/questions/57121227/why-do-we-need-to-release-connection-when-using-connection-pool-in-mysql
+[^2]: https://www.inflearn.com/questions/536047
