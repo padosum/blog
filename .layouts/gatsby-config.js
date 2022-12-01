@@ -54,13 +54,42 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `  {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(filter: {path: {regex: "/^(?!\\/wiki\\/[0-9]{4}).*/"}}) {
+            nodes {
+              path
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage }) => {
+          return allSitePage.nodes.map(node => {
+            return {
+              url: site.siteMetadata.siteUrl + node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            };
+          });
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: siteMetadata.siteUrl,
-        sitemap: `${siteMetadata.siteUrl}/sitemap-pages.xml`,
-        policy: [{ userAgent: "*", allow: "/" }],
+        sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: ["/wiki/2021/*", "/wiki/2022/*"],
+          },
+        ],
       },
     },
     {
