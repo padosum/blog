@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-11-09 21:33:50 +0900
+updated : 2022-12-03 23:19:31 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -92,7 +92,8 @@ updated : 2022-11-09 21:33:50 +0900
 	* [[How-Does-Git-Work]]
 	* [[Clone-Github-Wiki]]
 	* [[Git-switch|Git switch 명령어]]
-  * [[Git-pre-commit-Hooks]]
+	* [[Git-pre-commit-Hooks]]
+	* [[Creating-new-pre-commit-hooks]]
 * Development
   * [[CI-CD|CI/CD]] 
   * [[SDK]]
