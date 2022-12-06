@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-12-06 19:51:25 +0900
+updated : 2022-12-06 21:32:30 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -151,6 +151,7 @@ updated : 2022-12-06 19:51:25 +0900
 	* [[Servlet-Database]] 
 * Tools
 	* [[The-Shell]]
+		* [[How-to-Create-Shell-Script|쉘 스크립트 작성하기]]		
 	* [[커맨드 라인 명령어 및 사용법 모음]]
 	* [[Vim 사용법 모음]]
 	* [[Tauch-t]]
