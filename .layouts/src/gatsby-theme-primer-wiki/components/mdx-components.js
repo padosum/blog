@@ -16,7 +16,7 @@ import List from './list'
 import Note from 'gatsby-theme-primer-wiki/src/components/note'
 import Paragraph from 'gatsby-theme-primer-wiki/src/components/paragraph'
 import Table from 'gatsby-theme-primer-wiki/src/components/table'
-import AnchorTag from 'gatsby-theme-primer-wiki/src/components/anchor-tag'
+import AnchorTag from './anchor-tag'
 import Figcaption from 'gatsby-theme-primer-wiki/src/components/figcaption'
 import Kbd from './kbd'
 

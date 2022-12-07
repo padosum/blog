@@ -98,8 +98,14 @@ const Post = ({ data, pageContext, location }) => {
     tags: tags || [],
     language,
   }
+
+  const postSlug = fields.slug
   const AnchorTag = props => (
-    <components.a {...props} references={outboundReferences} />
+    <components.a
+      {...props}
+      references={outboundReferences}
+      postSlug={postSlug}
+    />
   )
 
   const { resolvedColorMode } = useTheme()

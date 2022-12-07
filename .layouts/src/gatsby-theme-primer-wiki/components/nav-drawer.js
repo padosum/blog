@@ -7,7 +7,7 @@ import useSiteMetadata from 'gatsby-theme-primer-wiki/src/use-site'
 import DarkButton from './dark-button'
 import Details from 'gatsby-theme-primer-wiki/src/components/details'
 import Drawer from 'gatsby-theme-primer-wiki/src/components/drawer'
-import NavItems from 'gatsby-theme-primer-wiki/src/components/nav-items'
+import NavItems from './nav-items'
 import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
 import { useTheme } from '@primer/components'
 import { SunIcon, MoonIcon, RocketIcon } from '@primer/octicons-react'
@@ -156,7 +156,7 @@ function PrimerNavItems({ items }) {
                     </Box>
                   </summary>
                   <Box display="flex" flexDirection="column" mt={2}>
-                    {item.items.map((child) => (
+                    {item.items.map(child => (
                       <components.a
                         key={child.title}
                         href={child.url}
