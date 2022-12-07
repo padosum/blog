@@ -7,6 +7,7 @@ import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
 import SEO from 'gatsby-theme-primer-wiki/src/components/seo'
 import { Box, Heading, Text, useTheme } from '@primer/components'
 import { HEADER_HEIGHT } from 'gatsby-theme-primer-wiki/src/components/header'
+import Blockquote from 'gatsby-theme-primer-wiki/src/components/blockquote'
 import WindowFooter from './window-footer'
 import TableOfContents from './table-of-contents'
 import TagsBlock from 'gatsby-theme-primer-wiki/src/components/tags-block'
@@ -206,6 +207,7 @@ const Post = ({ data, pageContext, location }) => {
                 </Box>
               </Box>
             )}
+            {description && <Blockquote>{description}</Blockquote>}
 
             {tableOfContents.items ? (
               <Box
