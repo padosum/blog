@@ -38,11 +38,11 @@ const TagPosts = ({
                         fontSize={1}
                       >
                         &nbsp; - {themeConfig.lastUpdatedText}&nbsp;
-                        {post.fields.lastUpdated}
+                        {post.frontmatter.updated.split(' ')[0]}
                       </Text>
                     )}
                   {themeConfig.shouldShowLastUpdated &&
-                    post.fields.lastUpdated && (
+                    post.frontmatter.updated && (
                       <Box
                         display={
                           forceMobile ? 'block' : ['block', null, null, 'none']
@@ -53,7 +53,7 @@ const TagPosts = ({
                         mt={1}
                       >
                         {themeConfig.lastUpdatedText}&nbsp;
-                        {post.fields.lastUpdated}
+                        {post.frontmatter.updated.split(' ')[0]}
                       </Box>
                     )}
                 </li>

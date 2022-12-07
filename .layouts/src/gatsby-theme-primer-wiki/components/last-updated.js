@@ -5,14 +5,11 @@ import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
 const CreatedText = ({ created }) => {
   return (
     <Text fontSize={1} color="text.window" mt={1} mr={2}>
-      {'문서 생성 시각 '} <u>{created.replace(/\+.*$/, '')}</u>
+      {'문서 생성'} <u>{created.replace(/\+.*$/, '')}</u>
     </Text>
   )
 }
 
-const Spacing = () => {
-  return <span style={{ margin: '0 6px' }}> ∙ </span>
-}
 function LastUpdated({ created, lastUpdated }) {
   const primerWikiThemeConfig = useThemeConfig()
   const { lastUpdatedText, shouldShowLastUpdated } = primerWikiThemeConfig

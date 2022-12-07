@@ -31,7 +31,7 @@ module.exports = {
         shouldSupportLatest: true,
         defaultIndexLatestPostCount: 20,
         sidebarComponents: ["latest", "tag"],
-        lastUpdatedText: "최근 수정 시각",
+        lastUpdatedText: "최근 수정",
         nav: [
           {
             title: "Github",

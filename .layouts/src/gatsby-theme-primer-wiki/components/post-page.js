@@ -44,7 +44,6 @@ const Post = ({ data, pageContext, location }) => {
     pageContext.sidebarItems,
     pageContext.tagsGroups
   )
-  const latestPosts = pageContext.latestPosts
   const {
     tableOfContents,
     frontmatter,
@@ -56,16 +55,7 @@ const Post = ({ data, pageContext, location }) => {
     excerpt,
   } = post
 
-  const {
-    title,
-    lastUpdatedAt,
-    lastUpdated,
-    gitCreatedAt,
-    slug,
-    url,
-    editUrl,
-    shouldShowTitle,
-  } = fields
+  const { title, gitCreatedAt, slug, url, editUrl, shouldShowTitle } = fields
 
   const {
     date,
@@ -75,7 +65,11 @@ const Post = ({ data, pageContext, location }) => {
     tags,
     language,
     seoTitle,
+    updated,
   } = frontmatter
+
+  const lastUpdatedTime = updated?.split('+')[0].trim() || ''
+
   const category = tags && tags[0]
   const datePublished = date
     ? new Date(date.split(' ')[0])
@@ -93,8 +87,8 @@ const Post = ({ data, pageContext, location }) => {
     seoTitle,
     dateModified: dateModified
       ? new Date(dateModified)
-      : lastUpdatedAt
-      ? new Date(lastUpdatedAt)
+      : lastUpdatedTime
+      ? new Date(lastUpdatedTime)
       : datePublished,
     category,
     imageUrl: frontmatter.image ? frontmatter.image.publicURL : null,
@@ -185,7 +179,7 @@ const Post = ({ data, pageContext, location }) => {
           >
             <LastUpdated
               created={frontmatter.date}
-              lastUpdated={lastUpdatedAt}
+              lastUpdated={lastUpdatedTime}
             ></LastUpdated>
           </Box>
 
@@ -239,19 +233,6 @@ const Post = ({ data, pageContext, location }) => {
             <MDXProvider components={{ a: AnchorTag }}>
               <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
-            {
-              // slug === "/" &&
-              //   primerWikiThemeConfig.shouldShowLatestOnIndex &&
-              //   latestPosts.length > 0 && (
-              //     <Box>
-              //       <components.h2>Recently Updated</components.h2>
-              //       <TagPosts
-              //         nodes={latestPosts}
-              //         shouldShowInstantView={false}
-              //       ></TagPosts>
-              //     </Box>
-              //   )
-            }
             {slug === '/' &&
               primerWikiThemeConfig.shouldShowSidebarListOnIndex &&
               sidebarItems.length > 0 &&

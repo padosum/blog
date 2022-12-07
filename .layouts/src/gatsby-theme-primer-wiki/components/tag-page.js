@@ -1,10 +1,9 @@
 import React from 'react'
 import Layout from './layout'
 import SEO from 'gatsby-theme-primer-wiki/src/components/seo'
-import { Box, Text } from '@primer/components'
+import { Box } from '@primer/components'
 import urlJoin from 'url-join'
 import TagPosts from 'gatsby-theme-primer-wiki/src/components/tag-posts'
-import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
 import WindowFooter from './window-footer'
 import WindowTitle from './window-title'
 
@@ -14,9 +13,10 @@ const Tag = ({ data, pageContext, location }) => {
   const fullPath = urlJoin(pathPrefix || '/', slug)
   const siteUrl = data.site.siteMetadata.siteUrl
   const fullUrl = urlJoin(siteUrl, fullPath)
+
   const posts = data.allMdx.nodes.sort((a, b) => {
-    const aDate = new Date(a.fields.lastUpdatedAt || 0).getTime()
-    const bDate = new Date(b.fields.lastUpdatedAt || 0).getTime()
+    const aDate = new Date(a.frontmatter.updated.split(' ')[0] || 0).getTime()
+    const bDate = new Date(b.frontmatter.updated.split(' ')[0] || 0).getTime()
     return bDate - aDate
   })
   let firstPublistedAt = null
