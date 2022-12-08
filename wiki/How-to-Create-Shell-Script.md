@@ -3,7 +3,7 @@ title   : 쉘 스크립트 작성하기
 date    : 2022-12-06 21:34:33 +0900
 updated : 2022-12-06 23:04:27 +0900
 aliases : ["쉘 스크립트 작성하기"] 
-tags: ["Shell", "How-to"] 
+tags: ["Shell", "How to"] 
 draft : false
 description: week number를 출력하는 프로그램 만들기
 ---
