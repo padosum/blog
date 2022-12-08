@@ -43,12 +43,9 @@ const AnchorTag = ({
     }
     const fields = ref.fields || {}
     const frontmatter = ref.frontmatter || {}
-    console.log({ title })
-    console.log({ postSlug: restProps.postSlug })
     const dateLog = /^\/wiki\/\d{4}\/\d{2}\/\d{4}-\d{2}\//.test(
       restProps.postSlug
     )
-    console.log({ dateLog })
     const shouldShowTitle =
       fields.shouldShowTitle !== undefined ? fields.shouldShowTitle : false
     const documentTitle = fields.title

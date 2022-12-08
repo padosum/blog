@@ -24,13 +24,17 @@ const TagPosts = ({
                 (!post.frontmatter || post.frontmatter.draft !== true)
             )
             .map(post => {
+              const updated = post.frontmatter.updated
+                ? post.frontmatter.updated.split(' ')[0]
+                : post.fields.lastUpdated
+
               return (
                 <li key={post.fields.slug}>
                   <AnchorTag href={post.fields.slug}>
                     {post.fields.title}
                   </AnchorTag>
                   {themeConfig.shouldShowLastUpdated &&
-                    post.fields.lastUpdated &&
+                    updated &&
                     !forceMobile && (
                       <Text
                         display={['none', null, null, 'inline-block']}
@@ -38,24 +42,23 @@ const TagPosts = ({
                         fontSize={1}
                       >
                         &nbsp; - {themeConfig.lastUpdatedText}&nbsp;
-                        {post.frontmatter.updated.split(' ')[0]}
+                        {updated}
                       </Text>
                     )}
-                  {themeConfig.shouldShowLastUpdated &&
-                    post.frontmatter.updated && (
-                      <Box
-                        display={
-                          forceMobile ? 'block' : ['block', null, null, 'none']
-                        }
-                        color="text.placeholder"
-                        fontSize={1}
-                        mb={2}
-                        mt={1}
-                      >
-                        {themeConfig.lastUpdatedText}&nbsp;
-                        {post.frontmatter.updated.split(' ')[0]}
-                      </Box>
-                    )}
+                  {themeConfig.shouldShowLastUpdated && updated && (
+                    <Box
+                      display={
+                        forceMobile ? 'block' : ['block', null, null, 'none']
+                      }
+                      color="text.placeholder"
+                      fontSize={1}
+                      mb={2}
+                      mt={1}
+                    >
+                      {themeConfig.lastUpdatedText}&nbsp;
+                      {updated}
+                    </Box>
+                  )}
                 </li>
               )
             })}
