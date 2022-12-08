@@ -49,3 +49,22 @@ Math.ceil(-3.1);   // -3
 Math.floor(1.5); // 1 
 Math.floor(-2.4); // -3
 ```
+
+## 정수 부분 반환
+### `Math.trunc()`
+인수로 전달된 숫자의 소수를 제거해 정수 부분을 반환한다.
+```javascript
+Math.trunc(1.23232); // 1
+Math.trunc(32.1); // 32
+```
+
+`~~`를 사용해도 같은 결과가 나온다.
+```javascript
+console.log(~~1.23232); // 1
+console.log(~~32.1); // 32
+```
+
+단, 입력 범위가 32비트 정수 내에 있을 경우에만 사용해야 한다. [^1]
+
+
+[^1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
