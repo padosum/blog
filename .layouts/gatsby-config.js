@@ -28,7 +28,7 @@ module.exports = {
       options: {
         icon: "./static/logo.png",
         contentMaxWidth: 1440,
-        shouldSupportLatest: true,
+        shouldSupportLatest: false,
         defaultIndexLatestPostCount: 20,
         sidebarComponents: ["latest", "tag"],
         lastUpdatedText: "최근 수정",
