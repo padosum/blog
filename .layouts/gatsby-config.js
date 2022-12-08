@@ -20,7 +20,7 @@ module.exports = {
       options: {
         name: "content",
         path: `${__dirname}/..`,
-        ignore: [`**/\.*/**/*`],
+        ignore: [`**/\.*/**/*`, "wiki/template"],
       },
     },
     {
