@@ -28,9 +28,10 @@ module.exports = {
       options: {
         icon: "./static/logo.png",
         contentMaxWidth: 1440,
-        shouldSupportLatest: false,
+        shouldSupportLatest: true,
         defaultIndexLatestPostCount: 20,
         sidebarComponents: ["latest", "tag"],
+        editUrlText: "수정하기",
         lastUpdatedText: "최근 수정",
         nav: [
           {
