@@ -1,11 +1,11 @@
 /* Neo둥근모 */
-@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css');
+@import url("//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css");
 
 /* Neo둥근모 Code */
-@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm_code/style.css');
+@import url("//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm_code/style.css");
 
 html {
-  font-family: 'NeoDunggeunmo';
+  font-family: "NeoDunggeunmo";
 }
 
 body {
@@ -89,17 +89,17 @@ th {
 }
 
 input::placeholder {
-  color: #c5ced7;
+  color: hsl(34, 37%, 70%);
 }
 
 .prism-code {
-  font-family: 'NeoDunggeunmo Code';
+  font-family: "NeoDunggeunmo Code";
 }
 
 code {
-  font-family: 'NeoDunggeunmo Code';
+  font-family: "NeoDunggeunmo Code";
 }
 
 strong {
-  color: #0366d6;
+  color: hsl(4, 72%, 55%);
 }

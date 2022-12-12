@@ -1,40 +1,46 @@
-import { StyledOcticon, Link, themeGet, Box, Heading } from '@primer/components'
+import {
+  StyledOcticon,
+  Link,
+  themeGet,
+  Box,
+  Heading,
+} from "@primer/components";
 import {
   LinkExternalIcon,
   ChevronDownIcon,
   ChevronUpIcon,
-} from '@primer/octicons-react'
-import { Link as GatsbyLink, useStaticQuery, graphql } from 'gatsby'
-import { encodeSlug } from 'gatsby-theme-primer-wiki/src/utils/encode'
-import React from 'react'
-import styled from 'styled-components'
-import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
+} from "@primer/octicons-react";
+import { Link as GatsbyLink, useStaticQuery, graphql } from "gatsby";
+import { encodeSlug } from "gatsby-theme-primer-wiki/src/utils/encode";
+import React from "react";
+import styled from "styled-components";
+import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 
 const NavLink = styled(Link)`
   &.active {
-    font-weight: ${themeGet('fontWeights.bold')};
-    color: ${themeGet('colors.auto.gray.8')};
+    font-weight: ${themeGet("fontWeights.bold")};
+    color: ${themeGet("colors.gray.8")};
   }
-`
+`;
 
 const NavBox = styled(Box)`
   &.active {
-    font-weight: ${themeGet('fontWeights.bold')};
-    color: ${themeGet('colors.auto.gray.8')};
+    font-weight: ${themeGet("fontWeights.bold")};
+    color: ${themeGet("colors.auto.gray.8")};
   }
-`
+`;
 function getGroupIsActive(location, url, items) {
   return (
     (url &&
       (location.pathname === url || location.pathname === encodeSlug(url))) ||
     (Array.isArray(items) &&
       items.find(item => getGroupIsActive(location, item.url, item.items)))
-  )
+  );
 }
 function getIsActive(location, url) {
   return (
     url && (location.pathname === url || location.pathname === encodeSlug(url))
-  )
+  );
 }
 function SidebarItem({
   location,
@@ -45,30 +51,30 @@ function SidebarItem({
   items,
   depth = 0,
   sidebarDepth = 1,
-  type = 'normal',
+  type = "normal",
   collapse = false,
   indent,
   currentIndent,
   description,
 }) {
-  items = items || []
-  const defaultShowItems = depth < sidebarDepth
-  const isGroupActive = getGroupIsActive(location, url, items)
-  const isActive = getIsActive(location, url)
+  items = items || [];
+  const defaultShowItems = depth < sidebarDepth;
+  const isGroupActive = getGroupIsActive(location, url, items);
+  const isActive = getIsActive(location, url);
 
   const [isShowItems, setIsShowItems] = React.useState(
     isGroupActive || defaultShowItems || collapse
-  )
-  const isHasItems = items.length > 0
+  );
+  const isHasItems = items.length > 0;
 
   const handleToggleCollapse = () => {
-    setIsShowItems(!isShowItems)
-  }
-  let isShowBorderBottom = true
+    setIsShowItems(!isShowItems);
+  };
+  let isShowBorderBottom = true;
   if (depth === 0 && items.length === 0) {
-    isShowBorderBottom = false
+    isShowBorderBottom = false;
   }
-  const marginLeft = currentIndent !== false && depth > sidebarDepth ? 3 : 0
+  const marginLeft = currentIndent !== false && depth > sidebarDepth ? 3 : 0;
 
   return (
     <Box
@@ -87,23 +93,19 @@ function SidebarItem({
       <Box
         display="flex"
         justifyContent="space-between"
-        mb={depth > 0 ? 0 : '1'}
-        mt={depth > 0 ? 2 : 1}
+        py="2"
         fontSize={depth === 0 && sidebarDepth > 0 ? 2 : 1}
+        backgroundColor={isActive ? "gray.0" : undefined}
       >
         {external ? (
-          <Link
-            color={depth > 0 ? undefined : 'text.primary'}
-            display="block"
-            href={url}
-          >
+          <Link color={"text.primary"} display="block" href={url}>
             <Box display="flex" alignItems="center" position="relative">
               {title}
               <StyledOcticon
                 ml={2}
                 sx={{
-                  top: '2px',
-                  position: 'relative',
+                  top: "2px",
+                  position: "relative",
                 }}
                 size={14}
                 icon={LinkExternalIcon}
@@ -113,33 +115,33 @@ function SidebarItem({
           </Link>
         ) : url ? (
           <NavLink
-            color={depth > 0 ? undefined : 'text.primary'}
+            color={"text.primary"}
             as={GatsbyLink}
             to={url}
-            className={isActive ? 'active' : undefined}
+            className={isActive ? "active" : undefined}
             display="block"
             sx={
-              type === 'tag'
+              type === "tag"
                 ? {
-                    ':before': {
+                    ":before": {
                       content: "'# '",
-                      color: 'text.disabled',
-                      opacity: '0.8',
+                      color: "text.disabled",
+                      opacity: "0.8",
                     },
                   }
                 : {}
             }
           >
             {title} {description && ` 「${description}」`}
-            {type === 'tag' && items && items.length > 0
+            {type === "tag" && items && items.length > 0
               ? ` (${items.length})`
-              : ''}
+              : ""}
           </NavLink>
         ) : (
           <NavBox
             color="text.secondary"
-            fontWeight={isActive ? '600' : '400'}
-            className={isActive ? 'active' : undefined}
+            fontWeight={isActive ? "600" : "400"}
+            className={isActive ? "active" : undefined}
             display="block"
           >
             {title}
@@ -173,11 +175,11 @@ function SidebarItem({
           ))
         : null}
     </Box>
-  )
+  );
 }
 
 function NavItems({ items, location }) {
-  const primerWikiThemeConfig = useThemeConfig()
+  const primerWikiThemeConfig = useThemeConfig();
   const allTILData = useStaticQuery(graphql`
     query TILSidebarQuery {
       allMdx(
@@ -209,22 +211,22 @@ function NavItems({ items, location }) {
         }
       }
     }
-  `)
+  `);
 
-  const { nodes } = allTILData.allMdx
+  const { nodes } = allTILData.allMdx;
   const enrichedItems = items.map((item, idx) => {
     if (idx === 0) {
-      const [recentlyUpdatedDocs] = item.items
+      const [recentlyUpdatedDocs] = item.items;
       item.items[0].items = recentlyUpdatedDocs.items.map(doc => {
-        const [mdx] = nodes.filter(mdx => mdx.fields.slug === doc.url)
+        const [mdx] = nodes.filter(mdx => mdx.fields.slug === doc.url);
         return {
           ...doc,
           description: mdx?.frontmatter.description,
-        }
-      })
+        };
+      });
     }
-    return item
-  })
+    return item;
+  });
   return (
     <>
       {enrichedItems.map((item, rootIndex) => (
@@ -240,11 +242,11 @@ function NavItems({ items, location }) {
           <Box display="flex" flexDirection="column">
             {item.title && (
               <Heading
-                color="text.disabled"
-                fontSize="12px"
+                color="text.placeholder"
+                fontSize="16px"
                 sx={{
-                  textTransform: 'uppercase',
-                  fontFamily: 'Content-font, Roboto, sans-serif;',
+                  textTransform: "uppercase",
+                  fontFamily: "Content-font, Roboto, sans-serif;",
                 }}
                 mb={1}
                 fontWeight="500"
@@ -267,7 +269,7 @@ function NavItems({ items, location }) {
         </Box>
       ))}
     </>
-  )
+  );
 }
 
-export default NavItems
+export default NavItems;
