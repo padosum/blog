@@ -1,7 +1,7 @@
 ---
 title   : JavaScript Data Type 
 date    : 2021-05-02 12:19:19 +0900
-updated : 2021-09-15 17:15:14 +0900
+updated : 2022-12-14 23:38:39 +0900
 aliases : ["데이터 타입"]
 tags: ["JavaScript"]
 ---
@@ -14,21 +14,31 @@ tags: ["JavaScript"]
 	- null
 	- [[JavaScript-Symbol|Symbol]] (ES6부터 추가되었음)
 - **객체타입**  
----
-값의 타입은 `typeof`연산자를 통해 알 수 있다. 
+
+
+## 데이터 타입이 왜 필요한가? 
+- 자바스크립트 엔진은 변수에 할당되는 값의 데이터 타입에 따라 정해진 크기의 메모리 공간을 확보한다.  
+- 값을 참조할 때도 해당 데이터 타입에 정해진 단위(메모리 공간의 크기)를 읽어 들인다.  
+- 메모리에서 읽어 들인 2진수를 어떻게 해석할지 결정할 때 필요하다.  
+	- `0100 0001`은  `A` 인지 `65`인지? 
+
+💡 **값의 타입은 `typeof`연산자를 통해 알 수 있다.** 
 
 ## 숫자 타입
-- 정수 값과 실수 값을 구분하지 않는다. 정수로 표시된다해도 사실은 실수 → 모든 숫자를 실수로 표현 
+- 자바스크립트는 다른 프로그래밍 언어와 달리, 정수 값과 실수 값을 구분하지 않는다. 다 `Number` 타입이다. 정수로 표시된다해도 사실은 실수 → 모든 숫자를 실수로 표현 
+- 만약 데이터 타입이 다르면 타입마다 다른 방법을 사용해야 할 것이다. 숫자 타입이 정수, 실수가 다른 언어에 비해 다루기 쉬워지는 장점이 있는 것
 
 ### 숫자의 범위  
 - 메모리 제한 때문에 자연계에 존재하는 모든 숫자를 표현할 수는 없다. 표현할 수 있는 최솟값은 `Number.MIN_VALUE`, 최댓값은 `Number.MAX_VALUE`
+	- 안전하게 표현 가능한 최댓값은 `Number.MAX_SAFE_INTEGER`, 최솟값은 `Number.MIN_SAFE_INTEGER`
 - 계산 결과가 자바스크립트의 숫자형 범위에서 나타낼 수 없는 숫자면 `Infinity`로 변환된다.  
 - `Infinity`: 양의 무한대
 - `-Infinity`: 음의 무한대
 - `NaN`: 산술 연산 불가(Not a Number)
 	- `NaN`은 어떠한 값과도 일치하지 않으며 심지어 `NaN`끼리도 일치하지 않는다. 
-		- 때문에 `isNaN()`함수가 제공된다.  
-			- ES6부터 `Number.isNaN()`이 추가되었다.
+		- 그리고 `typeof NaN`은 `Number`다. ~~이럴수가...~~
+		- 때문에 `isNaN()`함수가 제공된다.
+			- ES6부터 `Number.isNaN()`이 추가되었다. `isNaN('문자열')` 도 `true`가 나온다. 따라서 `Number.isNaN()`을 사용하자. 
 
 ```javascript
 console.log(10 / 0); // Infinity
@@ -36,9 +46,17 @@ console.log(10 / -0); // -Infinity
 console.log(1 * "Hello"); // NaN
 ```
 
+### 정수인지 확인하기
+```js
+Number.isInteger(10); // true
+Number.isInteger(13.2); // false
+```
+
+**안전한 정수인지는 `Number.isSafeInteger()`**
+
 
 ## 문자열 타입 
-- 문자열은 큰따옴표(`""`)나 작은따옴표(`''`) 또는 백틱(``)로 감싸서 표현한다.  
+- 문자열은 큰따옴표(`""`)나 작은따옴표(`''`) 또는 백틱(`` ` ``)으로 감싸서 표현한다.  
 
 ```javascript
 let string;
@@ -92,21 +110,17 @@ console.log(`My name is ${first} ${last}.`);
 - 이전에 참조하던 값을 더 이상 참조하지 않겠다는 의미  
 	- 이전에 할당된 값에 대한 참조를 명시적으로 제거하는 것 
 	- [[JavaScript-Engine|자바스크립트 엔진]]은 가비지 콜렉션을 수행할 것이다.  
-- `typeof null`의 결과는 `"object"`이다.
+- `typeof null`의 결과는 `"object"`이다. ~~왜...?~~
 
 ## [[JavaScript-Symbol|Symbol]] 
+[[JavaScript-Symbol|Symbol]]
 - ES6 에서 추가된 타입 
 - 변경 불가능한 원시 타입의 값 , 다른 값과 중복되지 않는 유일무이한 값이다. 
 - 주로 이름이 충돌할 위험이 없는 객체의 유일한 프로퍼티 키를 만들기 위해 사용한다.  
 
 ## 객체 타입 
-- [[JavaScript-Object]]
+- [[JavaScript-Object|자바스크립트 객체]]
 
-## 데이터 타입이 왜 필요한가? 
-- 자바스크립트 엔진은 변수에 할당되는 값의 데이터 타입에 따라 정해진 크기의 메모리 공간을 확보한다.  
-- 값을 참조할 때도 해당 데이터 타입에 정해진 단위(메모리 공간의 크기)를 읽어 들인다.  
-- 메모리에서 읽어 들인 2진수를 어떻게 해석할지 결정할 때 필요하다.  
-	- `0100 0001`은  `A` 인지 `65`인지? 
 
 ## 동적 타이핑 
 
@@ -162,7 +176,14 @@ console.log(`My name is ${first} ${last}.`);
 - `Date()`
 - `Error()`
 - `Symbol()`
-- 
+
+`"bla"` 같은 원시 값이 있을 때, 이 값의 `length` 프로퍼티나 `String.prototype`에 정의된 메서드(ex, `concat()`, `trim()`)를 호출하면 자바스크립트는 자동으로 원시 값을 '박싱'(해당 되는 객체 래퍼로 감쌈)하여 필요한 프로퍼티, 메서드를 쓸 수 있게 해준다.
+
+```js
+"bla".concat('bla')
+"bla".length
+```
+
 ## reference 
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)

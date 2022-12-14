@@ -1,7 +1,7 @@
 ---
 title   : Javascript 정규 표현식
 date    : 2020-01-31 19:37:16 +0900
-updated : 2022-09-05 19:47:36 +0900
+updated : 2022-12-14 23:38:39 +0900
 aliases : ["JavaScript 정규 표현식"]
 tags: ["JavaScript"]
 ---
@@ -19,6 +19,8 @@ const str = '험프티 덤프티 담 위에 앉아있었네.';
 const regexp = /프티/g;
 regexp.test(str); // true
 ```
+
+리터럴 형식으로 사용하면 성능상 이점([[JavaScript-Engine|자바스크립트 엔진]]이 실행 전 정규 표현식을 미리 컴파일한 후 캐시)이 있다고 한다.[^1]
 
 ### `RegExp` 생성자 함수
 ```javascript
@@ -203,3 +205,6 @@ regexp.test(str2); // false
 
 ## reference
 - [MDN Web Docs](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+
+[^1]: 이일웅, 최병현 역, 카일 심슨 저, 《You Don't Know JS: 타입과 문법, 스코프와 클로저》, 한빛미디어, 2017년, 77쪽
