@@ -1,7 +1,7 @@
 ---
 title   : JavaScript this
 date    : 2021-09-14 15:29:46 +0900
-updated : 2022-04-22 21:30:46 +0900
+updated : 2022-12-15 22:26:48 +0900
 aliases: ["this"]
 tags: ["JavaScript"]
 ---
@@ -225,7 +225,7 @@ function callSum1(num1, num2) {
   return sum.apply(this, [num1, num2]); // 배열을 넘김
 }
 ```
-`appy`, `call` 메서드의 기능은 함수를 호출하는 것. 첫 번째 인수로 전달한 특정 객체를 호출한 함수의 `this`에 바인딩한다. 두 메서드는 전달 방식만 다르고 동작은 동일하다.
+`apply`, `call` 메서드의 기능은 함수를 호출하는 것. 첫 번째 인수로 전달한 특정 객체를 호출한 함수의 `this`에 바인딩한다. 두 메서드는 전달 방식만 다르고 동작은 동일하다.
 
 ```javascript
 window.color = "yellow";

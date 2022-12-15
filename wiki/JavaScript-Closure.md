@@ -2,18 +2,20 @@
 title   : JavaScript 클로저 
 excerpt : 
 date    : 2020-06-03 00:18:47 +0900
-updated : 2021-12-07 13:44:40 +0900
+updated : 2022-12-15 22:26:56 +0900
 tags    : ["JavaScript"]
 aliases : ["클로저"]
 ---
 
-> 클로저란 어떤 함수 A에서 선언한 변수 a를 참조하는 내부함수 B를 외부로 전달할 경우 A의 실행 컨텍스트가 종료된 이후에도 변수 a가 사라지지 않는 현상을 말한다.  
-> 
-> **클로저**는 함수와 함수가 선언된 어휘적 환경의 조합이다. 클로저를 이해하려면 자바스크립트가 어떻게 변수의 유효범위를 지정하는지(Lexical scoping)를 먼저 이해해야 한다.
-- 내부함수가 외부함수의 맥락(context)에 접근할 수 있는 것 
-- 자바스크립트 고유의 개념이 아닌, 함수를 [[JavaScript-First-Class-Object|일급 객체]]로 하는 [[Functional-Programming|함수형 프로그래밍]] 언어에서 사용되는 중요한 특성  
 
-## 함수가 선언된 어휘적 환경 (Lexical Environment)
+클로저란 도대체 무엇인가...!
+
+> 클로저는 외부 변수를 기억하고 이 외부 변수에 접근할 수 있는 함수를 의미한다.[^1]
+
+음... 이해하기 어렵다. 예시를 보면 좋을 것 같다. 그리고 어떻게 외부 변수를 기억하는지 알면 좋겠다.
+
+## 함수가 외부 변수를 기억하다
+
 [[JavaScript-Scope|자바스크립트 엔진은 함수를 어디서 호출했느냐가 아닌 함수를 어디에 정의했는지에 따라 상위 스코프를 결정]] 한다. 이를 렉시컬 스코프라고 한다. 
 
 ```javascript
@@ -26,92 +28,56 @@ function outter() {
 }
 outter();
 ```
-위 코드의 `inner` 함수의 상위 스코프는 `outter` 함수이다. `outter` 함수의 상위 스코프는 전역 이다.  함수의 상위 스코프는 함수를 어디서 호출했는지가 아닌 함수가 정의한 위치에 의해 정적으로 결정되어 변하지 않는다. 
+
+위 코드의 `inner` 함수의 상위 스코프는 `outter` 함수이다. `outter` 함수의 상위 스코프는 전역 이다. 함수의 상위 스코프는 함수를 어디서 호출했는지가 아닌 함수가 정의한 위치에 의해 정적으로 결정되어 변하지 않는다. 
 
 스코프는 [[JavaScript-Execution-Context|실행 컨텍스트]]의 렉시컬 환경이다. [[JavaScript-Scope-Chain|이 렉시컬 환경은 자신의 Outer Lexical Environment Reference를 통해 상위의 렉시컬 환경과 연결된다.]]
 
 **함수가 정의된 위치와 호출된 위치가 다를 수 있기 때문에 렉시컬 스코프가 가능하려면 상위 스코프를 기억해야 한다. 이것을 위해 함수는 자신의 내부 슬롯 `[[Environment]]`에 자신이 정의된 환경인 상위 스코프의 참조를 저장한다.** 즉 현재 실행 중인 실행 컨텍스트의 렉시컬 환경의 참조를 저장한다.  
 
-그래서 위 코드의 `inner` 함수는 상위 스코프인 `outter` 함수의 렉시컬 환경을 내부 슬롯 `[[Environment]]`에 저장해서 기억한다. 
+그래서 위 코드의 `inner` 함수는 상위 스코프인 `outter` 함수의 렉시컬 환경을 내부 슬롯 `[[Environment]]`에 저장해서 기억해둔다!
 
 
 ## 클로저 
-내부함수는 외부함수의 실행이 끝나서 외부함수가 소멸된 이후에도 외부함수의 변수에 접근이 가능하다. 이런 중첩된 함수를 클로저라고 부른다. 
 ```javascript
 function outter() {
 	var text = 'hello world';
-	return function() {
+	function inner() {
 		alert(text);
 	}
+	return inner;
 }
 var inner = outter(); // outter() 내부에 return되는 함수가 들어간다. 
 inner(); // 외부함수(outter())의 지역변수인 text가 그대로 접근이 가능함 
 ```
-`outter` 함수의 실행이 종료되면 `outter` 함수의 실행 컨텍스트가 콜 스택에서 제거되지만 렉시컬 환경은 `inner` 함수의 `[[Environment]]` 내부 슬롯에 의해 참조되고 있고, `inner` 함수는 전역 변수인 `inner`에 의해 참조되고 있으므로 가비지 컬렉션의 대상이 되지 않기 때문이다. 가비지 컬렉터는 누군가 참조하고 있는 메모리 공간을 함부로 해제하지 않는다.  
 
-클로저에 의해 참조되는 상위 스코프의 변수를 **자유 변수(free variable)**라고 부른다. 클로저는 함수가 자유 변수에 대해 닫혀있다.(closed)라는 의미이다. 
-## 예제1
+위 코드의 결과에 대해 생각해보자. `outter()` 함수의 실행이 끝났으니 `outter()` 내부의 `text` 변수도 사용할 수 없겠다는 생각이 든다. [[JavaScript-Engine|자바스크립트 엔진]]이 가비지 콜렉터를 사용해서 더는 사용하지 않는 메모리를 해제시키기 때문이다.  
+
+하지만 코드를 실행해보면 `ouuter`의 내부 변수인 `text`를 가져와 사용할 수 있다. 
+`outter()`의 내부는 여전히 '사용 중'이므로 가비지 콜렉션의 대상이 아니기 때문이다. 그럼 누가 사용하는걸까? 바로 리턴된 `inner` 함수다. **선언된 위치 때문에** `inner` 함수는 계속 `ouuter` 스코프를 참조하고 있다. 그리고 전역 변수인 `inner`에 의해 `inner` 함수가 참조되고 있다. 이 참조를 클로저라 부른다.
+
+### 클로저라는 이름에 대해
+
+클로저를 이해하기 위해 여러 책을 읽고 자료를 찾아봤다. 제일 궁금했던 것은 "그래서 왜 이름이 클로저일까"이다. 
+영어가 모국어도 아니니 답답했던 것 같다. 어쩌면 그냥 내 이름이 연정인 것처럼 그냥 클로저도 "클로저"니까 그냥 그렇게 부르면 된다고 쉽게 넘어가면 될 것을 말이다. 어쨌든 사전에 검색해보니 "폐쇄"라는 뜻이었다.
+
+그리고 좀 더 [검색](https://www.reddit.com/r/javascript/comments/9jgcfd/why_is_it_called_a_closure_anyway/) 을 해봤다.  
+Peter Landin이라는 컴퓨터 과학자가 만든 용어라고 한다. 
 ```javascript
-function factory_movie(title) {
-	return {
-		get_title : function () {
-			return title;
-		},
-		set_title : function(_title) {
-			title = _title;
-		}
+function outter() {
+	var text = 'hello world';
+	function inner() {
+		alert(text);
 	}
+	return inner;
 }
-var ghost = factory_movie('Ghost in the shell');
-var matrix = factory_movie('Matrix');
-
-console.log(ghost.get_title());	    // 'Ghost in the shell
-console.log(matrix.get_title());	// 'Matrix'
-ghost.set_title('공각기동대')
-console.log(ghost.get_title());	    //	'공각기동대'
+var inner = outter();
+inner();
 ```
-- 똑같은 외부함수로 만들어진 ghost, matrix의 get_title의 결과가 다른 것은 외부함수가 실행될 때마다 새로운 지역변수를 포함하는 클로저가 생성되기 때문이다.
-- 자바스크립트는 기본적으로 private 속성을 지원하지 않는데 클로저의 이러한 특성을 이용해 private 속성을 사용할 수 있게 된다.  
+아까 예시 코드를 다시 가져왔다. 전역 변수 `inner`에 담긴 것은 무엇인가? 함수 자체에 대한 참조와 그 렉시컬 환경(위 코드의 경우에는 `text`라는 변수)이다. 
+Landin의 입장에서 함수와 환경이 결합된 용어가 필요했다. 그래서 "폐쇄"라는 용어를 선택한 것이다. 함수와 환경을 함께 포장하고 묶기 때문에. 그리고 클로저가 변수들(여기선 `text`)을 "닫는다"고 말한다.
 
-## 예제2
-```javascript
-var arr = []
-for (var i = 0; i < 5; i++) {
-	arr[i] = function() {
-		return i;
-	}
-}
-for(var index in arr) {
-	console.log(arr[index]()); // 5만 다섯번 
-}
-```
-`for` 문의 `var i`는 함수 레벨 스코프를 갖는 전역 변수라 함수를 호출하면 함수의 상위 스코프인 전역 스코프의 전역 변수 `i`를 호출한다. `i`는 `for`로 반복되어 `5`가 출력이 된다.  
-```javascript
-var arr = []
-for (var i = 0; i < 5; i++) {
-	arr[i] = function(id) {
-		return function() {
-			return id;
-		}
-	}(i);
-}
-for(var index in arr) {
-	console.log(arr[index]());
-}
-```
-즉시 실행 함수를 사용하면 전역 변수 `i`에 현재 할당된 값을 인수로 받아 매개변수(`id`)에 할당하고 중첩 함수를 반환한다.  
-```javascript
-// let 사용하기
-const arr = [];
-for (let i = 0; i < 5; i++) {
-  arr[i] = function () { return i; };
-}
-
-for(let index in arr) {
-  console.log(arr[index]());
-}
-
-```
+음... 알랑말랑하다. 아래 private 변수를 만드는 것도 같은 맥락일까? 외부에서 접근할 수 없는 **폐쇄된 변수**이기 때문이다. 이 부분은 시간이 지난 뒤에 다시 읽고 정리해야겠다.
 
 ## 클로저 활용 private 변수 만들기  
 ```javascript
@@ -143,8 +109,7 @@ console.log(fund.getMoney()); // 200
 외부 상태 변경이나 가변 데이터를 피하고 불변성을 지향하는 [[Functional-Programming|함수형 프로그래밍]]에서 부수 효과를 최대한 억제해 오류를 피하면서 프로그램 안전성을 높이기 위해 클로저는 적극 활용된다.
 
 ## 클로저 활용 부분 적용 함수
-부분 적용 함수(partially applied function), n개의 인자를 받는 함수에 미리 m개의 인자만 넘겨서 기억시킨 뒤에 나중에 (n-m)개의 인자를 넘기면 원래 함수의 실행 결과를 얻을 수 있는 함수이다.
-`this`를 바인딩해야 하는 점을 제외하면 [[JavaScript-this|bind 메서드]]와 실행 결과가 같다. 하지만 `this`의 값에 상관없이 사용하는 부분 적용 함수를 클로저를 통해 구현이 가능하다.  
+> 정리 필요...
 
 ### 디바운스
 [[JavaScript-Debounce-Throttle|디바운스와 스로틀]]
@@ -178,3 +143,6 @@ console.log(getMaxWith10(25)); // 25
 - [생활코딩](https://opentutorials.org/course/743/6544)
 - [⟪코어 자바스크립트⟫](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158391720&orderClick=LAG&Kc=)
 - [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures)
+
+
+[^1]: [https://ko.javascript.info/closure](https://ko.javascript.info/closure)
