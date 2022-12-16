@@ -1,7 +1,7 @@
 ---
 title   : 블록 레벨 스코프
 date    : 2021-05-15 17:05:36 +0900
-updated : 2022-12-15 22:26:45 +0900
+updated : 2022-12-16 22:30:03 +0900
 aliases : ["블록 레벨 스코프"]
 tags: ["JavaScript"]
 ---
@@ -55,15 +55,6 @@ let foo = 1;
 
 위 코드를 살펴보자. 만약 호이스팅이 발생하지 않는다면 전역 변수 `foo`의 값을 출력해야 한다. 호이스팅은 발생하니까 참조 에러가 발생하는 것이다. (아직 초기화가 되지 않았다는 것) 
 
-`let`으로 선언한 전역 변수는 전역 객체의 프로퍼티가 아니다. 
-`window.foo`로 접근할 수 없다. 
-  ```javascript
-  let x = 1;
-
-  console.log(window.x); // undefined
-  console.log(x); // 1
-  ```
-
 ## const 키워드 
 - **상수**를 선언하기 위해 사용한다. 
 	- 수학에서 상수는 변하지 않는 값이다. 변수와 달리 선언된 값은 고정된다.
@@ -95,6 +86,27 @@ const obj = {}
 obj = { name : 'hello' } // Uncaught TypeError: Assignment to constant variable.
 ```
 따라서 위 코드의 실행 결과 처럼 재할당 해버리면 오류가 난다. 상수에 할당된 참조 값은 변경하지 못하는 것이다.
+
+
+## 전역 객체
+
+`var`로 선언한 전역 변수는 전역 객체의 프로퍼티가 된다.
+
+```js
+var x = 1
+
+console.log(window.x); // 1
+console.log(x); // 1
+```
+
+하지만 `let`으로 선언한 전역 변수는 전역 객체의 프로퍼티가 아니다. 
+`window.foo`로 접근할 수 없다. 이건 `const`도 마찬가지다!
+  ```javascript
+  let x = 1;
+
+  console.log(window.x); // undefined
+  console.log(x); // 1
+  ```
 
 ## 무엇을 사용하는게 좋을까?  
 - 의외로 객체를 재할당하는 경우는 드물다고 한다. 일단 `const` 키워드를 사용하고 재할당이 필요한지 생각해본 뒤 `let`으로 바꿔도 결코 늦지 않다. 
