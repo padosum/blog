@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2022-01-21 09:40:27 +0900
+updated : 2022-12-17 23:42:43 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
@@ -11,15 +11,15 @@ tags: ["Web", "Webpack"]
 ## 모듈
 - 프로그래밍 관점에서 특정 기능을 갖는 작은 코드 단위 
 - JavaScript에서의 모듈: [[JavaScript-Module]] 
-- 웹팩에서의 모듈
+- webpack에서의 모듈
     - 자바스크립트 모듈에만 국한되지 않고 웹 애플리케이션을 구성하는 모든 자원을 의미. HTML, CSS, JavaScript, image, font 등.... 하나하나가 모듈이다.  
 ## 모듈 번들링  
 - 웹 애플리케이션을 구성하는 많은 자원들을 하나의 파일로 병합 및 압축해주는 동작
 
-## 웹팩 사용 전후의 차이  
-- Network 탭: 웹팩을 사용하면 http request 수가 적다. 여러 파일이 하나로 번들링 되었기 때문   
+## webpack 사용 전후의 차이  
+- Network 탭: webpack을 사용하면 http request 수가 적다. 여러 파일이 하나로 번들링 되었기 때문   
   
-## 웹팩으로 해결하려는 문제들  
+## webpack으로 해결하려는 문제들  
 - 자바스크립트 변수 유효 범위 문제 
   - ES6의 Modules 문법, 모듈 번들링으로 해결
 - 브라우저별 HTTP 요청 숫자의 제약  
@@ -28,31 +28,47 @@ tags: ["Web", "Webpack"]
 - Dynamic Loading & Lazy Loading 미지원 
   - 원하는 모듈을 원하는 타이밍에 로딩할 수 있음 
 
-## 웹팩 설치  
+## webpack 설치  
 - `npm install -D webpack webpack-cli`  
 
-## 웹팩의 속성 
+## webpack의 속성 
+
+webpack 설정 파일인 `webpack.config.js`을 프로젝트 루트 폴더에 추가해야 한다. 그러면 webpack이 자동으로 이 파일을 사용한다.
+
+`webpack.config.js` 예시 코드:
+```javascript
+const path = require("path");
+
+module.exports = {
+  entry: {
+    main: "./src/app.js",
+  },
+  output: {
+    path: path.resolve("./dist"),
+    filename: "[name].js", // main.js
+  },
+};
+```
+
 ### entry
-- 웹팩에서 자원을 빌드하기 위한 최초 집입점, 자바스크립트 파일 경로 
+- webpack에서 자원을 빌드하기 위한 최초 집입점, 자바스크립트 파일 경로 
 - 웹 애플리케이션의 전반적인 구조와 내용이 담겨져야 하는데 그렇게 해서 모듈 간의 의존 관계가 생기는 구조를 디펜던시 그래프라고 한다.  
 - 엔트리 포인트는 여러 개가 될 수도 있다.  
   - 싱글 페이지 애플리케이션이 아닌 경우  
-```javascript
-...
-entry: {
-    main: './src/app.js'
-},
-output: {
-    path: path.resolve('./dist'),
-    filename: '[name].js' // main.js
-}
-```
+
 ### output
-- 웹팩을 사용하고 난 뒤 결과물의 파일 경로  
+- webpack을 사용하고 난 뒤 결과물의 파일 경로  
 - 다양한 옵션을 추가해야 한다.  
-  
+
+여기까지 설정하고 실행해보자.
+```sh
+npx webpack
+```
+
+빌드 결과물을 `dist` 디렉토리에서 확인한다.
+
 ### loader
-- 자바스크립트 파일이 아닌 웹 자원(HTML, CSS, image, font 등)을 웹팩이 인식할 수 있도록 도와주는 속성
+- 자바스크립트 파일이 아닌 웹 자원(HTML, CSS, image, font 등)을 webpack이 인식할 수 있도록 도와주는 속성
 - 여러 개의 로더를 사용하는 경우 **오른쪽에서 왼쪽 순으로 적용**된다.  
 ```javascript
 {
@@ -64,16 +80,58 @@ output: {
 - `style-loader`: 동적으로 `style` 태그를 생성해 CSS를 적용
 - `css-loader`: `.css` 파일을 읽어들이기 위해 사용, CSS 파일 간의 의존관계를 해소
 
+### Babel 연동하기
+
+webpack을 [[Babel]]과 함께 사용할 수 있다.
+
+다음 명령으로 `babel-loader`를 설치한다.
+```sh
+npm install babel-loader --save-dev
+```
+
+`webpack.config.js`에 `module`을 추가하고, `rule`을 추가한다:
+```js
+const path = require("path");
+
+module.exports = {
+  entry: {
+    main: "./src/app.js",
+  },
+  output: {
+    path: path.resolve("./dist"),
+    filename: "[name].js", // main.js
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
+};
+```
+
+다시 webpack을 실행한다.
+```sh
+npx webpack
+```
+
+사뭇 다른 결과물을 확인할 수 있을 것이다...
+
 ### plugin
-- 웹팩의 기본적인 동작에 추가적인 기능을 제공  
+- webpack의 기본적인 동작에 추가적인 기능을 제공  
 - 로더가 파일을 해석하고 변환하는 과정에 관여한다면 플러그인은 해당 겨로가물의 형태를 바꾸는 역할 
 - HtmlWebpackPlugin
-    - 웹팩 빌드 결과물에 대해 html 파일을 만들어준다. 빌드 결과가 다 들어가있다.  
+    - webpack 빌드 결과물에 대해 html 파일을 만들어준다. 빌드 결과가 다 들어가있다.  
 
-## 웹팩 데브 서버 (Webpack Dev Server)  
+## webpack 데브 서버 (Webpack Dev Server)  
 - 코드 한줄 변경시 다시 빌드해야 하는 번거로움을 해결하기 위한 도구
-    - 매번 웹팩 명령어를 실행하지 않아도 코드만 변경하고 저장하면 웹팩으로 빌드한 후 브라우저를 새로고침 해준다.  
-    - **웹팩 빌드 시간 까지 줄여준다.** 
+    - 매번 webpack 명령어를 실행하지 않아도 코드만 변경하고 저장하면 webpack으로 빌드한 후 브라우저를 새로고침 해준다.  
+    - **webpack 빌드 시간 까지 줄여준다.** 
 - 개발용 서버  
     - 배포시 잠재적 문제를 미리 확인(ajax 방식의 api연동에서 cors 문제 확인)  
 - 파일이 아닌 메모리 상으로만 빌드 결과물을 보여준다.
@@ -96,10 +154,9 @@ module.exports = {
 - [옵션들](https://webpack.js.org/configuration/dev-server/)
 - `--progress`를 추가하면 빌드 진행률을 보여준다.  
 
-## [[Babel]]
 
 ## [[Sass]] 
-- sass파일을 사용하기 위해 웹팩에서 `sass-loader`를 사용한다.  
+- sass파일을 사용하기 위해 webpack에서 `sass-loader`를 사용한다.  
  
 ### Webpack Dev Server와 API  
 #### API mockup - devServer.before
@@ -172,6 +229,6 @@ module.exports = {
 ### externals  
 - 서드 파티 라이브러리는 이미 패키지로 제공되었을 때 빌드 과정을 거쳤기에 프로세스에서 제외하는 것이 좋다. externals가  제공하는 기능이다.  
 ## reference
-- [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe) 
+- [프론트엔드 개발자를 위한 webpack](https://inf.run/hVZe) 
 - [프론트엔드 개발환경의 이해와 실습](https://inf.run/PM8f)  
   

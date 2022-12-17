@@ -1,15 +1,27 @@
 ---
 title   : JavaScript this
 date    : 2021-09-14 15:29:46 +0900
-updated : 2022-12-15 22:26:48 +0900
+updated : 2022-12-17 15:17:20 +0900
 aliases: ["this"]
 tags: ["JavaScript"]
 ---
 
-## `this`를 왜 사용하는가?  
-`this`를 어떻게 사용하는지 알기 전에 왜 사용하는지부터 생각해보자.
+## Goal
+자바스크립트의 `this`에 대해 알아보자.
 
-함수를 정의하는 시점에는 나중에 함수를 사용할 객체를 가리킬 식별자를 미리 지정하기 어렵다. 그래서 자바스크립트는 **`this`라는 특수한 식별자를 제공**한다.  
+## 왜 알아보는건가?
+
+우선 나는 자바스크립트를 배우기 전에 Java를 배웠다. 그래서 내 머릿속에 담긴 `this`는 [[JavaScript-Class|클래스]]에서 생성된 객체를 지칭하는 것으로 담겨있다.
+Java에 대한 기억이 흐려져 갈 즈음에 자바스크립트 공부를 시작했다. 자연스럽게 다른 사람들의 코드도 보게 되었고 거기선 클래스를 사용하지 않는데 `this`가 쓰이는 것을 종종 보게 되었다. 그럼 이 `this`는 무엇을 가리키는 것일까? 코드를 이해하기 위해, 또 사용할 나를 위해 공부해야 한다.
+
+## `this`를 왜 사용하는가?  
+우선 `this`를 어떻게 사용하는지 알기 전에 왜 사용하는지부터 생각해보자.
+
+책을 읽었다. 이런 내용이 담겨져 있었다.
+> **`this`는 모든 함수 스코프 내에 자동으로 설정되는 특수한 식별자**로 경험 많은 자바스크립트 개발자도 정확히 무엇을 가리키는지 짚어내기가 만만치 않다.[^1]
+
+그렇다. `this`는 내가 설정하지 않아도 모든 함수 스코프 내에서 알아서 설정되는 **특수한** 식별자다. 이렇게 자동으로 설정하는 이유는 유용함에 있을 것이다. 어떤 유용함이 있는지 알아보자.
+
 아래 코드는 `this`를 사용한 예시이다. `getDiameter`라는 함수는 `this`를 사용하여 객체 별로 따로 함수를 작성할 필요 없이 [[Object-Oriented-Programming|객체]] `circle1`과 `circle2` 모두에서 재사용이 가능하다. 
 ```javascript
 function getDiameter() {
@@ -18,6 +30,7 @@ function getDiameter() {
 
 var circle1 = {
   radius: 2
+  
 };
 
 var circle2 = {
@@ -356,3 +369,6 @@ bar(3); // a:2, b:3
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 
 - [모던 자바스크립트 Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
 - 이일웅 역, 카일 심슨 저, 《YOU DON'T KNOW JS: this와 객체 프로토타입, 비동기와 성능》, PART 1 - Chapter 1, 2
+
+
+[^1]: 이일웅 역, 카일 심슨 저, 《YOU DON'T KNOW JS: this와 객체 프로토타입, 비동기와 성능》, 29쪽

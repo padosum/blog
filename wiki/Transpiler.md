@@ -1,7 +1,7 @@
 ---
 title   : 트랜스파일러 
 date    : 2021-04-23 17:14:08 +0900
-updated : 2021-04-23 17:14:31 +0900
+updated : 2022-12-17 23:42:45 +0900
 aliases : ["트랜스파일러"]
 tags: ["Programming"]
 ---
@@ -18,9 +18,11 @@ tags: ["Programming"]
 ## JavaScript Transpiler 
 - JavaScript의 가장 큰 골칫거리는 호환성 문제
 - Chrome이나 Firefox, Safari 같은 에버그린 웹 브라우저는 ECMAScript 표준을 바로 적용시키면서 다른 브라우저보다 앞서서 최신 문법들을 지원하기도 한다.  
-- 브라우저의 호환성 문제를 해결하기 위해 Babel이 등장했다.  
+- **transpiling을 통해 하위 브라우저에서도 최신 기능 문법도 동작하도록 문법을 바꿀 수 있다.**
+- 브라우저의 호환성 문제를 해결하기 위해 [[Babel]]이 등장했다.  
 
 ### Babel
+- [[Babel]]
 - [https://babeljs.io](https://babeljs.io)
 - 최신 문법의 JavaScript를 구형 브라우저에서 실행가능하도록 번역해주는 트랜스파일러
 - JSX를 순수 리액트로 트랜스파일링
