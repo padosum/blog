@@ -1,18 +1,19 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2022-12-17 23:42:43 +0900
+updated : 2022-12-18 23:04:23 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
 
-- [[모듈 번들러]]
+- [[Module-Bundler|모듈 번들러]]
 
 ## 모듈
 - 프로그래밍 관점에서 특정 기능을 갖는 작은 코드 단위 
 - JavaScript에서의 모듈: [[JavaScript-Module]] 
 - webpack에서의 모듈
     - 자바스크립트 모듈에만 국한되지 않고 웹 애플리케이션을 구성하는 모든 자원을 의미. HTML, CSS, JavaScript, image, font 등.... 하나하나가 모듈이다.  
+
 ## 모듈 번들링  
 - 웹 애플리케이션을 구성하는 많은 자원들을 하나의 파일로 병합 및 압축해주는 동작
 
@@ -67,22 +68,46 @@ npx webpack
 
 빌드 결과물을 `dist` 디렉토리에서 확인한다.
 
+### mode
+- `mode` 파라미터를 `development`, `production`, `none`으로 설정하면 환경별로 최적화를 활성화할 수 있다. 기본값은 `production`
+- `process.env.NODE.ENV`가 설정된다.
+
+```js
+module.exports = {
+  mode: 'production'
+}
+```
+
 ### loader
 - 자바스크립트 파일이 아닌 웹 자원(HTML, CSS, image, font 등)을 webpack이 인식할 수 있도록 도와주는 속성
 - 여러 개의 로더를 사용하는 경우 **오른쪽에서 왼쪽 순으로 적용**된다.  
 ```javascript
-{
-  test: /\.scss$/,
-  use: ['style-loader', 'css-loader', 'sass-loader']
-}
+const path = require('path');
+
+module.exports = {
+  output: {
+    filename: 'my-first-webpack.bundle.js',
+  },
+  module: {
+    rules: [{
+	  test: /\.scss$/,
+	  use: ['style-loader', 'css-loader', 'sass-loader']
+	}],
+  },
+};
+
 ```
-- `babel-loader`: ECMAScript 2015 이전 규격의 코드를 ECMAScript 5 규격으로 변환
-- `style-loader`: 동적으로 `style` 태그를 생성해 CSS를 적용
-- `css-loader`: `.css` 파일을 읽어들이기 위해 사용, CSS 파일 간의 의존관계를 해소
+- `test`: 변환이 필요한 파일을 식별하는 속성
+- `use`: 변환을 수행하기 위해 사용하는 로더를 명시하는 속성
+- loader의 예
+	- `babel-loader`: ECMAScript 2015 이전 규격의 코드를 ECMAScript 5 규격으로 변환
+	- `style-loader`: 동적으로 `style` 태그를 생성해 CSS를 적용
+	- `css-loader`: `.css` 파일을 읽어들이기 위해 사용, CSS 파일 간의 의존관계를 해소
+	- `sass-loader`: [[sass]] 파일을 사용하기 위한 loader  
 
-### Babel 연동하기
+#### Babel 연동하기
 
-webpack을 [[Babel]]과 함께 사용할 수 있다.
+babel-loader를 사용해보자.
 
 다음 명령으로 `babel-loader`를 설치한다.
 ```sh
@@ -122,11 +147,39 @@ npx webpack
 
 사뭇 다른 결과물을 확인할 수 있을 것이다...
 
+
 ### plugin
-- webpack의 기본적인 동작에 추가적인 기능을 제공  
-- 로더가 파일을 해석하고 변환하는 과정에 관여한다면 플러그인은 해당 겨로가물의 형태를 바꾸는 역할 
-- HtmlWebpackPlugin
-    - webpack 빌드 결과물에 대해 html 파일을 만들어준다. 빌드 결과가 다 들어가있다.  
+- loader가 파일을 해석하고 변환하는 과정에 관여한다면 plugin은 해당 결과물의 형태를 바꾸는 역할 
+	- 번들 최적화, 에셋 관리, 환경 변수 주입 등...
+
+#### plugin 사용하기
+
+`require()`로 플러그인을 불러와서 `plugins` 배열에 추가한다.
+
+아래 예시는 `html-webpack-plugin`이다. webpack 빌드 결과물에 대해 html 파일을 만들어준다. 빌드 결과가 다 들어가있다. 
+
+```sh
+npm install --save-dev html-webpack-plugin
+```
+
+```js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack'); // 내장 plugin에 접근하는 데 사용
+
+module.exports = {
+  module: {
+    rules: [{ test: /\.txt$/, use: 'raw-loader' }],
+  },
+  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+};
+```
+
+
+
+
+## 개발을 위한 설정들
+
+webp
 
 ## webpack 데브 서버 (Webpack Dev Server)  
 - 코드 한줄 변경시 다시 빌드해야 하는 번거로움을 해결하기 위한 도구
@@ -154,9 +207,6 @@ module.exports = {
 - [옵션들](https://webpack.js.org/configuration/dev-server/)
 - `--progress`를 추가하면 빌드 진행률을 보여준다.  
 
-
-## [[Sass]] 
-- sass파일을 사용하기 위해 webpack에서 `sass-loader`를 사용한다.  
  
 ### Webpack Dev Server와 API  
 #### API mockup - devServer.before
