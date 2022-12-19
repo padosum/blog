@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2022-12-18 23:04:23 +0900
+updated : 2022-12-19 23:56:01 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
@@ -179,84 +179,171 @@ module.exports = {
 
 ## 개발을 위한 설정들
 
-webp
+`webpack.config.js` 파일에 `mode`를 `development`로 설정하자.
+```js
+module.exports = {
+  mode: 'development'
+  // ...
+}
+```
 
-## webpack 데브 서버 (Webpack Dev Server)  
+### source maps
+
+webpack이 코드를 번들링하게 되면 여러 파일들이 하나로 묶인다. 그래서 오류가 발생한 경우 오류의 기존 위치를 파악하기가 어려울 수 있다.
+
+source map은 빌드된 파일과 원본 파일을 서로 연결해서 오류 추적을 도와준다. 
+source map 사용을 위해서는 `webpack.config.js`를 다음과 같이 작성한다:
+```js
+module.exports = {
+  devtool: 'eval-source-map'
+}
+```
+
+source map을 설정하면 Devtools에서 오류가 발생한 위치가 몇 번째 줄인지 확인 가능하다.
+![source map 적용 후](Attachments/source-map.png)
+
+[devtool 옵션](https://webpack.js.org/configuration/devtool/#devtool)
+
+### 코드 변경시 자동 컴파일 하기
+
+코드를 수정할 때마다 매번 `npm run build`를 입력해서 빌드하기는 매우 귀찮을 것이다.
+
+코드가 변경될 때 자동 컴파일을 도와주는 여러 옵션이 있다.
+1. watch mode
+2. webpack-dev-server
+3. webpack-dev-middleware
+
+이 3가지를 알아보자!
+
+#### watch mode
+
+"watch"라는 이름에서 알 수 있듯이 디펜던시 그래프 내 모든 파일에서 변경사항을 지켜보도록 webpack에게 요청하는 것이다. 
+
+`package.json`에 watch mode로 webpack을 실행할 수 있도록 스크립트를 추가하자.
+```json
+{
+	"watch": "webpack --watch"
+}
+```
+
+그리고 `npm run watch`를 실행하자! 그리고 코드를 수정하고 저장하면 다시 빌드가 된다. 하지만 문제가 있다. **브라우저를 새로고침해야 변경 사항이 반영된다는 것이다.** 매번 또 새로고침을 해야 한다. 번거롭다. 
+
+이를 해결하기 위해 webpack-dev-server를 사용하자.
+
+####  webpack 데브 서버 (Webpack Dev Server)  
 - 코드 한줄 변경시 다시 빌드해야 하는 번거로움을 해결하기 위한 도구
-    - 매번 webpack 명령어를 실행하지 않아도 코드만 변경하고 저장하면 webpack으로 빌드한 후 브라우저를 새로고침 해준다.  
+    - 매번 webpack 명령어를 실행하지 않아도 코드만 변경하고 저장하면 webpack으로 빌드한 후 **브라우저를 새로고침** 해준다.  
     - **webpack 빌드 시간 까지 줄여준다.** 
 - 개발용 서버  
     - 배포시 잠재적 문제를 미리 확인(ajax 방식의 api연동에서 cors 문제 확인)  
-- 파일이 아닌 메모리 상으로만 빌드 결과물을 보여준다.
+- 빌드 후 메모리에만 번들 파일을 보관한다.
     - 컴퓨터 구조상 **파일 입출력 보다 메모리 입출력이 속도가 빠르고 자원이 덜 소모되기 때문** 
-- `npm i -D webpack-dev-server`로 설치
+    - 만약 페이지가 다른 경로에서 번들 파일을 찾을 것으로 예상된다면 서버 설정에서 `devMiddleware.publicPath` 옵션을 사용해 설정 가능하다.
+
+webpack-dev-server를 설치한다:
+```sh
+npm install --save-dev webpack-dev-server
+```
+
+아래와 같이 설정하면 `webpack-dev-server`에게 `dist` 디렉터리 파일을 `localhost:8080`에서 제공하도록 한다.
 ```javascript
 // webpack.config.js 
 module.exports = {
   // ...
   devServer: {
-    contentBase: path.join(__dirname, '/'),
-    historyApiFallback: true,
-    port: 3000
+    static: './dist'
   },
 };
 ```
-- `npx webpack-dev-server --mode=development --hot --inline --open`
-  
-### Webpack Dev Server 옵션  
-- [옵션들](https://webpack.js.org/configuration/dev-server/)
-- `--progress`를 추가하면 빌드 진행률을 보여준다.  
 
- 
-### Webpack Dev Server와 API  
-#### API mockup - devServer.before
-```javascript
-devServer: {
-  before: (app, server, compiler) => {
-    app.get("/api/users", (req, res) => {
-      res.json([
-	{ id: 1, name: "tomas" },
-	{ id: 2, name: "nicolas" },
-	{ id: 3, name: "james" } 
-      ])
-    })
-  }
-}
-```   
-#### API mockup - connect-api-mocker  
-- 특정 목업 폴더를 만들어 api 응답을 담은 파일을 저장하고 api로 제공해주는 기능 
-```bash
-npm i -D connect-api-mocker
+
+`package.json`에 스크립트를 추가하자.
+```js
+"scripts": {
+  "build": "webpack",
+  "watch": "webpack --watch",
+  "client:dev": "webpack serve --open"
+},
 ```
-```javascript
-// webpack.config.js:
-const apiMocker = require("connect-api-mocker")
 
-module.exports = {
-  devServer: {
-    before: (app, server, compiler) => {
-      app.use(apiMocker("/api", "mocks/api"))
-    },
-  },
-}
-```  
-- `/mocks/api` 디렉토리 내부 경로에 `GET.json` 응답파일을 만들면된다.  
-- `/api`로 들어온 요청에 대해 처리하겠다는 것  
+`npm run client:dev`를 실행하면 코드 변경시 빌드 후 브라우저도 새로고침되는 것을 확인할 수 있다.
+- [webpack-dev-server의 옵션들](https://webpack.js.org/configuration/dev-server/)
+	- `--progress`를 추가하면 빌드 진행률을 보여준다.  
 
-### CORS  
+
+##### Hot Module Replacement  
+
+커다란 프로젝트에서 일부 모듈만 수정되었지만 전체를 갱신한다면 불필요한 시간을 소모하는 것이다.
+
+**Hot Module Replacement(HMR)**은 코드가 변경되었을 때 전체 모듈을 갱신하지 않고 변경된 모듈만 갱신하는 기능이다.
+
+설정 방법
+- `webpack-dev-server` `v4.0.0` 부터는 HMR이 기본적으로 활성화되어 있다.
+- `devServer.hot` 속성을 `true`로  
+- `module.hot` 객체의 `accept()` 메소드를 사용.  
+  - 감시할 모듈과 콜백 함수를 인자로 받고, 해당 모듈의 변경이 있으면 콜백 함수가 동작하는 방식이다.  
+  - 이런 동작을 **HMR 인터페이스를 구현한다**라고 한다.
+- css, file loader 등이 핫로딩을 지원한다.
+
+
+##### CORS  
 - 실제 api 연동시, CORS 정책으로 인해 다른 서버의 api를 사용하지 못하는 경우가 있다.  
 - 해결방법
   - 서버측에서 api 응답 헤더에 `Access-Control-Allow-Origin: *` 헤더 추가 
   - webpack dev server에서 `proxy` 속성
     - [https://webpack.js.org/configuration/dev-server/#devserverproxy](https://webpack.js.org/configuration/dev-server/#devserverproxy)
 
-### Hot Module Replacement  
-- 전체 화면을 갱신하지 않고 변경된 모듈만 갱신하는 기능  
-- `devServer.hot` 속성을 `true`로  
-- `module.hot` 객체의 `accept()` 메소드를 사용.  
-  - 감시할 모듈과 콜백 함수를 인자로 받고, 해당 모듈의 변경이 있으면 콜백 함수가 동작하는 방식이다.  
-  - 이런 동작을 **HMR 인터페이스를 구현한다**라고 한다.     
-- css, file loader 등이 핫로딩을 지원한다.  
+#### webpack-dev-middleware
+
+frontend 코드와 server 코드가 함께 있는 경우에, 프론트엔드 코드가 변경될 때 `webpack-dev-middleware`를 사용해 webpack을 실행할 수 있다.
+
+`webpack-dev-middleware`는 webpack에서 처리한 파일을 서버로 보낸다.
+
+express와 `webpack-dev-middleware` 를 결합해보자.
+```sh
+npm install --save-dev express webpack-dev-middleware
+```
+
+
+`webpack.config.js`를 수정하자:
+```js
+module.exports = {
+  mode: 'development',
+  devtool: 'eval-source-map',
+  entry: {
+    main: './src/client/App.js',
+  },
+  output: {
+    path: path.resolve('./dist'),
+    filename: '[name].js',
+    publicPath: '/',
+  },
+```
+`publicPath`는 서버 스크립트내에서 사용된다.
+
+서버 스크립트(`server.js`):
+```js
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
+const app = express();
+const config = require('./webpack.config.js');
+const compiler = webpack(config);
+
+// express에서 webpack-dev-middleware와 webpack.config.js를 사용하도록 설정
+app.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath,
+  })
+);
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!\n');
+});
+```
+
+`node server.js`를 실행하고 `http://localhost:3000`에 접속한다. webpack이 작동되는 것을 확인할 수 있다!
 
 ## 최적화 하기  
 ### production 모드  

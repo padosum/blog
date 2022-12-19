@@ -7,7 +7,7 @@
 👋 안녕하세요  
 최연정의 개인 위키입니다.
 
-📝 [[Today-I-Learned|매일 배운 것을 기록]]하며 [시행 착오](/tags/how-to/)를 겪고 있습니다.
+📝 [[Today-I-Learned|매일 배운 것을 기록]]하며 [시행착오](/tags/how-to/)를 겪고 있습니다.
 
 - 🗂 [[wiki-index]]
 - 📚 [[Book-list]]

@@ -1,7 +1,7 @@
 ---
 title   : JavaScript this
 date    : 2021-09-14 15:29:46 +0900
-updated : 2022-12-17 15:17:20 +0900
+updated : 2022-12-19 18:41:32 +0900
 aliases: ["this"]
 tags: ["JavaScript"]
 ---
@@ -59,7 +59,7 @@ getDiameter(circle1); // 4
 getDiameter(circle2); // 6
 ```
 
-## `this`에 대한 오해
+## `this`, 이름 때문에 얻는 오해
 `this`라는 이름 때문에 보통 두 가지 의미로 해석을 하게 된다.  
 1. `this`가 함수 그 자체를 가리킨다.
 2. `this`가 함수의 스코프를 가리킨다.  
@@ -100,14 +100,37 @@ foo();// undefined
 ```
 이 코드는 `foo()` 함수 내부에서 `bar()` 함수를 실행한다면 `foo()` 함수 내부 스코프에 있는 변수 `a`에 접근할 수 있다는 전제하에 작성한 것이다. 하지만 결과를 보면 알 수 있듯이 불가능하다. 
 
-이처럼 `this`라는 이름으로 인해 대충 감으로 코드를 작성하다가 예상치 못한 결과를 얻을 수 있다. 그래서 이런 오해와 추측을 버리고 이어서 서술할 `this` 바인딩에 대해 정확히 인지할 필요가 있다.  
+음... 알쏭달쏭하다. `this`에 대해 내 마음대로 예상하지 않고, 잘 알고 파악하는 것이 중요하다는 것을 깨달았다!
 
-우선 `this`는 [[JavaScript-Engine|자바스크립트 엔진]]에 의해 암묵적으로 생성된다. 
+앞서 책에서 **`this`는 모든 함수 스코프 내에 자동으로 설정되는 특수한 식별자** 라고 설명했다.  
+`this`는 [[JavaScript-Engine|자바스크립트 엔진]]에 의해 암묵적으로 생성된다. 
 함수를 호출하면 `arguments` 객체와 `this`가 함수 내부에 전달되는데 **`this`가 가리키는 값은 함수 호출 방식에 의해 동적으로 결정**된다.
 
 ## this 바인딩
-`this`와 `this`가 가리키는 값을 연결하는 과정을 `this` 바인딩이라고 한다. **자바스크립트에서는 `this` 바인딩이 함수 호출 방식에 따라 결정이된다.**
-함수가 호출되는 호출부를 찾으려면 함수 호출의 연쇄를 순서대로 잘 따라가면 그려볼 수 있다. 하지만 그 과정이 복잡하다면 브라우저의 디버거 툴을 사용하면 좋다.  
+`this`와 `this`가 가리키는 값을 연결하는 과정을 `this` 바인딩이라고 한다. 즉, `this` 바인딩이 어떻게 되는지 알면 `this`가 무엇을 가리키는지 알게될 것이다. 
+
+결론은 **`this` 바인딩은 함수 호출 방식에 따라 결정이된다.**
+
+책《YOU DON'T KNOW JS: this와 객체 프로토타입, 비동기와 성능》에서 번역하신 분이 다음 시를 추가하셨다
+
+> 꽃 - 김춘수
+> 내가 그의 이름을 불러주기 전에는
+> 그는 다만
+> 하나의 몸짓에 지나지 않았다.
+> 
+> 내가 그의 이름을 불러 주었을 때
+> 그는 나에게로 와서
+> 꽃이 됐다.
+
+> 내가 this를 호출하기 전에는
+> 그는 다만 
+> 코드 조각에 지나지 않았다.
+> 
+> 내가 그를 불러다 쓰려고 할 때
+> 그는 나에게로 와서
+> 바인딩 됐다.
+
+이해하기에 매우 재밌는 비유라는 생각이 들었다!
 
 ```javascript
 function baz() {
@@ -139,10 +162,13 @@ baz(); // 'baz'의 호출부
 ![[Call Stack.png]]
 
 ### 일반 함수 호출
-기본적으로 `this`에는 전역 객체가 바인딩된다. 전역 함수, 중첩 함수, 콜백 함수 등 **일반 함수**로 함수를 호출하면 함수 내부의 `this`에는 전역 객체가 바인딩된다.  
+기본적으로 `this`에는 전역 객체가 바인딩된다. 전역 함수, 중첩 함수, 콜백 함수 등 **일반 함수**로 함수를 호출하면 함수 내부의 `this`에는 전역 객체가 바인딩된다. 
+
+> 💡 단, strict mode에서 전역 객체는 바인딩 대상에서 제외되서 undefined다.
+
 중첩 함수나 콜백 함수는 외부 함수를 돕는 헬퍼 함수의 역할을 하는데 외부 함수인 메서드와 `this`가 일치하지 않는 다는 것은 헬퍼 함수로 동작하기 어려운 문제점이 있다. 나중에 살펴볼 `Function.prototype.apply`, `Function.prototype.call`, `Function.prototype.bind` 메서드를 통해 `this` 바인딩을 일치시킬 수 있다.    
 
-그 외에도 다음과 같이 `this` 바인딩을 일치시키거나,  
+그 외에도 다음과 같이 `this` 바인딩을 일치시키거나:
 ```javascript
 var value = 1;
 
@@ -159,7 +185,8 @@ const obj = {
 
 obj.foo();
 ```
-또는 [[JavaScript-Arrow-Function|화살표 함수]]를 사용해서 `this` 바인딩을 일치시킬 수도 있다. 화살표 함수 내부의 `this`는 상위 스코프의 `this`를 가리킨다.  
+
+또는 [[JavaScript-Arrow-Function|화살표 함수]]를 사용해서 `this` 바인딩을 일치시킬 수도 있다. 화살표 함수 내부의 `this`는 상위 스코프의 `this`를 가리킨다:  
 ```javascript
 var value = 1;
 
@@ -177,8 +204,10 @@ obj.foo();
 여러 책을 읽으면서 이런 꼼수를 사용하기에 앞서 `this`에 대해 우선 잘 이해해보자는 생각이 들었다. 
 
 ### 메서드 호출 
-💡 여타 언어에서 객체(클래스)에 부속된 함수를 주로 '메서드'라 칭한다.  
-메서드 내부의 `this`는 메서드를 호출한 객체를 가리킨다. **메서드를 소유한 객체가 아닌, 호출한 객체**라는 것에 주의해야 한다.  
+
+> 💡 프로그래밍 언어에서 객체(클래스)에 부속된 함수를 주로 '메서드'라 칭한다.  
+
+메서드 내부의 `this`는 메서드를 호출한 객체를 가리킨다. 
 ```javascript
 function greeting() {
   console.log(`👋 Hello, ${this.name}`);
@@ -225,21 +254,33 @@ console.log(p2.sayHello); // Hello, yj
 함수 레퍼런스를 객체의 프로퍼티에 추가(메서드)하지 않고 어떤 객체를 `this` 바인딩하려면 `apply`, `call`, `bind` 메서드를 이용한다. 
 `apply`, `call`, `bind` 메서드는 `Function.prototype`의 메서드이다. [[JavaScript-Prototype-Chain|프로토타입 체인]]을 통해 모든 함수가 상속받아서 사용 가능하다!
 
+`apply`, `call` 메서드의 기능은 함수를 호출하는 것. 첫 번째 인수로 전달한 특정 객체를 호출한 함수의 `this`에 바인딩한다. 두 메서드는 전달 방식만 다르고 동작은 동일하다:
 ```javascript
 function sum(num1, num2) {
+  console.log(this);
   return num1 + num2;
 }
 
 function callSum(num1, num2) {
-  return sum.call(this, num1, num2); // 각각 넘겨야한다.
+  const obj = {
+    name: "call",
+  };
+  return sum.call(obj, num1, num2); // 각각 넘겨야한다.
 }
 
 function callSum1(num1, num2) {
-  return sum.apply(this, [num1, num2]); // 배열을 넘김
+  const obj = {
+    name: "apply",
+  };
+  return sum.apply(obj, [num1, num2]); // 배열을 넘김
 }
-```
-`apply`, `call` 메서드의 기능은 함수를 호출하는 것. 첫 번째 인수로 전달한 특정 객체를 호출한 함수의 `this`에 바인딩한다. 두 메서드는 전달 방식만 다르고 동작은 동일하다.
 
+sum(1, 2); // 전역 객체
+callSum(2, 3); // obj { name: "call" }
+callSum1(1, 2); // obj { name: "apply" }
+```
+
+`bind` 메서드는 함수를 호출하지 않아서 명시적으로 호출해야 한다.
 ```javascript
 window.color = "yellow";
 let o = { color: "green" };
@@ -257,88 +298,8 @@ sayColor.call(o); // green
 let objSayColor = sayColor.bind(o);
 objSayColor(); // green
 ```
-`bind` 메서드는 함수를 호출하지 않아서 명시적으로 호출해야 한다.
 
-### this 바인딩의 우선순위  
-위 4가지의 `this` 바인딩 규칙이 중복으로 해당될 때는 어떻게 바인딩될 것인지 확인해 볼 필요가 있다.  
-
-```javascript
-function foo() {
-  console.log(this.a);
-}
-
-var obj1 = {
-  a: 2,
-  foo: foo
-};
-
-var obj2 = {
-  a: 3,
-  foo: foo
-};
-
-obj1.foo(); // 2
-obj2.foo(); // 3
-
-obj1.foo.call(obj2); // 3
-obj2.foo.call(obj1); // 2
-```
-위 코드의 결과를 보면 `call` 메서드를 사용하는 것이 메서드로 호출한 것보다 우선순위가 높은 것을 알 수 있다.  
-
-생성자 함수 호출은 어떨까? 아래 코드를 보면 생성자 함수 호출이 메서드로 호출한 것보다 우선순위가 높음을 알 수 있다.  
-```javascript
-function foo(something) {
-  this.a = something;
-}
-
-var obj1 = {
-  foo: foo
-};
-
-var obj2 = {};
-
-obj1.foo(2);
-console.log(obj1.a); // 2
-
-obj1.foo.call(obj2, 3);
-console.log(obj2.a); // 3
-
-var bar = new obj1.foo(4);
-
-console.log(obj1.a);  // 2
-console.log(bar.a);  // 4
-```
-
-마지막으로 `bind()`와 생성자 함수 호출을 비교해보자.  
-```javascript
-function foo(something) {
-  this.a = something;
-}
-
-var obj1 = {};
-
-var bar = foo.bind(obj1);
-bar(2);
-console.log(obj1.a);  // 2
-
-var baz = new bar(3);
-console.log(obj1.a); // 2
-console.log(baz.a); // 3
-```
-`new bar(3)`이 실행되어도 `obj1.a`의 값은 3으로 바뀌지 않고 그 대신 `obj1`에 바인딩 된 `bar()` 호출은 `new`로 오버라이드할 수 있다. 또한 `new`를 사용했으므로 새로 만들어진 객체가 `baz`에 할당되고 `baz.a`의 값은 3이 된다.  
-
-`new`로 오버라이딩 하는 것은 어떤 경우일까? 기본적으로 `this` 바인딩을 무시하는 함수를 생성해서 함수 인자를 전부 또는 일부만 미리 세팅해야 할 때 유용하다. `bind()` 메서드는 최초 `this` 바인딩 이후 전달된 인자를 원래 함수의 기본 인자로 고정한다. 이런 기술을 부분 적용이라고 하는데 [[Functional-Programming|커링]]의 일종이다.  
-```javascript
-function foo(p1, p2) {
-  this.val = p1 + p2;
-}
-
-// 'null'을 입력한 건 여기서 'this' 바인딩은
-// 어차피 'new' 호출 시 오버라이드되므로 신경 쓰지 않겠다는 의미
-var bar = foo.bind(null, "p1");
-var baz = new bar("p2"); 
-baz.val; // p1p2
-```
+### apply, call, bind에 this 바인딩을 하지 않으면
 
 `apply`, `call`, `bind` 메서드의 첫 번째 인자로 `null` 또는 `undefined`를 넘기면 `this` 바인딩이 무시되고 일반 함수 호출이 된다. 
 ```javascript
@@ -364,6 +325,13 @@ foo.apply(null, [2, 3]); // a:2, b:3
 var bar = foo.bind(null, 2);
 bar(3); // a:2, b:3
 ```
+
+
+## 생각
+
+`this`를 공부하며 든 생각은. 여전히 헷갈린다! 무엇보다 이름의 영향이 큰 듯 싶다. 아마 `this`를 만나면 이 문서를 다시 열어볼 것이다. 공부하면서 읽은 책 중에 《자바스크립트는 왜 그 모양일까》라는 책이 있었다. 저자는 `this`를 ~~극혐~~ 아주 싫어하고 있었다. 문제도 많고 필요도 없다고 한다. 그래서 `this`를 완전히 금지해야 한다고 주장한다. 
+
+나도 사용한다면, 다른 방법이 없을지 생각해보고 사용해야겠다. 왜냐하면 내가 이해하고 작성한다고 해도 읽는 입장에서 `this`가 뜻하는 바를 알기 위해 한번 더 생각을 거쳐야 한다면,,, 상당히 곤란하기 때문이다.
 
 ## reference
 - [프론트엔드 개발자를 위한 자바스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260768&orderClick=LAG&Kc=) 
