@@ -1,17 +1,19 @@
 ---
 title   : JavaScript 프로토타입
 date    : 2021-05-15 23:02:57 +0900
-updated : 2021-05-15 23:03:17 +0900
+updated : 2022-12-20 23:24:11 +0900
 aliases : ["프로토타입"]
 tags: ["JavaScript"]
 ---
 자바스크립트는 프로토타입 기반 객체지향 프로그래밍 언어다.
+
 ## 객체지향 프로그래밍 
 [[Object-Oriented-Programming|객체 지향 프로그래밍]]
 
 ## 상속과 프로토타입  
 상속은 어떤 객체의 프로퍼티 또는 메서드를 다른 객체가 그대로 사용할 수 있게 하는 것이다. 
-자바스크립트는 프로토타입을 기반으로 상속을 구현해 중복을 제거한다. 코드를 재사용하는 것. 
+자바스크립트는 프로토타입을 기반으로 상속을 구현해 중복을 제거한다. 코드를 재사용하는 것. **엄밀히 말하면 상속이라기보단 복사다.**
+
 ```javascript
 function Circle(radius) {
     this.radius = radius;
@@ -25,7 +27,8 @@ const circle2 = new Circle(2);
 
 console.log(circle.getArea === circle2.getArea); // false  
 ```
-`circle1`과 `circle2`는 `getArea`라는 메서드를 각각 갖고있다. 동일한 내용의 메서드라면 하나만 생성해서 모든 인스턴스가 공유하는 것이 바람직하다. 
+`circle1`과 `circle2`는 `getArea`라는 메서드를 각각 갖고있다. 동일한 내용의 메서드라면 하나만 생성해서 모든 인스턴스가 공유하는 것이 바람직하다.
+
 ```javascript
 function Circle(radius) {
     this.radius = radius;
@@ -40,19 +43,22 @@ const circle2 = new Circle(2);
 
 console.log(circle.getArea === circle2.getArea); // true  
 ```
+
 `Circle` 생성자 함수가 생성한 모든 인스턴스는 자신의 프로토타입, 상위(부모) 객체 역할을 하는 `Circle.prototype`의 모든 프로퍼티와 메서드를 상속받는다. 이처럼 상속을 통해 불필요한 중복을 제거할 수 있다. 
 
 ## 프로토타입 객체
 - 프로토타입 객체(또는 프로토타입)란 객체 간 상속을 구현하기 위해 사용된다. 
 - 프로토타입은 어떤 객체의 상위 객체의 역할을 하는 객체로 다른 객체에 공유 프로퍼티(메서드를 포함)를 제공한다. 
 - 모든 객체는 `[[Prototype]]`이라는 내부 슬롯을 가지며, 이 내부 슬롯의 값은 프로토타입의 참조다. 
-	- `[[Prototype]]`에 저장되는 프로토타입은 객체 생성 방식에 의해 결정된다. 객체가 생성될 때 객체 생성 방식에 따라 프로토타입이 결정되고  `[[Prototype]]`에 저장되는 것 
-- 모든 객체는 하나의 프로토타입을 갖고(`[[Prototype]]` 값이 `null`인 객체는 프로토타입이 없다.) 모든 프로토타입은 생성자 함수와 연결되어 있다. 
+- 모든 객체는 하나의 프로토타입을 갖는다.(`[[Prototype]]` 값이 `null`인 객체는 프로토타입이 없다.)
+
+## 프로토타입 체인
+[[JavaScript-Prototype-Chain|프로토타입 체인]]
 
 ### `__proto__` 접근자 프로퍼티
 - 💡 `__proto__`는 '던더 프로토'라고 발음한다.
 - **모든 객체는 `__proto__` 접근자 프로퍼티를 통해 자신의 프로토타입, `[[Prototype]]` 내부 슬롯에 간접적으로 접근이 가능하다.**
-- 접근자 프로퍼티는 자체적으로 값(`[[Value]]` 프로퍼티 어트리뷰트)를 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 `[[Get]]`, `[[Set]]` 프로퍼티 어트리뷰트로 구성된 프로퍼티이다.  [[JavaScript-Property-Attributes]] 참고
+- 접근자 프로퍼티는 자체적으로 값(`[[Value]]` 프로퍼티 어트리뷰트)을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 사용하는 `[[Get]]`, `[[Set]]` 프로퍼티 어트리뷰트로 구성된 프로퍼티이다.  [[JavaScript-Property-Attributes]] 참고
 - `__proto__` 접근자 프로퍼티는 객체가 직접 소유하는 것이 아닌 `Object.prototype`의 프로퍼티
 - 사용하는 이유는? 
 	- 상호 참조를 막기 위해 ([[JavaScript-Prototype-Chain|프로토타입 체인]]은 단방향 링크드 리스트로 구현되어야 함) 
@@ -89,7 +95,7 @@ const me = new Person('Lee');
 console.log(me.constructor === Person); // true 
 ```
 - 모든 프로토타입은 `constructor` 프로퍼티를 갖는다. 자신을 참조하고 있는 생성자 함수를 가리킨다. 
-- `me` 객체에는 `constructor` 프로퍼티가 없지만 프로토타입인 `Person.prototype`에 `constructor` 프로퍼티를 상속받아 사용할 수 있는 것 
+- `me` 객체에는 `constructor` 프로퍼티가 없다! 하지만 프로토타입인 `Person.prototype`에 `constructor` 프로퍼티를 위임해 사용할 수 있는 것 
 
 ## 프로토타입의 생성 시점 
 프로토타입은 생성자 함수가 생성되는 시점에 함께 생성된다. 
@@ -124,8 +130,6 @@ function Person(name) {
 	you.sayHello(); 
 	```
 
-## 프로토타입 체인
-[[JavaScript-Prototype-Chain|프로토타입 체인]]
 
 ## 프로퍼티 섀도잉
 [[JavaScript-Property-Shadowing|프로퍼티 섀도잉]]
