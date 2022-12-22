@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2022-12-19 23:56:01 +0900
+updated : 2022-12-22 23:09:30 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
@@ -295,9 +295,7 @@ module.exports = {
 
 #### webpack-dev-middleware
 
-frontend 코드와 server 코드가 함께 있는 경우에, 프론트엔드 코드가 변경될 때 `webpack-dev-middleware`를 사용해 webpack을 실행할 수 있다.
-
-`webpack-dev-middleware`는 webpack에서 처리한 파일을 서버로 보낸다.
+frontend 코드와 server 코드가 함께 있는 경우에, `webpack-dev-middleware`를 사용하면 webpack에서 처리한 파일을 서버로 내보낸다.
 
 express와 `webpack-dev-middleware` 를 결합해보자.
 ```sh
