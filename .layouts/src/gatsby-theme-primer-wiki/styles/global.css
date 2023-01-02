@@ -1,11 +1,8 @@
-/* Neo둥근모 */
-@import url("//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css");
-
-/* Neo둥근모 Code */
+@import url("//cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
 @import url("//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm_code/style.css");
 
 html {
-  font-family: "NeoDunggeunmo";
+  font-family: "SUIT", sans-serif;
 }
 
 body {
