@@ -6,7 +6,7 @@ import {
   Text,
 } from "@primer/components";
 import React from "react";
-import Seo from "gatsby-theme-primer-wiki/src/components/seo";
+import Seo from "../components/seo";
 import { navigate } from "gatsby";
 
 const NotFoundPage = ({ data, location }) => {

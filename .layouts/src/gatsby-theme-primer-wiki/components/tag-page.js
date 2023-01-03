@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./layout";
-import SEO from "gatsby-theme-primer-wiki/src/components/seo";
+import SEO from "./seo";
 import { Box } from "@primer/components";
 import urlJoin from "url-join";
 import TagPosts from "./tag-posts";

@@ -4,7 +4,7 @@ import Layout from "./layout";
 import ReferencesBlock from "./references-block";
 import { MDXProvider } from "@mdx-js/react";
 import components from "./mdx-components";
-import SEO from "gatsby-theme-primer-wiki/src/components/seo";
+import SEO from "./seo";
 import { Box, Heading, Text, useTheme } from "@primer/components";
 import { HEADER_HEIGHT } from "gatsby-theme-primer-wiki/src/components/header";
 import Blockquote from "gatsby-theme-primer-wiki/src/components/blockquote";
