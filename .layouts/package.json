@@ -1,28 +1,29 @@
 {
-    "private": true,
-    "name": "wiki",
-    "version": "1.0.0",
-    "license": "MIT",
-    "scripts": {
-        "develop": "gatsby develop -H 0.0.0.0",
-        "start": "gatsby develop -H 0.0.0.0",
-        "build": "gatsby build",
-        "clean": "gatsby clean",
-        "serve": "gatsby serve",
-        "test": "echo test"
-    },
-    "dependencies": {
-        "@giscus/react": "^1.0.0",
-        "gatsby": "4.6.0",
-        "gatsby-plugin-exclude": "^1.0.2",
-        "gatsby-plugin-google-adsense": "^1.1.3",
-        "gatsby-plugin-google-gtag": "^4.7.0",
-        "gatsby-plugin-manifest": "^4.7.0",
-        "gatsby-plugin-robots-txt": "^1.7.0",
-        "gatsby-plugin-sitemap": "3.3.0",
-        "gatsby-source-filesystem": "^4.7.0",
-        "gatsby-theme-primer-wiki": "^2.0.5",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
-    }
+  "private": true,
+  "name": "wiki",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop -H 0.0.0.0 && echo \"hello\"",
+    "start": "gatsby develop -H 0.0.0.0",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve",
+    "test": "echo test"
+  },
+  "dependencies": {
+    "@giscus/react": "^1.0.0",
+    "gatsby": "4.6.0",
+    "gatsby-plugin-exclude": "^1.0.2",
+    "gatsby-plugin-google-adsense": "^1.1.3",
+    "gatsby-plugin-google-gtag": "^4.7.0",
+    "gatsby-plugin-manifest": "^4.7.0",
+    "gatsby-plugin-notifications": "0.0.2",
+    "gatsby-plugin-robots-txt": "^1.7.0",
+    "gatsby-plugin-sitemap": "3.3.0",
+    "gatsby-source-filesystem": "^4.7.0",
+    "gatsby-theme-primer-wiki": "^2.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }

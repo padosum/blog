@@ -16,6 +16,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-notifications`,
+      options: {
+        sound: `Glass`,
+        toast: true,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "content",
