@@ -86,7 +86,7 @@ const Post = ({ data, pageContext, location }) => {
     dateModified: dateModified
       ? new Date(dateModified)
       : lastUpdatedTime
-      ? new Date(lastUpdatedTime)
+      ? new Date(lastUpdatedTime.split(" ")[0])
       : datePublished,
     category,
     imageUrl: frontmatter.image ? frontmatter.image.publicURL : null,
