@@ -1,7 +1,7 @@
 ---
 title   : Webpack
 date    : 2021-06-04 20:37:21 +0900
-updated : 2022-12-22 23:09:30 +0900
+updated : 2023-01-06 22:51:16 +0900
 aliases : ["웹팩"]
 tags: ["Web", "Webpack"]
 ---
@@ -104,6 +104,9 @@ module.exports = {
 	- `style-loader`: 동적으로 `style` 태그를 생성해 CSS를 적용
 	- `css-loader`: `.css` 파일을 읽어들이기 위해 사용, CSS 파일 간의 의존관계를 해소
 	- `sass-loader`: [[sass]] 파일을 사용하기 위한 loader  
+
+#### Asset Modules
+webpack에서 폰트나 아이콘 등을 불러올 때 `file-loader`, `url-loader`등을 사용했었다. Webpack5 부터는 로더를 사용하지 않고 [Asset Modules](https://webpack.kr/guides/asset-modules/) 을 사용하면 된다!
 
 #### Babel 연동하기
 
@@ -270,6 +273,19 @@ module.exports = {
 - [webpack-dev-server의 옵션들](https://webpack.js.org/configuration/dev-server/)
 	- `--progress`를 추가하면 빌드 진행률을 보여준다.  
 
+##### SPA와 함께
+
+[HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)를 사용하는 경우엔 `404 Not Found` 응답을 받는 대신 `index.html`이 제공되어야 한다. 이때 `historyApiFallback` 설정을 `true`로 해주면 된다.
+```js
+// webpack.config.js
+module.exports = {
+  //...
+  devServer: {
+    historyApiFallback: true,
+  },
+};
+```
+이 옵션의 의미가 뭔지 몰랐는데 사용하는 경우를 생각해보니 그냥 직관적인 이름이었다. history Api 사용시 대처하는 기능(Fallback)을 의미하는 것이었다.
 
 ##### Hot Module Replacement  
 
