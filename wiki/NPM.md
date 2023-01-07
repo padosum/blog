@@ -1,7 +1,7 @@
 ---
 title   : NPM
 date    : 2021-06-03 13:56:01 +0900
-updated : 2022-11-16 23:51:49 +0900
+updated : 2023-01-07 22:44:53 +0900
 tags    : ["JavaScript"] 
 ---
 **NPM (Node Package Manager)**  
@@ -70,6 +70,14 @@ $ npm install concurrently
 	- `@latest` 또는 `@x`: 항상 최신 버전
 	- `>`, `<`, `>=`, `<=`, `=`: 문자 그대로 초과, 미만, 이상, 이하, 동일을 의미
 
+---
+
+모 패키지를 둘러보다가 rc라고 붙은 버전을 발견했다.
+
+`3.0.0-rc.1`
+
+무슨 뜻일까 찾아보니 rc = release candidate -> 릴리즈 후보였다.
+아직 정식으로 출시된 것은 아니나 준비가 된 버전을 의미하는 것이었다. [버그가 발견되지 않고 개발자들, 커뮤니티에서 안정적인 것으로 판단되면 릴리즈 된다.](https://stackoverflow.com/questions/41307500/what-does-the-rc-in-a-npm-package-version-structure)
 
 ## reference 
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)
