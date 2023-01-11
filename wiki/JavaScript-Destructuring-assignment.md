@@ -78,7 +78,45 @@ const user = {
 const { name, age, address: { city } } = user
 console.log(name, age, city) // padosum 100 Busan
 ```
+
+
 ## 다른 사용 예  
+
+### rest parameter와 함께
+
+[[JavaScript-Rest-Parameter|Rest parameter]]와 함께 사용하면 특정 키 값 제거를 쉽게할 수 있다.
+
+다음과 같은 배열이 주어졌을 때, b만 제거된 값을 얻고 싶다면
+```js
+const data = { a: 1, b: 2, c: 3 };
+```
+
+보통 특정 값을 가져올 때 사용하지만 다음과 같이 객체에서 그 값을 제거한 경우도 가져올 수 있다.
+```js
+const data = { a: 1, b: 2, c: 3 };
+
+const { b, ...rest } = data;
+console.log(rest); // { a: 1, c: 3 }
+```
+
+만약 키값을 동적으로 적용하고 싶다면 따로 변수에 넣어두면 된다.
+```js
+const data = { 'some-key': 1, a: 1, b: 2 };
+const someKey = 'some-key';
+
+const { [someKey]: removeKey, ...rest } = data;
+console.log(removeKey); // 1
+console.log(rest); // { a: 1, b: 2 }
+```
+
+### 배열에서 
+다음과 같이 새로운 이름으로 할당해서 값을 가져올 수 있다. 배열의 index를 객체의 `key` 처럼 얻을 수 있기 때문이다. ( ex, `arr[1]`)
+```js
+const arr = [1, 2, 3, 4];
+const { 0: first, 1: second, [arr.length - 1]: last } = arr;
+console.log(first, second, last); // 1, 2, 4
+```
+
 ### Vuex  
 - `actions` 속성에서 `context` 인자 사용시
 - `commit`을 여러번 호출해야 하는 경우 코드 단순화를 위해 사용한다.  

@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2022-12-06 21:32:30 +0900
+updated : 2023-01-11 20:57:11 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -38,6 +38,7 @@ updated : 2022-12-06 21:32:30 +0900
   * [[Chrome-Devtools-Tips]]
 	* [[Session-and-Token-Authentication]]
 	* [[Session-login-with-lowdb-in-express]]
+  * [[Https-redirect-in-Safai]]
 * CSS 
   * [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   * [[CSS-z-index]]
