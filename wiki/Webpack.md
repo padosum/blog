@@ -24,7 +24,7 @@ tags: ["Web", "Webpack"]
 - 자바스크립트 변수 유효 범위 문제 
   - ES6의 Modules 문법, 모듈 번들링으로 해결
 - 브라우저별 HTTP 요청 숫자의 제약  
-  - 브라우저별로 한 번에 서버에 보낼 수 있는 HTTP 요청 숫자가 정해져있다.  
+  - 브라우저별로 한 번에 서버에 보낼 수 있는 HTTP 요청 숫자가 정해져있다.[^1]  
 - 사용하지 않는 코드 관리
 - Dynamic Loading & Lazy Loading 미지원 
   - 원하는 모듈을 원하는 타이밍에 로딩할 수 있음 
@@ -383,3 +383,4 @@ app.listen(3000, function () {
 - [프론트엔드 개발자를 위한 webpack](https://inf.run/hVZe) 
 - [프론트엔드 개발환경의 이해와 실습](https://inf.run/PM8f)  
   
+[^1]: https://www.tutorialspoint.com/what-are-max-parallel-http-connections-in-a-browser
