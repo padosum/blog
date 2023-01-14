@@ -1,7 +1,7 @@
 ---
 title   : 클린코드 자바스크립트 
 date    : 2022-02-25 21:55:23 +0900
-updated : 2022-02-26 09:15:14 +0900
+updated : 2023-01-14 09:53:41 +0900
 aliases : ["클린코드 자바스크립트"]
 tags    : 
 ---
@@ -1109,6 +1109,7 @@ function hasOwnProp(targetObj, targetProp) {
 }
 ```
 알아두면 좋다. 언젠가는 코드 작성시에 의미있게 도움이 될 수 있음 
+`call`을 사용하는 대신 [[JavaScript-Prototype|Object.hasOwn()]]을 사용하자!
 
 ### 직접 접근 지양하기
 ```javascript

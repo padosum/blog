@@ -1,7 +1,7 @@
 ---
 title   : JavaScript 프로토타입
 date    : 2021-05-15 23:02:57 +0900
-updated : 2022-12-20 23:24:11 +0900
+updated : 2023-01-14 09:53:41 +0900
 aliases : ["프로토타입"]
 tags: ["JavaScript"]
 ---
@@ -172,6 +172,10 @@ me.staticMethod(); // Error
 
 ### `Object.prototype.hasOwnProperty` 메서드 
 고유의 프로퍼티인 경우에만 `ture`, 상속받은 것이면 `false`
+
+`Object.create(null)`을 사용해 생성된 객체는 `Object.prototype`을 상속받지 못하는 문제가 있고, `hasOwnProperty`를 [[JavaScript-Property-Shadowing|shadowing]]한 경우에도 문제가 있다. 새로나온 `Object.hasOwn()` 메서드를 사용하는 것이 좋겠다!
+[참고](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
+
 
 ## 프로퍼티 열거하기 
 ### `for ... in` 문 
