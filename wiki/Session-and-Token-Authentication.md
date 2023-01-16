@@ -1,7 +1,7 @@
 ---
 title   : 세션 기반 인증과 토큰 기반 인증 
 date    : 2022-09-11 20:37:01 +0900
-updated : 2022-09-12 15:27:39 +0900
+updated : 2023-01-16 22:31:07 +0900
 aliases : ["세션 기반 인증과 토큰 기반 인증"]
 tags    : ["Web"] 
 ---
@@ -34,7 +34,7 @@ tags    : ["Web"]
 
 이후에 웹 브라우저가 요청을 보낼 때 웹 서버의 도메인에 해당하는 모든 쿠키값이 Cookie 헤더를 통해 함께 전달된다. 이를 통해 서버는 요청을 보낸 클라이언트의 고유한 상태를 구분할 수 있게 된다. 
 
-HTTP Response의 `Set-Cookie` 헤더를 주는 방법 외에도 [웹 브라우저에서 JavaScript로 쿠키를 제어]([https://developer.mozilla.org/ko/docs/Web/API/Document/cookie](https://developer.mozilla.org/ko/docs/Web/API/Document/cookie))할 수도 있다. → `document.cookie`
+HTTP Response의 `Set-Cookie` 헤더를 주는 방법 외에도 [웹 브라우저에서 JavaScript로 쿠키를 제어](https://developer.mozilla.org/ko/docs/Web/API/Document/cookie)할 수도 있다. → `document.cookie`
 
 ## 세션 기반 인증
 
