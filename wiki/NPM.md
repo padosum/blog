@@ -1,7 +1,7 @@
 ---
 title   : NPM
 date    : 2021-06-03 13:56:01 +0900
-updated : 2023-01-07 22:44:53 +0900
+updated : 2023-01-29 22:52:04 +0900
 tags    : ["JavaScript"] 
 ---
 **NPM (Node Package Manager)**  
@@ -79,7 +79,20 @@ $ npm install concurrently
 무슨 뜻일까 찾아보니 rc = release candidate -> 릴리즈 후보였다.
 아직 정식으로 출시된 것은 아니나 준비가 된 버전을 의미하는 것이었다. [버그가 발견되지 않고 개발자들, 커뮤니티에서 안정적인 것으로 판단되면 릴리즈 된다.](https://stackoverflow.com/questions/41307500/what-does-the-rc-in-a-npm-package-version-structure)
 
+
+## NVM (Node Version Manager)  
+- node 버전 변경 프로그램 
+- 호환성을 위해 node 버전을 변경해야할 때 이전 버전을 직접 설치해도 되지만 NVM을 사용해도 된다.  
+- NVM 사용법
+  - 설치 후 `node -v` 현재 node 버전 확인
+  - `nvm install 10.16.3` node 10.16.3 버전이 설치되고 해당 버전으로 변경 
+  - `nvm use 버전명` node 버전 변경(해당 버전이 이미 설치된 경우)  
+  - `nvm list`: 설치된 node version 목록을 보여준다.
+  - `nvm uninstall 버전명`: 노드 버전을 삭제한다.
+	  - ex) `nvm uninstall v14`: 14.xxx 버전이 삭제된다.
+
 ## reference 
 - [프론트엔드 개발자를 위한 웹팩](https://inf.run/hVZe)
+- [https://ellapresso.tistory.com/79](https://ellapresso.tistory.com/79)
 
 [^1]: 조현영 저, 《Node.js 교과서》, 길벗, 2018년
