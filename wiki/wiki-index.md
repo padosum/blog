@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-01-11 20:57:11 +0900
+updated : 2023-02-09 09:16:32 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -82,6 +82,7 @@ updated : 2023-01-11 20:57:11 +0900
 	* [[Vue-Router]]
 	* [[Vue-Axios]]
 	* [[Add-Utterances-To-Vue-Project|Vue Project에 Utterances 추가하기]]
+    * [[Nuxt]]
 * Git
 	* [[New-branch-not-showing-in-visual-studio]]
 	* [[Skip-Git-Commit-Hooks]]
