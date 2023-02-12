@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-02-09 09:16:32 +0900
+updated : 2023-02-12 21:28:07 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -149,6 +149,7 @@ updated : 2023-02-09 09:16:32 +0900
 	* [[DNS]]
 	* [[Email]]
 	* [[Scaffolding]]
+	* [[JPEG]]
 * Java
 	* [[Servlet-Database]] 
 * Tools
