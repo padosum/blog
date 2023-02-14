@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-02-12 21:28:07 +0900
+updated : 2023-02-14 19:26:24 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -189,4 +189,6 @@ updated : 2023-02-12 21:28:07 +0900
 * Blog
 	* [[Enable-google-custom-engine-in-Gatsby]]
 	* [[Today-I-Learned]] 
+    * [[After-reading-Just-JavaScript]]
+
 - [[What-I-Learned-Through-Woowahan-Tech-Camp]]
