@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-02-17 21:42:46 +0900
+updated : 2023-02-18 22:08:30 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -108,6 +108,7 @@ updated : 2023-02-17 21:42:46 +0900
     * [[Jasmine]]
     * [[JavaScript-Test-With-Mocha]]
 	* [[testing-library]]
+	* [[Jest]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
