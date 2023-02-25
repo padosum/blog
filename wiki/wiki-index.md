@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-02-18 22:08:30 +0900
+updated : 2023-02-25 22:13:54 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -183,6 +183,7 @@ updated : 2023-02-18 22:08:30 +0900
 	* [[TPO]]
   * [[VC]]
   * [[상면]]
+  * [[uuidv4()-is-deprecated]]
 * Art
 	* [[Cubism]]
 	* [[Fresco]]
