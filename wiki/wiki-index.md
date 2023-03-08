@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-02-25 22:13:54 +0900
+updated : 2023-03-08 11:56:48 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -184,6 +184,7 @@ updated : 2023-02-25 22:13:54 +0900
   * [[VC]]
   * [[상면]]
   * [[uuidv4()-is-deprecated]]
+  * [[Fix-iCloud-drive-sync-problem]]
 * Art
 	* [[Cubism]]
 	* [[Fresco]]
