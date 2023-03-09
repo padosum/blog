@@ -1,7 +1,7 @@
 ---
 title: Babel
 date: 2021-06-11 17:42:26 +0900
-updated : 2022-12-17 23:42:52 +0900
+updated : 2023-03-09 13:59:41 +0900
 aliases:
 tags: ['Web', 'JavaScript']
 ---
@@ -68,7 +68,7 @@ npm install @babel/core @babel/cli @babel/preset-env
 
 BAabel은 파싱과 출력만 담당, 변환 작업은 **플러그인**이 처리한다.
 
-ES2015+으로 코딩시 필요한 플러그인을 일일이 찾아 적는 것은 힘들기 때문에 목적에 맞게 여러가지 플러그인을 세트로 모아놓은 **프리셋**을 사용하는 것이 좋다. 패키지 설치 때 `@babel/preset-env`라는 프리셋을 설치했따.
+ES2015+으로 코딩시 필요한 플러그인을 일일이 찾아 적는 것은 힘들기 때문에 목적에 맞게 여러가지 플러그인을 세트로 모아놓은 **프리셋**을 사용하는 것이 좋다. 패키지 설치 때 `@babel/preset-env`라는 프리셋을 설치했다.
 
 - Babel에서 제공하는 [프리셋](https://babeljs.io/docs/en/presets)
 - preset-env
