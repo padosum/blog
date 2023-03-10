@@ -314,6 +314,32 @@ module.exports = {
   },
 ```
 
+## stylesheet 적용하기
+
+webpack에서 `style-loader`와 `css-loader`를 사용한다.
+
+```sh
+npm install --save-dev style-loader
+npm install --save-dev css-loader
+```
+
+```js
+// webpack.config.js
+module.exports = {
+  ...
+  module: {
+    rules: [
+      ...
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  }
+}
+```
+
+
 ## 생각
 
 `create-react-app`은 뒤에서 정말 많은 일을 해주고 있었다. 간단한 설정만 필요하다면 사용하는 것이 훨씬 이득같다. 하지만 조금이라도 더 설정이 필요할 때 문제가 생길 가능성이 농후해보인다. 다음번에는 vite에서 작업하는 것도 진행해봐야겠다.
