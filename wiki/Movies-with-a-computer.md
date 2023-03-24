@@ -27,6 +27,8 @@ tags: ["movie"]
 * [X] 소스 코드(Source Code, 2011)
 * [X] 소셜 네트워크(The Social Network, 2010)
 * [ ] 스니커드(Sneakers, 1992)
+* [x] 스마트폰을 떨어뜨렸을 뿐인데 (2023)
+	* [ ] 오프닝 시퀀스는 서치가 생각났다.
 * [X] 아이언맨(Iron Man, 2008)
 * [X] 아이언맨 2(Iron Man 2, 2012)
 * [X] 아이언맨 3(Iron Man 3, 2013)
