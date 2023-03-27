@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-03-09 13:24:15 +0900
+updated : 2023-03-27 23:32:13 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -127,7 +127,7 @@ updated : 2023-03-09 13:24:15 +0900
 
   * [[Virtual-DOM]]
 	* [[React-빌드-후-API-통신-오류-문제|React 빌드 후 API 통신 오류 문제]]
-
+  * [[React-optimization]]
 * Programming 
 	* [[REST-API]]
 	* [[SPA]]
