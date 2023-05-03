@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-03-27 23:32:13 +0900
+updated : 2023-05-03 22:44:10 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -115,7 +115,8 @@ updated : 2023-03-27 23:32:13 +0900
 	* [[Vuepress-Depoly-To-GitHub-Pages]]
 	* [[Add-Favicon-With-Webpack|웹팩으로 파비콘 추가하기]]
   * [[Docker]]
-* React
+* [[React]]
+    * [[Understanding-the-React-programming-model|React 프로그래밍 모델 이해하기]]
 	* [[React-Props-and-State]]
 	* [[React-Context]]
 	* [[React-Native-tutorial]]
