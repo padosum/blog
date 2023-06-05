@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-06-01 23:05:25 +0900
+updated : 2023-06-05 22:04:24 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -73,6 +73,7 @@ updated : 2023-06-01 23:05:25 +0900
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
 	* [[TypeScript-Generics]]
+	* [[Props-Type-in-React-Component]]
 * Vue.js  
   * [[What-is-the-difference-between-the-views-and-components folders-in-a-vue-project|Vue.js Project에서 views 와 components 폴더의 차이]]
 	* [[Vue-js]]
@@ -109,6 +110,7 @@ updated : 2023-06-01 23:05:25 +0900
     * [[JavaScript-Test-With-Mocha]]
 	* [[testing-library]]
 	* [[Jest]]
+    * [[React-Testing-Libarry-in-Vitest]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
