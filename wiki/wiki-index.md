@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-06-15 21:29:39 +0900
+updated : 2023-06-21 22:57:04 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -74,6 +74,7 @@ updated : 2023-06-15 21:29:39 +0900
 	* [[TypeScript-Mapped-Type]]
 	* [[TypeScript-Generics]]
 	* [[Props-Type-in-React-Component]]
+    * [[useReducer-with-TypeScript]]
 * Vue.js  
   * [[What-is-the-difference-between-the-views-and-components folders-in-a-vue-project|Vue.js Project에서 views 와 components 폴더의 차이]]
 	* [[Vue-js]]
@@ -133,6 +134,8 @@ updated : 2023-06-15 21:29:39 +0900
 	* [[React-빌드-후-API-통신-오류-문제|React 빌드 후 API 통신 오류 문제]]
   * [[React-optimization]]
   * [[Setup-Tailwind-CSS-in-React-with-Vite]]
+* Redux
+  * [[Redux에서 외부 slice에 정의된 액션에 응답하기]]
 * Programming 
 	* [[REST-API]]
 	* [[SPA]]
