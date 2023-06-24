@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-06-21 22:57:04 +0900
+updated : 2023-06-24 18:55:55 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -98,6 +98,7 @@ updated : 2023-06-21 22:57:04 +0900
 	* [[Git-switch|Git switch 명령어]]
 	* [[Git-pre-commit-Hooks]]
 	* [[Creating-new-pre-commit-hooks]]
+	* [[Run-pre-commit-hook-with-husky-and-lint-staged|husky와 lint-staged를 사용해 pre-commit hook 실행하기]]
 * Development
   * [[CI-CD|CI/CD]] 
   * [[SDK]]
