@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-06-24 18:55:55 +0900
+updated : 2023-07-03 21:49:46 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -26,6 +26,7 @@ updated : 2023-06-24 18:55:55 +0900
 	* [[DOM]]
 	* [[Add-Custom-Domain-to-Vercel|Netlify에서 Vercel로 도메인 설정하기]]
 	* [[Add-Subdomain-to-Vercel|Vercel에서 서브도메인 추가하기]]
+    * [[AWS-domain-register]]
 	* [[브라우저의-렌더링-과정]]
 	* [[Viewport|뷰포트]]
 	* [[Event]]
