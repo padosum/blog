@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-07-07 21:29:24 +0900
+updated : 2023-07-09 08:50:15 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -70,6 +70,7 @@ updated : 2023-07-07 21:29:24 +0900
   * [[JavaScript-Arrow-Function-Hoisting|화살표 함수가 호이스팅된다는 착각]]
 * Node.js
 	* [[Working-With-Environment-Variables-in-Node.js|Node.js에서 환경 변수 사용하기]]
+	* [[Using-debugger-in-Nodejs]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
