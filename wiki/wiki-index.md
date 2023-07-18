@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-07-17 23:39:50 +0900
+updated : 2023-07-18 22:31:05 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -77,6 +77,7 @@ updated : 2023-07-17 23:39:50 +0900
 	* [[TypeScript-Generics]]
 	* [[Props-Type-in-React-Component]]
     * [[useReducer-with-TypeScript]]
+	* [[TypeScript-Access-Modifiers]]
 * Vue.js  
   * [[What-is-the-difference-between-the-views-and-components folders-in-a-vue-project|Vue.js Project에서 views 와 components 폴더의 차이]]
 	* [[Vue-js]]
