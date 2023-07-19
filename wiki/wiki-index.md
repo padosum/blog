@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-07-18 22:31:05 +0900
+updated : 2023-07-19 22:58:23 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -118,6 +118,7 @@ updated : 2023-07-18 22:31:05 +0900
     * [[React-Testing-Libarry-in-Vitest]]
 	* [[Applying-Taliwindcss-to-React-Testing-Library]]
 	* [[Testing-Redux-Toolkit-Query-with-MSW]]
+    * [[Tips-for-Testing]]
 * 개발환경
 	* [[Frontend-development-environment]]
 	* [[Install-Oracle-Database-In-MacOS]]
