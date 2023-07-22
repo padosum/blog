@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-07-19 22:58:23 +0900
+updated : 2023-07-22 22:51:59 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -71,6 +71,8 @@ updated : 2023-07-19 22:58:23 +0900
 * Node.js
 	* [[Working-With-Environment-Variables-in-Node.js|Node.js에서 환경 변수 사용하기]]
 	* [[Using-debugger-in-Nodejs]]
+* NestJS
+    * [[Using-MySQL-without-TypeORM-in-NestJS]]
 * TypeScript  
 	* [[TypeScript-Utility-Type]]
 	* [[TypeScript-Mapped-Type]]
