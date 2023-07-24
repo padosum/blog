@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-07-23 22:22:29 +0900
+updated : 2023-07-24 23:50:49 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -111,6 +111,7 @@ updated : 2023-07-23 22:22:29 +0900
   * [[Environment-Variables-In-Vercel-With-Vite|Vercel에서 환경 변수 설정하기]]
   * [[Configure-Proxy-With-Vercel|Vercel에서 Proxy 설정하기]]
   - [[Create-a-Telegram-bot-with-Python]]
+  * [[crbug 1173575 non-JS module files deprecated]]
 * Testing
     * [[TDD]] 
     * [[Jasmine]]
@@ -144,7 +145,8 @@ updated : 2023-07-23 22:22:29 +0900
   * [[Setup-Tailwind-CSS-in-React-with-Vite]]
   * [[Redirect-to-another-page-and-fill-a-field-in-React]]
 * Redux
-  * [[Redux에서 외부 slice에 정의된 액션에 응답하기]]
+  * [[Redux에서 외부 slice에 정의된 액션에 응답하기
+  * [[How-to-trigger-Fetch-in-RTK-Query]]
 * Programming 
 	* [[REST-API]]
 	* [[SPA]]
