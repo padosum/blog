@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-07-24 23:50:49 +0900
+updated : 2023-08-14 16:50:50 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -112,6 +112,7 @@ updated : 2023-07-24 23:50:49 +0900
   * [[Configure-Proxy-With-Vercel|Vercel에서 Proxy 설정하기]]
   - [[Create-a-Telegram-bot-with-Python]]
   * [[crbug 1173575 non-JS module files deprecated]]
+  * [[Thinking-about-find-password-logic]]
 * Testing
     * [[TDD]] 
     * [[Jasmine]]
