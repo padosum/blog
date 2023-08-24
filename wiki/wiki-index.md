@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-08-14 16:50:50 +0900
+updated : 2023-08-24 10:42:34 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -68,6 +68,7 @@ updated : 2023-08-14 16:50:50 +0900
   * [[Uncaught-in-promise-SyntaxError-Unexpected-token-in-JSON-at-position-0]]
   * [[Fix-Cannot-use-import-statement-outside-a-module|Cannot use import statement outside a module 오류 해결하기]]
   * [[JavaScript-Arrow-Function-Hoisting|화살표 함수가 호이스팅된다는 착각]]
+  * [[Illegal-invocation]]
 * Node.js
 	* [[Working-With-Environment-Variables-in-Node.js|Node.js에서 환경 변수 사용하기]]
 	* [[Using-debugger-in-Nodejs]]
