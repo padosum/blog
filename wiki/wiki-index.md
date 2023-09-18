@@ -1,7 +1,7 @@
 ---
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2023-08-24 10:42:34 +0900
+updated : 2023-09-18 22:46:55 +0900
 ---
 * [[Movies-with-a-computer]]
 * [[Book-list]]
@@ -105,6 +105,8 @@ updated : 2023-08-24 10:42:34 +0900
 	* [[Git-pre-commit-Hooks]]
 	* [[Creating-new-pre-commit-hooks]]
 	* [[Run-pre-commit-hook-with-husky-and-lint-staged|husky와 lint-staged를 사용해 pre-commit hook 실행하기]]
+* Database
+  * [[PostgreSQL]] 
 * Development
   * [[CI-CD|CI/CD]] 
   * [[SDK]]
@@ -178,6 +180,7 @@ updated : 2023-08-24 10:42:34 +0900
 * Java
 	* [[Servlet-Database]] 
 * Tools
+    * [[WebStorm]]
 	* [[The-Shell]]
 		* [[How-to-Create-Shell-Script|쉘 스크립트 작성하기]]		
 	* [[커맨드 라인 명령어 및 사용법 모음]]

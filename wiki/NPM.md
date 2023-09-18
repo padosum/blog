@@ -1,7 +1,7 @@
 ---
 title   : NPM
 date    : 2021-06-03 13:56:01 +0900
-updated : 2023-01-29 22:52:04 +0900
+updated : 2023-09-18 22:43:29 +0900
 tags    : ["JavaScript"] 
 ---
 **NPM (Node Package Manager)**  
@@ -34,8 +34,9 @@ tags    : ["JavaScript"]
 
 ## NPM 명령어
 ### `npm ci`
-`node_modules`가 없는 경우에 `npm install`보다 2배 이상 빠르다. 
 
+- 현재 `node_modules`를 삭제하고 `package-lock.json` 파일에 명시된 대로 하위 의존성 모듈까지 **정확한 버전**으로 설치한다. 
+- `node_modules`가 없는 경우에 `npm install`보다 2배 이상 빠르다. [참고](https://blog.npmjs.org/post/171139955345/v570.html)
 
 ## scripts
 - custom scripts는 `npm run 명령어`로 실행한다.  
