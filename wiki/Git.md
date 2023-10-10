@@ -1,7 +1,7 @@
 ---
 title   : Git
 date    : 2021-04-23 19:50:26 +0900
-updated : 2023-09-18 22:37:46 +0900
+updated : 2023-10-10 23:12:07 +0900
 aliases : 
 tags: ["Git"]
 ---
@@ -159,7 +159,7 @@ $ git config --global core.editor vim
 - `git reset`
   - `git reset --hard HEAD^` : 수정한 것까지 통째로 되돌리기
   - `git reset --mixed HEAD^` : add한 것까지 되돌리기
-  - `git reset --soft HEAD^`: commit한 것만 되돌리기
+  - `git reset --soft HEAD^`: commit한 것만 되돌리기 (undo last commit)
   - `HEAD^`의 의미
       - `HEAD`: 가장 최근 버전에서
       - `^`: 하나 되돌리기
