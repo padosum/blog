@@ -1,7 +1,7 @@
 ---
 title: wiki
 date: 2017-11-26 21:38:36 +0900
-updated: 2023-09-18 22:46:55 +0900
+updated: 2023-11-01 23:05:58 +0900
 ---
 
 - [[Movies-with-a-computer]]
@@ -159,6 +159,7 @@ updated: 2023-09-18 22:46:55 +0900
   - [[How-to-trigger-Fetch-in-RTK-Query]]
 - Programming
   - [[REST-API]]
+  - [[GraphQL]]
   - [[SPA]]
   - [[Transpiler]]
   - [[Task-Runner]]
