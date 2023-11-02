@@ -1,11 +1,15 @@
 ---
 title   : PostgreSQL
 date    : 2023-09-18 22:44:24 +0900
-updated : 2023-09-18 22:45:20 +0900
+updated : 2023-11-02 23:06:36 +0900
 aliases : 
 draft : false
 tags : ["Database"]
 ---
+
+## like와 ilike의 차이 
+- 처음에 `ilike`를 보고 오타인 줄 알았다.
+- `ilike`는 대소문자를 무시한다. `like`는 대소문자도 일치해야 한다.
 
 ## Bookmarks
 

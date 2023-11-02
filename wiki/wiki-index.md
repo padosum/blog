@@ -1,7 +1,7 @@
 ---
 title: wiki
 date: 2017-11-26 21:38:36 +0900
-updated: 2023-11-01 23:05:58 +0900
+updated: 2023-11-02 23:01:21 +0900
 ---
 
 - [[Movies-with-a-computer]]
@@ -160,7 +160,8 @@ updated: 2023-11-01 23:05:58 +0900
 - Programming
   - [[REST-API]]
   - [[GraphQL]]
-  - [[SPA]]
+  - [[Gatsby]]
+	- [[SPA]]
   - [[Transpiler]]
   - [[Task-Runner]]
   - [[Library]]
