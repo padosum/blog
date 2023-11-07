@@ -1,11 +1,16 @@
 ---
 title   : Vim 사용법 모음 
 date    : 2022-12-04 10:35:20 +0900
-updated : 2023-11-07 22:04:39 +0900
+updated : 2023-11-07 22:16:11 +0900
 tags : ["Vim", "How to"] 
 draft : false
 description: 기록하고 익숙해지도록 한다.
 ---
+
+## .vimrc 파일은 `source`를 사용할 필요가 없다.  
+다른 설정 파일을 생각하고 `source .vimrc`를 사용했는데 오류가 났다. 애초에 필요가 없었다.  
+[참고](https://github.com/vim/vim/issues/441)  
+
 
 ## 줄 마지막 커서로 이동해 입력하기
 
