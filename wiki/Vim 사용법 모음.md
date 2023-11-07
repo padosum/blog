@@ -1,7 +1,7 @@
 ---
 title   : Vim 사용법 모음 
 date    : 2022-12-04 10:35:20 +0900
-updated : 2023-06-24 18:55:55 +0900
+updated : 2023-11-07 22:04:39 +0900
 tags : ["Vim", "How to"] 
 draft : false
 description: 기록하고 익숙해지도록 한다.
@@ -31,6 +31,7 @@ description: 기록하고 익숙해지도록 한다.
 - `p`: 복사된 내용 붙이
 - `dd`: 줄 삭제하기
 - `u`: 되돌리기
+- [[Vim-Copy-and-Paste-To-Clipboard]]
 
 ## 찾기
 
