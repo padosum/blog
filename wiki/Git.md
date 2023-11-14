@@ -1,7 +1,7 @@
 ---
 title: Git
 date: 2021-04-23 19:50:26 +0900
-updated: 2023-10-10 23:12:07 +0900
+updated: 2023-11-14 23:43:12 +0900
 aliases:
 tags: ['Git']
 ---
@@ -147,6 +147,13 @@ folder/*
   - 수정한 내용 임시 저장
 - `git stash pop`
   - 임시 저장한 내용 복구
+- `git stash apply`
+  - 임시 저장한 내용을 복구하는데 `pop`은 가장 위에 저장된 것을 없애는 반면, `apply`는 적용만 하고 삭제시키진 않는다.
+- `git stash show -p` 
+	- `stash`된 내용을 볼 수 있다. (`-p`: 상세 조회 옵션)
+	- `git stash show -p stash@{1}`: 인덱스 선택
+- `git cherry-pick`
+  - 다른 branch에 있는 commit을 골라 현재 branch에 적용시킨다. 
 - `git checkout -- <파일명>`
   - 수정한 내용 원래대로 복구
   - `checkout` 은 브랜치 변경시에도 사용. 도서관에서 책을 받는 것과 같은 의미. 저장소 디렉토리에 있는 `.git` 폴더에서 히스토리를 관리. `.git`에서 특정 히스토리를 꺼내는 것
