@@ -1,7 +1,7 @@
 ---
 title   : PostgreSQL
 date    : 2023-09-18 22:44:24 +0900
-updated : 2023-11-02 23:06:36 +0900
+updated : 2023-11-20 23:28:11 +0900
 aliases : 
 draft : false
 tags : ["Database"]
@@ -10,6 +10,10 @@ tags : ["Database"]
 ## like와 ilike의 차이 
 - 처음에 `ilike`를 보고 오타인 줄 알았다.
 - `ilike`는 대소문자를 무시한다. `like`는 대소문자도 일치해야 한다.
+
+## Snippets
+- [[PostgreSQL-get-last-week-date|PostgreSQL - 지난주 날짜 구하기]]
+- [[PostgresSQL-string-to-array]]
 
 ## Bookmarks
 
@@ -22,3 +26,4 @@ tags : ["Database"]
 - [GROUP BY에 숫자?](https://discuss.codecademy.com/t/confusion-about-the-group-by-1-2-3/37951)
 - [homebrew로 PostgreSQL 설치 및 실행](https://kth990303.tistory.com/414)
 - [duplicate key value violates unique constraint](https://snepbnt.tistory.com/252)
+
