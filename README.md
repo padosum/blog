@@ -17,5 +17,3 @@
 - [Obsidian](https://obsidian.md/)
 - [Vimwiki+Jekyll+Github.io로 나만의 위키를 만들자](https://johngrib.github.io/wiki/my-wiki/)
 - [theowenyoung/gatsby-theme-primer-wiki](https://github.com/theowenyoung/gatsby-theme-primer-wiki)
-- [duotone-dark-earth-syntax](https://github.com/simurai/duotone-dark-earth-syntax)
-- [Eleanor's Notes](https://publish.obsidian.md/eleanorkonik/00+Meta/03+Guidance/Welcome)
