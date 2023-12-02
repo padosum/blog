@@ -1,49 +1,50 @@
 const theme = {
   fonts: {
-    normal: "NeoDunggeunmo",
-    mono: "NeoDunggeunmo Code",
+    normal: 'NeoDunggeunmo',
+    mono: 'NeoDunggeunmo Code',
   },
   colorSchemes: {
     light: {
       colors: {
         auto: {
-          white: "#f7f3ee",
+          white: '#ede0de',
         },
         header: {
-          bg: "hsl(36, 37%, 92%)",
-          text: "hsl(31, 45%, 20%)",
+          bg: '#0ac266',
+          text: '#1f5c7a',
         },
         bg: {
-          primary: "#f7f3ee",
-          alt: "hsl(36, 37%, 92%)",
-          title: "#00007f",
+          primary: '#fbfdfc',
+          alt: 'rgba(255, 255, 255, 0.07)',
+          title: '#00007f',
         },
         text: {
-          primary: "hsl(31, 45%, 20%)",
-          link: "hsl(43, 100%, 42%)",
-          placeholder: "hsl(34, 37%, 70%)",
-          neutralMuted: "rgba(175,184,193,0.2)",
+          primary: '#2c293d',
+          link: 'hsl(251, 13%, 31%)',
+          placeholder: 'hsl(251, 13%, 31%)',
+          neutralMuted: 'rgba(175,184,193,0.2)',
+          alt: '#fbfdfc',
         },
         border: {
-          primary: "hsl(36, 37%, 83%)",
+          primary: 'hsl(251, 13%, 31%)',
         },
-        gray: ["hsl(35, 35%, 90%)"],
+        gray: ['#0ac266'],
       },
     },
     dark: {
       colors: {
         bg: {
-          primary: "hsl(27, 14%, 15%)",
+          primary: 'hsl(27, 14%, 15%)',
         },
         text: {
-          primary: "#ffffff",
-          neutralMuted: "rgba(110,118,129,0.4)",
+          primary: '#ffffff',
+          neutralMuted: 'rgba(110,118,129,0.4)',
         },
 
-        gray: ["hsl(27, 15%, 12%)"],
+        gray: ['hsl(27, 15%, 12%)'],
       },
     },
   },
-};
+}
 
-export default theme;
+export default theme

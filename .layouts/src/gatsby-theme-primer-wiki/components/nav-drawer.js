@@ -1,56 +1,56 @@
-import { Box, Link, Text } from "@primer/components";
-import { ChevronDownIcon, ChevronUpIcon, XIcon } from "@primer/octicons-react";
-import debounce from "lodash.debounce";
-import React from "react";
-import { Link as GatsbyLink } from "gatsby";
-import useSiteMetadata from "gatsby-theme-primer-wiki/src/use-site";
-import DarkButton from "./dark-button";
-import Details from "gatsby-theme-primer-wiki/src/components/details";
-import Drawer from "gatsby-theme-primer-wiki/src/components/drawer";
-import NavItems from "./nav-items";
-import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
-import { useTheme } from "@primer/components";
-import { SunIcon, MoonIcon, RocketIcon } from "@primer/octicons-react";
-import components from "gatsby-theme-primer-wiki/src/components/mdx-components";
-import randomArticle from "../randomArticle";
+import { Box, Link, Text } from '@primer/components'
+import { ChevronDownIcon, ChevronUpIcon, XIcon } from '@primer/octicons-react'
+import debounce from 'lodash.debounce'
+import React from 'react'
+import { Link as GatsbyLink } from 'gatsby'
+import useSiteMetadata from 'gatsby-theme-primer-wiki/src/use-site'
+import DarkButton from './dark-button'
+import Details from 'gatsby-theme-primer-wiki/src/components/details'
+import Drawer from 'gatsby-theme-primer-wiki/src/components/drawer'
+import NavItems from './nav-items'
+import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
+import { useTheme } from '@primer/components'
+import { SunIcon, MoonIcon, RocketIcon } from '@primer/octicons-react'
+import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
+import randomArticle from '../randomArticle'
 
 export function useNavDrawerState(breakpoint) {
   // Handle string values from themes with units at the end
-  if (typeof breakpoint === "string") {
-    breakpoint = parseInt(breakpoint, 10);
+  if (typeof breakpoint === 'string') {
+    breakpoint = parseInt(breakpoint, 10)
   }
-  const [isOpen, setOpen] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(false)
 
   const onResize = React.useCallback(() => {
     if (window.innerWidth >= breakpoint) {
-      setOpen(false);
+      setOpen(false)
     }
-  }, [setOpen, breakpoint]);
+  }, [setOpen, breakpoint])
 
   const debouncedOnResize = React.useMemo(() => {
-    return debounce(onResize, 250);
-  }, [onResize]);
+    return debounce(onResize, 250)
+  }, [onResize])
 
   React.useEffect(() => {
     if (isOpen) {
-      window.addEventListener("resize", debouncedOnResize);
+      window.addEventListener('resize', debouncedOnResize)
       return () => {
         // cancel any debounced invocation of the resize handler
-        debouncedOnResize.cancel();
-        window.removeEventListener("resize", debouncedOnResize);
-      };
+        debouncedOnResize.cancel()
+        window.removeEventListener('resize', debouncedOnResize)
+      }
     }
-  }, [isOpen, debouncedOnResize]);
+  }, [isOpen, debouncedOnResize])
 
-  return [isOpen, setOpen];
+  return [isOpen, setOpen]
 }
 
 function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
-  const { siteMetadata } = useSiteMetadata();
-  const primerWikiThemeConfig = useThemeConfig();
-  const navItems = sidebarItems;
-  const primerNavItems = primerWikiThemeConfig.nav;
-  const { resolvedColorMode, setColorMode } = useTheme();
+  const { siteMetadata } = useSiteMetadata()
+  const primerWikiThemeConfig = useThemeConfig()
+  const navItems = sidebarItems
+  const primerNavItems = primerWikiThemeConfig.nav
+  const { resolvedColorMode, setColorMode } = useTheme()
   return (
     <Drawer isOpen={isOpen} onDismiss={onDismiss}>
       <Box
@@ -58,7 +58,7 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
         flexDirection="column"
         height="100%"
         bg="header.bg"
-        style={{ overflow: "auto", WebkitOverflowScrolling: "touch" }}
+        style={{ overflow: 'auto', WebkitOverflowScrolling: 'touch' }}
       >
         <Box
           display="flex"
@@ -88,11 +88,11 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
             <DarkButton
               aria-label="Theme"
               onClick={() =>
-                setColorMode(resolvedColorMode === "day" ? "night" : "day")
+                setColorMode(resolvedColorMode === 'day' ? 'night' : 'day')
               }
               ml={3}
             >
-              {resolvedColorMode === "day" ? (
+              {resolvedColorMode === 'day' ? (
                 <SunIcon />
               ) : (
                 <MoonIcon></MoonIcon>
@@ -102,7 +102,7 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
               aria-label="Random article"
               ml={3}
               onClick={() => {
-                randomArticle(navItems[0].items);
+                randomArticle(navItems[0].items)
               }}
             >
               <RocketIcon />
@@ -112,20 +112,9 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
             <PrimerNavItems items={primerNavItems} />
           </Box>
         </Box>
-        {navItems.length > 0 ? (
-          <Box
-            display="flex"
-            flexDirection="column"
-            flex="1 0 auto"
-            color="auto.gray.7"
-            bg="header.bg"
-          >
-            <NavItems location={location} items={navItems} />
-          </Box>
-        ) : null}
       </Box>
     </Drawer>
-  );
+  )
 }
 
 function PrimerNavItems({ items }) {
@@ -145,7 +134,7 @@ function PrimerNavItems({ items }) {
             {({ open, toggle }) => {
               return (
                 <>
-                  <summary onClick={toggle} style={{ cursor: "pointer" }}>
+                  <summary onClick={toggle} style={{ cursor: 'pointer' }}>
                     <Box
                       display="flex"
                       alignItems="center"
@@ -170,7 +159,7 @@ function PrimerNavItems({ items }) {
                     ))}
                   </Box>
                 </>
-              );
+              )
             }}
           </Details>
         ) : (
@@ -179,8 +168,8 @@ function PrimerNavItems({ items }) {
           </Link>
         )}
       </Box>
-    );
-  });
+    )
+  })
 }
 
-export default NavDrawer;
+export default NavDrawer

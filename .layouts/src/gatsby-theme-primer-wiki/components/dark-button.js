@@ -1,12 +1,14 @@
-import { ButtonOutline, themeGet } from "@primer/components";
-import styled from "styled-components";
+import { ButtonOutline, themeGet } from '@primer/components'
+import styled from 'styled-components'
 
 const DarkButton = styled(ButtonOutline)`
-  color: ${themeGet("colors.header.text")};
+  color: ${themeGet('colors.header.text')};
   background-color: transparent;
   box-shadow: none;
+  border: 1px solid ${themeGet('colors.header.text')};
+  border-radius: 0;
   &:hover {
-    background-color: hsl(31, 45%, 20%);
+    background-color: #0ac266;
   }
   &:hover > div {
     color: #fff;
@@ -14,6 +16,6 @@ const DarkButton = styled(ButtonOutline)`
   &:hover svg {
     fill: #fff;
   }
-`;
+`
 
-export default DarkButton;
+export default DarkButton

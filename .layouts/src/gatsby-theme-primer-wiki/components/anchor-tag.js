@@ -1,13 +1,13 @@
-import React from "react";
-import { Link as GatsbyLink } from "gatsby";
-import Tippy from "@tippyjs/react";
-import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { Link, Box, Heading, Button, Text } from "@primer/components";
-import isRelativeUrl from "is-relative-url";
-import { ZapIcon } from "@primer/octicons-react";
-import { useTheme } from "@primer/components";
-import { encodeSlug } from "gatsby-theme-primer-wiki/src/utils/encode";
+import React from 'react'
+import { Link as GatsbyLink } from 'gatsby'
+import Tippy from '@tippyjs/react'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { Link, Box, Heading, Button, Text } from '@primer/components'
+import isRelativeUrl from 'is-relative-url'
+import { ZapIcon } from '@primer/octicons-react'
+import { useTheme } from '@primer/components'
+import { encodeSlug } from 'gatsby-theme-primer-wiki/src/utils/encode'
 
 const AnchorTag = ({
   title,
@@ -17,41 +17,41 @@ const AnchorTag = ({
   withoutPopup,
   ...restProps
 }) => {
-  const theme = useTheme();
-  const colorMode = theme.resolvedColorMode;
+  const theme = useTheme()
+  const colorMode = theme.resolvedColorMode
   const ref = references.find(
     x => x.fields.slug === href || encodeSlug(x.fields.slug) === href
-  );
+  )
 
-  let instance = null;
+  let instance = null
   const onCreate = theInstance => {
-    instance = theInstance;
-  };
-  let popupContent;
-  let child;
+    instance = theInstance
+  }
+  let popupContent
+  let child
   const show = () => {
     if (instance) {
-      instance.show();
+      instance.show()
     }
-  };
+  }
 
   if (ref) {
     const nestedComponents = {
       a(props) {
-        return <AnchorTag {...props} references={references} withoutPopup />;
+        return <AnchorTag {...props} references={references} withoutPopup />
       },
-    };
-    const fields = ref.fields || {};
-    const frontmatter = ref.frontmatter || {};
+    }
+    const fields = ref.fields || {}
+    const frontmatter = ref.frontmatter || {}
     const dateLog = /^\/wiki\/\d{4}\/\d{2}\/\d{4}-\d{2}\//.test(
       restProps.postSlug
-    );
+    )
     const shouldShowTitle =
-      fields.shouldShowTitle !== undefined ? fields.shouldShowTitle : false;
-    const documentTitle = fields.title;
+      fields.shouldShowTitle !== undefined ? fields.shouldShowTitle : false
+    const documentTitle = fields.title
     popupContent = (
       <Box
-        width={["100%", "400px"]}
+        width={['100%', '400px']}
         maxHeight="300px"
         minHeight="100px"
         overflowY="scroll"
@@ -62,7 +62,7 @@ const AnchorTag = ({
       >
         {shouldShowTitle && documentTitle && (
           <Box mb={4}>
-            <Box display="flex" sx={{ alignItems: "center" }}>
+            <Box display="flex" sx={{ alignItems: 'center' }}>
               <Heading as="h1" mr={2}>
                 {documentTitle}
               </Heading>
@@ -77,43 +77,43 @@ const AnchorTag = ({
           </MDXProvider>
         )}
       </Box>
-    );
+    )
     child = (
       <Text
         data-test="ref-tag"
         sx={{
-          ":before": {
+          ':before': {
             content: "'['",
-            color: "text.disabled",
-            mr: "1px",
-            opacity: "0.5",
+            color: 'text.disabled',
+            mr: '1px',
+            opacity: '0.5',
           },
-          ":after": {
+          ':after': {
             content: "']'",
-            color: "text.disabled",
-            opacity: "0.5",
-            ml: "1px",
+            color: 'text.disabled',
+            opacity: '0.5',
+            ml: '1px',
           },
-          ":hover": {
-            textDecoration: "none",
+          ':hover': {
+            textDecoration: 'none',
           },
         }}
         {...restProps}
       >
         <Text
           sx={{
-            ":before": {
-              mr: "2px",
+            ':before': {
+              mr: '2px',
               content: "'['",
-              color: "text.disabled",
-              opacity: "0.5",
+              color: 'text.disabled',
+              opacity: '0.5',
             },
           }}
         ></Text>
         <Link
           sx={{
-            ":hover": {
-              textDecoration: "none",
+            ':hover': {
+              textDecoration: 'none',
             },
           }}
           as={GatsbyLink}
@@ -127,7 +127,7 @@ const AnchorTag = ({
         </Link>
 
         <Button
-          display={["inline-block", "inline-block", "inline-block", "none"]}
+          display={['inline-block', 'inline-block', 'inline-block', 'none']}
           bg="transparent"
           px="1"
           py="0"
@@ -140,20 +140,20 @@ const AnchorTag = ({
         </Button>
         <Text
           sx={{
-            ":after": {
-              ml: "2px",
+            ':after': {
+              ml: '2px',
               content: "']'",
-              color: "text.disabled",
-              opacity: "0.5",
+              color: 'text.disabled',
+              opacity: '0.5',
             },
           }}
         ></Text>
       </Text>
-    );
+    )
   } else {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     const externalLink =
-      !isRelativeUrl(href) || (restProps && restProps.target === "_blank");
+      !isRelativeUrl(href) || (restProps && restProps.target === '_blank')
 
     child = externalLink ? (
       <Link
@@ -163,24 +163,31 @@ const AnchorTag = ({
         rel="noopener noreferrer"
         href={href}
         title={title}
+        underline="true"
       >
         {restProps.children}
       </Link>
     ) : (
-      <Link {...restProps} as={GatsbyLink} to={href} title={title}>
+      <Link
+        {...restProps}
+        as={GatsbyLink}
+        to={href}
+        title={title}
+        underline="true"
+      >
         {restProps.children}
       </Link>
-    );
-    return child;
+    )
+    return child
   }
 
   if (withoutPopup) {
-    return child;
+    return child
   }
 
   return (
     <Tippy
-      theme={colorMode === "night" ? "dark" : "light"}
+      theme={colorMode === 'night' ? 'dark' : 'light'}
       delay={100}
       interactiveDebounce={0}
       interactive={true}
@@ -189,11 +196,11 @@ const AnchorTag = ({
       maxWidth="none"
       arrow={false}
       placement="bottom"
-      touch={["hold", 5000]}
+      touch={['hold', 5000]}
       onCreate={onCreate}
     >
       {child}
     </Tippy>
-  );
-};
-export default AnchorTag;
+  )
+}
+export default AnchorTag

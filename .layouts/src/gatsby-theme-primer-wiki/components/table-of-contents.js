@@ -1,23 +1,30 @@
-import { Box, Link } from "@primer/components";
-import React from "react";
-import { useScrollSpy } from "gatsby-theme-primer-wiki/src/hooks/use-scrollspy";
+import { Box, Link } from '@primer/components'
+import React from 'react'
+import { useScrollSpy } from 'gatsby-theme-primer-wiki/src/hooks/use-scrollspy'
 
 function TableOfContents({ items, depth }) {
   const activeId = useScrollSpy(
     items.map(({ url }) => `[id="${url.slice(1)}"]`),
     {
-      rootMargin: "0% 0% -24% 0%",
+      rootMargin: '0% 0% -24% 0%',
     }
-  );
+  )
   return (
-    <Box as="ul" m={0} p={0} css={{ listStyle: "none" }}>
+    <Box as="ul" m={0} p={0} css={{ listStyle: 'none' }}>
       {items.map(item => (
         <Box
           as="li"
           key={item.url}
           pl={depth > 0 ? 3 : 1}
-          backgroundColor={item.url === `#${activeId}` ? "gray.0" : "undefined"}
-          borderRadius="1"
+          backgroundColor={item.url === `#${activeId}` ? 'gray.0' : ''}
+          sx={{
+            ':hover': {
+              backgroundColor: 'gray.0',
+            },
+            ':hover a': {
+              color: 'text.alt',
+            },
+          }}
         >
           {item.title ? (
             <Link
@@ -25,12 +32,12 @@ function TableOfContents({ items, depth }) {
               py={1}
               href={item.url}
               fontSize={[2, null, 1]}
-              color="text.primary"
+              color={item.url === `#${activeId}` ? 'text.alt' : 'text.primary'}
               sx={{
-                fontWeight: item.url === `#${activeId}` ? "bold" : "medium",
+                fontWeight: item.url === `#${activeId}` ? 'bold' : 'medium',
               }}
               aria-current={
-                item.url === `#${activeId}` ? "location" : undefined
+                item.url === `#${activeId}` ? 'location' : undefined
               }
             >
               {item.title}
@@ -42,11 +49,11 @@ function TableOfContents({ items, depth }) {
         </Box>
       ))}
     </Box>
-  );
+  )
 }
 
 TableOfContents.defaultProps = {
   depth: 0,
-};
+}
 
-export default TableOfContents;
+export default TableOfContents

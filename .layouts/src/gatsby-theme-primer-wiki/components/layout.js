@@ -1,15 +1,15 @@
-import { Box } from "@primer/components";
-import React from "react";
-import Header from "./header";
-import Sidebar from "./sidebar";
-import "../styles/global.css";
-import { getSidebarItems } from "gatsby-theme-primer-wiki/src/utils/sidebar-items";
+import { Box } from '@primer/components'
+import React from 'react'
+import Header from './header'
+import '../styles/global.css'
+import '../styles/giscus.css'
+import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-items'
 
 function Layout({ children, location, pageContext }) {
-  const sidebarItems = pageContext.sidebarItems;
-  const tagsGroups = pageContext.tagsGroups;
-  const currentSlug = pageContext.slug;
-  const finalSidebarItems = getSidebarItems(sidebarItems, tagsGroups);
+  const sidebarItems = pageContext.sidebarItems
+  const tagsGroups = pageContext.tagsGroups
+  const currentSlug = pageContext.slug
+  const finalSidebarItems = getSidebarItems(sidebarItems, tagsGroups)
   return (
     <Box
       display="flex"
@@ -30,13 +30,12 @@ function Layout({ children, location, pageContext }) {
         flexDirection="row"
         css={{ zIndex: 0 }}
       >
-        <Sidebar location={location} sidebarItems={finalSidebarItems} />
-        <Box as="main" flex="1">
+        <Box as="main" flex="1" margin="auto" maxWidth="60em">
           {children}
         </Box>
       </Box>
     </Box>
-  );
+  )
 }
 
-export default Layout;
+export default Layout

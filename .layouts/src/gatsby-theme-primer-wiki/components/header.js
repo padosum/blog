@@ -1,4 +1,4 @@
-import { Box, Link, StyledOcticon } from "@primer/components";
+import { Box, Link, StyledOcticon } from '@primer/components'
 import {
   MarkGithubIcon,
   SearchIcon,
@@ -6,25 +6,25 @@ import {
   SunIcon,
   MoonIcon,
   RocketIcon,
-} from "@primer/octicons-react";
-import { Link as GatsbyLink } from "gatsby";
-import React from "react";
-import useSiteMetadata from "gatsby-theme-primer-wiki/src/use-site";
-import DarkButton from "./dark-button";
-import MobileSearch from "gatsby-theme-primer-wiki/src/components/mobile-search";
-import NavDrawer, { useNavDrawerState } from "./nav-drawer";
+} from '@primer/octicons-react'
+import { Link as GatsbyLink } from 'gatsby'
+import React from 'react'
+import useSiteMetadata from 'gatsby-theme-primer-wiki/src/use-site'
+import DarkButton from './dark-button'
+import MobileSearch from 'gatsby-theme-primer-wiki/src/components/mobile-search'
+import NavDrawer, { useNavDrawerState } from './nav-drawer'
 import NavDropdown, {
   NavDropdownItem,
-} from "gatsby-theme-primer-wiki/src/components/nav-dropdown";
-import Search from "gatsby-theme-primer-wiki/src/components/search";
-import GraphButton from "gatsby-theme-primer-wiki/src/components/graph-button";
-import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
-import { useTheme } from "@primer/components";
-import components from "gatsby-theme-primer-wiki/src/components/mdx-components";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import randomArticle from "../randomArticle";
+} from 'gatsby-theme-primer-wiki/src/components/nav-dropdown'
+import Search from 'gatsby-theme-primer-wiki/src/components/search'
+import GraphButton from 'gatsby-theme-primer-wiki/src/components/graph-button'
+import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
+import { useTheme } from '@primer/components'
+import components from 'gatsby-theme-primer-wiki/src/components/mdx-components'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import randomArticle from '../randomArticle'
 
-export const HEADER_HEIGHT = 66;
+export const HEADER_HEIGHT = 66
 function Header({
   isSearchEnabled,
   location,
@@ -32,27 +32,33 @@ function Header({
   tagsGroups,
   currentSlug,
 }) {
-  const { resolvedColorMode, setColorMode, theme } = useTheme();
+  const { resolvedColorMode, setColorMode, theme } = useTheme()
   const [isNavDrawerOpen, setIsNavDrawerOpen] = useNavDrawerState(
     theme.breakpoints[2]
-  );
-  const [isGraphOpen, setIsGraphOpen] = React.useState(false);
+  )
+  const [isGraphOpen, setIsGraphOpen] = React.useState(false)
 
-  const [isMobileSearchOpen, setIsMobileSearchOpen] = React.useState(false);
-  const { siteMetadata } = useSiteMetadata();
-  const themeConfig = useThemeConfig();
-  const primerNavItems = themeConfig.nav;
-  const image = getImage(themeConfig.icon);
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = React.useState(false)
+  const { siteMetadata } = useSiteMetadata()
+  const themeConfig = useThemeConfig()
+  const primerNavItems = themeConfig.nav
+  const image = getImage(themeConfig.icon)
 
   return (
-    <Box top={0} zIndex={1} position="sticky">
+    <Box
+      top={0}
+      zIndex={1}
+      position="sticky"
+      borderBottom="2px solid"
+      borderColor="header.bg"
+      bg="bg.primary"
+    >
       <Box
         display="flex"
         height={HEADER_HEIGHT}
         px={[3, null, null, 4]}
         alignItems="center"
         justifyContent="space-between"
-        bg="header.bg"
         color="header.text"
       >
         <Box display="flex" alignItems="center">
@@ -60,7 +66,7 @@ function Header({
             {themeConfig.icon ? (
               <GatsbyImage
                 imgStyle={{
-                  borderRadius: "9999999px",
+                  borderRadius: '9999999px',
                 }}
                 image={image}
                 alt="logo"
@@ -84,24 +90,24 @@ function Header({
           ) : null}
 
           {isSearchEnabled ? (
-            <Box display={["none", null, null, "block"]} ml={4}>
+            <Box display={['none', null, null, 'block']} ml={4}>
               <Search tagsGroups={tagsGroups} />
             </Box>
           ) : null}
         </Box>
         <Box display="flex">
-          <Box display={["none", null, null, "flex"]} alignItems="center">
+          <Box display={['none', null, null, 'flex']} alignItems="center">
             <PrimerNavItems items={primerNavItems} />
 
             <DarkButton
               aria-label="Theme"
               aria-expanded={isNavDrawerOpen}
               onClick={() =>
-                setColorMode(resolvedColorMode === "day" ? "night" : "day")
+                setColorMode(resolvedColorMode === 'day' ? 'night' : 'day')
               }
               ml={3}
             >
-              {resolvedColorMode === "day" ? (
+              {resolvedColorMode === 'day' ? (
                 <SunIcon />
               ) : (
                 <MoonIcon></MoonIcon>
@@ -117,7 +123,7 @@ function Header({
             </DarkButton>
           </Box>
 
-          <Box display={["flex", null, null, "none"]}>
+          <Box display={['flex', null, null, 'none']}>
             {isSearchEnabled ? (
               <>
                 <DarkButton
@@ -135,7 +141,7 @@ function Header({
               </>
             ) : null}
           </Box>
-          <DarkButton aria-label="Show Graph Visualisation" sx={{ ml: "3" }}>
+          <DarkButton aria-label="Show Graph Visualisation" sx={{ ml: '3' }}>
             <GraphButton
               currentSlug={currentSlug}
               isOpen={isGraphOpen}
@@ -144,7 +150,7 @@ function Header({
             ></GraphButton>
           </DarkButton>
 
-          <Box display={["flex", null, null, "none"]}>
+          <Box display={['flex', null, null, 'none']}>
             <DarkButton
               aria-label="Menu"
               aria-expanded={isNavDrawerOpen}
@@ -163,12 +169,12 @@ function Header({
         </Box>
       </Box>
     </Box>
-  );
+  )
 }
 
 Header.defaultProps = {
   isSearchEnabled: true,
-};
+}
 
 function PrimerNavItems({ items }) {
   return (
@@ -185,7 +191,7 @@ function PrimerNavItems({ items }) {
                 ))}
               </NavDropdown>
             </Box>
-          );
+          )
         }
 
         return (
@@ -198,10 +204,10 @@ function PrimerNavItems({ items }) {
           >
             {item.title}
           </components.a>
-        );
+        )
       })}
     </Box>
-  );
+  )
 }
 
-export default Header;
+export default Header
