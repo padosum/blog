@@ -35,7 +35,7 @@ module.exports = {
       options: {
         icon: './static/logo.png',
         contentMaxWidth: 1440,
-        defaultIndexLatestPostCount: 20,
+        defaultIndexLatestPostCount: 15,
         shouldShowLatestOnIndex: true,
         sidebarComponents: ['latest'],
         editUrlText: '수정하기',
@@ -62,43 +62,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `  {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allSitePage(filter: {path: {regex: "/^(?!\\/wiki\\/[0-9]{4}).*/"}}) {
-            nodes {
-              path
-            }
-          }
-        }`,
-        serialize: ({ site, allSitePage }) => {
-          return allSitePage.nodes.map(node => {
-            return {
-              url: site.siteMetadata.siteUrl + node.path,
-              changefreq: `daily`,
-              priority: 0.7,
-            }
-          })
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: siteMetadata.siteUrl,
-        sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
-        policy: [
-          {
-            userAgent: '*',
-            allow: '/',
-            disallow: ['/wiki/2021/*', '/wiki/2022/*'],
-          },
-        ],
-      },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
