@@ -4,15 +4,15 @@ import {
   Button,
   ButtonOutline,
   Text,
-} from "@primer/components";
-import React from "react";
-import Seo from "../components/seo";
-import { navigate } from "gatsby";
+} from '@primer/components'
+import React from 'react'
+import Seo from '../components/seo'
+import { navigate } from 'gatsby'
 
 const NotFoundPage = ({ data, location }) => {
   return (
     <>
-      <Seo post={{ title: "404: Not Found" }} />
+      <Seo post={{ title: '404: Not Found' }} />
       <Box
         display="flex"
         flexDirection="column"
@@ -42,12 +42,12 @@ const NotFoundPage = ({ data, location }) => {
           <ButtonGroup display="block" my={2}>
             <Button onClick={() => navigate(-1)}>이전 페이지로</Button>
             <ButtonOutline
-              onClick={() => navigate("/")}
+              onClick={() => navigate('/')}
               color="text.primary"
               sx={{
-                ":hover": {
-                  color: "text.primary",
-                  backgroundColor: "bg.alt",
+                ':hover': {
+                  color: 'text.primary',
+                  backgroundColor: 'bg.alt',
                 },
               }}
             >
@@ -57,7 +57,7 @@ const NotFoundPage = ({ data, location }) => {
         </Box>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage
