@@ -50,7 +50,7 @@ function Header({
       zIndex={1}
       position="sticky"
       borderBottom="2px solid"
-      borderColor="header.bg"
+      borderColor="header.border"
       bg="bg.primary"
     >
       <Box
@@ -178,13 +178,22 @@ Header.defaultProps = {
 
 function PrimerNavItems({ items }) {
   return (
-    <Box display="flex" alignItems="center" color="header.text">
+    <Box
+      display="flex"
+      alignItems="center"
+      color="header.text"
+      sx={{
+        '& > a': {
+          textDecoration: 'none',
+        },
+      }}
+    >
       {items.map((item, index) => {
         if (item.items) {
           return (
             <Box ml={4} key={index}>
               <NavDropdown title={item.title}>
-                {item.items.map(child => (
+                {item.items.map((child) => (
                   <NavDropdownItem key={child.title} href={child.url}>
                     {child.title}
                   </NavDropdownItem>

@@ -17,7 +17,6 @@ const ReferencesBlock = ({ references }) => {
       borderStyle="solid"
       borderColor="text.primary"
       borderWidth="1"
-      borderRadius="2"
     >
       <Heading as="h4" fontSize="2" mb="3" color="text.placeholder">
         <StyledOcticon
@@ -33,7 +32,7 @@ const ReferencesBlock = ({ references }) => {
         LINKS TO THIS PAGE
       </Heading>
       <components.ul style={{ paddingLeft: '16px', listStyle: 'none' }}>
-        {references.map(node => (
+        {references.map((node) => (
           <ReferenceLi key={node.fields.slug}>
             <components.a href={node.fields.slug} references={[node]}>
               {node.fields.title || node.fields.slug}

@@ -1,19 +1,18 @@
-import { StyledOcticon, Link, Box } from "@primer/components";
-import { PencilIcon } from "@primer/octicons-react";
-import React from "react";
-import LastUpdated from "./last-updated";
-import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
+import { StyledOcticon, Link, Box } from '@primer/components'
+import { PencilIcon } from '@primer/octicons-react'
+import React from 'react'
+import LastUpdated from './last-updated'
+import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
 
 function PageHistory({ editUrl, created, lastUpdated }) {
-  const data = useThemeConfig();
+  const data = useThemeConfig()
 
   return editUrl || lastUpdated ? (
     <Box
       borderStyle="solid"
-      borderColor="border.primary"
+      borderColor="text.secondary"
       borderWidth={0}
-      borderTopWidth={1}
-      borderRadius={0}
+      borderTopWidth={2}
       py={2}
     >
       <Box
@@ -23,7 +22,7 @@ function PageHistory({ editUrl, created, lastUpdated }) {
         textAlign="right"
       >
         {editUrl ? (
-          <Link mb="1" href={editUrl} fontSize={1}>
+          <Link mb="1" href={editUrl} fontSize={1} color="text.secondary">
             <StyledOcticon icon={PencilIcon} mr={2} />
             {data.editUrlText}
           </Link>
@@ -36,11 +35,11 @@ function PageHistory({ editUrl, created, lastUpdated }) {
         )}
       </Box>
     </Box>
-  ) : null;
+  ) : null
 }
 
 PageHistory.defaultProps = {
   contributors: [],
-};
+}
 
-export default PageHistory;
+export default PageHistory

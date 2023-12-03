@@ -86,7 +86,7 @@ th {
 }
 
 input::placeholder {
-  color: hsl(251, 14%, 70%);
+  color: #2c293d;
 }
 
 .prism-code {
@@ -95,8 +95,4 @@ input::placeholder {
 
 code {
   font-family: 'NeoDunggeunmo Code';
-}
-
-strong {
-  color: hsl(168, 100%, 15%);
 }

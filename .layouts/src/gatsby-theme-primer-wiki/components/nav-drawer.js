@@ -57,7 +57,7 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
         display="flex"
         flexDirection="column"
         height="100%"
-        bg="header.bg"
+        bg="bg.primary"
         style={{ overflow: 'auto', WebkitOverflowScrolling: 'touch' }}
       >
         <Box
@@ -65,7 +65,7 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
           flexDirection="column"
           flex="0 0 auto"
           color="header.text"
-          bg="header.bg"
+          bg="bg.primary"
         >
           <Box>
             <Box
@@ -74,7 +74,7 @@ function NavDrawer({ isOpen, onDismiss, location, sidebarItems }) {
               pl={4}
               pr={3}
               alignItems="center"
-              justifyContent="justify-content"
+              justifyContent="space-between"
             >
               <Link as={GatsbyLink} to="/" color="inherit" fontFamily="mono">
                 {siteMetadata.title}
@@ -145,7 +145,7 @@ function PrimerNavItems({ items }) {
                     </Box>
                   </summary>
                   <Box display="flex" flexDirection="column" mt={2}>
-                    {item.items.map(child => (
+                    {item.items.map((child) => (
                       <components.a
                         key={child.title}
                         href={child.url}

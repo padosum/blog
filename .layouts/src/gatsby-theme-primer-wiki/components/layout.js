@@ -2,7 +2,6 @@ import { Box } from '@primer/components'
 import React from 'react'
 import Header from './header'
 import '../styles/global.css'
-import '../styles/giscus.css'
 import { getSidebarItems } from 'gatsby-theme-primer-wiki/src/utils/sidebar-items'
 
 function Layout({ children, location, pageContext }) {
@@ -29,8 +28,9 @@ function Layout({ children, location, pageContext }) {
         flex="1 1 auto"
         flexDirection="row"
         css={{ zIndex: 0 }}
+        justifyContent="center"
       >
-        <Box as="main" flex="1" margin="auto" maxWidth="60em">
+        <Box as="main" flex="1" maxWidth="60em">
           {children}
         </Box>
       </Box>

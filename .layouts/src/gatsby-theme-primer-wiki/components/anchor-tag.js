@@ -20,11 +20,11 @@ const AnchorTag = ({
   const theme = useTheme()
   const colorMode = theme.resolvedColorMode
   const ref = references.find(
-    x => x.fields.slug === href || encodeSlug(x.fields.slug) === href
+    (x) => x.fields.slug === href || encodeSlug(x.fields.slug) === href
   )
 
   let instance = null
-  const onCreate = theInstance => {
+  const onCreate = (theInstance) => {
     instance = theInstance
   }
   let popupContent
@@ -119,6 +119,7 @@ const AnchorTag = ({
           as={GatsbyLink}
           to={href}
           title={title}
+          color="text.secondary"
         >
           {title || restProps.children}
           {dateLog &&
@@ -164,6 +165,7 @@ const AnchorTag = ({
         href={href}
         title={title}
         underline="true"
+        color="text.secondary"
       >
         {restProps.children}
       </Link>
@@ -174,6 +176,7 @@ const AnchorTag = ({
         to={href}
         title={title}
         underline="true"
+        color="text.secondary"
       >
         {restProps.children}
       </Link>

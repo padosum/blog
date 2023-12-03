@@ -11,7 +11,7 @@ import Blockquote from 'gatsby-theme-primer-wiki/src/components/blockquote'
 import TableOfContents from './table-of-contents'
 import TagsBlock from 'gatsby-theme-primer-wiki/src/components/tags-block'
 import useThemeConfig from 'gatsby-theme-primer-wiki/src/use-theme-config'
-import { Giscus } from '@giscus/react'
+import Giscus from '@giscus/react'
 import { useStaticQuery, graphql } from 'gatsby'
 import PageHistory from './page-history'
 function TagsList({
@@ -23,7 +23,7 @@ function TagsList({
   nodes = [],
 }) {
   items = items || []
-  const [mdx] = nodes.filter(mdx => mdx.fields.slug === url)
+  const [mdx] = nodes.filter((mdx) => mdx.fields.slug === url)
   const description = mdx?.frontmatter?.description ?? ''
   return (
     <li>
@@ -111,7 +111,7 @@ const Post = ({ data, pageContext, location }) => {
   }
 
   const postSlug = fields.slug
-  const AnchorTag = props => (
+  const AnchorTag = (props) => (
     <components.a
       {...props}
       references={outboundReferences}
@@ -175,17 +175,19 @@ const Post = ({ data, pageContext, location }) => {
           {shouldShowTitle && (
             <Box>
               <Box display="flex" sx={{ alignItems: 'center' }}>
-                <Heading as="h1" mr={2}>
+                <Heading as="h1" mr={2} color="text.secondary">
                   {title}
                 </Heading>
               </Box>
             </Box>
           )}
-          <PageHistory
-            editUrl={editUrl}
-            created={date}
-            lastUpdated={lastUpdatedTime}
-          />
+          {slug != '/' && (
+            <PageHistory
+              editUrl={editUrl}
+              created={date}
+              lastUpdated={lastUpdatedTime}
+            />
+          )}
           {description && <Blockquote>{description}</Blockquote>}
 
           {tableOfContents.items ? (
@@ -224,12 +226,12 @@ const Post = ({ data, pageContext, location }) => {
           {slug === '/' &&
             primerWikiThemeConfig.shouldShowLatestOnIndex &&
             sidebarItems.items.length > 0 &&
-            sidebarItems.items.map(item => {
+            sidebarItems.items.map((item) => {
               return (
                 <Box key={item.title}>
                   <components.h2>✏️ 최근 변경된 것 </components.h2>
                   <components.a href={item.url}>(전체 목록 보기)</components.a>
-                  {item.items.map(child => {
+                  {item.items.map((child) => {
                     return (
                       <components.ul key={child.title}>
                         <TagsList
@@ -259,7 +261,11 @@ const Post = ({ data, pageContext, location }) => {
             term={title}
             reactionsEnabled="1"
             emitMetadata="0"
-            theme={resolvedColorMode === 'day' ? 'light_high_contrast' : 'dark'}
+            theme={
+              resolvedColorMode === 'day'
+                ? 'light_high_contrast'
+                : 'dark_high_contrast'
+            }
           />
         </Box>
       </Box>
