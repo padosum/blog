@@ -1,8 +1,8 @@
 import { Box, Text } from '@primer/components'
 import Highlight, { themes, defaultProps } from 'prism-react-renderer'
 import Prism from 'gatsby-theme-primer-wiki/src/prism'
-import vsDarkTheme from 'gatsby-theme-primer-wiki/src/vs-dark'
-import duotoneLight from '../duotone-light'
+import nightOwlLight from '../night-owl-light'
+import nightOwl from '../night-owl'
 import React from 'react'
 import ClipboardCopy from './clipboard-copy'
 import LiveCode from 'gatsby-theme-primer-wiki/src/components/live-code'
@@ -37,7 +37,7 @@ function Code({ className, children, live, noinline }) {
         Prism={Prism}
         code={code}
         language={language}
-        theme={colorMode === 'night' ? vsDarkTheme : duotoneLight}
+        theme={colorMode === 'night' ? nightOwl : nightOwlLight}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <Box
