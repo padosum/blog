@@ -1,5 +1,5 @@
 import { Box, Text } from '@primer/components'
-import Highlight, { themes, defaultProps } from 'prism-react-renderer'
+import Highlight, { defaultProps } from 'prism-react-renderer'
 import Prism from 'gatsby-theme-primer-wiki/src/prism'
 import nightOwlLight from '../night-owl-light'
 import nightOwl from '../night-owl'
@@ -7,6 +7,7 @@ import React from 'react'
 import ClipboardCopy from './clipboard-copy'
 import LiveCode from 'gatsby-theme-primer-wiki/src/components/live-code'
 import { useTheme } from '@primer/components'
+import themeGet from '@styled-system/theme-get'
 
 function Code({ className, children, live, noinline }) {
   const language = className ? className.replace(/language-/, '') : ''
@@ -27,6 +28,7 @@ function Code({ className, children, live, noinline }) {
         display: 'table',
         tableLayout: 'fixed',
         width: '100%',
+        marginBottom: themeGet('space.3'),
       }}
     >
       <Box position="absolute" top={0} right={0} p={2}>
