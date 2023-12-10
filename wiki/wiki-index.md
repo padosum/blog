@@ -1,7 +1,7 @@
 ---
 title: wiki
 date: 2017-11-26 21:38:36 +0900
-updated: 2023-11-02 23:01:21 +0900
+updated: 2023-12-03 23:57:34 +0900
 ---
 
 - [[Movies-with-a-computer]]
@@ -41,6 +41,7 @@ updated: 2023-11-02 23:01:21 +0900
   - [[Session-and-Token-Authentication]]
   - [[Session-login-with-lowdb-in-express]]
   - [[Https-redirect-in-Safai]]
+  - [[Drawing-Pixel-Art-in-Web]]
 - CSS
   - [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   - [[CSS-z-index]]
