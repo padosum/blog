@@ -3,7 +3,7 @@ title: 웹에서 픽셀 아트 만들기
 date: 2023-12-03 23:57:35 +0900
 updated: 2023-12-10 20:28:24 +0900
 aliases: ['웹에서 픽셀 아트 만들기']
-tags: ['How to']
+tags: ['How to', '글또']
 ---
 
 ![e-boy](https://cdn0.vox-cdn.com/assets/4604041/eboy_section_3_1.gif)  
