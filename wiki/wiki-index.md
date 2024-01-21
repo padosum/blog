@@ -1,7 +1,7 @@
 ---
 title: wiki
 date: 2017-11-26 21:38:36 +0900
-updated: 2024-01-06 10:32:51 +0900
+updated: 2024-01-20 09:37:02 +0900
 ---
 
 - [[Movies-with-a-computer]]
@@ -43,6 +43,7 @@ updated: 2024-01-06 10:32:51 +0900
   - [[Https-redirect-in-Safai]]
   - [[Drawing-Pixel-Art-in-Web]]
   - [[Various-Aspects-of-Emoji]]
+  - [[Using-indexedDB-instead-of-localStorage]]
 - CSS
   - [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   - [[CSS-z-index]]
