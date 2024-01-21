@@ -3,7 +3,7 @@ title: 이모지의 이모저모
 date: 2024-01-06 10:32:51 +0900
 updated: 2024-01-07 23:04:46 +0900
 aliases: ['이모지의 이모저모']
-tags: ['글또']
+tags: ['글또', 'How to']
 draft: false
 ---
 
