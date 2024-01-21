@@ -91,6 +91,7 @@ input::placeholder {
 
 .prism-code {
   font-family: 'NeoDunggeunmo Code';
+  margin-bottom: 16px;
 }
 
 code {
