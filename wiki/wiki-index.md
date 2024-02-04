@@ -1,7 +1,7 @@
 ---
 title: wiki
 date: 2017-11-26 21:38:36 +0900
-updated: 2024-01-20 09:37:02 +0900
+updated: 2024-02-03 00:52:30 +0900
 ---
 
 - [[Movies-with-a-computer]]
@@ -44,6 +44,7 @@ updated: 2024-01-20 09:37:02 +0900
   - [[Drawing-Pixel-Art-in-Web]]
   - [[Various-Aspects-of-Emoji]]
   - [[Using-indexedDB-instead-of-localStorage]]
+  - [[Applying-styles-to-an-HTML-table]]
 - CSS
   - [[CSS-line-breaks|CSS로 줄바꿈 처리를 하는 방법]]
   - [[CSS-z-index]]
