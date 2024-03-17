@@ -1,7 +1,7 @@
 ---
 title: wiki
 date: 2017-11-26 21:38:36 +0900
-updated: 2024-02-03 00:52:30 +0900
+updated: 2024-03-17 11:43:46 +0900
 ---
 
 - [[Movies-with-a-computer]]
@@ -77,6 +77,7 @@ updated: 2024-02-03 00:52:30 +0900
   - [[The-illusion-that-you-can-compare-Strings-and-Booleans-in-JavaScript|String과 Boolean을 비교할 수 있다는 착각]]
   - [[Extracting-a-URL-parameter-in-JavaScript|JavaScript에서 URL parameter 추출하기]]
   - [[Illegal-invocation]]
+  - [[JavaScript-Decorator-Pattern]]
 - Node.js
   - [[Working-With-Environment-Variables-in-Node.js|Node.js에서 환경 변수 사용하기]]
   - [[Using-debugger-in-Nodejs]]
