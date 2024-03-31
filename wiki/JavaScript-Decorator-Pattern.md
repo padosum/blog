@@ -1,7 +1,7 @@
 ---
 title: JavaScript Decorator Pattern
 date: 2024-03-17 11:43:48 +0900
-updated: 2024-03-17 13:45:30 +0900
+updated: 2024-03-31 09:50:07 +0900
 aliases:
 tags: ['Design Pattern', 'JavaScript']
 description:
@@ -123,9 +123,9 @@ const americanoWithSugar = new SugarDecorator(americano, 1)
 const coffeeWithSugar = new SugarDecorator(americano, 3)
 ```
 
-## ES6 Decorator
+## ES7 Decorator
 
-JavaScript와 Decorator를 함께 검색하면 design pattern 말고도 ES6에 추가된 Decorator 문법에 대한 설명도 나온다.
+JavaScript와 Decorator를 함께 검색하면 design pattern 말고도 ES7(ECMAScript 2016)에 추가된 Decorator 문법에 대한 설명도 나온다.
 Decorator 문법 또한 이름에서 알 수 있듯이 클래스나 클래스 멤버 선언 시 특별한 구문을 사용해 장식하는 기능을 제공하는 것이다.  
 클래스, 메서드, 프로퍼티 등에 부가적인 기능을 추가할 수 있다. Decorator 문법을 사용해 Decorator Pattern을 구현하는 데 사용될 수 있으나 그 자체로 Decorator Pattern인 것은 아니다. 코드의 가독성 및 유지 보수성을 향상시키는 것을 목표로 사용한다.
 
@@ -169,4 +169,4 @@ Decorator Pattern 외 다른 Design Pattern 도 차차 공부해야겠다. 그�
 - [Design Patterns in JavaScript](https://www.udemy.com/course/design-patterns-javascript)
 - [데코레이터 만들기](https://dojang.io/mod/page/view.php?id=2427)
 - [개방-폐쇄 원칙](https://ko.wikipedia.org/wiki/%EA%B0%9C%EB%B0%A9-%ED%8F%90%EC%87%84_%EC%9B%90%EC%B9%99)
-- [Javascript - Decorator 문법](https://godsenal.com/posts/javascript-decorator-%EB%AC%B8%EB%B2%95/)
+- [Javascript - Decorator 문법](https://godsenal.com/posts/javascript-decorator-%/EB%AC%B8%EB%B2%95/)
