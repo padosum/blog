@@ -3,6 +3,9 @@
   "name": "wiki",
   "version": "1.0.0",
   "license": "MIT",
+  "overrides": {
+    "lmdb-store": "npm:lmdb@^2.5.0"
+  },
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0 && echo \"hello\"",
     "start": "gatsby develop -H 0.0.0.0",
