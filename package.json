@@ -1,0 +1,42 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "<div>  <img src=\"https://github.com/padosum/blog/blob/master/.layouts/static/logo.png?raw=true\" width=\"80\" height=\"80\"/> </div>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.server.json && vite build && node dist/server/index.js build",
+    "dev": "tsc -p tsconfig.server.json && concurrently \"vite build --watch\" \"node dist/server/index.js watch\"",
+    "preview": "vite preview",
+    "serve": "node dist/server/index.js serve",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=24.x"
+  },
+  "dependencies": {
+    "@fxts/core": "^1.9.0",
+    "fs-extra": "^11.3.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.9",
+    "rune-ts": "^0.9.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/marked": "^5.0.2",
+    "@types/node": "^22.14.1",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.25.1",
+    "express": "^5.1.0",
+    "prettier": "3.5.3",
+    "rimraf": "^6.0.1",
+    "socket.io": "^4.8.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2"
+  }
+}
