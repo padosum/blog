@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": ">=24.x"
+    "node": ">=20.x"
   },
   "dependencies": {
     "@fxts/core": "^1.9.0",
