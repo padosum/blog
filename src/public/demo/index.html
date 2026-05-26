@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Padosum Wiki — 디자인 톤 데모 (인덱스)</title>
+
+  <link rel="stylesheet" as="style"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="shell site-header-inner">
+      <a href="./index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>PADOSUM / WIKI</span>
+      </a>
+      <nav class="nav" aria-label="primary">
+        <a href="./index.html" class="active">Index</a>
+        <a href="#">Tags</a>
+        <a href="./post.html">Article</a>
+        <a href="#">TIL</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell hero">
+      <span class="hero-eyebrow">PADOSUM.DEV / SINCE 2019</span>
+      <h1 class="hero-title">매일 배운 것을 기록하고,<br/>시행착오를 모아두는 위키.</h1>
+      <p class="hero-subtitle">
+        프론트엔드, 자바스크립트, CS, 책 — 그날그날 배운 것을 가공하지 않고 정직하게 적어둡니다.
+        오래 두면 쌓이고, 쌓이면 길이 됩니다.
+      </p>
+
+      <div class="hero-meta">
+        <span><strong>998</strong> NOTES</span>
+        <span><strong>176</strong> IMAGES</span>
+        <span><strong>312</strong> WIKI-LINKS</span>
+        <span>LAST UPDATED · <strong>2026-05-09</strong></span>
+      </div>
+    </section>
+
+    <section class="shell">
+      <h2 class="section-title">
+        Latest Notes
+        <span class="count">15 of 998</span>
+      </h2>
+
+      <ul class="note-list">
+        <li class="note-item">
+          <a class="note-link" href="./post.html">
+            <span class="note-cat">JavaScript</span>
+            <span class="note-title">자바스크립트 이터레이터</span>
+            <span class="note-date">2021-12-27</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">CSS</span>
+            <span class="note-title">CSS z-index 완전정복</span>
+            <span class="note-date">2021-10-28</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">Node.js</span>
+            <span class="note-title">node.js event-driven architecture</span>
+            <span class="note-date">2024-01-07</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">TypeScript</span>
+            <span class="note-title">TypeScript Interface와 객체지향 프로그래밍</span>
+            <span class="note-date">2024-02-12</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">JavaScript</span>
+            <span class="note-title">JavaScript Decorator Pattern</span>
+            <span class="note-date">2023-11-18</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">CSS</span>
+            <span class="note-title">html table에 style 적용하기</span>
+            <span class="note-date">2023-09-05</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">JavaScript</span>
+            <span class="note-title">JavaScript es6 -&gt; es7 차이 정리</span>
+            <span class="note-date">2024-03-02</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">CS</span>
+            <span class="note-title">IndexedDB 한 번 정리</span>
+            <span class="note-date">2023-08-12</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">Books</span>
+            <span class="note-title">학교에서 알려주지 않는 17가지 실무 개발 기술</span>
+            <span class="note-date">2023-07-21</span>
+          </a>
+        </li>
+        <li class="note-item">
+          <a class="note-link" href="#">
+            <span class="note-cat">TIL</span>
+            <span class="note-title">2024-01-06 — 부하테스트 강의 후기</span>
+            <span class="note-date">2024-01-06</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="note-list-footer">
+        <a href="#">All notes (998) →</a>
+      </div>
+    </section>
+
+    <section class="shell">
+      <h2 class="section-title">
+        Tags
+        <span class="count">42 categories</span>
+      </h2>
+
+      <div class="tag-cloud">
+        <a class="tag-chip" href="#">JavaScript <span class="tag-chip-count">142</span></a>
+        <a class="tag-chip" href="#">CSS <span class="tag-chip-count">68</span></a>
+        <a class="tag-chip" href="#">TypeScript <span class="tag-chip-count">53</span></a>
+        <a class="tag-chip" href="#">React <span class="tag-chip-count">47</span></a>
+        <a class="tag-chip" href="#">Node.js <span class="tag-chip-count">39</span></a>
+        <a class="tag-chip" href="#">CS <span class="tag-chip-count">36</span></a>
+        <a class="tag-chip" href="#">Algorithm <span class="tag-chip-count">31</span></a>
+        <a class="tag-chip" href="#">Books <span class="tag-chip-count">28</span></a>
+        <a class="tag-chip" href="#">TIL <span class="tag-chip-count">120</span></a>
+        <a class="tag-chip" href="#">Git <span class="tag-chip-count">19</span></a>
+        <a class="tag-chip" href="#">Docker <span class="tag-chip-count">12</span></a>
+        <a class="tag-chip" href="#">how-to <span class="tag-chip-count">45</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer-inner">
+      <span>© 2019—2026 · PADOSUM.DEV</span>
+      <span>BUILT WITH RUNE-TS · SOURCE ON <a href="https://github.com/padosum/blog">GITHUB</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

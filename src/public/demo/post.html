@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>자바스크립트 이터레이터 · Padosum Wiki</title>
+
+  <link rel="stylesheet" as="style"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="shell site-header-inner">
+      <a href="./index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>PADOSUM / WIKI</span>
+      </a>
+      <nav class="nav" aria-label="primary">
+        <a href="./index.html">Index</a>
+        <a href="#">Tags</a>
+        <a href="./post.html" class="active">Article</a>
+        <a href="#">TIL</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="article-layout">
+
+      <aside class="sidebar" aria-label="related">
+        <div class="sidebar-section">
+          <div class="sidebar-heading">In JavaScript</div>
+          <ul class="sidebar-list">
+            <li><a href="#">Iterator</a></li>
+            <li><a href="#">Generator</a></li>
+            <li><a href="#">Symbol</a></li>
+            <li><a href="#" class="active">Iteration Protocol</a></li>
+            <li><a href="#">Array Method Chain</a></li>
+            <li><a href="#">Spread Syntax</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-heading">Tags</div>
+          <ul class="sidebar-list">
+            <li><a href="#">JavaScript <span class="num">142</span></a></li>
+            <li><a href="#">ECMAScript <span class="num">23</span></a></li>
+            <li><a href="#">Iterator <span class="num">7</span></a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <article class="article">
+        <header class="article-header">
+          <div class="article-tags">
+            <span class="tag-chip">JavaScript</span>
+            <span class="tag-chip">ECMAScript</span>
+            <span class="tag-chip">Iterator</span>
+          </div>
+          <h1 class="article-title">자바스크립트 이터레이터</h1>
+          <div class="article-meta">
+            <span>PUBLISHED · <strong>2021-12-27</strong></span>
+            <span>UPDATED · <strong>2023-08-24</strong></span>
+            <span>READING · <strong>8 min</strong></span>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p>
+            이터레이션 프로토콜은 <em>순회 가능한(iterable)</em> 데이터 컬렉션(자료구조)을
+            만들기 위해서 ECMAScript 사양에 정의하여 미리 약속한 규칙을 말한다.
+            ES6에 도입된 이터레이션 프로토콜은
+            <a href="#" class="wiki-link">JavaScript Symbol</a>과
+            <a href="#" class="wiki-link">JavaScript Generator</a>를 이해하는 가장 좋은 출발점이다.
+          </p>
+
+          <blockquote>
+            한 줄 요약 — <code>Symbol.iterator</code>를 키로 갖는 메서드를 구현한 객체는
+            <strong>iterable</strong>이고, 그 메서드를 호출해서 얻은
+            <code>{ next, return?, throw? }</code> 객체는 <strong>iterator</strong>이다.
+          </blockquote>
+
+          <h2 id="iteration-protocol">이터레이션 프로토콜</h2>
+          <p>
+            iterable은 <a href="#" class="wiki-link">Well-known Symbol</a>인
+            <code>Symbol.iterator</code>를 프로퍼티 키로 사용한 메서드를 구현하거나
+            프로토타입 체인을 통해 상속받은 객체를 말한다.
+          </p>
+
+          <h3 id="iterable">Iterable</h3>
+          <pre data-lang="js"><code>const iterable = {
+  [Symbol.iterator]() {
+    let i = 0;
+    return {
+      next() {
+        return i &lt; 3
+          ? { value: i++, done: false }
+          : { value: undefined, done: true };
+      }
+    };
+  }
+};
+
+for (const v of iterable) console.log(v); // 0, 1, 2</code></pre>
+
+          <p>
+            위 코드는 <code>iterable</code>이 곧 <code>iterator</code>가 아니라는 점을 보여준다.
+            <code>Symbol.iterator()</code>를 호출해야 비로소 이터레이터가 만들어진다.
+          </p>
+
+          <h3 id="built-in-iterables">빌트인 이터러블</h3>
+          <p>
+            JavaScript의 빌트인 객체 중 다음은 이터러블이다 —
+            <code>Array</code>, <code>String</code>, <code>Map</code>,
+            <code>Set</code>, <code>TypedArray</code>, <code>arguments</code>, <code>NodeList</code>.
+          </p>
+
+          <ul>
+            <li>일반 객체(<code>Object</code>)는 이터러블이 <em>아니다</em>.</li>
+            <li>그래서 <code>for...of</code>가 동작하지 않고, spread도 키 순회가 안 된다.</li>
+            <li>이터러블로 만들고 싶다면 <code>Symbol.iterator</code> 메서드를 직접 구현하면 된다.</li>
+          </ul>
+
+          <hr/>
+
+          <h2 id="why">왜 알아야 하는가</h2>
+          <p>
+            이터레이션 프로토콜을 이해하면
+            <a href="#" class="wiki-link">JavaScript Generator</a>를 자연스럽게 받아들일 수 있고,
+            함수형 라이브러리의 lazy evaluation이 왜 메모리 효율적인지 한 줄로 설명할 수 있다.
+          </p>
+
+          <p>
+            관련 외부 자료: <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Iteration_protocols" target="_blank" rel="noopener">MDN — Iteration protocols</a>.
+          </p>
+        </div>
+
+        <aside class="backlinks" aria-label="backlinks">
+          <h2 class="backlinks-title">Backlinks · 4</h2>
+          <div class="backlinks-list">
+            <a class="backlink" href="#">
+              <span class="backlink-title">JavaScript Generator</span>
+              <span class="backlink-context">…제너레이터는 <mark>이터레이터</mark>를 더 쉽게 만들기 위한 문법이다…</span>
+            </a>
+            <a class="backlink" href="#">
+              <span class="backlink-title">@fxts/core 사용기</span>
+              <span class="backlink-context">…lazy evaluation은 <mark>이터레이터</mark> 프로토콜 위에서 자연스럽게 동작한다…</span>
+            </a>
+            <a class="backlink" href="#">
+              <span class="backlink-title">JavaScript Spread Syntax</span>
+              <span class="backlink-context">…spread 연산자가 동작하려면 우항이 <mark>이터러블</mark>이어야 한다…</span>
+            </a>
+            <a class="backlink" href="#">
+              <span class="backlink-title">TIL · 2023-08-24</span>
+              <span class="backlink-context">…<mark>이터레이터</mark> 노트를 다시 읽고 정리…</span>
+            </a>
+          </div>
+        </aside>
+      </article>
+
+      <aside class="toc" aria-label="table of contents">
+        <div class="toc-heading">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#iteration-protocol" class="active">이터레이션 프로토콜</a></li>
+          <li><a href="#iterable" class="toc-h3">Iterable</a></li>
+          <li><a href="#built-in-iterables" class="toc-h3">빌트인 이터러블</a></li>
+          <li><a href="#why">왜 알아야 하는가</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer-inner">
+      <span>© 2019—2026 · PADOSUM.DEV</span>
+      <span>BUILT WITH RUNE-TS · SOURCE ON <a href="https://github.com/padosum/blog">GITHUB</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
