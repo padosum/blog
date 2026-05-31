@@ -558,6 +558,17 @@ img {
   border-bottom: 1px solid var(--border-soft);
 }
 
+.index-logo-wrap {
+  margin-bottom: var(--sp-5);
+}
+
+.index-logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+}
+
 .article-tags {
   display: flex;
   gap: var(--sp-2);
@@ -606,7 +617,7 @@ img {
 }
 
 .article-body {
-  font-family: var(--font-serif);
+  font-family: var(--font-pixel);
   font-size: var(--text-md);
   line-height: 1.85;
   color: var(--ink);

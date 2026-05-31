@@ -25,6 +25,9 @@ export class IndexPage extends View<IndexPageData> {
 
   <article class="article">
     <header class="article-header">
+      <div class="index-logo-wrap">
+        <img class="index-logo" src="/logo.png" width="80" height="80" alt="Padosum Wiki 로고" />
+      </div>
       <h1 class="article-title">Padosum Wiki</h1>
       <div class="article-meta">
         <span>PUBLISHED · <strong>${siteCreated}</strong></span>

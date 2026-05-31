@@ -31,3 +31,12 @@ Thumbs.db
 # Wiki private (Obsidian metadata, templates)
 wiki/.obsidian/
 wiki/template/
+
+# Claude Code internal
+.claude/
+
+# Legacy Gatsby build artifacts
+.layouts/
+
+# Vite scaffold (unused)
+/public/
