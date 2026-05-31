@@ -1,0 +1,92 @@
+/* ============================================================
+ * Design Tokens — Padosum Wiki
+ *
+ * Inspired by makingsoftware.com — minimal palette:
+ *   pure white background, near-black ink, one electric-blue accent,
+ *   subtle gray hairline for dividers.
+ * ============================================================ */
+
+:root {
+  /* ---------- Colors (only 4 essentials) ---------- */
+  --bg:           #FFFFFF;  /* pure white */
+  --ink:          #1A1A1A;  /* primary text & emphasis border */
+  --accent:       #2E4DF5;  /* electric cobalt blue — single accent */
+  --rule:         #E5E5E5;  /* hairline gray for hr / dividers */
+
+  /* ---------- Derived (subtle variants for hover, muted text) ---------- */
+  --ink-sub:      #5C5C5C;  /* secondary text */
+  --ink-mute:     #9C9C9C;  /* tertiary text, meta */
+  --bg-sunken:    #F7F7F7;  /* very subtle gray for muted sections */
+  --accent-bg:    #EEF0FF;  /* pale blue tint */
+
+  /* ---------- Legacy aliases (so existing style.css keeps working) ---------- */
+  --bg-elev:      #FFFFFF;
+  --border-soft:  var(--rule);
+  --link:         var(--accent);
+  --tag:          var(--ink);
+  --success:      var(--accent);
+  --code-bg:      #F6F8FA;
+  --code-ink:     #1A1A1A;
+  --code-ink-sub: #6E7781;
+
+  /* ---------- Typography ---------- */
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
+               'Apple SD Gothic Neo', sans-serif;
+  --font-serif: 'Noto Serif KR', 'Noto Serif Korean', 'Source Han Serif K',
+                'Apple SD Gothic Neo', serif;
+  --font-mono: 'IBM Plex Mono', 'D2Coding', 'SF Mono', Consolas, Menlo, monospace;
+  --font-pixel: 'YKompyuta', 'Noto Serif KR', serif;
+
+  --text-xs:    12px;
+  --text-sm:    13px;
+  --text-base:  15px;
+  --text-md:    16px;
+  --text-lg:    18px;
+  --text-xl:    22px;
+  --text-2xl:   28px;
+  --text-3xl:   36px;
+  --text-4xl:   44px;
+
+  --leading-tight: 1.3;
+  --leading-snug:  1.5;
+  --leading-base:  1.7;
+  --leading-loose: 1.85;
+
+  --tracking-tight: -0.02em;
+  --tracking-base:  0;
+  --tracking-wide:  0.05em;
+  --tracking-wider: 0.1em;
+
+  /* ---------- Spacing (4px base) ---------- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+
+  /* ---------- Borders & shadows ---------- */
+  --border-hair:  1px solid var(--rule);
+  --border-ink:   1px solid var(--ink);
+  --border-thin:  var(--border-ink);
+  --border-thick: 1px solid var(--ink);   /* slimmed down — was 2px */
+
+  /* offset-only shadows — reserved for emphasis only, used sparingly */
+  --shadow-sm: 2px 2px 0 var(--ink);
+  --shadow-md: 4px 4px 0 var(--ink);
+  --shadow-lg: 6px 6px 0 var(--ink);
+
+  /* ---------- Layout ---------- */
+  --shell-max:    1200px;
+  --article-max:  720px;
+  --radius:       0;  /* always sharp corners */
+
+  /* ---------- Motion ---------- */
+  --ease-pop: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-quick: 100ms;
+}
