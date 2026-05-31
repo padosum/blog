@@ -15,8 +15,6 @@
     "scan": "tsx src/build/scan.ts",
     "render": "tsx src/build/pipeline.ts",
     "validate:pipeline": "tsx src/build/_validate-pipeline.ts",
-    "demo:article": "tsx src/build/_demo-article.ts",
-    "demo:index": "tsx src/build/_demo-index.ts",
     "clean": "rimraf dist .vite"
   },
   "dependencies": {
